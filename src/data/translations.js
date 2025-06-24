@@ -90,9 +90,14 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     achievements: {
       title: 'Achievements',
+      description: 'A collection of certificates and achievements that I have obtained throughout my professional journey.',
       all: 'All',
-      certifications: 'Certifications',
-      awards: 'Awards',
+      certifications: 'Certificate',
+      other: 'Other',
+      items: [
+        { type: 'certification', image: '../../../public/images/hackaton.jpg', title: 'Certificate of Participation in the Hackathon Competition', organizer: 'Paramadina University', date: 'Juny 2025' },
+        { type: 'other', image: '../../../public/images/jurnal.jpg', title: 'Journal Publications', organizer: 'Jurnal Teknoif Institut Teknologi Padang', date: 'October 2024' },
+      ],
     },
     projects: {
       title: 'Projects',
@@ -200,7 +205,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
           year: 'Jul 2023 - Nov 2023',
           time: '- 4 Bulan',
           pos: '- Magang',
-          workfrom: '- WFO',
+          workfrom: '- Di tempat',
           description:
             'Bekerja sama dengan tim teknis untuk menerjemahkan konsep IT yang kompleks menjadi konten visual yang mudah dipahami.\nMembuat dokumentasi visual dan materi komunikasi (seperti flyer, video animasi, dan presentasi) untuk mendukung inisiatif IT Change Management. \nMemastikan semua materi komunikasi sesuai dengan standar branding perusahaan dan tata kelola IT. \nMenggunakan tools seperti Canva, Adobe Illustrator, dan PowerPoint untuk membuat visual yang menarik dan informatif.',
           current: false,
@@ -209,9 +214,11 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     },
     achievements: {
       title: 'Prestasi',
+      description: 'Kumpulan sertifikat dan prestasi yang saya peroleh sepanjang perjalanan profesional saya.',
       all: 'Semua',
-      certifications: 'Sertifikasi',
-      awards: 'Penghargaan',
+      certifications: 'Sertifikat',
+      other: 'lainnya',
+      items: [{ type: 'certification', image: '../../../public/images/hackaton.jpg', title: 'Sertifikat Apresiasi Partisipasi Lomba Hackathon', organizer: 'Universitas Paramadina', date: 'Juni 2025' }],
     },
     projects: {
       title: 'Proyek',
