@@ -218,7 +218,16 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       all: 'Semua',
       certifications: 'Sertifikat',
       other: 'lainnya',
-      items: [{ type: 'certification', image: '../../../public/images/hackaton.jpg', title: 'Sertifikat Apresiasi Partisipasi Lomba Hackathon', organizer: 'Universitas Paramadina', date: 'Juni 2025' }],
+      items: [
+        { type: 'certification', image: '../../../public/images/hackaton.jpg', title: 'Sertifikat Apresiasi Partisipasi Lomba Hackathon', organizer: 'Universitas Paramadina', date: 'Juni 2025' },
+        {
+          type: 'other',
+          image: '../../../public/images/jurnal.jpg',
+          title: 'Publikasi Journal',
+          organizer: 'Jurnal Teknoif Institut Teknologi Padang',
+          date: 'Oktober 2024',
+        },
+      ],
     },
     projects: {
       title: 'Proyek',
