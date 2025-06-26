@@ -80,6 +80,16 @@ const ProjectsSection = () => {
       githubUrl: '#',
     },
     {
+      id: 1,
+      title: 'E-Commerce Platform',
+      description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
+      image: 'https://idcloudhost.com/wp-content/uploads/2020/04/Shoope-ECommerce-dan-Marketplace-Terbaik-Indonesia-min.png',
+      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      category: 'fullstack',
+      demoUrl: '#',
+      githubUrl: '#',
+    },
+    {
       id: 2,
       title: 'E-Commerce Platform',
       description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
