@@ -29,6 +29,16 @@ const ProjectsSection = () => {
       demoUrl: '#',
       githubUrl: '#',
     },
+    {
+      id: 2,
+      title: 'E-Commerce Platform',
+      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
+      image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
+      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      category: 'fullstack',
+      demoUrl: '#',
+      githubUrl: '#',
+    },
   ];
 
   const categories = ['all', 'fullstack', 'frontend', 'backend'];
