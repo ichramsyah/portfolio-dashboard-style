@@ -1,6 +1,6 @@
-import About from '../common/about/About';
-import Education from '../common/about/Education';
-import Experience from '../common/about/Experience';
+import About from '../sections/about/About';
+import Education from '../sections/about/Education';
+import Experience from '../sections/about/Experience';
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 

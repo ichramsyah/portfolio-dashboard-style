@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import { Search, ExternalLink, Github } from 'lucide-react';
+import SectionHeader from '../common/SectionHeader';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
@@ -11,8 +12,8 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with React and Node.js',
-      image: '🛒',
+      description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
+      image: 'https://idcloudhost.com/wp-content/uploads/2020/04/Shoope-ECommerce-dan-Marketplace-Terbaik-Indonesia-min.png',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'fullstack',
       demoUrl: '#',
@@ -20,51 +21,11 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management with real-time updates',
-      image: '📋',
-      tech: ['React', 'Firebase', 'Material-UI'],
-      category: 'frontend',
-      demoUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather app with detailed forecasts',
-      image: '🌤️',
-      tech: ['React', 'OpenWeather API', 'Chart.js'],
-      category: 'frontend',
-      demoUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 4,
-      title: 'RESTful API Service',
-      description: 'Scalable API service with authentication and rate limiting',
-      image: '🔧',
-      tech: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
-      category: 'backend',
-      demoUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 5,
-      title: 'Social Media Platform',
-      description: 'Full-featured social media app with real-time messaging',
-      image: '📱',
-      tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+      title: 'E-Commerce Platform',
+      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
+      image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
+      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'fullstack',
-      demoUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      id: 6,
-      title: 'Data Analytics API',
-      description: 'High-performance API for data processing and analytics',
-      image: '📊',
-      tech: ['Python', 'FastAPI', 'PostgreSQL', 'Redis'],
-      category: 'backend',
       demoUrl: '#',
       githubUrl: '#',
     },
@@ -80,8 +41,7 @@ const ProjectsSection = () => {
 
   return (
     <div className="py-12">
-      <h1 className="text-4xl font-bold text-gray-9 dark:text-whitee mb-8">{t('projects.title')}</h1>
-
+      <SectionHeader title={t('projects.title')} description={t('projects.description')} />
       <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 mb-8">
         <div className="relative flex-1 max-w-md">
           <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-4" />
@@ -107,45 +67,54 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="bg-whitee dark:bg-gray-8 rounded-lg overflow-hidden shadow-sm border border-gray-2 dark:border-gray-7 hover:shadow-md transition-shadow">
-            <div className="p-6 text-center text-4xl bg-gray-50 dark:bg-gray-7">{project.image}</div>
-            <div className="p-6">
-              <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
-              <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech, index) => (
-                  <span key={index} className="px-2 py-1 bg-blue-1 dark:bg-blue-9 text-blue-8 dark:text-blue-2 text-xs rounded">
-                    {tech}
-                  </span>
-                ))}
+          <div key={project.id} className="rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
+            <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden flex flex-col bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9">
+              <div className="w-full aspect-[16/9] overflow-hidden">
+                <img src={project.image} className="w-full h-full object-cover" />
               </div>
 
-              <div className="flex items-center justify-between mb-4">
-                <span
-                  className={`px-2 py-1 text-xs rounded-full ${
-                    project.category === 'fullstack'
-                      ? 'bg-purple-1 dark:bg-purple-9 text-purple-8 dark:text-purple-2'
-                      : project.category === 'frontend'
-                      ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
-                      : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
-                  }`}
-                >
-                  {project.category}
-                </span>
-              </div>
+              <div className="flex flex-col justify-between flex-1 p-6">
+                <div>
+                  <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
+                  <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
 
-              <div className="flex space-x-2">
-                <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 bg-blue-6 text-whitee rounded text-sm hover:bg-blue-7 transition-colors">
-                  <ExternalLink size={16} />
-                  <span>{t('projects.liveDemo')}</span>
-                </button>
-                <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 border border-gray-3 dark:border-gray-6 text-gray-7 dark:text-gray-3 rounded text-sm hover:bg-gray-2 dark:hover:bg-gray-7 transition-colors">
-                  <Github size={16} />
-                  <span>{t('projects.sourceCode')}</span>
-                </button>
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`px-2 py-1 text-xs rounded-full ${
+                        project.category === 'fullstack'
+                          ? 'bg-purple-1 dark:bg-purple-9 text-purple-8 dark:text-purple-2'
+                          : project.category === 'frontend'
+                          ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
+                          : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
+                      }`}
+                    >
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex mt-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, index) => (
+                      <span key={index} className="px-2 py-1 bg-blue-1 dark:bg-blue-9 text-blue-8 dark:text-blue-2 text-xs rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 bg-blue-6 text-whitee rounded text-sm hover:bg-blue-7 transition-colors">
+                      <ExternalLink size={16} />
+                      <span>{t('projects.liveDemo')}</span>
+                    </button>
+                    <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 border border-gray-3 dark:border-gray-6 text-gray-7 dark:text-gray-3 rounded text-sm hover:bg-gray-2 dark:hover:bg-gray-7 transition-colors">
+                      <Github size={16} />
+                      <span>{t('projects.sourceCode')}</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

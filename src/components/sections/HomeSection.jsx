@@ -1,7 +1,7 @@
-import TechStackMarquee from '../common/home/TechStackMarquee';
-import GithubContribution from '../common/home/GithubContribution';
-import Greeting from '../common/home/Greeting';
-import Services from '../common/home/Services';
+import TechStackMarquee from '../sections/home/TechStackMarquee';
+import GithubContribution from '../sections/home/GithubContribution';
+import Greeting from '../sections/home/Greeting';
+import Services from '../sections/home/Services';
 
 const HomeSection = () => {
   return (

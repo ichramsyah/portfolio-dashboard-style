@@ -22,6 +22,7 @@ const techStack = [
   'Framer Motion',
   'React Router',
   'Vite',
+  'Notion',
 ];
 
 const iconMap = {
@@ -48,10 +49,19 @@ const iconMap = {
   'Framer Motion': <img src="https://cdn.worldvectorlogo.com/logos/framer-motion.svg" alt="Framer Motion" className="w-[22px] " />,
   'React Router': <img src="https://www.svgrepo.com/show/354262/react-router.svg" alt="React Router" className="w-[22px] " />,
   Vite: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/2078px-Vitejs-logo.svg.png" alt="" className="w-[22px] " />,
+  Notion: <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" className="w-[22px] " />,
 };
 
 const TechStackItem = ({ tech }) => (
-  <span className="flex-shrink-0 flex items-center gap-2 px-[20px] py-2 bg-whitee dark:bg-gray-8 border border-gray-2 dark:border-gray-7 rounded-full text-[15px] font-medium text-gray-7 dark:text-gray-3 mr-3">
+  <span
+    className="flex-shrink-0 flex items-center gap-2 px-[20px] py-2 
+    bg-whitee dark:bg-gray-8 
+    border border-gray-2 dark:border-gray-7 
+    rounded-full text-[15px] font-medium 
+    text-gray-7 dark:text-gray-3 mr-3 
+    transition-transform duration-300 hover:inset-shadow-sm hover:inset-shadow-gray-2 dark:hover:inset-shadow-gray-9
+"
+  >
     {iconMap[tech]}
     {tech}
   </span>

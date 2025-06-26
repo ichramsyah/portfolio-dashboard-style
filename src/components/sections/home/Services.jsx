@@ -42,9 +42,9 @@ const Services = () => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-book-user-icon lucide-book-user"
         >
           <path d="M15 13a3 3 0 1 0-6 0" />
@@ -58,11 +58,8 @@ const Services = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
         {serviceList.map((service) => (
-          <div className="border border-gray-2 dark:border-gray-7 rounded-lg">
-            <div
-              key={service.key}
-              className="bg-linear-to-t h-[92%] from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-4 border border-gray-2 dark:border-gray-7 m-[5px]"
-            >
+          <div key={service.key} className="border border-gray-2 dark:border-gray-7 rounded-lg">
+            <div className="bg-linear-to-t h-[92%] from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-4 border border-gray-2 dark:border-gray-7 m-[5px]">
               <div className="flex items-start space-x-4">
                 <div className="p-2 bg-gray-1 dark:bg-gray-6 rounded-lg">{service.icon}</div>
                 <div className="flex-1">

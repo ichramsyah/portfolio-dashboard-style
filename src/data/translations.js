@@ -1,4 +1,5 @@
 export const translations = {
+  // English
   en: {
     nav: {
       home: 'Home',
@@ -101,6 +102,7 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     projects: {
       title: 'Projects',
+      description: 'Several projects that I have worked on, both private and open source.',
       all: 'All Projects',
       fullstack: 'Full Stack',
       frontend: 'Frontend',
@@ -123,6 +125,8 @@ I am eager to contribute to the technology industry with innovative web solution
       responseTime: 'Response Time: Within 24 hours',
     },
   },
+
+  // Indonesia
   id: {
     nav: {
       home: 'Beranda',
@@ -231,6 +235,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     },
     projects: {
       title: 'Proyek',
+      description: 'Several projects that I have worked on, both private and open source.',
       all: 'Semua Proyek',
       fullstack: 'Full Stack',
       frontend: 'Frontend',
