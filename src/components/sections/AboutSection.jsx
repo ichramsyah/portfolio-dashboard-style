@@ -36,5 +36,16 @@ const AboutSection = () => {
     </div>
   );
 };
+const AboutSection = () => {
+  const { t } = useContext(LanguageContext);
+  return (
+    <div className="py-12">
+      <h1 className="text-3xl font-medium text-gray-9 dark:text-whitee mb-5">{t('about.title')}</h1>
+      <About />
+      <Experience />
+      <Education />
+    </div>
+  );
+};
 
 export default AboutSection;
