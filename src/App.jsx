@@ -31,10 +31,6 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [renderSection]);
-
   return (
     <ThemeProvider>
       <LanguageProvider>
