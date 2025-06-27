@@ -11,9 +11,9 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'VeloChat - Chat Realtime Web App',
       description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
-      image: 'https://idcloudhost.com/wp-content/uploads/2020/04/Shoope-ECommerce-dan-Marketplace-Terbaik-Indonesia-min.png',
+      image: 'https://i.ytimg.com/vi/2FnM3nW0jvQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC10cIwA9dyFwRYnTuO3YaRfQ9u8w',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'Fullstack',
       demoUrl: '#',
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
     },
   ];
 
-  const categories = ['all', 'Fullstack', 'frontend', 'backend'];
+  const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
 
   const filteredProjects = projects.filter((project) => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) || project.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -73,11 +73,7 @@ const ProjectsSection = () => {
             <div className="absolute flex top-1 right-1">
               <span
                 className={`font-medium pl-10 pr-7 pb-2 py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
-                  project.category === 'Fullstack'
-                    ? 'bg-gray-800 text-gray-1 dark:text-purple-2'
-                    : project.category === 'frontend'
-                    ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
-                    : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
+                  project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-7 text-gray-2 dark:text-gray-2' : 'bg-gray-6 text-gray-2 dark:text-gray-2'
                 }`}
               >
                 {project.category}
