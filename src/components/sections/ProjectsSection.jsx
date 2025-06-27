@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
       image: 'https://idcloudhost.com/wp-content/uploads/2020/04/Shoope-ECommerce-dan-Marketplace-Terbaik-Indonesia-min.png',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'fullstack',
+      category: 'Fullstack',
       demoUrl: '#',
       githubUrl: '#',
     },
@@ -25,13 +25,13 @@ const ProjectsSection = () => {
       description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
       image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'fullstack',
+      category: 'Fullstack',
       demoUrl: '#',
       githubUrl: '#',
     },
   ];
 
-  const categories = ['all', 'fullstack', 'frontend', 'backend'];
+  const categories = ['all', 'Fullstack', 'frontend', 'backend'];
 
   const filteredProjects = projects.filter((project) => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) || project.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -70,11 +70,11 @@ const ProjectsSection = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
-            <div className="absolute flex items-center top-1 right-1">
+            <div className="absolute flex top-1 right-1">
               <span
-                className={`pl-10 pr-8 py-[6px] py-1 text-lg rounded-tr-[7px] rounded-bl-[50px] bg-gray-9 ${
-                  project.category === 'fullstack'
-                    ? ' text-gray-1 dark:text-purple-2'
+                className={`font-medium pl-10 pr-7 pb-2 py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
+                  project.category === 'Fullstack'
+                    ? 'bg-gray-800 text-gray-1 dark:text-purple-2'
                     : project.category === 'frontend'
                     ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
                     : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
