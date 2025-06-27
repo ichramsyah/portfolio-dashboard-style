@@ -69,7 +69,20 @@ const ProjectsSection = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
+          <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
+            <div className="absolute top-1 right-1 flex items-center mb-4">
+              <span
+                className={`px-8 py-1 text-lg rounded-bl-full bg-gray-1 ${
+                  project.category === 'fullstack'
+                    ? ' text-purple-8 dark:text-purple-2'
+                    : project.category === 'frontend'
+                    ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
+                    : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
+                }`}
+              >
+                {project.category}
+              </span>
+            </div>
             <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden flex flex-col bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9">
               <div className="w-full aspect-[16/9] overflow-hidden">
                 <img src={project.image} className="w-full h-full object-cover" />
@@ -79,20 +92,6 @@ const ProjectsSection = () => {
                 <div>
                   <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <span
-                      className={`px-2 py-1 text-xs rounded-full ${
-                        project.category === 'fullstack'
-                          ? 'bg-purple-1 dark:bg-purple-9 text-purple-8 dark:text-purple-2'
-                          : project.category === 'frontend'
-                          ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
-                          : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
-                      }`}
-                    >
-                      {project.category}
-                    </span>
-                  </div>
                 </div>
 
                 <div className="flex mt-2">
