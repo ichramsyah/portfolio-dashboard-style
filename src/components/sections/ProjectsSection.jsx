@@ -15,10 +15,10 @@ const ProjectsSection = () => {
       title: 'VeloChat - Chat Realtime Web App',
       description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
       image: 'https://i.ytimg.com/vi/2FnM3nW0jvQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC10cIwA9dyFwRYnTuO3YaRfQ9u8w',
-      tech: [techIcons.react],
+      tech: [techIcons.mongodb, techIcons.express, techIcons.react, techIcons.nodejs, techIcons.tailwindcss],
       category: 'Fullstack',
-      demoUrl: '#',
       githubUrl: '#',
+      demoUrl: '#',
     },
     {
       id: 2,
@@ -27,8 +27,8 @@ const ProjectsSection = () => {
       image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
       tech: [techIcons.react],
       category: 'Fullstack',
-      demoUrl: 'https://www.satriabahari.site/projects',
-      githubUrl: '',
+      githubUrl: '#',
+      demoUrl: '',
     },
   ];
 
@@ -92,20 +92,25 @@ const ProjectsSection = () => {
                 </div>
                 <div className="flex justify-between items-center mt-7">
                   <div className="flex flex-wrap items-center gap-2">
-                    {project.tech.map((tech) => (
-                      <img src={tech.url} className="w-6 object-cover" alt="" />
+                    {project.tech.map((tech, index) => (
+                      <img key={index} src={tech.url} className="w-6 object-cover" alt="" />
                     ))}
                   </div>
 
                   <div className=" flex items-center justify-center space-x-4">
-                    <a href={project.demoUrl} className="flex items-center gap-[6px]">
-                      <i className="fab fa-github text-gray-8 dark:text-gray-2 text-lg"></i>
-                    </a>
-                    <span className="text-gray-5 dark:text-gray-4">|</span>
-                    <a href={project.demoUrl} className="flex items-center gap-[6px]">
-                      <ExternalLink size={16} className="text-gray-8 dark:text-gray-2 text-lg" />
-                      <span className="text-gray-8 dark:text-gray-2">{t('projects.liveDemo')}</span>
-                    </a>
+                    {project.githubUrl && (
+                      <a href={project.githubUrl} className="flex items-center gap-[6px]" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github text-gray-8 dark:text-gray-2 text-lg"></i>
+                        <span className="text-gray-9 dark:text-gray-2 text-[16px]">{t('projects.sourceCode')}</span>
+                      </a>
+                    )}
+                    {project.githubUrl && project.demoUrl && <span className="text-gray-5 dark:text-gray-4">|</span>}
+                    {project.demoUrl && (
+                      <a href={project.demoUrl} className="flex items-center gap-[6px]" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} className="text-gray-8 dark:text-gray-2 text-lg" />
+                        <span className="text-gray-9 dark:text-gray-2 text-[16px]">{t('projects.liveDemo')}</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
