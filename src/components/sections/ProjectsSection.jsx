@@ -22,9 +22,19 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
+      title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
+      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
+      image: 'https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-websites-design-example-nightlife.jpg',
+      tech: [techIcons.laravel, techIcons.tailwindcss, techIcons.mysql],
+      category: 'Fullstack',
+      githubUrl: '#',
+      demoUrl: '#',
+    },
+    {
+      id: 3,
       title: 'E-Commerce Platform',
       description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
-      image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
+      image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
       tech: [techIcons.react],
       category: 'Fullstack',
       githubUrl: '#',
@@ -68,47 +78,52 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="grid min-[768px]:grid-cols-2 min-[1400px]:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
-            <div className="absolute flex top-1 right-1">
+            <div className="absolute flex top-0 right-0">
               <span
-                className={`font-medium pl-10 pr-7 pb-2 py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
+                className={`font-medium pl-10 pr-7 pb-3 py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
                   project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-7 text-gray-2 dark:text-gray-2' : 'bg-gray-6 text-gray-2 dark:text-gray-2'
                 }`}
               >
                 {project.category}
               </span>
             </div>
-            <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden flex flex-col bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9">
+            <div className=" h-full rounded-lg overflow-hidden flex flex-col">
               <div className="w-full aspect-[16/9] overflow-hidden">
                 <img src={project.image} className="w-full h-full object-cover" />
               </div>
 
-              <div className="flex flex-col justify-between flex-1 p-6">
+              <div
+                className="
+              bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9
+              
+              flex flex-col justify-between flex-1 p-6"
+              >
                 <div>
                   <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
                 </div>
-                <div className="flex justify-between items-center mt-7">
-                  <div className="flex flex-wrap items-center gap-2">
+                <div className="w-full flex justify-between items-center mt-4">
+                  <div className="max-[1200px]:w-1/3  flex flex-wrap items-center gap-1">
                     {project.tech.map((tech, index) => (
                       <img key={index} src={tech.url} className="w-6 object-cover" alt="" />
                     ))}
                   </div>
 
-                  <div className=" flex items-center justify-center space-x-4">
+                  <div className="flex items-center justify-center space-x-[9px]">
                     {project.githubUrl && (
-                      <a href={project.githubUrl} className="flex items-center gap-[6px]" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-github text-gray-8 dark:text-gray-2 text-lg"></i>
-                        <span className="text-gray-9 dark:text-gray-2 text-[16px]">{t('projects.sourceCode')}</span>
+                      <a href={project.githubUrl} className="flex items-center gap-[5px]" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github text-gray-7 dark:text-gray-2 text-[18px]"></i>
+                        <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.sourceCode')}</span>
                       </a>
                     )}
-                    {project.githubUrl && project.demoUrl && <span className="text-gray-5 dark:text-gray-4">|</span>}
+                    {project.githubUrl && project.demoUrl && <span className="text-gray-4 dark:text-gray-5">|</span>}
                     {project.demoUrl && (
-                      <a href={project.demoUrl} className="flex items-center gap-[6px]" target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="text-gray-8 dark:text-gray-2 text-lg" />
-                        <span className="text-gray-9 dark:text-gray-2 text-[16px]">{t('projects.liveDemo')}</span>
+                      <a href={project.demoUrl} className="flex items-center gap-[5px]" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} className="text-gray-7 dark:text-gray-2 text-sm" />
+                        <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.liveDemo')}</span>
                       </a>
                     )}
                   </div>
