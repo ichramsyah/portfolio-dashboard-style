@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
-import { Search, ExternalLink, Github } from 'lucide-react';
+import { Search, ExternalLink } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
+import { techIcons } from '../common/techIcons';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
@@ -14,7 +15,7 @@ const ProjectsSection = () => {
       title: 'VeloChat - Chat Realtime Web App',
       description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
       image: 'https://i.ytimg.com/vi/2FnM3nW0jvQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC10cIwA9dyFwRYnTuO3YaRfQ9u8w',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      tech: [techIcons.react],
       category: 'Fullstack',
       demoUrl: '#',
       githubUrl: '#',
@@ -24,10 +25,10 @@ const ProjectsSection = () => {
       title: 'E-Commerce Platform',
       description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
       image: 'https://www.jagoanhosting.com/blog/wp-content/uploads/2023/09/Website-Toko-Online-Gratis-Cover-1200x675.png',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      tech: [techIcons.react],
       category: 'Fullstack',
-      demoUrl: '#',
-      githubUrl: '#',
+      demoUrl: 'https://www.satriabahari.site/projects',
+      githubUrl: '',
     },
   ];
 
@@ -89,25 +90,22 @@ const ProjectsSection = () => {
                   <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
                 </div>
-
-                <div className="flex mt-2">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, index) => (
-                      <span key={index} className="px-2 py-1 bg-blue-1 dark:bg-blue-9 text-blue-8 dark:text-blue-2 text-xs rounded">
-                        {tech}
-                      </span>
+                <div className="flex justify-between items-center mt-7">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {project.tech.map((tech) => (
+                      <img src={tech.url} className="w-6 object-cover" alt="" />
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-2">
-                    <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 bg-blue-6 text-whitee rounded text-sm hover:bg-blue-7 transition-colors">
-                      <ExternalLink size={16} />
-                      <span>{t('projects.liveDemo')}</span>
-                    </button>
-                    <button className="flex-1 flex items-center justify-center space-x-1 px-3 py-2 border border-gray-3 dark:border-gray-6 text-gray-7 dark:text-gray-3 rounded text-sm hover:bg-gray-2 dark:hover:bg-gray-7 transition-colors">
-                      <Github size={16} />
-                      <span>{t('projects.sourceCode')}</span>
-                    </button>
+                  <div className=" flex items-center justify-center space-x-4">
+                    <a href={project.demoUrl} className="flex items-center gap-[6px]">
+                      <i className="fab fa-github text-gray-8 dark:text-gray-2 text-lg"></i>
+                    </a>
+                    <span className="text-gray-5 dark:text-gray-4">|</span>
+                    <a href={project.demoUrl} className="flex items-center gap-[6px]">
+                      <ExternalLink size={16} className="text-gray-8 dark:text-gray-2 text-lg" />
+                      <span className="text-gray-8 dark:text-gray-2">{t('projects.liveDemo')}</span>
+                    </a>
                   </div>
                 </div>
               </div>
