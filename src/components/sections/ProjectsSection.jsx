@@ -70,11 +70,11 @@ const ProjectsSection = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
-            <div className="absolute top-1 right-1">
+            <div className="absolute flex items-center top-1 right-1">
               <span
-                className={`pl-14 pr-10 py-1 text-lg rounded-bl-full bg-gray-1 ${
+                className={`pl-10 pr-8 py-[6px] py-1 text-lg rounded-tr-[7px] rounded-bl-[50px] bg-gray-9 ${
                   project.category === 'fullstack'
-                    ? ' text-purple-8 dark:text-purple-2'
+                    ? ' text-gray-1 dark:text-purple-2'
                     : project.category === 'frontend'
                     ? 'bg-green-1 dark:bg-green-9 text-green-8 dark:text-green-2'
                     : 'bg-orange-1 dark:bg-orange-9 text-orange-8 dark:text-orange-2'
