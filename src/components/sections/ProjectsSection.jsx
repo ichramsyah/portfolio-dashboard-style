@@ -123,7 +123,7 @@ const ProjectsSection = () => {
                 </div>
               </span>
             </div>
-            <div className=" h-full rounded-lg overflow-hidden flex flex-col">
+            <div className="h-full rounded-lg overflow-hidden flex flex-col">
               <div className="w-full aspect-[16/9] overflow-hidden">
                 <img src={project.image} className="w-full h-full object-cover" />
               </div>
@@ -138,8 +138,8 @@ const ProjectsSection = () => {
                   <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
                 </div>
-                <div className="w-full flex justify-between items-center mt-4">
-                  <div className="max-[1200px]:w-1/3  flex flex-wrap items-center gap-1">
+                <div className="w-full flex md:flex-row flex-col justify-between items-center  mt-4">
+                  <div className="max-[1200px]:w-1/3 max-[480px]:w-full max-[480px]:justify-center max-[480px]:mb-4   flex flex-wrap items-center gap-1">
                     {project.tech.map((tech, index) => (
                       <img key={index} src={tech.url} className="w-6 object-cover" alt="" />
                     ))}
