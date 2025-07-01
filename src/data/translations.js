@@ -103,7 +103,7 @@ I am eager to contribute to the technology industry with innovative web solution
     projects: {
       title: 'Projects',
       description: 'Several projects that I have worked on, both private and open source.',
-      all: 'All Projects',
+      all: 'All Project',
       Fullstack: 'FullStack',
       Frontend: 'Frontend',
       Backend: 'Backend',
