@@ -236,7 +236,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     projects: {
       title: 'Proyek',
       description: 'Several projects that I have worked on, both private and open source.',
-      all: 'Semua Proyek',
+      all: 'Semua',
       Fullstack: 'Fullstack',
       Frontend: 'Frontend',
       Backend: 'Backend',
