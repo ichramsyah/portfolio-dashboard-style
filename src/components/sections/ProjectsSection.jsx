@@ -43,7 +43,17 @@ const ProjectsSection = () => {
       description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
       image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
       tech: [techIcons.react],
-      category: 'Fullstack',
+      category: 'Backend',
+      githubUrl: '#',
+      demoUrl: '',
+    },
+    {
+      id: 4,
+      title: 'E-Commerce Platform',
+      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
+      image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
+      tech: [techIcons.react],
+      category: 'Frontend',
       githubUrl: '#',
       demoUrl: '',
     },
@@ -68,7 +78,7 @@ const ProjectsSection = () => {
             placeholder={t('projects.search')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-3 dark:border-gray-6 rounded-lg bg-whitee dark:bg-gray-8 text-gray-9 dark:text-whitee focus:ring-2 focus:ring-blue-5 focus:border-transparent"
+            className="w-full transition-all pl-10 pr-4 py-2 border border-gray-3 dark:border-gray-6 rounded-[8px] focus:rounded-[50px] bg-whitee dark:bg-gray-8 text-gray-9 dark:text-whitee focus:ring-2 focus:ring-blue-5 outline-none"
           />
         </div>
 
@@ -77,16 +87,16 @@ const ProjectsSection = () => {
             <button
               key={category}
               onClick={() => setCategoryFilter(category)}
-              className={`flex items-center gap-2 px-4 py-[6px] rounded-full font-medium text-sm transition-all duration-300 ease-in-out
+              className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
         ${
           categoryFilter === category
-            ? category === 'frontend'
-              ? 'bg-green-600 text-whitee scale-105'
-              : category === 'backend'
-              ? 'bg-orange-600 text-whitee scale-105'
-              : category === 'fullstack'
-              ? 'bg-purple-600 text-whitee scale-105'
-              : 'bg-blue-600 text-whitee scale-105'
+            ? category === 'Frontend'
+              ? 'bg-gray-8 text-whitee scale-105'
+              : category === 'Backend'
+              ? 'bg-gray-8 text-whitee scale-105'
+              : category === 'Fullstack'
+              ? 'bg-gray-8 text-whitee scale-105'
+              : 'bg-gray-8 text-whitee scale-105'
             : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'
         }
       `}
@@ -103,7 +113,7 @@ const ProjectsSection = () => {
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
             <div className="absolute flex top-0 right-0">
               <span
-                className={`font-medium pl-10 pr-7 pb-3 py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
+                className={`font-medium pl-10 pr-7 pb-[11px] py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
                   project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-7 text-gray-2 dark:text-gray-2' : 'bg-gray-6 text-gray-2 dark:text-gray-2'
                 }`}
               >
