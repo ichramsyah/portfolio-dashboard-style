@@ -3,7 +3,6 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 import { Search, ExternalLink } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import { techIcons } from '../common/techIcons';
-import { Code, Layers, LayoutGrid } from 'lucide-react';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
