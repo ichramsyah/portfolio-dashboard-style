@@ -113,11 +113,14 @@ const ProjectsSection = () => {
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
             <div className="absolute flex top-0 right-0">
               <span
-                className={`font-medium pl-10 pr-7 pb-[11px] py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
-                  project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-7 text-gray-2 dark:text-gray-2' : 'bg-gray-6 text-gray-2 dark:text-gray-2'
+                className={`font-medium pl-7 pr-5 pb-[11px] py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
+                  project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : 'bg-gray-8 text-gray-2 dark:text-gray-2'
                 }`}
               >
-                {project.category}
+                <div className="flex items-center gap-2">
+                  {categoryIcons[project.category]}
+                  {project.category}
+                </div>
               </span>
             </div>
             <div className=" h-full rounded-lg overflow-hidden flex flex-col">
