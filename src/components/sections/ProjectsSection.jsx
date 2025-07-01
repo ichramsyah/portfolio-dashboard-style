@@ -3,11 +3,19 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 import { Search, ExternalLink } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import { techIcons } from '../common/techIcons';
+import { Code, Layers, LayoutGrid } from 'lucide-react';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
+
+  const categoryIcons = {
+    all: <LayoutGrid size={16} />,
+    fullstack: <Layers size={16} />,
+    frontend: <LayoutGrid size={16} />,
+    backend: <Code size={16} />,
+  };
 
   const projects = [
     {
@@ -65,12 +73,14 @@ const ProjectsSection = () => {
           />
         </div>
 
-        <div className="flex space-x-2">
+        <div className="flex flex-wrap gap-3">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setCategoryFilter(category)}
-              className={`px-4 py-2 rounded-lg transition-colors ${categoryFilter === category ? 'bg-blue-6 text-whitee' : 'bg-gray-1 dark:bg-gray-8 text-gray-7 dark:text-gray-3 hover:bg-gray-2 dark:hover:bg-gray-7'}`}
+              className={`px-4 py-[6px] rounded-full font-medium text-sm transition-all duration-300 ease-in-out
+        ${categoryFilter === category ? 'bg-gradient-to-tr from-blue-6 to-blue-5 text-whitee scale-105' : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'}
+      `}
             >
               {t(`projects.${category}`)}
             </button>
