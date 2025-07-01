@@ -70,7 +70,7 @@ const ProjectsSection = () => {
   return (
     <div className="py-12">
       <SectionHeader title={t('projects.title')} description={t('projects.description')} />
-      <div className="flex flex-col spacex-2 md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 mb-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between md:space-x-10 space-y-4 md:space-y-0 mb-8">
         <div className="relative flex-1 max-w-md">
           <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-4" />
           <input
