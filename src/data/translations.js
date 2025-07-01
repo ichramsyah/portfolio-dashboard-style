@@ -241,8 +241,8 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       Frontend: 'Frontend',
       Backend: 'Backend',
       search: 'Cari proyek...',
-      liveDemo: 'Demo Langsung',
-      sourceCode: 'Kode Sumber',
+      liveDemo: 'Live Demo',
+      sourceCode: 'Source Code',
       viewDetails: 'Lihat Detail',
     },
     contact: {
