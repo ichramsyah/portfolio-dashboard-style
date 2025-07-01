@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
-import { Search, ExternalLink } from 'lucide-react';
+import { Search, ExternalLink, LayoutGrid, Layers, Code } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import { techIcons } from '../common/techIcons';
 
@@ -11,9 +11,9 @@ const ProjectsSection = () => {
 
   const categoryIcons = {
     all: <LayoutGrid size={16} />,
-    fullstack: <Layers size={16} />,
-    frontend: <LayoutGrid size={16} />,
-    backend: <Code size={16} />,
+    Fullstack: <Layers size={16} />,
+    Frontend: <LayoutGrid size={16} />,
+    Backend: <Code size={16} />,
   };
 
   const projects = [
@@ -77,11 +77,22 @@ const ProjectsSection = () => {
             <button
               key={category}
               onClick={() => setCategoryFilter(category)}
-              className={`px-4 py-[6px] rounded-full font-medium text-sm transition-all duration-300 ease-in-out
-        ${categoryFilter === category ? 'bg-gradient-to-tr from-blue-6 to-blue-5 text-whitee scale-105' : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'}
+              className={`flex items-center gap-2 px-4 py-[6px] rounded-full font-medium text-sm transition-all duration-300 ease-in-out
+        ${
+          categoryFilter === category
+            ? category === 'frontend'
+              ? 'bg-green-600 text-whitee scale-105'
+              : category === 'backend'
+              ? 'bg-orange-600 text-whitee scale-105'
+              : category === 'fullstack'
+              ? 'bg-purple-600 text-whitee scale-105'
+              : 'bg-blue-600 text-whitee scale-105'
+            : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'
+        }
       `}
             >
-              {t(`projects.${category}`)}
+              {categoryIcons[category]}
+              <span>{t(`projects.${category}`)}</span>
             </button>
           ))}
         </div>
