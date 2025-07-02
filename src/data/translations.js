@@ -259,7 +259,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     },
     projects: {
       title: 'Proyek',
-      description: 'Beberapa proyek yang telah saya kerjakan, baik proyek pribadi, pendidikan, maupun sumber terbuka.',
+      description: 'Beberapa proyek yang telah saya kerjakan, baik proyek pribadi maupun pendidikan',
       all: 'Semua',
       Fullstack: 'Fullstack',
       Frontend: 'Frontend',

@@ -10,7 +10,7 @@ const Experience = () => {
 
   return (
     <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-7">
-      <h3 className="flex items-center text-2xl font-semibold text-gray-9 dark:text-whitee mb-6">
+      <h3 className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6">
         <BriefcaseBusiness className="mr-2" /> {t('about.experience')}
       </h3>
       <div className="">
@@ -30,7 +30,7 @@ const Experience = () => {
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg font-semibold text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-blue-5 dark:text-blue-3 mb-2">{exp.company}</p>
+                    <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
                     <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
                       <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>

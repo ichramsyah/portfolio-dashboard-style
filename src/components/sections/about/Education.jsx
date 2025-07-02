@@ -7,7 +7,7 @@ const Education = () => {
   const educationItems = t('about.educationItems', { returnObjects: true });
   return (
     <div className="">
-      <h3 className="flex items-center text-2xl font-semibold text-gray-9 dark:text-whitee mb-6">
+      <h3 className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6">
         <GraduationCap className="mr-2" /> {t('about.education')}
       </h3>
       <div className="space-y-6">
@@ -20,7 +20,7 @@ const Education = () => {
                   <img src={edu.logo} className="w-7 object-contain mt-[3px]" alt="" />
                   <div className="flex-1">
                     <h4 className="text-xl font-semibold text-gray-9 dark:text-whitee mb-1">{edu.school}</h4>
-                    <p className="text-blue-5 dark:text-blue-3 mb-2">{edu.degree}</p>
+                    <p className="text-blue-4 dark:text-blue-3 mb-2">{edu.degree}</p>
                     <div className="flex items-center space-x-2 mb-1">
                       <p className="text-sm text-gray-5 dark:text-gray-4">{edu.year}</p>
                       <p className="text-[12px] text-gray-5 dark:text-gray-4">{edu.location}</p>

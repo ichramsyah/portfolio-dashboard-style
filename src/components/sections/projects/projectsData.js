@@ -13,14 +13,14 @@ export const projects = [
   },
   {
     id: 2,
-    image: '/images/rinema.webp',
+    image: '/images/rinema.png',
     tech: [techIcons.php, techIcons.laravel, techIcons.tailwindcss, techIcons.mysql],
     githubUrl: 'https://github.com/ichramsyah/rinema-fullstack-webApp',
     demoUrl: 'https://rinemaa.paramadina.ac.id',
   },
   {
     id: 3,
-    image: './images/rinema-rebuild.webp',
+    image: './images/rinema-rebuild.png',
     tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
     githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
     demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
