@@ -47,11 +47,11 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-[0.2s] ${
-                        activeSection === item.id ? 'bg-blue-1 dark:bg-blue-4 text-blue-7 dark:text-gray-1 scale-[106%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[106%]'
+                      className={`w-full flex items-center space-x-3 px-3 py-2 pb-[11px] rounded-lg transition-[0.2s] ${
+                        activeSection === item.id ? 'bg-blue-1 dark:bg-blue-4 text-blue-7 dark:text-gray-1 scale-[104%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[104%]'
                       }`}
                     >
-                      <Icon size={22} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
+                      <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
                       <span>{item.label}</span>
                     </button>
                   </li>
