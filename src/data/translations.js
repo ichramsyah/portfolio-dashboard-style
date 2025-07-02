@@ -126,15 +126,9 @@ I am eager to contribute to the technology industry with innovative web solution
         },
         {
           id: 3,
-          title: 'E-Commerce Backend',
-          description: 'Backend API for an e-commerce platform built with Node.js and Express.',
+          title: 'Rebuild Rinema - Indonesian Movie Lovers Social Platform',
+          description: 'The rebuild of the Rinema app website uses a more modern approach.',
           category: 'Backend',
-        },
-        {
-          id: 4,
-          title: 'E-Commerce Frontend',
-          description: 'Frontend interface for an e-commerce application built using React.',
-          category: 'Frontend',
         },
       ],
     },
@@ -273,7 +267,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       items: [
         {
           id: 1,
-          title: 'VeloChat - Aplikasi Chat Realtime',
+          title: 'VeloChat - Aplikasi Web Chat Realtime',
           description: 'VeloChat adalah aplikasi chat realtime yang dibangun dengan stack MERN dan integrasi Socket.IO.',
           category: 'Fullstack',
         },
@@ -285,15 +279,9 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
         },
         {
           id: 3,
-          title: 'Backend E-Commerce',
-          description: 'API backend untuk platform e-commerce yang dibangun dengan Node.js dan Express.',
+          title: 'Rebuild Rinema - Platform Sosial Pecinta Film Indonesia',
+          description: 'Pembangunan ulang website aplikasi Rinema menggunakan pendekatan yang lebih modern',
           category: 'Backend',
-        },
-        {
-          id: 4,
-          title: 'Frontend E-Commerce',
-          description: 'Antarmuka frontend untuk aplikasi e-commerce yang dibangun dengan React.',
-          category: 'Frontend',
         },
       ],
     },

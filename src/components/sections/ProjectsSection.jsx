@@ -23,29 +23,22 @@ const ProjectsSection = () => {
       id: 1,
       image: 'https://i.ytimg.com/vi/2FnM3nW0jvQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC10cIwA9dyFwRYnTuO3YaRfQ9u8w',
       tech: [techIcons.mongodb, techIcons.express, techIcons.react, techIcons.nodejs, techIcons.tailwindcss],
-      githubUrl: '#',
-      demoUrl: '#',
+      githubUrl: 'https://github.com/ichramsyah/velochat-fullstack-webApp',
+      demoUrl: 'https://youtu.be/2FnM3nW0jvQ?feature=shared',
     },
     {
       id: 2,
       image: '/images/rinema.webp',
-      tech: [techIcons.laravel, techIcons.tailwindcss, techIcons.mysql],
-      githubUrl: '#',
-      demoUrl: '#',
+      tech: [techIcons.php, techIcons.laravel, techIcons.tailwindcss, techIcons.mysql],
+      githubUrl: 'https://github.com/ichramsyah/rinema-fullstack-webApp',
+      demoUrl: 'https://rinemaa.paramadina.ac.id',
     },
     {
       id: 3,
-      image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
-      tech: [techIcons.react],
-      githubUrl: '#',
-      demoUrl: '',
-    },
-    {
-      id: 4,
-      image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
-      tech: [techIcons.react],
-      githubUrl: '#',
-      demoUrl: '',
+      image: './images/rinema-rebuild.webp',
+      tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+      githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
+      demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
     },
   ];
 
@@ -110,7 +103,7 @@ const ProjectsSection = () => {
             </div>
             <div className="h-full rounded-lg overflow-hidden flex flex-col">
               <div className="w-full aspect-[16/9] overflow-hidden">
-                <img src={project.image} className="w-full h-full object-cover" alt="" />
+                <img src={project.image} className="w-full bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
               </div>
               <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 flex flex-col justify-between flex-1 p-6">
                 <div>
