@@ -17,7 +17,7 @@ const Experience = () => {
         {experienceItems.map((exp, index) => (
           <div key={index} className="flex space-x-4">
             <div className="flex-shrink-0 flex flex-col items-center">
-              <div className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-4'}`}></div>
+              <div className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-3 dark:bg-blue-3'}`}></div>
               <div className="w-0.5 h-full bg-gray-3 dark:bg-gray-6 "></div>
             </div>
 
