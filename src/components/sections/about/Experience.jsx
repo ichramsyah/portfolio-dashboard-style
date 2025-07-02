@@ -34,7 +34,7 @@ const Experience = () => {
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
                     <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
                       <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
-                      <div className="flex md:flex-row flex-col gap-2">
+                      <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
