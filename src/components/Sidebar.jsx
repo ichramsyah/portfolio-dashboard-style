@@ -48,7 +48,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setIsMobileMenuOpen(false);
                       }}
                       className={`w-full flex items-center space-x-3 px-3 py-2 pb-[11px] rounded-lg transition-[0.2s] ${
-                        activeSection === item.id ? 'bg-blue-1 dark:bg-blue-4 text-blue-7 dark:text-gray-1 scale-[104%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[104%]'
+                        activeSection === item.id ? 'bg-blue-1 dark:bg-blue-3 text-blue-7 dark:text-blue-6 scale-[100%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[104%]'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
