@@ -40,6 +40,20 @@ const ProjectsSection = () => {
       githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
       demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
     },
+    {
+      id: 4,
+      image: './images/portfolio-dashboard.JPG',
+      tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+      githubUrl: 'https://github.com/ichramsyah/portfolio-dashboard-style',
+      demoUrl: 'http://ichram-portfolio-v2.vercel.app/',
+    },
+    {
+      id: 5,
+      image: './images/portfolio-dashboard.JPG',
+      tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+      githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
+      demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
+    },
   ];
 
   const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
