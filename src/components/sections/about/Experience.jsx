@@ -17,7 +17,7 @@ const Experience = () => {
         {experienceItems.map((exp, index) => (
           <div key={index} className="flex space-x-4">
             <div className="flex-shrink-0 flex flex-col items-center">
-              <div className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-6'}`}></div>
+              <div className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-4'}`}></div>
               <div className="w-0.5 h-full bg-gray-3 dark:bg-gray-6 "></div>
             </div>
 
@@ -27,10 +27,10 @@ const Experience = () => {
                   <img src={exp.logo} className="w-7 object-contain mt-[3px]" alt="" />
 
                   <div className="flex-1 relative">
-                    <span className="absolute top-0 right-0 text-sm text-gray-400 dark:text-gray-400 hidden sm:block">{exp.location}</span>
+                    <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg font-semibold text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-blue-6 dark:text-blue-4 mb-2">{exp.company}</p>
+                    <p className="text-blue-5 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
                     <div className="flex items-center space-x-2 mb-5">
                       <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
