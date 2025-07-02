@@ -1,6 +1,7 @@
 import { Globe } from 'lucide-react';
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
+import { ChevronDown } from 'lucide-react';
 
 const About = () => {
   const { t } = useContext(LanguageContext);
@@ -18,8 +19,12 @@ const About = () => {
     <div className="grid lg:grid-cols-2 gap-12 mb-8 pb-8 border-b border-gray-3 dark:border-gray-7">
       <div>
         <p className="text-[17px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line">{showFullBio ? fullBio : previewBio}</p>
-        <button onClick={() => setShowFullBio((prev) => !prev)} className="text-blue-600 hover:underline text-sm">
+        <button
+          onClick={() => setShowFullBio((prev) => !prev)}
+          className="inline-flex items-center gap-1 text-sm text-blue-600 bg-blue-100 dark:bg-blue-9 dark:text-blue-3 px-3 py-[5px] rounded-full transition-all hover:bg-blue-200 dark:hover:bg-blue-8"
+        >
           {showFullBio ? 'Show less' : 'Show more'}
+          <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />
         </button>
       </div>
 
@@ -35,7 +40,7 @@ const About = () => {
                 <span className="text-gray-5 dark:text-gray-4">{lang.level}%</span>
               </div>
               <div className="w-full bg-gray-2 dark:bg-gray-7 rounded-full h-2">
-                <div className="bg-blue-6 h-2 rounded-full transition-all duration-1000" style={{ width: `${lang.level}%` }} />
+                <div className="bg-blue-3 h-2 rounded-full transition-all duration-1000" style={{ width: `${lang.level}%` }} />
               </div>
             </div>
           ))}
