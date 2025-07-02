@@ -46,7 +46,7 @@ const App = () => {
           </button>
 
           <div className="lg:ml-64 min-h-screen">
-            <main className="container mx-auto px-6 lg:px-12">{renderSection()}</main>
+            <main className="container mx-auto px-6 md:pt-0 pt-2 lg:px-12">{renderSection()}</main>
           </div>
         </div>
       </LanguageProvider>
