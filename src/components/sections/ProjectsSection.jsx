@@ -16,44 +16,34 @@ const ProjectsSection = () => {
     Backend: <Code size={16} />,
   };
 
+  const projectTexts = t('projects.items');
+
   const projects = [
     {
       id: 1,
-      title: 'VeloChat - Chat Realtime Web App',
-      description: 'Berbagi.link is a mini-website platform for online businesses but lacks mobile functionality. This project develops an Android-based',
       image: 'https://i.ytimg.com/vi/2FnM3nW0jvQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC10cIwA9dyFwRYnTuO3YaRfQ9u8w',
       tech: [techIcons.mongodb, techIcons.express, techIcons.react, techIcons.nodejs, techIcons.tailwindcss],
-      category: 'Fullstack',
       githubUrl: '#',
       demoUrl: '#',
     },
     {
       id: 2,
-      title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
-      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
-      image: 'https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-websites-design-example-nightlife.jpg',
+      image: '/images/rinema.webp',
       tech: [techIcons.laravel, techIcons.tailwindcss, techIcons.mysql],
-      category: 'Fullstack',
       githubUrl: '#',
       demoUrl: '#',
     },
     {
       id: 3,
-      title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
       image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
       tech: [techIcons.react],
-      category: 'Backend',
       githubUrl: '#',
       demoUrl: '',
     },
     {
       id: 4,
-      title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with React and Node.js dsadsa dsa dsadsadsadsa sad sadsa dsa dsa',
       image: 'https://www.zenesys.com/getmedia/5dfa0f67-7e79-4705-bbd0-a1f93ff06a74/TOP-10-WEB-DESIGN-TRENDS-IN-2024.png?width=1200&height=630&ext=.png',
       tech: [techIcons.react],
-      category: 'Frontend',
       githubUrl: '#',
       demoUrl: '',
     },
@@ -61,11 +51,21 @@ const ProjectsSection = () => {
 
   const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
 
-  const filteredProjects = projects.filter((project) => {
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) || project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = categoryFilter === 'all' || project.category === categoryFilter;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredProjects = projects
+    .map((project) => {
+      const text = projectTexts.find((p) => p.id === project.id);
+      return {
+        ...project,
+        title: text?.title || '',
+        description: text?.description || '',
+        category: text?.category || 'Fullstack',
+      };
+    })
+    .filter((project) => {
+      const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) || project.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = categoryFilter === 'all' || project.category === categoryFilter;
+      return matchesSearch && matchesCategory;
+    });
 
   return (
     <div className="py-12">
@@ -88,18 +88,7 @@ const ProjectsSection = () => {
               key={category}
               onClick={() => setCategoryFilter(category)}
               className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
-        ${
-          categoryFilter === category
-            ? category === 'Frontend'
-              ? 'bg-blue-4 text-whitee scale-105'
-              : category === 'Backend'
-              ? 'bg-blue-4 text-whitee scale-105'
-              : category === 'Fullstack'
-              ? 'bg-blue-4 text-whitee scale-105'
-              : 'bg-blue-4 text-whitee scale-105'
-            : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'
-        }
-      `}
+              ${categoryFilter === category ? 'bg-blue-4 text-whitee scale-105' : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'}`}
             >
               {categoryIcons[category]}
               <span>{t(`projects.${category}`)}</span>
@@ -112,11 +101,7 @@ const ProjectsSection = () => {
         {filteredProjects.map((project) => (
           <div key={project.id} className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
             <div className="absolute flex top-0 right-0">
-              <span
-                className={`font-medium pl-7 pr-5 pb-[11px] py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
-                  project.category === 'Fullstack' ? 'bg-blue-4 text-white dark:text-gray-2' : project.category === 'Frontend' ? 'bg-blue-4 text-white dark:text-gray-2' : 'bg-blue-4 text-white dark:text-gray-2'
-                }`}
-              >
+              <span className="font-medium pl-7 pr-5 pb-[11px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[50px] bg-blue-4 text-white dark:text-gray-2">
                 <div className="flex items-center gap-2">
                   {categoryIcons[project.category]}
                   {project.category}
@@ -125,26 +110,19 @@ const ProjectsSection = () => {
             </div>
             <div className="h-full rounded-lg overflow-hidden flex flex-col">
               <div className="w-full aspect-[16/9] overflow-hidden">
-                <img src={project.image} className="w-full h-full object-cover" />
+                <img src={project.image} className="w-full h-full object-cover" alt="" />
               </div>
-
-              <div
-                className="
-              bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9
-              
-              flex flex-col justify-between flex-1 p-6"
-              >
+              <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 flex flex-col justify-between flex-1 p-6">
                 <div>
                   <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
                 </div>
-                <div className="w-full flex md:flex-row flex-col justify-between items-center  mt-4">
-                  <div className="max-[1200px]:w-1/3 max-[480px]:w-full max-[480px]:justify-center max-[480px]:mb-4   flex flex-wrap items-center gap-1">
+                <div className="w-full flex md:flex-row flex-col justify-between items-center mt-4">
+                  <div className="max-[1200px]:w-1/3 max-[480px]:w-full max-[480px]:justify-center max-[480px]:mb-4 flex flex-wrap items-center gap-1">
                     {project.tech.map((tech, index) => (
                       <img key={index} src={tech.url} className="w-6 object-cover" alt="" />
                     ))}
                   </div>
-
                   <div className="flex items-center justify-center space-x-[9px]">
                     {project.githubUrl && (
                       <a href={project.githubUrl} className="flex items-center gap-[5px]" target="_blank" rel="noopener noreferrer">

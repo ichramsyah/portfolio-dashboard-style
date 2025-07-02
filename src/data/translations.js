@@ -102,7 +102,7 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     projects: {
       title: 'Projects',
-      description: 'Several projects that I have worked on, both private and open source.',
+      description: 'Several projects I have worked on, including personal, education, and open source projects.',
       all: 'All',
       Fullstack: 'FullStack',
       Frontend: 'Frontend',
@@ -111,6 +111,32 @@ I am eager to contribute to the technology industry with innovative web solution
       liveDemo: 'Live Demo',
       sourceCode: 'Source Code',
       viewDetails: 'View Details',
+      items: [
+        {
+          id: 1,
+          title: 'VeloChat - Realtime Chat Web App',
+          description: 'VeloChat is a realtime chat application built using the MERN stack with Socket.IO integration.',
+          category: 'Fullstack',
+        },
+        {
+          id: 2,
+          title: 'Rinema - Indonesian Movie Lovers Social Platform',
+          description: 'A community-driven platform built with Laravel and MySQL for Indonesian film enthusiasts.',
+          category: 'Fullstack',
+        },
+        {
+          id: 3,
+          title: 'E-Commerce Backend',
+          description: 'Backend API for an e-commerce platform built with Node.js and Express.',
+          category: 'Backend',
+        },
+        {
+          id: 4,
+          title: 'E-Commerce Frontend',
+          description: 'Frontend interface for an e-commerce application built using React.',
+          category: 'Frontend',
+        },
+      ],
     },
     contact: {
       title: 'Contact Me',
@@ -235,7 +261,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     },
     projects: {
       title: 'Proyek',
-      description: 'Several projects that I have worked on, both private and open source.',
+      description: 'Beberapa proyek yang telah saya kerjakan, baik proyek pribadi, pendidikan, maupun sumber terbuka.',
       all: 'Semua',
       Fullstack: 'Fullstack',
       Frontend: 'Frontend',
@@ -244,6 +270,32 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       liveDemo: 'Live Demo',
       sourceCode: 'Source Code',
       viewDetails: 'Lihat Detail',
+      items: [
+        {
+          id: 1,
+          title: 'VeloChat - Aplikasi Chat Realtime',
+          description: 'VeloChat adalah aplikasi chat realtime yang dibangun dengan stack MERN dan integrasi Socket.IO.',
+          category: 'Fullstack',
+        },
+        {
+          id: 2,
+          title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
+          description: 'Sebuah platform komunitas untuk pecinta film Indonesia yang dibangun menggunakan Laravel dan MySQL.',
+          category: 'Fullstack',
+        },
+        {
+          id: 3,
+          title: 'Backend E-Commerce',
+          description: 'API backend untuk platform e-commerce yang dibangun dengan Node.js dan Express.',
+          category: 'Backend',
+        },
+        {
+          id: 4,
+          title: 'Frontend E-Commerce',
+          description: 'Antarmuka frontend untuk aplikasi e-commerce yang dibangun dengan React.',
+          category: 'Frontend',
+        },
+      ],
     },
     contact: {
       title: 'Hubungi Saya',
