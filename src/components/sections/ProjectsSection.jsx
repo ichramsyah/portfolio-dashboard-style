@@ -91,12 +91,12 @@ const ProjectsSection = () => {
         ${
           categoryFilter === category
             ? category === 'Frontend'
-              ? 'bg-gray-8 text-whitee scale-105'
+              ? 'bg-blue-4 text-whitee scale-105'
               : category === 'Backend'
-              ? 'bg-gray-8 text-whitee scale-105'
+              ? 'bg-blue-4 text-whitee scale-105'
               : category === 'Fullstack'
-              ? 'bg-gray-8 text-whitee scale-105'
-              : 'bg-gray-8 text-whitee scale-105'
+              ? 'bg-blue-4 text-whitee scale-105'
+              : 'bg-blue-4 text-whitee scale-105'
             : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'
         }
       `}
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
             <div className="absolute flex top-0 right-0">
               <span
                 className={`font-medium pl-7 pr-5 pb-[11px] py-[6px] py-1 text-sm rounded-tr-[7px] rounded-bl-[50px] ${
-                  project.category === 'Fullstack' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : project.category === 'Frontend' ? 'bg-gray-8 text-gray-2 dark:text-gray-2' : 'bg-gray-8 text-gray-2 dark:text-gray-2'
+                  project.category === 'Fullstack' ? 'bg-blue-4 text-white dark:text-gray-2' : project.category === 'Frontend' ? 'bg-blue-4 text-white dark:text-gray-2' : 'bg-blue-4 text-white dark:text-gray-2'
                 }`}
               >
                 <div className="flex items-center gap-2">
