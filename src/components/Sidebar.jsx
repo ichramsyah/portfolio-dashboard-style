@@ -88,7 +88,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 <Globe size={20} />
                 <div className="flex items-center space-x-2">
                   <span>{language === 'en' ? 'English' : 'Indonesia'}</span>
-                  <span className="mb-[-4px]">{language === 'en' ? '🇺🇸' : '🇮🇩'}</span>
+                  <span>{language === 'en' ? '🇺🇸' : '🇮🇩'}</span>
                 </div>
               </button>
             </div>
