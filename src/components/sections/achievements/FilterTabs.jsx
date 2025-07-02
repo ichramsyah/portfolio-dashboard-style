@@ -28,12 +28,14 @@ const FilterTabs = () => {
             key={filterType}
             onClick={() => setFilter(filterType === 'certifications' ? 'certification' : filterType === 'other' ? 'other' : 'all')}
             className={`relative px-3 py-1 font-medium transition-colors duration-300 group ${
-              (filter === 'all' && filterType === 'all') || (filter === 'certification' && filterType === 'certifications') || (filter === 'other' && filterType === 'other') ? 'text-blue-5' : 'text-gray-5 dark:text-gray-4 hover:text-blue-5'
+              (filter === 'all' && filterType === 'all') || (filter === 'certification' && filterType === 'certifications') || (filter === 'other' && filterType === 'other')
+                ? 'text-blue-4 dark:text-blue-3'
+                : 'text-gray-4 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'
             }`}
           >
             <span
               className={`absolute left-0 -bottom-1 h-[2px] w-full transition-all duration-300 ${
-                (filter === 'all' && filterType === 'all') || (filter === 'certification' && filterType === 'certifications') || (filter === 'other' && filterType === 'other') ? 'bg-blue-5' : 'bg-transparent group-hover:bg-blue-5'
+                (filter === 'all' && filterType === 'all') || (filter === 'certification' && filterType === 'certifications') || (filter === 'other' && filterType === 'other') ? 'bg-blue-3' : 'bg-transparent group-hover:bg-blue-3'
               }`}
             />
             {t(`achievements.${filterType}`)}
