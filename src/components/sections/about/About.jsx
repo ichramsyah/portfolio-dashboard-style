@@ -21,9 +21,9 @@ const About = () => {
         <p className="text-[17px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line">{showFullBio ? fullBio : previewBio}</p>
         <button
           onClick={() => setShowFullBio((prev) => !prev)}
-          className="inline-flex items-center gap-1 text-sm text-blue-600 bg-blue-100 dark:bg-blue-9 dark:text-blue-3 px-3 py-[5px] rounded-full transition-all hover:bg-blue-200 dark:hover:bg-blue-8"
+          className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-blue-1 bg-blue-1 dark:bg-blue-4 hover:bg-blue-2 dark:hover:bg-blue-5 px-3 py-[5px] rounded-full transition-all"
         >
-          {showFullBio ? 'Show less' : 'Show more'}
+          <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Show more'}</span>
           <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />
         </button>
       </div>
