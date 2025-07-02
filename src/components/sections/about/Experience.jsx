@@ -32,11 +32,13 @@ const Experience = () => {
                     <h4 className="text-lg font-semibold text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
                     <p className="text-blue-5 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
-                    <div className="flex items-center space-x-2 mb-5">
+                    <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
                       <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
-                      <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
-                      <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
-                      <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
+                      <div className="flex md:flex-row flex-col gap-2">
+                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
+                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
+                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
+                      </div>
                     </div>
 
                     <Disclosure>
