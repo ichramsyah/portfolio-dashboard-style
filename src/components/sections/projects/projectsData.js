@@ -1,4 +1,3 @@
-// 📁 components/Projects/projectsData.js
 import { techIcons } from '../../common/techIcons';
 
 export const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
@@ -36,7 +35,7 @@ export const projects = [
 
   {
     id: 5,
-    image: './images/portfolio-dashboard.JPG',
+    image: './images/portfolio-landingpage.png',
     tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
     githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
     demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
