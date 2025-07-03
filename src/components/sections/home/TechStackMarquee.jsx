@@ -85,7 +85,7 @@ const TechStackMarquee = () => {
           ))}
         </div>
       </motion.div>
-      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 1 }} className="relative w-full overflow-hidden whitespace-nowrap mt-3">
+      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 1 }} viewport={{ once: true }} className="relative w-full overflow-hidden whitespace-nowrap mt-3">
         <div className="animate-marquee-left">
           {[...techStack, ...techStack, ...techStack].map((tech, index) => (
             <TechStackItem key={index} tech={tech} />
