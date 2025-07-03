@@ -2,6 +2,7 @@ import { Globe } from 'lucide-react';
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
 import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const { t } = useContext(LanguageContext);
@@ -18,33 +19,49 @@ const About = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-12 mb-8 pb-8 border-b border-gray-3 dark:border-gray-7">
       <div>
-        <p className="text-[17px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line">{showFullBio ? fullBio : previewBio}</p>
-        <button
-          onClick={() => setShowFullBio((prev) => !prev)}
-          className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-blue-1 bg-blue-1 dark:bg-blue-4 hover:bg-blue-2 dark:hover:bg-blue-5 px-3 py-[5px] rounded-full transition-all"
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-[17px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line"
         >
-          <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Show more'}</span>
-          <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />
-        </button>
+          {showFullBio ? fullBio : previewBio}
+        </motion.p>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }} viewport={{ once: true }}>
+          <button
+            onClick={() => setShowFullBio((prev) => !prev)}
+            className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-blue-1 bg-blue-1 dark:bg-blue-4 hover:bg-blue-2 dark:hover:bg-blue-5 px-3 py-[5px] rounded-full transition-all"
+          >
+            <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Show more'}</span>
+            <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />
+          </button>
+        </motion.div>
       </div>
 
       <div>
-        <h3 className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6">
+        <motion.h3
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
+          viewport={{ once: true }}
+          className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6"
+        >
           <Globe className="mr-2" /> {t('about.language')}
-        </h3>
-        <div className="space-y-4">
+        </motion.h3>
+        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.8 }} viewport={{ once: true }} className="space-y-4">
           {language.map((lang, index) => (
             <div key={index}>
               <div className="flex justify-between mb-2">
                 <span className="text-gray-7 dark:text-gray-3">{lang.name}</span>
                 <span className="text-gray-5 dark:text-gray-4">{lang.level}%</span>
               </div>
-              <div className="w-full bg-gray-2 dark:bg-gray-7 rounded-full h-2">
-                <div className="bg-blue-3 h-2 rounded-full transition-all duration-1000" style={{ width: `${lang.level}%` }} />
+              <div className="w-full bg-gray-2 dark:bg-gray-7 rounded-full h-2 overflow-hidden">
+                <motion.div className="bg-blue-3 h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${lang.level}%` }} transition={{ duration: 1, ease: 'easeOut', delay: 0.5 * index }} viewport={{ once: true }} />
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
