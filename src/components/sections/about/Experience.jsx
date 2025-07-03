@@ -6,13 +6,13 @@ import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, x: 30 },
   visible: (i) => ({
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      delay: i * 0.5,
-      duration: 0.7,
+      delay: i * 0.9,
+      duration: 0.9,
       ease: 'easeOut',
     },
   }),
@@ -24,9 +24,15 @@ const Experience = () => {
 
   return (
     <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-7">
-      <h3 className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6">
+      <motion.h3
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+        viewport={{ once: true }}
+        className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6"
+      >
         <BriefcaseBusiness className="mr-2" /> {t('about.experience')}
-      </h3>
+      </motion.h3>
       <div className="">
         {experienceItems.map((exp, index) => (
           <div key={index} className="flex space-x-4">
@@ -51,7 +57,7 @@ const Experience = () => {
               ></motion.div>
             </div>
 
-            {/* Right: Experience Card */}
+            {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
               <div className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border border-gray-2 dark:border-gray-7">
                 <div className="flex items-start space-x-4">

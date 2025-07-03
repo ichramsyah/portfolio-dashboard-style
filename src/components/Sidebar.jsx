@@ -24,7 +24,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
         <div className="flex flex-col h-full">
           <div className=" pb-5 border-b border-gray-2 dark:border-gray-7">
             <div className="flex items-center justify-between">
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="flex items-center">
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: false }} className="flex items-center">
                 <img src="./images/ppinstagram.png" alt="" className="w-8 object-cover rounded-full" />
                 <h1 className="text-[18px] font-semibold text-gray-9 dark:text-whitee pl-[6px]">Ichramabdr</h1>
                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-blue-4 ml-2 mt-[2px]" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <motion.li key={item.id} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 * index }} viewport={{ once: true }} className="group">
+                  <motion.li key={item.id} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 * index }} viewport={{ once: false }} className="group">
                     <button
                       onClick={() => {
                         setActiveSection(item.id);
@@ -64,14 +64,14 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
 
           <div className="pt-3 border-t border-gray-2 dark:border-gray-7">
             <div className="space-y-2">
-              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: false }}>
                 <button onClick={toggleTheme} className="w-full flex items-center space-x-3 px-3 py-2 text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 rounded-lg transition-[0.2s] hover:scale-[103%]">
                   {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
                   <span>{theme === 'light' ? 'Light' : 'Dark'} Mode</span>
                 </button>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 1.1 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 1.1 }} viewport={{ once: false }}>
                 <button
                   onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
                   className="w-full flex items-center space-x-3 px-3 py-2 text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 rounded-lg transition-[0.2s] hover:scale-[103%]"
