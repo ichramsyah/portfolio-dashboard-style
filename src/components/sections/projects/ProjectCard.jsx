@@ -28,14 +28,14 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
             </div>
             <div className="flex items-center justify-center space-x-[9px]">
               {project.githubUrl && (
-                <a href={project.githubUrl} className="flex items-center gap-[5px]" target="_blank" rel="noopener noreferrer">
+                <a href={project.githubUrl} className="flex items-center gap-[5px] transition-all hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github text-gray-7 dark:text-gray-2 text-[18px]"></i>
                   <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.sourceCode')}</span>
                 </a>
               )}
               {project.githubUrl && project.demoUrl && <span className="text-gray-4 dark:text-gray-5">|</span>}
               {project.demoUrl && (
-                <a href={project.demoUrl} className="flex items-center gap-[5px]" target="_blank" rel="noopener noreferrer">
+                <a href={project.demoUrl} className="flex items-center gap-[5px] transition-all hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
                   <ExternalLink size={16} className="text-gray-7 dark:text-gray-2 text-sm" />
                   <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.liveDemo')}</span>
                 </a>

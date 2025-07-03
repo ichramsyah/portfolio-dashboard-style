@@ -59,7 +59,7 @@ const ProjectsSection = () => {
               key={category}
               onClick={() => setCategoryFilter(category)}
               className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
-              ${categoryFilter === category ? 'bg-blue-4 text-whitee scale-105' : 'bg-gray-2 dark:bg-gray-7 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'}`}
+              ${categoryFilter === category ? 'bg-blue-4 text-whitee scale-105' : 'bg-gray-2 dark:bg-gray-8 text-gray-6 dark:text-gray-3 hover:bg-gray-3 dark:hover:bg-gray-6 hover:scale-105'}`}
             >
               {categoryIcons[category]}
               <span>{t(`projects.${category}`)}</span>

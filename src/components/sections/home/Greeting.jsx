@@ -1,16 +1,21 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
+import { motion } from 'framer-motion';
 
 const Greeting = () => {
   const { t } = useContext(LanguageContext);
   return (
     <div className="border-b border-gray-3 dark:border-gray-7 pb-8">
-      <h1 className="text-3xl font-medium text-gray-8 dark:text-whitee">{t('home.greeting')} Abdurrachman</h1>
-      <div className="flex items-center pt-3">
+      <motion.h1 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="text-3xl font-medium text-gray-8 dark:text-whitee">
+        {t('home.greeting')} Abdurrachman
+      </motion.h1>
+      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center pt-3">
         <h3 className="text-xl text-gray-7 dark:text-gray-3 ">{t('home.religion')}</h3>
         <p className="ml-2 px-[5px] py-[1px] text-[12px] font-medium bg-gray-2 dark:bg-gray-4 rounded-sm">ID</p>
-      </div>
-      <p className="text-lg text-gray-6 dark:text-gray-4 mt-4">{t('home.description')}</p>
+      </motion.div>
+      <motion.p initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.5 }} viewport={{ once: true }} className="text-lg text-gray-6 dark:text-gray-4 mt-4">
+        {t('home.description')}
+      </motion.p>
     </div>
   );
 };
