@@ -9,7 +9,6 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 import { Menu } from 'lucide-react';
 import './App.css';
-import GsapSection from './components/sections/GsapSection';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -27,8 +26,7 @@ const App = () => {
         return <ProjectsSection />;
       case 'contact':
         return <ContactSection />;
-      case 'gsap':
-        return <GsapSection />;
+
       default:
         return <HomeSection />;
     }
