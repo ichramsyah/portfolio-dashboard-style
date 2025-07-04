@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { svgIcons } from './svgIcons'; // Pastikan path ini benar
+import { svgIcons } from './svgIcons';
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Data kartu tetap sama
 const cardData = [
   {
     id: 'gmail',
@@ -82,9 +82,7 @@ const SocialCards = () => {
       const cards = gsap.utils.toArray('.card-item');
       const firstCard = cards[0];
 
-      // Atur tumpukan kartu di awal
       gsap.set(cards, {
-        // Posisikan semua kartu di tengah
         top: '50%',
         left: '50%',
         xPercent: -50,
@@ -99,47 +97,46 @@ const SocialCards = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top top',
-          end: `+=${(cardData.length - 1) * 1000}`, // Beri ruang scroll untuk setiap kartu
+          end: `+=${(cardData.length - 1) * 1000}`,
           scrub: 1,
           pin: true,
           anticipatePin: 1,
         },
       });
 
-      // Animasi untuk membuang kartu dan memajukan kartu berikutnya
       cards.slice(0, -1).forEach((card, index) => {
         const nextCard = cards[index + 1];
 
-        // Atur posisi awal kartu berikutnya (sedikit di bawah dan lebih kecil)
         gsap.set(nextCard, {
-          scale: 0.95,
-          yPercent: -45, // Sedikit lebih tinggi agar muncul dari balik kartu atas
+          scale: 0.5,
+          yPercent: -45,
           zIndex: cardData.length - (index + 1),
         });
 
         timeline
-          // Animasikan kartu saat ini (kartu atas) keluar layar
+
           .to(
             card,
             {
-              yPercent: -150, // Terbang ke atas
-              rotation: 15,
+              yPercent: -165,
+              scale: 0.8,
+              rotation: 13,
               duration: 0.7,
               ease: 'power2.in',
             },
             `card-${index}`
           )
-          // Animasikan kartu berikutnya maju ke tengah
+
           .to(
             nextCard,
             {
-              yPercent: -50, // Kembali ke posisi tengah vertikal
+              yPercent: -20,
               scale: 1,
               duration: 0.7,
               ease: 'power2.out',
             },
             `card-${index}`
-          ); // Mulai di waktu yang sama
+          );
       });
     }, containerRef);
 
@@ -147,37 +144,35 @@ const SocialCards = () => {
   }, []);
 
   return (
-    // Container utama untuk pinning dan background
-    <div ref={containerRef} className="h-screen w-full relative overflow-hidden">
-           {' '}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+      viewport={{ once: true }}
+      ref={containerRef}
+      className="h-screen w-full relative overflow-hidden mt-[-170px]"
+    >
       {cardData.map((card, index) => (
         <section
           key={card.id}
-          // Tambahkan ${card.bg} di sini:
-          className={`card-item absolute grid grid-cols-[2.5fr_1fr] items-center overflow-hidden p-6 bg-gradient-to-b ${card.bg} rounded-2xl border border-white/10 w-11/12 md:w-4/5 lg:w-[700px] h-[70vh] max-h-[450px]`}
+          className={`card-item absolute grid grid-cols-[2.5fr_1fr] items-center overflow-hidden p-6 bg-gradient-to-b ${card.bg} shadow-md rounded-2xl border border-white/10 w-full h-[40vh] max-h-[450px]`}
           style={{ zIndex: cardData.length - index }}
         >
-                    {/* Konten kartu tetap sama */}          <div className={`absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-white/10`}>{card.bgIcon}</div>         {' '}
+          <div className={`absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-white/10 bg-icon`}>{card.bgIcon}</div>
           <div className={`z-10 flex flex-col gap-y-2 ${card.text}`}>
-                        <h4 className="text-lg font-semibold">{card.title}</h4>            <p className="text-xs pb-2">{card.desc}</p>           {' '}
+            <h4 className="text-lg font-semibold">{card.title}</h4> <p className="text-xs pb-2">{card.desc}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" className={`${card.btn} rounded-md px-4 py-2 transition md:w-max`}>
-                           {' '}
               <div className="flex items-center gap-x-2 text-black">
-                                <p className="text-sm font-medium">Go to {card.label}</p>                {svgIcons.common}             {' '}
+                <p className="text-sm font-medium">Go to {card.label}</p> {svgIcons.common}  
               </div>
-                         {' '}
             </a>
-                     {' '}
           </div>
-                   {' '}
           <div className="flex items-end justify-end">
-                        <div className={`rounded-2xl border-8 p-2 text-white ${card.border}`}>{card.icon}</div>         {' '}
+            <div className={`rounded-2xl border-8 p-2 text-white ${card.border}`}>{card.icon}</div>
           </div>
-                 {' '}
         </section>
       ))}
-         {' '}
-    </div>
+    </motion.div>
   );
 };
 
