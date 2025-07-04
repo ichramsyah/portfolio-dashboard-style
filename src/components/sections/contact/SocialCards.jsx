@@ -98,7 +98,7 @@ const SocialCards = () => {
           trigger: containerRef.current,
           start: 'top top',
           end: `+=${(cardData.length - 1) * 1000}`,
-          scrub: 1,
+          scrub: 2,
           pin: true,
           anticipatePin: 1,
         },
