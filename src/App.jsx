@@ -9,6 +9,7 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 import { Menu } from 'lucide-react';
 import './App.css';
+import GsapSection from './components/sections/GsapSection';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -26,6 +27,8 @@ const App = () => {
         return <ProjectsSection />;
       case 'contact':
         return <ContactSection />;
+      case 'gsap':
+        return <GsapSection />;
       default:
         return <HomeSection />;
     }
@@ -38,7 +41,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-whitee dark:bg-gray-9 transition-colors">
+        <div className="min-h-screen bg-whitee  dark:bg-gray-9 transition-colors">
           <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
           <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-8 rounded-br-2xl shadow-md">
