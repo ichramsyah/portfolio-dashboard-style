@@ -150,7 +150,7 @@ const SocialCards = () => {
       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
       viewport={{ once: true }}
       ref={containerRef}
-      className="h-screen w-full relative overflow-hidden mt-[-185px]"
+      className="h-screen w-full relative overflow-hidden mt-[-180px]"
     >
       {cardData.map((card, index) => (
         <section
