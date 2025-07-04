@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                 ref={(el) => isActive && setActiveTabRef(el)}
                 onClick={() => setCategoryFilter(category)}
                 className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
-                ${isActive ? 'z-10 md:bg-transparent bg-blue-3 text-whitee dark:text-gray-2' : 'z-10 text-gray-6 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
+                ${isActive ? 'z-10 md:bg-transparent bg-blue-3 dark:bg-blue-4 text-whitee dark:text-gray-2' : 'z-10 text-gray-6 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
               >
                 {categoryIcons[category]}
                 <span>{t(`projects.${category}`)}</span>

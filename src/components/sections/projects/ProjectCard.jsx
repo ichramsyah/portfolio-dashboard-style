@@ -1,10 +1,17 @@
+import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
   return (
-    <div className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
+    <motion.div
+      initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.9 }}
+      whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+      viewport={{ once: false }}
+      className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full"
+    >
       <div className="absolute flex top-0 right-0">
-        <span className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[20px] bg-blue-3 dark:bg-blue-4 text-white dark:text-gray-2">
+        <span className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[28px] bg-blue-3 dark:bg-blue-4 text-white dark:text-gray-2">
           <div className="flex items-center gap-2">
             {categoryIcons[project.category]}
             {project.category}
@@ -44,7 +51,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

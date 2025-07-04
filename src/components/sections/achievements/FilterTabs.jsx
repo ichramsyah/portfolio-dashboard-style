@@ -62,7 +62,14 @@ const FilterTabs = () => {
       {/* Achievement Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredAchievements.map((achievement) => (
-          <div key={achievement.id} className="flex flex-col h-full bg-whitee dark:bg-gray-8 rounded-lg border-[2px] border-gray-2 dark:border-gray-7">
+          <motion.div
+            initial={{ opacity: 0, filter: 'blur(7px)', scale: 0.8 }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+            viewport={{ once: true }}
+            key={achievement.id}
+            className="flex flex-col h-full bg-whitee dark:bg-gray-8 rounded-lg border-[2px] border-gray-2 dark:border-gray-7"
+          >
             <div className="m-1 flex flex-col h-full rounded-lg overflow-hidden">
               <div className="relative group cursor-pointer aspect-[16/11] w-full overflow-hidden rounded-t-lg" onClick={() => setSelectedImage(achievement.image)}>
                 <img src={achievement.image} alt="" className="w-full h-full object-cover" />
@@ -79,7 +86,7 @@ const FilterTabs = () => {
                 <p className="text-gray-6 dark:text-gray-4 text-sm">{achievement.date}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
