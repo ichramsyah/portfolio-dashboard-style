@@ -29,7 +29,7 @@ export const projects = [
     id: 5,
     image: './images/portfolio-landingpage.png',
     tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
-    githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
+    githubUrl: 'https://github.com/ichramsyah/portfolio-landingpage-style',
     demoUrl: 'https://ichram-portofolio.vercel.app/',
   },
 

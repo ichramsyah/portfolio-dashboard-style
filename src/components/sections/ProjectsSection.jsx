@@ -1,10 +1,11 @@
-import { useContext, useState, useEffect, useRef } from 'react';
+import { useContext, useState } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
-import { Search, LayoutGrid, Layers, Code } from 'lucide-react';
+import { LayoutGrid, Layers, Code } from 'lucide-react';
 import SectionHeader from '../common/SectionHeader';
 import ProjectCard from './projects/ProjectCard';
 import { projects } from './projects/projectsData';
-import { motion } from 'framer-motion';
+import SearchInput from './projects/SearchInput';
+import FilterButtons from './projects/FilterButtons';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
@@ -18,7 +19,7 @@ const ProjectsSection = () => {
     Backend: <Code size={16} />,
   };
 
-  const projectTexts = t('projects.items');
+  const projectTexts = t('projects.items', { returnObjects: true });
   const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
 
   const filteredProjects = projects
@@ -37,79 +38,21 @@ const ProjectsSection = () => {
       return matchesSearch && matchesCategory;
     });
 
-  const containerRef = useRef(null);
-  const [activeTabRef, setActiveTabRef] = useState(null);
-  const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 });
-
-  useEffect(() => {
-    if (activeTabRef && containerRef.current) {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const activeRect = activeTabRef.getBoundingClientRect();
-      setUnderlineStyle({
-        left: activeRect.left - containerRect.left,
-        width: activeRect.width,
-      });
-    }
-  }, [categoryFilter, activeTabRef]);
-
   return (
     <div className="py-12">
       <SectionHeader title={t('projects.title')} description={t('projects.description')} />
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between md:space-x-10 space-y-4 md:space-y-0 mb-8">
-        {/* Search */}
-        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="relative flex-1 max-w-md">
-          <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-4" />
-          <input
-            type="text"
-            placeholder={t('projects.search')}
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full transition-all font-semibold pl-10 pr-4 py-2 border-2 border-gray-2 dark:border-gray-6 hover:border-blue-3 rounded-[7px] focus:rounded-[50px] bg-whitee dark:bg-gray-9 focus:text-blue-4 focus:dark:text-blue-3 focus:border-transparent focus:ring-2 focus:ring-blue-3 outline-none placeholder:text-gray-4 placeholder:font-normal"
-          />
-        </motion.div>
-
-        {/* Filter Buttons with sliding underline */}
-        <div ref={containerRef} className="relative flex flex-wrap gap-3">
-          <motion.div
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: underlineStyle.width, opacity: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 400,
-              damping: 30,
-              duration: 1,
-            }}
-            layout
-            className="absolute bottom-0 md:h-full h-0 rounded-sm bg-blue-3 dark:bg-blue-4"
-            style={{ left: underlineStyle.left }}
-          />
-          {categories.map((category) => {
-            const isActive = categoryFilter === category;
-            return (
-              <button
-                key={category}
-                ref={(el) => isActive && setActiveTabRef(el)}
-                onClick={() => setCategoryFilter(category)}
-                className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
-                ${isActive ? 'z-10 md:bg-transparent bg-blue-3 dark:bg-blue-4 text-whitee dark:text-gray-2' : 'z-10 text-gray-6 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
-              >
-                {categoryIcons[category]}
-                <span>{t(`projects.${category}`)}</span>
-              </button>
-            );
-          })}
-        </div>
+        <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} t={t} />
+        <FilterButtons categoryFilter={categoryFilter} setCategoryFilter={setCategoryFilter} categories={categories} categoryIcons={categoryIcons} t={t} />
       </div>
 
-      {/* Project Grid */}
       <div className="grid min-[768px]:grid-cols-2 min-[1400px]:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} categoryIcons={categoryIcons} t={t} />
         ))}
       </div>
 
-      {/* No Results */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
           <p className="text-gray-5 dark:text-gray-4 text-lg">No projects found matching your criteria.</p>
