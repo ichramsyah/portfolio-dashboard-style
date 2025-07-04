@@ -118,9 +118,9 @@ const SocialCards = () => {
           .to(
             card,
             {
-              yPercent: -165,
-              scale: 0.8,
-              rotation: 13,
+              yPercent: -125,
+              scale: 0.9,
+              rotation: 17,
               duration: 0.7,
               ease: 'power2.in',
             },
@@ -130,7 +130,7 @@ const SocialCards = () => {
           .to(
             nextCard,
             {
-              yPercent: -20,
+              yPercent: -40,
               scale: 1,
               duration: 0.7,
               ease: 'power2.out',
