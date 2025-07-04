@@ -121,7 +121,7 @@ const SocialCards = () => {
               yPercent: -145,
               scale: 0.9,
               rotation: 17,
-              duration: 0.7,
+              duration: 0.9,
               ease: 'power2.in',
             },
             `card-${index}`
@@ -150,7 +150,7 @@ const SocialCards = () => {
       transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
       viewport={{ once: true }}
       ref={containerRef}
-      className="h-screen w-full relative overflow-hidden mt-[-170px]"
+      className="h-screen w-full relative overflow-hidden mt-[-185px]"
     >
       {cardData.map((card, index) => (
         <section
