@@ -39,7 +39,14 @@ const FilterTabs = () => {
     <div>
       <div ref={containerRef} className="relative flex space-x-2 mb-6">
         {/* Sliding underline */}
-        <motion.div layout transition={{ type: 'spring', stiffness: 400, damping: 30 }} className="absolute bottom-0 h-full rounded-sm bg-blue-3 dark:bg-blue-4" style={{ left: underlineStyle.left, width: underlineStyle.width }} />
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0, originX: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          layout
+          className="absolute bottom-0 h-full rounded-sm bg-blue-3 dark:bg-blue-4"
+          style={{ left: underlineStyle.left, width: underlineStyle.width }}
+        />
 
         {['all', 'certifications', 'other'].map((filterType) => {
           const mappedFilter = filterType === 'certifications' ? 'certification' : filterType === 'other' ? 'other' : 'all';

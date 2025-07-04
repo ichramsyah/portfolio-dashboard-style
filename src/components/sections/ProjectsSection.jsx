@@ -58,7 +58,7 @@ const ProjectsSection = () => {
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between md:space-x-10 space-y-4 md:space-y-0 mb-8">
         {/* Search */}
-        <div className="relative flex-1 max-w-md">
+        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="relative flex-1 max-w-md">
           <Search size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-4" />
           <input
             type="text"
@@ -67,11 +67,23 @@ const ProjectsSection = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full transition-all font-semibold pl-10 pr-4 py-2 border-2 border-gray-2 dark:border-gray-6 hover:border-blue-3 rounded-[7px] focus:rounded-[50px] bg-whitee dark:bg-gray-9 focus:text-blue-4 focus:dark:text-blue-3 focus:border-transparent focus:ring-2 focus:ring-blue-3 outline-none placeholder:text-gray-4 placeholder:font-normal"
           />
-        </div>
+        </motion.div>
 
         {/* Filter Buttons with sliding underline */}
         <div ref={containerRef} className="relative flex flex-wrap gap-3">
-          <motion.div layout transition={{ type: 'spring', stiffness: 400, damping: 30 }} className="absolute bottom-0 md:h-full h-0 rounded-sm bg-blue-3 dark:bg-blue-4" style={{ left: underlineStyle.left, width: underlineStyle.width }} />
+          <motion.div
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: underlineStyle.width, opacity: 1 }}
+            transition={{
+              type: 'spring',
+              stiffness: 400,
+              damping: 30,
+              duration: 1,
+            }}
+            layout
+            className="absolute bottom-0 md:h-full h-0 rounded-sm bg-blue-3 dark:bg-blue-4"
+            style={{ left: underlineStyle.left }}
+          />
           {categories.map((category) => {
             const isActive = categoryFilter === category;
             return (
