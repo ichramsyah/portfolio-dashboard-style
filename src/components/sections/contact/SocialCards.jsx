@@ -1,106 +1,182 @@
-import React from 'react';
-import { svgIcons } from './svgIcons';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { svgIcons } from './svgIcons'; // Pastikan path ini benar
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Data kartu tetap sama
+const cardData = [
+  {
+    id: 'gmail',
+    title: 'Stay in Touch',
+    desc: 'Reach out via email for any inquiries or collaborations.',
+    bg: 'from-red-700 to-red-900',
+    text: 'text-red-300',
+    icon: svgIcons.gmail.iconGmail,
+    bgIcon: svgIcons.gmail.bgGmail,
+    btn: 'bg-red-300/80 hover:bg-red-300',
+    border: 'border-red-300/20',
+    link: 'mailto:ichramsyahabdurrachman@gmail.com',
+    label: 'Gmail',
+  },
+  {
+    id: 'instagram',
+    title: 'Follow My Journey',
+    desc: 'Stay updated with my latest posts and stories on Instagram.',
+    bg: 'from-purple-700 via-pink-500 to-orange-500',
+    text: 'text-purple-200',
+    icon: svgIcons.instagram.iconInstagram,
+    bgIcon: svgIcons.instagram.bgInstagram,
+    btn: 'bg-purple-200/80 hover:bg-purple-200',
+    border: 'border-purple-200/20',
+    link: 'https://www.instagram.com/ichramabdr/',
+    label: 'Instagram',
+  },
+  {
+    id: 'linkedin',
+    title: "Let's Connect",
+    desc: 'Connect for collaboration or explore my professional experience.',
+    bg: 'from-sky-700 to-sky-900',
+    text: 'text-sky-300',
+    icon: svgIcons.linkedIn.iconLinkedIn,
+    bgIcon: svgIcons.linkedIn.bgLinkedin,
+    btn: 'bg-sky-300/80 hover:bg-sky-300',
+    border: 'border-sky-300/20',
+    link: 'https://www.linkedin.com/in/ichramsyah-abdurrachman-49a131280/',
+    label: 'LinkedIn',
+  },
+  {
+    id: 'tiktok',
+    title: 'Join the Fun',
+    desc: 'Follow me on TikTok for entertaining and engaging content.',
+    bg: 'from-neutral-700 to-neutral-900',
+    text: 'text-neutral-400',
+    icon: svgIcons.tiktok.iconTiktok,
+    bgIcon: svgIcons.tiktok.bgTiktok,
+    btn: 'bg-neutral-400/80 hover:bg-neutral-400',
+    border: 'border-neutral-400/20',
+    link: 'https://www.tiktok.com/@diakuaku/',
+    label: 'TikTok',
+  },
+  {
+    id: 'github',
+    title: 'Explore the Code',
+    desc: 'Explore the source code for all my projects on GitHub.',
+    bg: 'from-slate-900 to-slate-950',
+    text: 'text-slate-400',
+    icon: svgIcons.github.iconGithub,
+    bgIcon: svgIcons.github.bgGithub,
+    btn: 'bg-slate-400/80 hover:bg-slate-400',
+    border: 'border-slate-400/20',
+    link: 'https://github.com/ichramsyah',
+    label: 'GitHub',
+  },
+];
 
 const SocialCards = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray('.card-item');
+      const firstCard = cards[0];
+
+      // Atur tumpukan kartu di awal
+      gsap.set(cards, {
+        // Posisikan semua kartu di tengah
+        top: '50%',
+        left: '50%',
+        xPercent: -50,
+        yPercent: -50,
+      });
+
+      gsap.set(firstCard, {
+        zIndex: cardData.length,
+      });
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: `+=${(cardData.length - 1) * 1000}`, // Beri ruang scroll untuk setiap kartu
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+
+      // Animasi untuk membuang kartu dan memajukan kartu berikutnya
+      cards.slice(0, -1).forEach((card, index) => {
+        const nextCard = cards[index + 1];
+
+        // Atur posisi awal kartu berikutnya (sedikit di bawah dan lebih kecil)
+        gsap.set(nextCard, {
+          scale: 0.95,
+          yPercent: -45, // Sedikit lebih tinggi agar muncul dari balik kartu atas
+          zIndex: cardData.length - (index + 1),
+        });
+
+        timeline
+          // Animasikan kartu saat ini (kartu atas) keluar layar
+          .to(
+            card,
+            {
+              yPercent: -150, // Terbang ke atas
+              rotation: 15,
+              duration: 0.7,
+              ease: 'power2.in',
+            },
+            `card-${index}`
+          )
+          // Animasikan kartu berikutnya maju ke tengah
+          .to(
+            nextCard,
+            {
+              yPercent: -50, // Kembali ke posisi tengah vertikal
+              scale: 1,
+              duration: 0.7,
+              ease: 'power2.out',
+            },
+            `card-${index}`
+          ); // Mulai di waktu yang sama
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-      {/* Gmail */}
-      <div class="relative grid w-full grid-cols-[2.5fr_1fr] overflow-hidden rounded-md p-6 md:col-span-2  bg-gradient-to-b from-red-700 to-red-900">
-        <div class="absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-neutral-50/9">{svgIcons.gmail.bgGmail}</div>
-        <div class="text-red-300 z-10 flex flex-col justify-between gap-y-2">
-          <h4 class="text-lg font-semibold tracking-wide">Stay in Touch</h4>
-          <p class="pb-2 text-xs">Reach out via email for any inquiries or collaborations.</p>
-          <a href="mailto:ichramsyahabdurrachman@gmail.com" target="_blank" class="bg-red-300/80 hover:bg-red-300 rounded-md px-4 py-2 transition duration-100 md:w-max ">
-            <div class="flex items-center justify-center gap-x-2 text-black">
-              <p class="text-sm font-medium">Go to gmail</p>
-              {svgIcons.common}
-            </div>
-          </a>
-        </div>
-        <div class="flex items-end justify-end">
-          <div class="rounded-2xl border-8 p-2 text-neutral-50 bg-transparent border-red-300/20">{svgIcons.gmail.iconGmail}</div>
-        </div>
-      </div>
-
-      {/* Instagram */}
-      <div class="relative grid w-full grid-cols-[2.5fr_1fr] overflow-hidden rounded-md p-6 bg-gradient-to-b from-purple-700 via-pink-500 to-orange-500">
-        <div class="absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-neutral-50/9">{svgIcons.instagram.bgInstagram}</div>
-        <div class="text-purple-200 z-10 flex flex-col justify-between gap-y-2">
-          <h4 class="text-lg font-semibold tracking-wide">Follow My Journey</h4>
-          <p class="pb-2 text-xs">Stay updated with my latest posts and stories on Instagram.</p>
-          <a href="https://www.instagram.com/ichramabdr/" class="bg-purple-200/80 hover:bg-purple-200 rounded-md px-4 py-2 transition duration-200 md:w-max ">
-            <div target="_blank" class="flex items-center justify-center gap-x-2  text-black">
-              <p class="text-sm font-medium">
-                Go to <span class="capitalize">instagram</span>
-              </p>
-              {svgIcons.common}
-            </div>
-          </a>
-        </div>
-        <div class="flex items-end justify-end">
-          <div class="rounded-2xl border-8 border-opacity-10 p-2 text-neutral-50 bg-transparent border-purple-200/20">{svgIcons.instagram.iconInstagram}</div>
-        </div>
-      </div>
-
-      {/* LinkedIn */}
-      <div class="relative grid w-full grid-cols-[2.5fr_1fr] overflow-hidden rounded-md p-6 undefined  bg-gradient-to-b from-sky-700 to-sky-900">
-        <div class="absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-neutral-50/8">{svgIcons.linkedIn.bgLinkedin}</div>
-        <div class="text-sky-300 z-10 flex flex-col justify-between gap-y-2">
-          <h4 class="text-lg font-semibold tracking-wide">Let's Connect</h4>
-          <p class="pb-2 text-xs">Connect for collaboration or explore my professional experience.</p>
-          <a href="https://www.linkedin.com/in/ichramsyah-abdurrachman-49a131280/" class="bg-sky-300/80 hover:bg-sky-300 rounded-md px-4 py-2 transition duration-200 md:w-max ">
-            <div target="_blank" class="flex items-center justify-center gap-x-2  text-black">
-              <p class="text-sm font-medium">
-                Go to <span class="capitalize">linkedin</span>
-              </p>
-              {svgIcons.common}
-            </div>
-          </a>
-        </div>
-        <div class="flex items-end justify-end">
-          <div class="rounded-2xl border-8 p-2 text-neutral-50 bg-transparent border-sky-300/20">{svgIcons.linkedIn.iconLinkedIn}</div>
-        </div>
-      </div>
-
-      {/* tiktok */}
-      <div class="relative grid w-full grid-cols-[2.5fr_1fr] overflow-hidden rounded-md p-6 undefined  bg-gradient-to-b from-neutral-700 to-neutral-900">
-        <div class="absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-neutral-50/4">{svgIcons.tiktok.bgTiktok}</div>
-        <div class="text-neutral-400 z-10 flex flex-col justify-between gap-y-2">
-          <h4 class="text-lg font-semibold tracking-wide">Join the Fun</h4>
-          <p class="pb-2 text-xs">Follow me on TikTok for entertaining and engaging content.</p>
-          <a href="https://www.tiktok.com/@diakuaku/" class="bg-neutral-400/80 hover:bg-neutral-400 rounded-md  px-4 py-2 transition duration-100 md:w-max ">
-            <div target="_blank" class="flex items-center justify-center gap-x-2  text-black">
-              <p class="text-sm font-medium">
-                Go to <span class="capitalize">tiktok</span>
-              </p>
-              {svgIcons.common}
-            </div>
-          </a>
-        </div>
-        <div class="flex items-end justify-end">
-          <div class="rounded-2xl border-8 p-2 text-neutral-50 bg-transparent border-neutral-400/20">{svgIcons.tiktok.iconTiktok}</div>
-        </div>
-      </div>
-
-      {/*  */}
-      <div class="relative grid w-full grid-cols-[2.5fr_1fr] overflow-hidden rounded-md p-6 undefined  bg-gradient-to-b from-slate-900 to-slate-950">
-        <div class="absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-neutral-50/8">{svgIcons.github.bgGithub}</div>
-        <div class="text-slate-400 z-10 flex flex-col justify-between gap-y-2">
-          <h4 class="text-lg font-semibold tracking-wide">Explore the Code</h4>
-          <p class="pb-2 text-xs">Explore the source code for all my projects on GitHub.</p>
-          <a href="https://github.com/ichramsyah" class="bg-slate-400/80 hover:bg-slate-400 rounded-md px-4 py-2 transition duration-100 md:w-max ">
-            <div target="_blank" class="flex items-center justify-center gap-x-2  text-black">
-              <p class="text-sm font-medium">
-                Go to <span class="capitalize">github</span>
-              </p>
-              {svgIcons.common}
-            </div>
-          </a>
-        </div>
-        <div class="flex items-end justify-end">
-          <div class="rounded-2xl border-8 p-2 text-neutral-50 bg-transparent border-slate-400/20">{svgIcons.github.iconGithub}</div>
-        </div>
-      </div>
+    // Container utama untuk pinning dan background
+    <div ref={containerRef} className="h-screen w-full relative overflow-hidden">
+           {' '}
+      {cardData.map((card, index) => (
+        <section
+          key={card.id}
+          // Tambahkan ${card.bg} di sini:
+          className={`card-item absolute grid grid-cols-[2.5fr_1fr] items-center overflow-hidden p-6 bg-gradient-to-b ${card.bg} rounded-2xl border border-white/10 w-11/12 md:w-4/5 lg:w-[700px] h-[70vh] max-h-[450px]`}
+          style={{ zIndex: cardData.length - index }}
+        >
+                    {/* Konten kartu tetap sama */}          <div className={`absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-white/10`}>{card.bgIcon}</div>         {' '}
+          <div className={`z-10 flex flex-col gap-y-2 ${card.text}`}>
+                        <h4 className="text-lg font-semibold">{card.title}</h4>            <p className="text-xs pb-2">{card.desc}</p>           {' '}
+            <a href={card.link} target="_blank" rel="noopener noreferrer" className={`${card.btn} rounded-md px-4 py-2 transition md:w-max`}>
+                           {' '}
+              <div className="flex items-center gap-x-2 text-black">
+                                <p className="text-sm font-medium">Go to {card.label}</p>                {svgIcons.common}             {' '}
+              </div>
+                         {' '}
+            </a>
+                     {' '}
+          </div>
+                   {' '}
+          <div className="flex items-end justify-end">
+                        <div className={`rounded-2xl border-8 p-2 text-white ${card.border}`}>{card.icon}</div>         {' '}
+          </div>
+                 {' '}
+        </section>
+      ))}
+         {' '}
     </div>
   );
 };
