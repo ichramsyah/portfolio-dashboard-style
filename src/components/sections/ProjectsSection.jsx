@@ -65,13 +65,13 @@ const ProjectsSection = () => {
             placeholder={t('projects.search')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full transition-all pl-10 pr-4 py-2 border-2 border-gray-2 dark:border-gray-6  hover:border-blue-3 rounded-[5px] focus:rounded-[50px] bg-whitee dark:bg-gray-9 text-blue-4 dark:text-blue-3 focus:border-transparent focus:ring-2 focus:ring-blue-3 outline-none placeholder:text-gray-4"
+            className="w-full transition-all font-semibold pl-10 pr-4 py-2 border-2 border-gray-2 dark:border-gray-6 hover:border-blue-3 rounded-[7px] focus:rounded-[50px] bg-whitee dark:bg-gray-9 focus:text-blue-4 focus:dark:text-blue-3 focus:border-transparent focus:ring-2 focus:ring-blue-3 outline-none placeholder:text-gray-4 placeholder:font-normal"
           />
         </div>
 
         {/* Filter Buttons with sliding underline */}
         <div ref={containerRef} className="relative flex flex-wrap gap-3">
-          <motion.div layout transition={{ type: 'spring', stiffness: 400, damping: 30 }} className="absolute bottom-0 h-full rounded-sm bg-blue-3 dark:bg-blue-4" style={{ left: underlineStyle.left, width: underlineStyle.width }} />
+          <motion.div layout transition={{ type: 'spring', stiffness: 400, damping: 30 }} className="absolute bottom-0 md:h-full h-0 rounded-sm bg-blue-3 dark:bg-blue-4" style={{ left: underlineStyle.left, width: underlineStyle.width }} />
           {categories.map((category) => {
             const isActive = categoryFilter === category;
             return (
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                 ref={(el) => isActive && setActiveTabRef(el)}
                 onClick={() => setCategoryFilter(category)}
                 className={`flex items-center gap-2 px-4 py-[6px] rounded-lg font-medium text-sm transition-all duration-300 ease-in-out
-                ${isActive ? 'z-10 text-whitee dark:text-gray-2' : 'z-10 text-gray-6 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
+                ${isActive ? 'z-10 md:bg-transparent bg-blue-3 text-whitee dark:text-gray-2' : 'z-10 text-gray-6 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
               >
                 {categoryIcons[category]}
                 <span>{t(`projects.${category}`)}</span>

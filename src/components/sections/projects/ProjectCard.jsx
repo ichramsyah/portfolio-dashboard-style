@@ -4,7 +4,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
   return (
     <div className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full">
       <div className="absolute flex top-0 right-0">
-        <span className="font-medium pl-7 pr-5 pb-[11px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[50px] bg-blue-4 text-white dark:text-gray-2">
+        <span className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[20px] bg-blue-3 dark:bg-blue-4 text-white dark:text-gray-2">
           <div className="flex items-center gap-2">
             {categoryIcons[project.category]}
             {project.category}
@@ -28,14 +28,14 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
             </div>
             <div className="flex items-center justify-center space-x-[9px]">
               {project.githubUrl && (
-                <a href={project.githubUrl} className="flex items-center gap-[5px] transition-all hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
+                <a href={project.githubUrl} className="flex items-center gap-[5px] transition-all duration-300 hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github text-gray-7 dark:text-gray-2 text-[18px]"></i>
                   <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.sourceCode')}</span>
                 </a>
               )}
               {project.githubUrl && project.demoUrl && <span className="text-gray-4 dark:text-gray-5">|</span>}
               {project.demoUrl && (
-                <a href={project.demoUrl} className="flex items-center gap-[5px] transition-all hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
+                <a href={project.demoUrl} className="flex items-center gap-[5px] transition-all duration-300 hover:-translate-y-1" target="_blank" rel="noopener noreferrer">
                   <ExternalLink size={16} className="text-gray-7 dark:text-gray-2 text-sm" />
                   <span className="text-gray-7 dark:text-gray-2 text-sm">{t('projects.liveDemo')}</span>
                 </a>
