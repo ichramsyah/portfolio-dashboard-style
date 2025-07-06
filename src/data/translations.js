@@ -127,7 +127,7 @@ I am eager to contribute to the technology industry with innovative web solution
         {
           id: 3,
           title: 'Rebuild Rinema - Indonesian Movie Lovers Social Platform',
-          description: 'The rebuild of the Rinema app website uses a more modern approach.',
+          description: 'Rebuilding the Rinema web app with its official API integration.',
           category: 'Frontend',
         },
         {
@@ -284,7 +284,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
         {
           id: 3,
           title: 'Rebuild Rinema - Platform Sosial Pecinta Film Indonesia',
-          description: 'Pembangunan ulang website aplikasi Rinema menggunakan pendekatan yang lebih modern',
+          description: 'Pengembangan ulang aplikasi web Rinema dengan integrasi API resminya.',
           category: 'Frontend',
         },
         {
