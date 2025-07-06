@@ -108,8 +108,8 @@ const SocialCards = () => {
         const nextCard = cards[index + 1];
 
         gsap.set(nextCard, {
-          scale: 0.5,
-          yPercent: -45,
+          scale: 0.8,
+          yPercent: -35,
           zIndex: cardData.length - (index + 1),
         });
 

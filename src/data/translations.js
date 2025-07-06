@@ -146,7 +146,7 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     contact: {
       title: 'Contact',
-      description: 'Contact Me!',
+      description: 'Scroll through this page and contact me!',
     },
   },
 
@@ -303,7 +303,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
     },
     contact: {
       title: 'Kontak',
-      description: 'Hubungi saya!',
+      description: 'Scroll halaman ini dan hubungi saya!',
     },
   },
 };
