@@ -96,8 +96,9 @@ I am eager to contribute to the technology industry with innovative web solution
       certifications: 'Certificate',
       other: 'Other',
       items: [
-        { type: 'certification', image: 'images/hackaton.jpg', title: 'Certificate of Participation in the Hackathon Competition', organizer: 'Paramadina University', date: 'Juny 2025' },
-        { type: 'other', image: 'images/jurnal.JPG', title: 'Journal Publications', organizer: 'Jurnal Teknoif Institut Teknologi Padang', date: 'October 2024' },
+        { type: 'certification', image: 'images/certificate/hackaton.jpg', title: 'Certificate of Participation in the Hackathon Competition', organizer: 'Paramadina University', date: 'Juny 2025' },
+        { type: 'certification', image: 'images/certificate/responsivewebdesign.png', title: 'Responsive Web Design Certification', organizer: 'FreeCodeCamp', date: 'July 2025' },
+        { type: 'other', image: 'images/certificate/jurnal.JPG', title: 'Journal Publications', organizer: 'Jurnal Teknoif Institut Teknologi Padang', date: 'October 2024' },
       ],
     },
     projects: {
@@ -247,10 +248,11 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       certifications: 'Sertifikat',
       other: 'lainnya',
       items: [
-        { type: 'certification', image: 'images/hackaton.jpg', title: 'Sertifikat Apresiasi Partisipasi Lomba Hackathon', organizer: 'Universitas Paramadina', date: 'Juni 2025' },
+        { type: 'certification', image: 'images/certificate/hackaton.jpg', title: 'Sertifikat Apresiasi Partisipasi Lomba Hackathon', organizer: 'Universitas Paramadina', date: 'Juni 2025' },
+        { type: 'certification', image: 'images/certificate/responsivewebdesign.png', title: 'Sertifikat Responsive Web Design', organizer: 'FreeCodeCamp', date: 'July 2025' },
         {
           type: 'other',
-          image: 'images/jurnal.JPG',
+          image: 'images/certificate/jurnal.JPG',
           title: 'Publikasi Journal',
           organizer: 'Jurnal Teknoif Institut Teknologi Padang',
           date: 'Oktober 2024',
