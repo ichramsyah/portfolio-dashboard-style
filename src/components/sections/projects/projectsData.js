@@ -4,13 +4,6 @@ export const categories = ['all', 'Fullstack', 'Frontend', 'Backend'];
 
 export const projects = [
   {
-    id: 4,
-    image: './images/portfolio-dashboard.png',
-    tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
-    githubUrl: 'https://github.com/ichramsyah/portfolio-dashboard-style',
-    demoUrl: 'http://ichram-portfolio-v2.vercel.app/',
-  },
-  {
     id: 1,
     image: './images/velochat.png',
     tech: [techIcons.mongodb, techIcons.express, techIcons.react, techIcons.nodejs, techIcons.tailwindcss],
@@ -24,7 +17,13 @@ export const projects = [
     githubUrl: 'https://github.com/ichramsyah/rinema-fullstack-webApp',
     demoUrl: 'https://rinemaa.paramadina.ac.id',
   },
-
+  {
+    id: 4,
+    image: './images/portfolio-dashboard.png',
+    tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+    githubUrl: 'https://github.com/ichramsyah/portfolio-dashboard-style',
+    demoUrl: 'http://ichram-portfolio-v2.vercel.app/',
+  },
   {
     id: 5,
     image: './images/portfolio-landingpage.png',
