@@ -147,6 +147,12 @@ I am eager to contribute to the technology industry with innovative web solution
           description: 'Personal website portfolio with landing page design',
           category: 'Frontend',
         },
+        {
+          id: 6,
+          title: 'RESTful APIs Simple Notes App',
+          description: 'A simple RESTful API using Express.js that functions to manage notes.',
+          category: 'Backend',
+        },
       ],
     },
     contact: {
@@ -308,6 +314,12 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
           title: 'Portofolio Website - Desain Landing Page',
           description: 'Website portofolio pribadi dengan design tata letak Landing Page',
           category: 'Frontend',
+        },
+        {
+          id: 6,
+          title: 'RESTful APIs Aplikasi Catatan Sederhana',
+          description: 'RESTful API sederhana menggunakan Express.js yang berfungsi untuk mengelola catatan (notes).',
+          category: 'Backend',
         },
       ],
     },

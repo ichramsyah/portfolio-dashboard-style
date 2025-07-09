@@ -18,6 +18,13 @@ export const projects = [
     demoUrl: 'https://rinemaa.paramadina.ac.id',
   },
   {
+    id: 3,
+    image: './images/rinema-rebuild.png',
+    tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+    githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
+    demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
+  },
+  {
     id: 4,
     image: './images/portfolio-dashboard.png',
     tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
@@ -31,12 +38,11 @@ export const projects = [
     githubUrl: 'https://github.com/ichramsyah/portfolio-landingpage-style',
     demoUrl: 'https://ichram-portofolio.vercel.app/',
   },
-
   {
-    id: 3,
-    image: './images/rinema-rebuild.png',
-    tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
-    githubUrl: 'https://github.com/ichramsyah/rinema-frontend-rebuild-filmPage',
-    demoUrl: 'https://rinema-frontend-rebuild-film-page.vercel.app/',
+    id: 6,
+    image: 'https://blog.postman.com/wp-content/uploads/2020/07/API-101-What-Is-a-REST-API-scaled.jpg',
+    tech: [techIcons.nodejs, techIcons.express],
+    githubUrl: 'https://github.com/ichramsyah/RESTful-API-notes-backend',
+    demoUrl: '',
   },
 ];
