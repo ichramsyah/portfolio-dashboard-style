@@ -43,7 +43,7 @@ const cardData = [
     bgIcon: svgIcons.linkedIn.bgLinkedin,
     btn: 'bg-sky-300/80 hover:bg-sky-300',
     border: 'border-sky-300/20',
-    link: 'https://www.linkedin.com/in/ichramsyah-abdurrachman-49a131280/',
+    link: 'https://www.linkedin.com/in/ichramsyah-abdurrachman/',
     label: 'LinkedIn',
   },
   {
