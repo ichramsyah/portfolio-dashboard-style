@@ -8,7 +8,7 @@ export const projects = [
     image: './images/velochat.png',
     tech: [techIcons.mongodb, techIcons.express, techIcons.react, techIcons.nodejs, techIcons.tailwindcss],
     githubUrl: 'https://github.com/ichramsyah/velochat-fullstack-webApp',
-    demoUrl: 'https://youtu.be/2FnM3nW0jvQ?feature=shared',
+    demoUrl: 'https://velochat.vercel.app',
   },
   {
     id: 2,
