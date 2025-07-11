@@ -40,7 +40,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.7 }}
         viewport={{ once: true }}
-        className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-4"
+        className="flex items-center text-xl text-gray-9 dark:text-whitee mb-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const Services = () => {
               <div className="flex items-start space-x-4">
                 <div className="p-2 bg-gray-1 dark:bg-gray-6 rounded-lg">{service.icon}</div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-gray-9 dark:text-whitee mb-1">{service.title}</h3>
+                  <h3 className=" text-gray-9 dark:text-whitee mb-1">{service.title}</h3>
                   <p className="text-gray-6 dark:text-gray-4 text-sm pr-2">{service.description}</p>
                 </div>
               </div>

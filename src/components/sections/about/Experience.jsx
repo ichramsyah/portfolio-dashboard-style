@@ -24,13 +24,7 @@ const Experience = () => {
 
   return (
     <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-7">
-      <motion.h3
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-        viewport={{ once: true }}
-        className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6"
-      >
+      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-whitee mb-6">
         <BriefcaseBusiness className="mr-2" /> {t('about.experience')}
       </motion.h3>
       <div className="">
@@ -66,7 +60,7 @@ const Experience = () => {
                   <div className="flex-1 relative">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
-                    <h4 className="text-lg font-semibold text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
+                    <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
                     <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
 

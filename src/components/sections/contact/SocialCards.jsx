@@ -160,7 +160,7 @@ const SocialCards = () => {
         >
           <div className={`absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-white/10 bg-icon`}>{card.bgIcon}</div>
           <div className={`z-1 flex flex-col gap-y-2 ${card.text}`}>
-            <h4 className="text-xl font-semibold">{card.title}</h4> <p className="text-xs pb-2">{card.desc}</p>
+            <h4 className="text-xl ">{card.title}</h4> <p className="text-xs pb-2">{card.desc}</p>
             <a href={card.link} target="_blank" rel="noopener noreferrer" className={`${card.btn} rounded-md px-4 py-2 transition md:w-max`}>
               <div className="flex items-center gap-x-2 text-black">
                 <p className="text-sm font-medium">Go to {card.label}</p> {svgIcons.common}

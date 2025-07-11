@@ -24,7 +24,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
         </div>
         <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 flex flex-col justify-between flex-1 p-6">
           <div>
-            <h3 className="font-semibold text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
+            <h3 className=" text-gray-9 dark:text-whitee mb-2">{project.title}</h3>
             <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
           </div>
           <div className="w-full flex md:flex-row flex-col justify-between items-center mt-4">

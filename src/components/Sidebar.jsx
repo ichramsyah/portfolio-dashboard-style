@@ -25,9 +25,9 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           <div className=" pb-5 border-b border-gray-2 dark:border-gray-7">
             <div className="flex items-center justify-between">
               <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: false }} className="flex items-center">
-                <img src="./images/ppinstagram.png" alt="" className="w-8 object-cover rounded-full" />
-                <h1 className="text-[18px] font-semibold text-gray-9 dark:text-whitee pl-[6px]">Ichramabdr</h1>
-                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-blue-4 ml-2 mt-[2px]" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                <img src="./images/ppinstagram.png" alt="" className="w-7 object-cover rounded-full" />
+                <h1 className="text-lg text-gray-9 dark:text-whitee pl-[6px]">Ichramabdr</h1>
+                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-blue-4 ml-1" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                   <path fill="none" d="M0 0h24v24H0z"></path>
                   <path d="m23 12-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"></path>
                 </svg>

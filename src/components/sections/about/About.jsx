@@ -45,7 +45,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
           viewport={{ once: true }}
-          className="flex items-center text-xl font-semibold text-gray-9 dark:text-whitee mb-6"
+          className="flex items-center text-xl text-gray-9 dark:text-whitee mb-6"
         >
           <Globe className="mr-2" /> {t('about.language')}
         </motion.h3>

@@ -81,7 +81,7 @@ const FilterTabs = () => {
               <div className="relative group cursor-pointer aspect-[16/11] w-full overflow-hidden rounded-t-lg" onClick={() => setSelectedImage(achievement.image)}>
                 <img src={achievement.image} alt="" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white font-semibold text-sm">See Image</span>
+                  <span className="text-white  text-sm">See Image</span>
                 </div>
               </div>
 
