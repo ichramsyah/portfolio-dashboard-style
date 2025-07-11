@@ -14,7 +14,7 @@ export const translations = {
       description:
         'A passionate and dedicated software developer with a focus on end-to-end development. Good understanding of web technologies with modern frameworks. Accustomed to working collaboratively in a team and committed to building functional, responsive and visually appealing web applications.',
       service: 'Service',
-      services_paragraph: 'With creativity and deep analysis, I solve user experience challenges, creating solutions that connect people worldwide with integrity.',
+      services_paragraph: 'I deliver fully integrated digital solutions, combining solid backend development, responsive frontend, and user-centric UI/UX design, to create effective and user-friendly web applications',
       services: {
         fullstack: {
           title: 'Fullstack Developer',
@@ -178,7 +178,8 @@ I am eager to contribute to the technology industry with innovative web solution
       description:
         'Seorang pengembang perangkat lunak yang bersemangat dan berdedikasi dengan fokus pada pengembangan end-to-end. Memiliki pemahaman yang baik dalam teknologi web dengan framework modern. Terbiasa bekerja secara kolaboratif dalam tim serta berkomitmen untuk membangun aplikasi web yang fungsional, responsif, dan menarik secara visual.',
       service: 'Layanan',
-      services_paragraph: 'Dengan kreativitas dan analisis mendalam, saya memecahkan tantangan pengalaman pengguna, menciptakan solusi yang menghubungkan orang di seluruh dunia dengan integritas.',
+      services_paragraph:
+        'Saya menghadirkan solusi digital yang terintegrasi penuh, menggabungkan pengembangan backend yang solid, frontend yang responsif, serta desain UI/UX yang berpusat pada pengguna, untuk menciptakan aplikasi web yang efektif dan mudah digunakan.',
       services: {
         fullstack: {
           title: 'Fullstack Developer',
@@ -315,7 +316,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
         },
         {
           id: 5,
-          title: 'Portofolio Website - Desain Landing Page',
+          title: 'Portofolio Website - Landing Page Design',
           description: 'Website portofolio pribadi dengan design tata letak Landing Page',
           category: 'Frontend',
         },
