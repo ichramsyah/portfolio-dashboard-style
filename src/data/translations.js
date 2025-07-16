@@ -115,7 +115,7 @@ I am eager to contribute to the technology industry with innovative web solution
       Frontend: 'Frontend',
       Backend: 'Backend',
       search: 'Search projects...',
-      liveDemo: 'Live Demo',
+      liveDemo: 'Live Site',
       sourceCode: 'Source Code',
       viewDetails: 'View Details',
       items: [
@@ -286,7 +286,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       Frontend: 'Frontend',
       Backend: 'Backend',
       search: 'Cari proyek...',
-      liveDemo: 'Live Demo',
+      liveDemo: 'Live Site',
       sourceCode: 'Source Code',
       viewDetails: 'Lihat Detail',
       items: [
