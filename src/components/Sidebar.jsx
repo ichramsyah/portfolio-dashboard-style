@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { Home, User, Award, Briefcase, Mail, Moon, Sun, Globe, X } from 'lucide-react';
@@ -16,13 +16,28 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     { id: 'contact', icon: Mail, label: t('nav.contact') },
   ];
 
+  const containerRef = useRef(null);
+  const [activeRef, setActiveRef] = useState(null);
+  const [sidelineStyle, setSidelineStyle] = useState({ top: 0, height: 10 });
+
+  useEffect(() => {
+    if (activeRef && containerRef.current) {
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const activeRect = activeRef.getBoundingClientRect();
+      setSidelineStyle({
+        top: activeRect.top - containerRect.top,
+        height: activeRect.height,
+      });
+    }
+  }, [activeSection, activeRef]);
+
   return (
     <>
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
       <div className={`fixed left-0 top-0 h-full w-68 bg-whitee px-7 py-7 dark:bg-gray-9 z-50 transform transition-all ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="flex flex-col h-full">
-          <div className=" pb-5 border-b border-gray-2 dark:border-gray-7">
+          <div className="pb-5 border-b border-gray-2 dark:border-gray-7">
             <div className="flex items-center justify-between">
               <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: false }} className="flex items-center">
                 <img src="./images/ppinstagram.png" alt="" className="w-7 object-cover rounded-full" />
@@ -38,19 +53,27 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
             </div>
           </div>
 
-          <nav className="flex-1 py-4">
-            <ul className="space-y-2">
+          <nav className="flex-1 py-4 relative" ref={containerRef}>
+            {/* Sliding sideline */}
+            <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-blue-3" />
+
+            <ul className="space-y-2 mt-3">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
+                const isActive = activeSection === item.id;
+
                 return (
                   <motion.li key={item.id} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 * index }} viewport={{ once: false }} className="group">
                     <button
+                      ref={(el) => {
+                        if (isActive) setActiveRef(el);
+                      }}
                       onClick={() => {
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center space-x-3 px-3 py-2 pb-[11px] rounded-lg transition-all ${
-                        activeSection === item.id ? 'bg-blue-1 dark:bg-blue-4 text-blue-7 dark:text-gray-1 scale-[100%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[104%]'
+                      className={`w-full flex items-center space-x-3 px-3 py-2 pb-[11px] rounded-lg rounded-r-sm transition-all ${
+                        isActive ? 'bg-blue-1 dark:bg-blue-4 text-blue-7 dark:text-gray-1 scale-[100%]' : 'text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 hover:scale-[104%]'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
@@ -62,6 +85,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
             </ul>
           </nav>
 
+          {/* Bagian bawah */}
           <div className="pt-3 border-t border-gray-2 dark:border-gray-7">
             <div className="space-y-2">
               <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: false }}>
