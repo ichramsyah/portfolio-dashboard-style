@@ -13,4 +13,5 @@ export const techIcons = {
   mysql: { url: 'https://cdn.simpleicons.org/mysql' },
   tailwindcss: { url: 'https://cdn.simpleicons.org/tailwindcss' },
   express: { url: 'https://cdn.simpleicons.org/express' },
+  typescript: { url: 'https://cdn.simpleicons.org/typescript' },
 };

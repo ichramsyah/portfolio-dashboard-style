@@ -115,8 +115,7 @@ I am eager to contribute to the technology industry with innovative web solution
       Frontend: 'Frontend',
       Backend: 'Backend',
       search: 'Search projects...',
-      liveDemo: 'Live Site',
-      sourceCode: 'Source Code',
+
       viewDetails: 'View Details',
       items: [
         {
@@ -130,6 +129,12 @@ I am eager to contribute to the technology industry with innovative web solution
           title: 'Rinema - Indonesian Movie Lovers Social Platform',
           description: 'A community-driven platform built with Laravel and MySQL for Indonesian film enthusiasts.',
           category: 'Fullstack',
+        },
+        {
+          id: 7,
+          title: 'BebasBlog - RESTful APIs Blog Sharing Social Media Platform',
+          description: 'This is the backend service for the BebasBlog project, a RESTful API built to support a blogging or social media platform.',
+          category: 'Backend',
         },
         {
           id: 3,
@@ -286,8 +291,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       Frontend: 'Frontend',
       Backend: 'Backend',
       search: 'Cari proyek...',
-      liveDemo: 'Live Site',
-      sourceCode: 'Source Code',
+
       viewDetails: 'Lihat Detail',
       items: [
         {
@@ -301,6 +305,12 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
           title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
           description: 'Sebuah platform komunitas untuk pecinta film Indonesia yang dibangun menggunakan Laravel dan MySQL.',
           category: 'Fullstack',
+        },
+        {
+          id: 7,
+          title: 'BebasBlog - RESTful APIs Platform Sosial Media Berbagi Blog',
+          description: 'Ini adalah layanan backend untuk proyek Bebasblog, sebuah API RESTful yang dibangun untuk mendukung platform blogging atau media sosial.',
+          category: 'Backend',
         },
         {
           id: 3,
