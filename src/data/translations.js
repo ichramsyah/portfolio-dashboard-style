@@ -132,7 +132,7 @@ I am eager to contribute to the technology industry with innovative web solution
         },
         {
           id: 7,
-          title: 'BebasBlog - RESTful APIs Blog Sharing Social Media Platform',
+          title: 'BebasBlog - RESTful APIs Social Media Platform',
           description: 'This is the backend service for the BebasBlog project, a RESTful API built to support a blogging or social media platform.',
           category: 'Backend',
         },
@@ -308,7 +308,7 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
         },
         {
           id: 7,
-          title: 'BebasBlog - RESTful APIs Platform Sosial Media Berbagi Blog',
+          title: 'BebasBlog - RESTful APIs Platform Sosials',
           description: 'Ini adalah layanan backend untuk proyek Bebasblog, sebuah API RESTful yang dibangun untuk mendukung platform blogging atau media sosial.',
           category: 'Backend',
         },
