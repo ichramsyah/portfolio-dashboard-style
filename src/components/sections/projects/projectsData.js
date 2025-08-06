@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: 7,
-    image: 'https://github.com/ichramsyah/bebasblog-backend/raw/main/src/public/postman-bebasblog.JPG',
+    image: './images/bebasblog-backend.jpeg',
     tech: [techIcons.mongodb, techIcons.typescript, techIcons.express, techIcons.nodejs],
     githubUrl: 'https://github.com/ichramsyah/bebasblog-backend',
     demoUrl: '',
