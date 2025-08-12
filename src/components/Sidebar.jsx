@@ -64,8 +64,8 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   <ToggleSwitch
                     isActive={theme === 'light'}
                     onToggle={toggleTheme}
-                    option1={{ icon: <Sun className="transition-transform duration-200 delay-200 hover:scale-120" size={14} /> }}
-                    option2={{ icon: <Moon className="transition-transform duration-200 delay-200 hover:scale-120" size={14} /> }}
+                    option1={{ icon: <Sun className="transition-transform duration-200 delay-100 hover:scale-120" size={14} /> }}
+                    option2={{ icon: <Moon className="transition-transform duration-200 delay-100 hover:scale-120" size={14} /> }}
                     activeBg="bg-whitee dark:bg-gray-7"
                     inactiveBg="bg-gray-3"
                     activeColor="text-blue-6 dark:text-gray-1"
@@ -73,7 +73,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   />
 
                   {/* Toggle Bahasa */}
-                  <ToggleSwitch
+                  {/* <ToggleSwitch
                     isActive={language === 'en'}
                     onToggle={() => setLanguage(language === 'en' ? 'id' : 'en')}
                     option1={{ icon: <span className="text-sm">🇺🇸</span> }}
@@ -82,7 +82,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     inactiveBg="bg-gray-400"
                     activeColor="text-white"
                     inactiveColor="text-gray-200"
-                  />
+                  /> */}
                 </div>
               </motion.div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-[-10px] right-[-10px] lg:hidden p-2 text-gray-5 hover:text-gray-7 dark:text-gray-4 dark:hover:text-gray-2">
@@ -110,7 +110,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center space-x-3 px-3 py-2 pb-[11px] rounded-lg rounded-r-sm transition-all duration-300 ${
+                      className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
                           ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-4 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%]'
                           : 'text-gray-7 dark:text-gray-3 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[104%]'
