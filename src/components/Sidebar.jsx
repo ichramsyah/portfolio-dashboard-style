@@ -3,6 +3,7 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { Home, User, Award, Briefcase, Mail, Moon, Sun, Globe, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ToggleSwitch from './common/ToggleSwitch';
 
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -57,6 +58,15 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     <path d="m23 12-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"></path>
                   </svg>
                 </div>
+
+                {/* Tombol */}
+                <div className="flex gap-2 mt-3">
+                  {/* Toggle untuk Tema */}
+                  <ToggleSwitch isActive={theme === 'light'} onToggle={toggleTheme} option1={{ icon: <Sun size={14} /> }} option2={{ icon: <Moon size={14} /> }} />
+
+                  {/* Toggle untuk Bahasa */}
+                  <ToggleSwitch isActive={language === 'en'} onToggle={() => setLanguage(language === 'en' ? 'id' : 'en')} option1={{ icon: <span className="text-sm">🇺🇸</span> }} option2={{ icon: <span className="text-sm">🇮🇩</span> }} />
+                </div>
               </motion.div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-[-10px] right-[-10px] lg:hidden p-2 text-gray-5 hover:text-gray-7 dark:text-gray-4 dark:hover:text-gray-2">
                 <X size={24} />
@@ -68,7 +78,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
             {/* Sliding sideline */}
             <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-blue-3" />
 
-            <ul className="space-y-2 mt-1">
+            <ul className="space-y-2">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = activeSection === item.id;
