@@ -7,6 +7,8 @@ export const translations = {
       achievements: 'Achievements',
       projects: 'Projects',
       contact: 'Contact',
+      copyright1: 'Copyright © 2025',
+      copyright2: 'Ichramsyah Abdurrachman. All rights reserved.',
     },
     home: {
       greeting: "Hello, I'm Ichramsyah",
@@ -176,6 +178,8 @@ I am eager to contribute to the technology industry with innovative web solution
       achievements: 'Prestasi',
       projects: 'Proyek',
       contact: 'Kontak',
+      copyright1: 'HAK CIPTA © 2025',
+      copyright2: 'Ichramsyah Abdurrachman. Seluruh hak dilindungi.',
     },
     home: {
       greeting: 'Hai, saya Ichramsyah',
