@@ -59,13 +59,30 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   </svg>
                 </div>
 
-                {/* Tombol */}
-                <div className="flex gap-2 mt-3">
-                  {/* Toggle untuk Tema */}
-                  <ToggleSwitch isActive={theme === 'light'} onToggle={toggleTheme} option1={{ icon: <Sun size={14} /> }} option2={{ icon: <Moon size={14} /> }} />
+                {/* Toggle */}
+                <div className="flex gap-2 py-2">
+                  <ToggleSwitch
+                    isActive={theme === 'light'}
+                    onToggle={toggleTheme}
+                    option1={{ icon: <Sun className="transition-transform duration-200 delay-200 hover:scale-120" size={14} /> }}
+                    option2={{ icon: <Moon className="transition-transform duration-200 delay-200 hover:scale-120" size={14} /> }}
+                    activeBg="bg-whitee dark:bg-gray-7"
+                    inactiveBg="bg-gray-3"
+                    activeColor="text-blue-6 dark:text-gray-1"
+                    inactiveColor="text-gray-5 dark:text-gray-4"
+                  />
 
-                  {/* Toggle untuk Bahasa */}
-                  <ToggleSwitch isActive={language === 'en'} onToggle={() => setLanguage(language === 'en' ? 'id' : 'en')} option1={{ icon: <span className="text-sm">🇺🇸</span> }} option2={{ icon: <span className="text-sm">🇮🇩</span> }} />
+                  {/* Toggle Bahasa */}
+                  <ToggleSwitch
+                    isActive={language === 'en'}
+                    onToggle={() => setLanguage(language === 'en' ? 'id' : 'en')}
+                    option1={{ icon: <span className="text-sm">🇺🇸</span> }}
+                    option2={{ icon: <span className="text-sm">🇮🇩</span> }}
+                    activeBg="bg-blue-500"
+                    inactiveBg="bg-gray-400"
+                    activeColor="text-white"
+                    inactiveColor="text-gray-200"
+                  />
                 </div>
               </motion.div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-[-10px] right-[-10px] lg:hidden p-2 text-gray-5 hover:text-gray-7 dark:text-gray-4 dark:hover:text-gray-2">
@@ -78,7 +95,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
             {/* Sliding sideline */}
             <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-blue-3" />
 
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {navItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = activeSection === item.id;
@@ -115,25 +132,6 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 <p className="text-sm text-gray-5">HAK CIPTA © 2025</p>
                 <p className="text-sm text-gray-5 pt-1">Ichramsyah Abdurrachman. Seluruh hak dilindungi.</p>
               </div>
-              {/* <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: false }}>
-                <button onClick={toggleTheme} className="w-full flex items-center space-x-3 px-3 py-2 text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 rounded-lg transition-[0.2s] hover:scale-[103%]">
-                  {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
-                  <span>{theme === 'light' ? 'Light' : 'Dark'} Mode</span>
-                </button>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 1.1 }} viewport={{ once: false }}>
-                <button
-                  onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
-                  className="w-full flex items-center space-x-3 px-3 py-2 text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 rounded-lg transition-[0.2s] hover:scale-[103%]"
-                >
-                  <Globe size={20} />
-                  <div className="flex items-center space-x-2">
-                    <span>{language === 'en' ? 'English' : 'Indonesia'}</span>
-                    <span>{language === 'en' ? '🇺🇸' : '🇮🇩'}</span>
-                  </div>
-                </button>
-              </motion.div> */}
             </div>
           </div>
         </div>
