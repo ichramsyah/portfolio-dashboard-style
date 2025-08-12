@@ -129,8 +129,8 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           <div className="pt-3 border-t border-gray-2 dark:border-gray-7">
             <div className="space-y-2">
               <div className="text-center">
-                <p className="text-sm text-gray-5">HAK CIPTA © 2025</p>
-                <p className="text-sm text-gray-5 pt-1">Ichramsyah Abdurrachman. Seluruh hak dilindungi.</p>
+                <p className="text-sm text-gray-5">{t('nav.copyright1')}</p>
+                <p className="text-sm text-gray-5 pt-1">{t('nav.copyright2')}</p>
               </div>
             </div>
           </div>
