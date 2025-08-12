@@ -64,12 +64,12 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   <ToggleSwitch
                     isActive={theme === 'light'}
                     onToggle={toggleTheme}
-                    option1={{ icon: <Sun className="transition-transform duration-200 delay-100 hover:scale-120" size={14} /> }}
-                    option2={{ icon: <Moon className="transition-transform duration-200 delay-100 hover:scale-120" size={14} /> }}
+                    option1={{ icon: <Sun className="transition-transform duration-400 delay-100 hover:scale-120" size={14} /> }}
+                    option2={{ icon: <Moon className="transition-transform duration-400 delay-100 hover:scale-120" size={14} /> }}
                     activeBg="bg-whitee dark:bg-gray-7"
                     inactiveBg="bg-gray-3"
                     activeColor="text-blue-6 dark:text-gray-1"
-                    inactiveColor="text-gray-5 dark:text-gray-4"
+                    inactiveColor="text-gray-5 dark:text-gray-3"
                   />
 
                   {/* Toggle Bahasa */}
@@ -113,7 +113,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
                           ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-4 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%]'
-                          : 'text-gray-7 dark:text-gray-3 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[104%]'
+                          : 'text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[104%]'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
