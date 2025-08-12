@@ -90,7 +90,11 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           {/* Bagian bawah */}
           <div className="pt-3 border-t border-gray-2 dark:border-gray-7">
             <div className="space-y-2">
-              <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: false }}>
+              <div className="text-center">
+                <p className="text-sm text-gray-5">HAK CIPTA © 2025</p>
+                <p className="text-sm text-gray-5 pt-1">Ichramsyah Abdurrachman. Seluruh hak dilindungi.</p>
+              </div>
+              {/* <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }} viewport={{ once: false }}>
                 <button onClick={toggleTheme} className="w-full flex items-center space-x-3 px-3 py-2 text-gray-7 dark:text-gray-3 hover:bg-gray-1 dark:hover:bg-gray-8 rounded-lg transition-[0.2s] hover:scale-[103%]">
                   {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
                   <span>{theme === 'light' ? 'Light' : 'Dark'} Mode</span>
@@ -108,7 +112,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     <span>{language === 'en' ? '🇺🇸' : '🇮🇩'}</span>
                   </div>
                 </button>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
         </div>
