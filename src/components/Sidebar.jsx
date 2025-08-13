@@ -42,13 +42,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
         <div className="flex flex-col h-full">
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
-                viewport={{ once: false }}
-                className="flex flex-col items-center w-full" // Menggunakan flex-col dan items-center
-              >
+              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: false }} className="flex flex-col items-center w-full">
                 {/* Gambar Profil */}
                 <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full" />
 

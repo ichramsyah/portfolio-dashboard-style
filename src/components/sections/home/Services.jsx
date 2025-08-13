@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
 import { Laptop, Palette } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SpotlightCard from '../../common/SpotlightCard';
 
 const Services = () => {
   const { t } = useContext(LanguageContext);
@@ -41,8 +42,43 @@ const Services = () => {
         </svg>
         <p className="pl-2">{t('home.service')}</p>
       </div>
-
       <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
+      // Perhatikan kelas-kelas responsif pada kontainer di bawah ini
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+        {/* Baris 1 */}
+        <SpotlightCard className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl" spotlightColor="rgba(221, 221, 221, 0.2)">
+          1
+        </SpotlightCard>
+
+        <SpotlightCard className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl" spotlightColor="rgba(221, 221, 221, 0.2)">
+          2
+        </SpotlightCard>
+
+        <SpotlightCard
+          // Kelas col-span-2 ini akan tetap berlaku pada layout md dan lg
+          className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl lg:col-span-2"
+          spotlightColor="rgba(221, 221, 221, 0.2)"
+        >
+          3
+        </SpotlightCard>
+
+        {/* Baris 2 */}
+        <SpotlightCard
+          // Kelas col-span-2 ini akan tetap berlaku pada layout md dan lg
+          className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl lg:col-span-2"
+          spotlightColor="rgba(221, 221, 221, 0.2)"
+        >
+          4
+        </SpotlightCard>
+
+        <SpotlightCard className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl" spotlightColor="rgba(221, 221, 221, 0.2)">
+          5
+        </SpotlightCard>
+
+        <SpotlightCard className="h-48 flex items-center justify-center rounded-lg bg-zinc-800 text-3xl" spotlightColor="rgba(221, 221, 221, 0.2)">
+          6
+        </SpotlightCard>
+      </div>
     </div>
   );
 };

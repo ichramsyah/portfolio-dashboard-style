@@ -50,7 +50,7 @@ const ToggleSwitch = ({
   const travel = typeof distanceOverride === 'number' ? distanceOverride : distance;
 
   return (
-    <div ref={containerRef} onClick={onToggle} className="relative flex w-15 h-7 cursor-pointer items-center rounded-lg bg-gray-2 dark:bg-gray-8 p-1 overflow-hidden">
+    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 dark:bg-gray-8 p-1 overflow-hidden">
       {/* Slider/knob */}
       <motion.div
         ref={knobRef}
