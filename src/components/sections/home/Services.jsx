@@ -24,7 +24,7 @@ const Services = () => {
         <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
-            <span className="pt-4 text-gray-8 dark:text-gray-200">Skills & Tools</span>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A collection of my technical skills and tools.</p>
           </div>
           <TechStackMarquee />
@@ -33,10 +33,10 @@ const Services = () => {
         <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
           <div className="flex flex-col items-center justify-center p-5">
             <User width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
-            <span className="pt-4 text-gray-8 dark:text-gray-200">About me</span>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">About me</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
           </div>
-          <div style={{ height: '600px', position: 'relative' }}>
+          <div className="relative mt-[-30px]">
             <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
           </div>
         </SpotlightCard>
