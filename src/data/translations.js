@@ -12,7 +12,7 @@ export const translations = {
       copyright2: 'Ichramsyah Abdurrachman. All rights reserved.',
     },
     home: {
-      greeting: "Hello, I'm Ichramsyah",
+      greeting: "Hello, I'm Ichramsyah Abdurrachman",
       religion: 'from Jakarta, Indonesia',
       description:
         'A passionate and dedicated software developer with a focus on end-to-end development. Good understanding of web technologies with modern frameworks. Accustomed to working collaboratively in a team and committed to building functional, responsive and visually appealing web applications.',
@@ -166,7 +166,7 @@ I am eager to contribute to the technology industry with innovative web solution
       copyright2: 'Ichramsyah Abdurrachman. Seluruh hak dilindungi.',
     },
     home: {
-      greeting: 'Hai, saya Ichramsyah',
+      greeting: 'Hai, saya Ichramsyah Abdurrachman',
       religion: 'Berasal dari Jakarta, Indonesia',
       description:
         'Seorang pengembang perangkat lunak yang bersemangat dan berdedikasi dengan fokus pada pengembangan end-to-end. Memiliki pemahaman yang baik dalam teknologi web dengan framework modern. Terbiasa bekerja secara kolaboratif dalam tim serta berkomitmen untuk membangun aplikasi web yang fungsional, responsif, dan menarik secara visual.',
