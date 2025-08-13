@@ -57,7 +57,7 @@ const ToggleSwitch = ({
         className={`absolute h-[75%] w-[45%] rounded-md ${activeBg} will-change-transform`}
         initial={false}
         animate={{ x: isActive ? 0 : travel }}
-        transition={{ type: 'spring', stiffness: 420, damping: 38 }}
+        transition={{ type: 'spring', stiffness: 420, damping: 48 }}
         style={{ visibility: ready ? 'visible' : 'hidden' }}
       />
 
