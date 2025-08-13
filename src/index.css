@@ -68,6 +68,17 @@ body {
   --color-orange-7: #c2410c; /* orange-700 */
   --color-orange-8: #9a3412; /* orange-800 */
   --color-orange-9: #7c2d12; /* orange-900 */
+
+  /* Yellow Scale */
+  --color-yellow-1: #fefce8; /* yellow-100 */
+  --color-yellow-2: #fef9c3; /* yellow-200 */
+  --color-yellow-3: #fef08a; /* yellow-300 */
+  --color-yellow-4: #fde047; /* yellow-400 */
+  --color-yellow-5: #facc15; /* yellow-500 */
+  --color-yellow-6: #eab308; /* yellow-600 */
+  --color-yellow-7: #a16207; /* yellow-700 */
+  --color-yellow-8: #854d0e; /* yellow-800 */
+  --color-yellow-9: #7c2d12; /* yellow-900 */
 }
 
 @keyframes marquee-right {
