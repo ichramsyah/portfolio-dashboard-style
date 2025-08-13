@@ -58,12 +58,11 @@ const iconMap = {
 
 const TechStackItem = ({ tech }) => (
   <span
-    className="flex-shrink-0 flex items-center gap-2 px-[20px] py-2 
-    bg-whitee dark:bg-gray-8 
-    border border-gray-2 dark:border-gray-7 
+    className="flex-shrink-0 flex items-center gap-2 px-[17px] py-2 
+    bg-gray-1 dark:bg-gray-8 
+    border border-gray-3 dark:border-gray-7 
     rounded-full text-[15px] font-medium 
     text-gray-7 dark:text-gray-3 mr-3 
-    transition-transform duration-300 hover:inset-shadow-sm hover:inset-shadow-gray-2 dark:hover:inset-shadow-gray-9
 "
   >
     {iconMap[tech]}

@@ -82,6 +82,17 @@ body {
   --color-yellow-7: #a16207; /* yellow-700 */
   --color-yellow-8: #854d0e; /* yellow-800 */
   --color-yellow-9: #7c2d12; /* yellow-900 */
+
+  /* Neutral Scale */
+  --color-neutral-1: #f8fafc; /* neutral-100 */
+  --color-neutral-2: #f1f5f9; /* neutral-200 */
+  --color-neutral-3: #e2e8f0; /* neutral-300 */
+  --color-neutral-4: #cbd5e1; /* neutral-400 */
+  --color-neutral-5: #94a3b8; /* neutral-500 */
+  --color-neutral-6: #64748b; /* neutral-600 */
+  --color-neutral-7: #475569; /* neutral-700 */
+  --color-neutral-8: #334155; /* neutral-800 */
+  --color-neutral-9: #1e293b; /* neutral-900 */
 }
 
 @keyframes marquee-right {

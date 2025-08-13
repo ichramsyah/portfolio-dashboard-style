@@ -3,6 +3,8 @@ import { LanguageContext } from '../../../contexts/LanguageContext';
 import { Laptop, LayoutGrid, Palette } from 'lucide-react';
 import SpotlightCard from '../../common/SpotlightCard';
 import TechStackMarquee from './TechStackMarquee';
+import { Home, User, Award, Briefcase, Mail, Moon, Sun, X, MessageSquareText } from 'lucide-react';
+import CircularGallery from '../../common/CircularGallery';
 
 const Services = () => {
   const { t } = useContext(LanguageContext);
@@ -19,31 +21,40 @@ const Services = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
         {/* Baris 1 */}
-        <SpotlightCard className="h-70 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
-          <div className="flex justify-center">
-            <LayoutGrid width={30} height={30} className="text-gray-4 dark:text-gray-1 bg-gray-2 p-1" />
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          <div className="flex flex-col items-center justify-center p-5">
+            <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            <span className="pt-4 text-gray-8 dark:text-gray-200">Skills & Tools</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A collection of my technical skills and tools.</p>
           </div>
           <TechStackMarquee />
         </SpotlightCard>
 
-        <SpotlightCard className="h-70 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
-          2
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          <div className="flex flex-col items-center justify-center p-5">
+            <User width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            <span className="pt-4 text-gray-8 dark:text-gray-200">About me</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
+          </div>
+          <div style={{ height: '600px', position: 'relative' }}>
+            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+          </div>
         </SpotlightCard>
 
-        <SpotlightCard className="h-70 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
           3
         </SpotlightCard>
 
         {/* Baris 2 */}
-        <SpotlightCard className="h-70 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
           4
         </SpotlightCard>
 
-        <SpotlightCard className="h-70 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
           5
         </SpotlightCard>
 
-        <SpotlightCard className="h-70 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
           6
         </SpotlightCard>
       </div>
