@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { Home, User, Award, Briefcase, Mail, Moon, Sun, MessageCircle, X } from 'lucide-react';
+import { Home, User, Award, Briefcase, Mail, Moon, Sun, X, MessageSquareText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
@@ -16,7 +16,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     { id: 'achievements', icon: Award, label: t('nav.achievements') },
     { id: 'projects', icon: Briefcase, label: t('nav.projects') },
     { id: 'contact', icon: Mail, label: t('nav.contact') },
-    { id: 'chatroom', icon: MessageCircle, label: t('nav.chatroom') },
+    { id: 'chatroom', icon: MessageSquareText, label: t('nav.chatroom') },
   ];
 
   const containerRef = useRef(null);
