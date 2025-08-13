@@ -60,7 +60,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   </svg>
                 </div>
 
-                {/* Toggle */}
+                {/* Toggle Tema */}
                 <div className="flex gap-2 py-2">
                   <ToggleSwitch
                     isActive={theme === 'light'}
