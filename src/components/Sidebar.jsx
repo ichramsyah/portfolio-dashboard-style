@@ -4,6 +4,7 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { Home, User, Award, Briefcase, Mail, Moon, Sun, Globe, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
+import LanguageSwitch from './common/LanguageSwitch';
 
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -48,7 +49,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 className="flex flex-col items-center w-full" // Menggunakan flex-col dan items-center
               >
                 {/* Gambar Profil */}
-                <img src="./images/ppinstagram.png" alt="" className="w-17 object-cover rounded-full dark:border-gray-700 mt-[-10px]" />
+                <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full mt-[-10px]" />
 
                 {/* Grup Nama & Ikon */}
                 <div className="flex items-center gap-1 mt-2">
@@ -68,21 +69,20 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     option2={{ icon: <Moon className="transition-transform duration-400 delay-100 hover:scale-120" size={14} /> }}
                     activeBg="bg-whitee dark:bg-gray-7"
                     inactiveBg="bg-gray-3"
-                    activeColor="text-blue-6 dark:text-gray-1"
+                    activeColor="text-blue-6 dark:text-yellow-200"
                     inactiveColor="text-gray-5 dark:text-gray-3"
                   />
 
                   {/* Toggle Bahasa */}
-                  {/* <ToggleSwitch
-                    isActive={language === 'en'}
-                    onToggle={() => setLanguage(language === 'en' ? 'id' : 'en')}
-                    option1={{ icon: <span className="text-sm">🇺🇸</span> }}
-                    option2={{ icon: <span className="text-sm">🇮🇩</span> }}
-                    activeBg="bg-blue-500"
-                    inactiveBg="bg-gray-400"
-                    activeColor="text-white"
-                    inactiveColor="text-gray-200"
-                  /> */}
+                  <LanguageSwitch
+                    options={[
+                      { label: '🇺🇸', value: 'en' },
+                      { label: '🇮🇩', value: 'id' },
+                      { label: '🇯🇵', value: 'jp' },
+                    ]}
+                    activeIndex={['en', 'id', 'jp'].indexOf(language)}
+                    onChange={(idx) => setLanguage(['en', 'id', 'jp'][idx])}
+                  />
                 </div>
               </motion.div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-[-10px] right-[-10px] lg:hidden p-2 text-gray-5 hover:text-gray-7 dark:text-gray-4 dark:hover:text-gray-2">
@@ -112,7 +112,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       }}
                       className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-4 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%]'
+                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-5 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%]'
                           : 'text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[104%]'
                       }`}
                     >

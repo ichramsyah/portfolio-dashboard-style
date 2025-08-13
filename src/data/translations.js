@@ -347,4 +347,13 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       description: 'Scroll halaman ini dan hubungi saya!',
     },
   },
+  jp: {
+    nav: {
+      home: 'ホーム',
+      about: '私について',
+      achievements: '業績',
+      projects: 'プロジェクト',
+      contact: '連絡先',
+    },
+  },
 };
