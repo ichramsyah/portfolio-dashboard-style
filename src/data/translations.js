@@ -6,6 +6,7 @@ export const translations = {
       about: 'About',
       achievements: 'Achievements',
       projects: 'Projects',
+      chatroom: 'Chat Room',
       contact: 'Contact',
       copyright1: 'Copyright © 2025',
       copyright2: 'Ichramsyah Abdurrachman. All rights reserved.',
@@ -15,26 +16,8 @@ export const translations = {
       religion: 'from Jakarta, Indonesia',
       description:
         'A passionate and dedicated software developer with a focus on end-to-end development. Good understanding of web technologies with modern frameworks. Accustomed to working collaboratively in a team and committed to building functional, responsive and visually appealing web applications.',
-      service: 'Service',
-      services_paragraph: 'I deliver fully integrated digital solutions, combining solid backend development, responsive frontend, and user-centric UI/UX design, to create effective and user-friendly web applications',
-      services: {
-        fullstack: {
-          title: 'Fullstack Developer',
-          description: 'Build complete web applications from user interfaces to server systems and databases',
-        },
-        backend: {
-          title: 'Backend Developer',
-          description: 'Design and build a strong, secure, and scalable server foundation to support the core functionality of the application',
-        },
-        frontend: {
-          title: 'Frontend Developer',
-          description: 'Create interactive, responsive, and visually appealing user interfaces for an optimal web experience',
-        },
-        uiux: {
-          title: 'UI UX Designer',
-          description: 'Designing intuitive user experiences and captivating visual interfaces, making the app easy to use and engaging.',
-        },
-      },
+      service: 'Featured',
+      services_paragraph: 'Explore everything I’ve crafted, contributed, and accomplished.',
     },
     about: {
       title: 'About Me',
@@ -178,6 +161,7 @@ I am eager to contribute to the technology industry with innovative web solution
       achievements: 'Prestasi',
       projects: 'Proyek',
       contact: 'Kontak',
+      chatroom: 'Ruang Obrolan',
       copyright1: 'HAK CIPTA © 2025',
       copyright2: 'Ichramsyah Abdurrachman. Seluruh hak dilindungi.',
     },
@@ -186,27 +170,8 @@ I am eager to contribute to the technology industry with innovative web solution
       religion: 'Berasal dari Jakarta, Indonesia',
       description:
         'Seorang pengembang perangkat lunak yang bersemangat dan berdedikasi dengan fokus pada pengembangan end-to-end. Memiliki pemahaman yang baik dalam teknologi web dengan framework modern. Terbiasa bekerja secara kolaboratif dalam tim serta berkomitmen untuk membangun aplikasi web yang fungsional, responsif, dan menarik secara visual.',
-      service: 'Layanan',
-      services_paragraph:
-        'Saya menghadirkan solusi digital yang terintegrasi penuh, menggabungkan pengembangan backend yang solid, frontend yang responsif, serta desain UI/UX yang berpusat pada pengguna, untuk menciptakan aplikasi web yang efektif dan mudah digunakan.',
-      services: {
-        fullstack: {
-          title: 'Fullstack Developer',
-          description: 'Membangun aplikasi web lengkap dari antarmuka pengguna hingga sistem server dan database, memastikan solusi yang terintegrasi penuh.',
-        },
-        backend: {
-          title: 'Backend Developer',
-          description: 'Merancang dan membangun fondasi server yang kuat, aman, dan skalabel untuk mendukung fungsionalitas inti aplikasi',
-        },
-        frontend: {
-          title: 'Frontend Developer',
-          description: 'Menciptakan antarmuka pengguna yang interaktif, responsif, dan menarik secara visual untuk pengalaman web yang optimal.',
-        },
-        uiux: {
-          title: 'UI UX Designer',
-          description: 'Mendesain pengalaman pengguna yang intuitif dan antarmuka visual yang menawan, membuat aplikasi mudah digunakan dan menarik.',
-        },
-      },
+      service: 'Unggulan',
+      services_paragraph: 'Jelajahi semua yang telah saya buat, kontribusikan, dan capai.',
     },
     about: {
       title: 'Tentang Saya',

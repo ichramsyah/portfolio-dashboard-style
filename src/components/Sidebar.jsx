@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { Home, User, Award, Briefcase, Mail, Moon, Sun, Globe, X } from 'lucide-react';
+import { Home, User, Award, Briefcase, Mail, Moon, Sun, MessageCircle, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
@@ -16,6 +16,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     { id: 'achievements', icon: Award, label: t('nav.achievements') },
     { id: 'projects', icon: Briefcase, label: t('nav.projects') },
     { id: 'contact', icon: Mail, label: t('nav.contact') },
+    { id: 'chatroom', icon: MessageCircle, label: t('nav.chatroom') },
   ];
 
   const containerRef = useRef(null);
@@ -39,7 +40,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
 
       <div className={`fixed left-0 top-0 h-full w-68 bg-whitee px-7 py-7 dark:bg-gray-9 z-50 transform transition-all ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="flex flex-col h-full">
-          <div className="pb-2 border-b border-gray-2 dark:border-gray-7 relative">
+          <div className="pb-2 border-b-[1.5px] border-gray-2 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -49,7 +50,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 className="flex flex-col items-center w-full" // Menggunakan flex-col dan items-center
               >
                 {/* Gambar Profil */}
-                <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full mt-[-10px]" />
+                <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full" />
 
                 {/* Grup Nama & Ikon */}
                 <div className="flex items-center gap-1 mt-2">
