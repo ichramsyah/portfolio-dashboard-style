@@ -37,7 +37,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-whitee dark:bg-[#0D131F] transition-colors">
+        <div className="min-h-screen bg-whitee dark:bg-background-dark transition-colors">
           <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
           <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-8 rounded-br-2xl shadow-md">
