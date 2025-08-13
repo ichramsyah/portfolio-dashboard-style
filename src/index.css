@@ -13,6 +13,9 @@ body {
   --color-whitee: #ffffff;
   --color-blackk: #000000;
 
+  /* Background */
+  --color-background-dark: #0d131f; /* Dark background */
+
   /* Gray Scale */
   --color-gray-1: #f3f4f6; /* gray-100 */
   --color-gray-2: #e5e7eb; /* gray-200 */
