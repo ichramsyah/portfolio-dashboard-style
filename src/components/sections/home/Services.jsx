@@ -1,37 +1,13 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { Laptop, Palette } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Laptop, LayoutGrid, Palette } from 'lucide-react';
+import SpotlightCard from '../../common/SpotlightCard';
+import TechStackMarquee from './TechStackMarquee';
+import { Home, User, Award, Briefcase, Mail, Moon, Sun, X, MessageSquareText } from 'lucide-react';
+import CircularGallery from '../../common/CircularGallery';
 
 const Services = () => {
   const { t } = useContext(LanguageContext);
-
-  const serviceList = [
-    {
-      key: 'fullstack',
-      icon: <Laptop size={26} className="text-gray-7 dark:text-gray-1" />,
-      title: t('home.services.fullstack.title'),
-      description: t('home.services.fullstack.description'),
-    },
-    {
-      key: 'backend',
-      icon: <Laptop size={26} className="text-gray-7 dark:text-gray-1" />,
-      title: t('home.services.backend.title'),
-      description: t('home.services.backend.description'),
-    },
-    {
-      key: 'frontend',
-      icon: <Laptop size={26} className="text-gray-7 dark:text-gray-1" />,
-      title: t('home.services.frontend.title'),
-      description: t('home.services.frontend.description'),
-    },
-    {
-      key: 'UI UX Designer',
-      icon: <Palette size={26} className="text-gray-7 dark:text-gray-1" />,
-      title: t('home.services.uiux.title'),
-      description: t('home.services.uiux.description'),
-    },
-  ];
 
   return (
     <div className="mt-8">
@@ -41,8 +17,47 @@ const Services = () => {
         </svg>
         <p className="pl-2">{t('home.service')}</p>
       </div>
-
       <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
+        {/* Baris 1 */}
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          <div className="flex flex-col items-center justify-center p-5">
+            <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A collection of my technical skills and tools.</p>
+          </div>
+          <TechStackMarquee />
+        </SpotlightCard>
+
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          <div className="flex flex-col items-center justify-center p-5">
+            <User width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            <span className="pt-4 text-gray-8 dark:text-gray-2">About me</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
+          </div>
+          <div className="relative mt-[-30px]">
+            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+          </div>
+        </SpotlightCard>
+
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
+          3
+        </SpotlightCard>
+
+        {/* Baris 2 */}
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
+          4
+        </SpotlightCard>
+
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          5
+        </SpotlightCard>
+
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+          6
+        </SpotlightCard>
+      </div>
     </div>
   );
 };

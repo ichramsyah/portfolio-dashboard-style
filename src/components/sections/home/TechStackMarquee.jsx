@@ -58,12 +58,11 @@ const iconMap = {
 
 const TechStackItem = ({ tech }) => (
   <span
-    className="flex-shrink-0 flex items-center gap-2 px-[20px] py-2 
-    bg-whitee dark:bg-gray-8 
-    border border-gray-2 dark:border-gray-7 
+    className="flex-shrink-0 flex items-center gap-2 px-[17px] py-2 
+    bg-gray-1 dark:bg-gray-8 
+    border border-gray-3 dark:border-gray-7 
     rounded-full text-[15px] font-medium 
     text-gray-7 dark:text-gray-3 mr-3 
-    transition-transform duration-300 hover:inset-shadow-sm hover:inset-shadow-gray-2 dark:hover:inset-shadow-gray-9
 "
   >
     {iconMap[tech]}
@@ -73,28 +72,22 @@ const TechStackItem = ({ tech }) => (
 
 const TechStackMarquee = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.7 }} viewport={{ once: true }} className="mt-7 border-b border-gray-3 dark:border-gray-7 pb-10">
-      <h3 className="flex items-center text-xl  text-gray-9 dark:text-whitee mb-6">
-        <svg className="mr-[4px]" stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-          <path d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"></path>
-        </svg>
-        Tech Stack
-      </h3>
-      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.8 }} viewport={{ once: true }} className="relative w-full overflow-hidden whitespace-nowrap">
+    <div className="">
+      <div className="relative w-full overflow-hidden whitespace-nowrap">
         <div className="animate-marquee-right">
           {[...techStack, ...techStack, ...techStack].map((tech, index) => (
             <TechStackItem key={index} tech={tech} />
           ))}
         </div>
-      </motion.div>
-      <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 1 }} viewport={{ once: true }} className="relative w-full overflow-hidden whitespace-nowrap mt-3">
+      </div>
+      <div className="relative w-full overflow-hidden whitespace-nowrap mt-3">
         <div className="animate-marquee-left">
           {[...techStack, ...techStack, ...techStack].map((tech, index) => (
             <TechStackItem key={index} tech={tech} />
           ))}
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
