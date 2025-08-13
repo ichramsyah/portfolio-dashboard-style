@@ -38,9 +38,9 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     <>
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
-      <div className={`fixed left-0 top-0 h-full w-68 bg-whitee px-7 py-7 dark:bg-gray-9 z-50 transform transition-all ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <div className={`fixed left-0 top-0 h-full w-68 bg-whitee px-7 py-7 dark:bg-[#0D131F] z-50 transform transition-all ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="flex flex-col h-full">
-          <div className="pb-2 border-b-[1.5px] border-gray-2 dark:border-gray-7 relative">
+          <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -92,7 +92,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
             </div>
           </div>
 
-          <nav className="flex-1 py-4 relative" ref={containerRef}>
+          <nav className="flex-1 py-3 relative" ref={containerRef}>
             {/* Sliding sideline */}
             <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-blue-3" />
 
@@ -127,7 +127,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           </nav>
 
           {/* Bagian bawah */}
-          <div className="pt-3 border-t border-gray-2 dark:border-gray-7">
+          <div className="pt-3 border-t border-gray-3 dark:border-gray-7">
             <div className="space-y-2">
               <div className="text-center">
                 <p className="text-sm text-gray-5">{t('nav.copyright1')}</p>
