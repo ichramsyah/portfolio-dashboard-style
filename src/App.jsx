@@ -14,18 +14,17 @@ const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // useEffect untuk scroll ke atas saat activeSection berubah
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Membuat scroll lebih halus
+      behavior: 'smooth',
     });
-  }, [activeSection]); // Dependency array: efek akan dijalankan setiap kali activeSection berubah
+  }, [activeSection]);
 
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
-        return <HomeSection />;
+        return <HomeSection setActiveSection={setActiveSection} />;
       case 'about':
         return <AboutSection />;
       case 'achievements':
@@ -35,7 +34,7 @@ const App = () => {
       case 'contact':
         return <ContactSection />;
       default:
-        return <HomeSection />;
+        return <HomeSection setActiveSection={setActiveSection} />;
     }
   };
 

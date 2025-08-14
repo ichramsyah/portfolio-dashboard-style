@@ -6,7 +6,7 @@ import TechStackMarquee from './TechStackMarquee';
 import { Home, User, Award, Briefcase, Mail, Moon, Sun, X, MessageSquareText } from 'lucide-react';
 import CircularGallery from '../../common/CircularGallery';
 
-const Services = () => {
+const Services = ({ setActiveSection }) => {
   const { t } = useContext(LanguageContext);
 
   return (
@@ -21,7 +21,7 @@ const Services = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
         {/* Baris 1 */}
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(234, 232, 232, 0.2)">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
@@ -32,7 +32,9 @@ const Services = () => {
 
         <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
           <div className="flex flex-col items-center justify-center p-5">
-            <User width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            <button onClick={() => setActiveSection('about')}>
+              <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+            </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">About me</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
           </div>
