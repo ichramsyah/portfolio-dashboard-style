@@ -2,7 +2,7 @@ import { useRef, useState, useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import clsx from 'clsx';
 
-const SpotlightCard = ({ children, className = '', spotlightColorLight = 'rgba(123, 127, 144, 0.3)', spotlightColorDark = 'rgba(255, 236, 236, 0.19)' }) => {
+const SpotlightCard = ({ children, className = '', spotlightColorLight = 'rgba(104, 104, 104, 0.21)', spotlightColorDark = 'rgba(255, 236, 236, 0.19)' }) => {
   const divRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
