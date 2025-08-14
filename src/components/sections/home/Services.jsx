@@ -21,7 +21,7 @@ const Services = ({ setActiveSection }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
         {/* Baris 1 */}
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(234, 232, 232, 0.2)">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
