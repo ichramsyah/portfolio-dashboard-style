@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { Laptop, LayoutGrid, Palette } from 'lucide-react';
+import { Laptop, Layers, LayoutGrid, Palette } from 'lucide-react';
 import SpotlightCard from '../../common/SpotlightCard';
 import TechStackMarquee from './TechStackMarquee';
-import { Home, User, Award, Briefcase, Mail, Moon, Sun, X, MessageSquareText } from 'lucide-react';
+import { User } from 'lucide-react';
 import CircularGallery from '../../common/CircularGallery';
+import CardSwap, { Card } from '../../common/CardSwap';
 
 const Services = ({ setActiveSection }) => {
   const { t } = useContext(LanguageContext);
@@ -21,7 +22,7 @@ const Services = ({ setActiveSection }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
         {/* Baris 1 */}
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(234, 232, 232, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
@@ -30,7 +31,7 @@ const Services = ({ setActiveSection }) => {
           <TechStackMarquee />
         </SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
+        <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('about')}>
               <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
@@ -43,22 +44,43 @@ const Services = ({ setActiveSection }) => {
           </div>
         </SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
-          3
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
+          <div className="w-full p-5">
+            <button onClick={() => setActiveSection('about')}>
+              <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+            </button>
+            <div className="pt-2">
+              <span className="text-gray-8 dark:text-gray-2">Project Showcase</span>
+              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A selection of real apps built to solve real problems.</p>
+            </div>
+          </div>
+          <div style={{ height: '300px', position: 'relative' }} className="w-full">
+            <CardSwap width={280} height={160} delay={3000} cardDistance={60} verticalDistance={70} pauseOnHover={false}>
+              <Card>
+                <img src="./images/portfolio-dashboard.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              </Card>
+              <Card>
+                <img src="./images/velochat.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              </Card>
+              <Card>
+                <img src="./images/rinema.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              </Card>
+              <Card>
+                <img src="./images/rinema-rebuild.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              </Card>
+              <Card>
+                <img src="./images/portfolio-landingpage.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+              </Card>
+            </CardSwap>
+          </div>
         </SpotlightCard>
 
         {/* Baris 2 */}
-        <SpotlightCard className="h-76 rounded-lg lg:col-span-2" spotlightColor="rgba(221, 221, 221, 0.2)">
-          4
-        </SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2">4</SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
-          5
-        </SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg">5</SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg" spotlightColor="rgba(221, 221, 221, 0.2)">
-          6
-        </SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg">6</SpotlightCard>
       </div>
     </div>
   );
