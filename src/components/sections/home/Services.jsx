@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { Laptop, Layers, LayoutGrid, Palette } from 'lucide-react';
+import { Award, Layers, LayoutGrid } from 'lucide-react';
 import SpotlightCard from '../../common/SpotlightCard';
 import TechStackMarquee from './TechStackMarquee';
 import { User } from 'lucide-react';
@@ -20,7 +20,7 @@ const Services = ({ setActiveSection }) => {
       </div>
       <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[8px] gap-3 mt-6">
         {/* Baris 1 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
@@ -45,7 +45,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
-          <div className="w-full p-5">
+          <div className="w-1/2 py-5 px-6">
             <button onClick={() => setActiveSection('about')}>
               <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
@@ -54,22 +54,22 @@ const Services = ({ setActiveSection }) => {
               <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A selection of real apps built to solve real problems.</p>
             </div>
           </div>
-          <div style={{ height: '300px', position: 'relative' }} className="w-full">
+          <div className="w-1/2 h-[160px] max-sm:h-[305px]">
             <CardSwap width={280} height={160} delay={3000} cardDistance={60} verticalDistance={70} pauseOnHover={false}>
               <Card>
-                <img src="./images/portfolio-dashboard.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <img className="rounded-lg" src="./images/portfolio-dashboard.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </Card>
               <Card>
-                <img src="./images/velochat.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <img className="rounded-lg" src="./images/velochat.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </Card>
               <Card>
-                <img src="./images/rinema.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <img className="rounded-lg" src="./images/rinema.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </Card>
               <Card>
-                <img src="./images/rinema-rebuild.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <img className="rounded-lg" src="./images/rinema-rebuild.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </Card>
               <Card>
-                <img src="./images/portfolio-landingpage.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <img className="rounded-lg" src="./images/portfolio-landingpage.png" alt="Card Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </Card>
             </CardSwap>
           </div>
@@ -80,7 +80,15 @@ const Services = ({ setActiveSection }) => {
 
         <SpotlightCard className="h-76 rounded-lg">5</SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg">6</SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg">
+          <div className="flex flex-col items-center justify-center p-5">
+            <button onClick={() => setActiveSection('about')}>
+              <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+            </button>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">Achievements</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
+          </div>
+        </SpotlightCard>
       </div>
     </div>
   );
