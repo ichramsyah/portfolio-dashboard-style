@@ -6,10 +6,21 @@ import TechStackMarquee from './TechStackMarquee';
 import { User } from 'lucide-react';
 import CircularGallery from '../../common/CircularGallery';
 import CardSwap, { Card } from '../../common/CardSwap';
-import { motion } from 'framer-motion';
+import TrueFocus from '../../common/TrueFocus';
+import Stack from '../../common/Stack';
 
 const Services = ({ setActiveSection }) => {
   const { t } = useContext(LanguageContext);
+
+  const images = [
+    { id: 1, img: './images/certificate/frontenddevelopment.png' },
+    { id: 2, img: './images/certificate/hackaton.jpg' },
+    { id: 3, img: './images/certificate/javascriptintermediate.jpg' },
+    { id: 4, img: './images/certificate/Sertifikat IBM.png' },
+    { id: 5, img: './images/certificate/legacyfrontend.png' },
+    { id: 6, img: './images/certificate/javascriptalgorithm.png' },
+    { id: 7, img: './images/certificate/responsivewebdesign.png' },
+  ];
 
   return (
     <div className="mt-8">
@@ -22,7 +33,7 @@ const Services = ({ setActiveSection }) => {
       <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[10px] gap-3 mt-6">
-        {/* Baris 1 */}
+        {/* 1 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
@@ -32,6 +43,7 @@ const Services = ({ setActiveSection }) => {
           <TechStackMarquee />
         </SpotlightCard>
 
+        {/* 2 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('about')}>
@@ -45,6 +57,7 @@ const Services = ({ setActiveSection }) => {
           </div>
         </SpotlightCard>
 
+        {/* 3 */}
         <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
             <button onClick={() => setActiveSection('projects')}>
@@ -76,7 +89,7 @@ const Services = ({ setActiveSection }) => {
           </div>
         </SpotlightCard>
 
-        {/* Baris 2 */}
+        {/* 4 */}
         <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
             <button>
@@ -87,9 +100,13 @@ const Services = ({ setActiveSection }) => {
               <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of the services offered.</p>
             </div>
           </div>
-          <div className="w-1/2 h-[160px] max-sm:h-[305px]">d</div>
+          {/* Kontainer yang sudah diperbaiki */}
+          <div className="w-1/2 h-[160px] max-sm:h-[305px] flex items-center justify-center md:mt-13 mt-0">
+            <TrueFocus sentence="Web UI/UX" manualMode={false} blurAmount={5} animationDuration={1} pauseBetweenAnimations={2} />
+          </div>
         </SpotlightCard>
 
+        {/* 5 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('chatroom')}>
@@ -99,14 +116,12 @@ const Services = ({ setActiveSection }) => {
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">Join the conversation and connect with others.</p>
           </div>
           <div className="px-2 space-y-3">
-            {/* Pesan 1 */}
             <div className="flex justify-start">
               <div className="max-w-xs rounded-xl rounded-tl-none bg-gray-2 p-3 text-gray-8 dark:bg-gray-8 dark:text-gray-2 chat-bubble-1">
                 <p className="text-sm">Hi, is this your website?</p>
               </div>
             </div>
 
-            {/* Pesan 2 */}
             <div className="flex justify-end">
               <div className="max-w-xs rounded-xl rounded-tr-none bg-blue-5 p-3 text-white chat-bubble-2">
                 <p className="text-sm">Yes, I built it myself!</p>
@@ -115,13 +130,17 @@ const Services = ({ setActiveSection }) => {
           </div>
         </SpotlightCard>
 
+        {/* 6 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
-            <button onClick={() => setActiveSection('about')}>
+            <button onClick={() => setActiveSection('achievements')}>
               <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">Achievements</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of my achievements.</p>
+          </div>
+          <div className="flex-grow flex items-center justify-center w-full p-4">
+            <Stack cardsData={images} sendToBackOnClick={true} />
           </div>
         </SpotlightCard>
       </div>
