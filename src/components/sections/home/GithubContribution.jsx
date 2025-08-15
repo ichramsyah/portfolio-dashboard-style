@@ -1,15 +1,60 @@
-const GithubContribution = () => {
+import { useState, useEffect, useContext } from 'react';
+import GitHubCalendar from 'react-github-calendar';
+import { FaGithub } from 'react-icons/fa';
+import { ThemeContext } from '../../../contexts/ThemeContext';
+
+export default function GithubContributionStats({ username }) {
+  const { theme } = useContext(ThemeContext);
+  const [stats, setStats] = useState({
+    total: 0,
+    thisWeek: 0,
+    best: 0,
+    average: 0,
+  });
+
+  useEffect(() => {
+    fetch(`https://github-contributions-api.deno.dev/${username}.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        const days = data.contributions.flatMap((week) => week.days);
+        const total = days.reduce((a, b) => a + b.count, 0);
+        const thisWeek = days.slice(-7).reduce((a, b) => a + b.count, 0);
+        const best = Math.max(...days.map((d) => d.count));
+        const average = (total / days.length).toFixed(1);
+        setStats({ total, thisWeek, best, average });
+      });
+  }, [username]);
+
   return (
-    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7 pb-8">
-      <h3 className="flex items-center text-xl  text-gray-9 dark:text-whitee mb-6">
-        <svg className="mr-2" stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-        </svg>
-        Github Contribution
-      </h3>
-      <img src="https://ghchart.rshah.org/15803d/ichramsyah" className="w-full" alt="GitHub chart" />
+    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7">
+      {/* Header */}
+      <div className="pb-7">
+        <h3 className="flex items-center text-xl text-gray-9 dark:text-whitee pb-3">
+          <FaGithub className="text-xl" />
+          <span className="ml-2">Github Contributions</span>
+        </h3>
+        <p className=" text-gray-5 dark:text-gray-4">My GitHub activity over the past year.</p>
+      </div>
+
+      {/* Stat cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <StatCard label="Total" value={stats.total} highlight />
+        <StatCard label="This week" value={stats.thisWeek} highlight />
+        <StatCard label="Best" value={stats.best} highlight />
+        <StatCard label="Average" value={`${stats.average} / day`} highlight />
+      </div>
+
+      {/* Calendar */}
+      <GitHubCalendar username={username} colorScheme={theme === 'dark' ? 'dark' : 'light'} blockSize={14} blockMargin={4} fontSize={14} />
     </div>
   );
-};
+}
 
-export default GithubContribution;
+function StatCard({ label, value, highlight }) {
+  return (
+    <div className="bg-gray-2 dark:bg-gray-8 rounded-lg p-4 text-center transition">
+      <p className="text-gray-5 text-sm">{label}</p>
+      <p className={`text-2xl font-bold ${highlight ? 'text-green-6' : ''}`}>{value}</p>
+    </div>
+  );
+}

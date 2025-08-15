@@ -11,15 +11,15 @@ const Skills = () => {
     { icon: <SiNextdotjs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nextjs', label: 'Next.js' },
     { icon: <FaLaravel size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'laravel', label: 'Laravel' },
     { icon: <SiExpress size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'express', label: 'Express.js' },
-    { icon: <FaJs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'javascript', label: 'JavaScript' },
-    { icon: <SiTypescript size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'typescript', label: 'TypeScript' },
+    { icon: <FaJs size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'javascript', label: 'JavaScript' },
+    { icon: <SiTypescript size={27} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'typescript', label: 'TypeScript' },
     { icon: <FaPhp size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'php', label: 'PHP' },
     { icon: <SiTailwindcss size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'tailwind', label: 'Tailwind CSS' },
     { icon: <FaBootstrap size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'bootstrap', label: 'Bootstrap' },
     { icon: <GrMysql size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mysql', label: 'MySQL' },
     { icon: <SiMongodb size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mongodb', label: 'MongoDB' },
-    { icon: <DiHtml5 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'html', label: 'HTML' },
-    { icon: <FaCss3Alt size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'css', label: 'CSS' },
+    { icon: <DiHtml5 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'html', label: 'HTML5' },
+    { icon: <FaCss3Alt size={32} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'css', label: 'CSS3' },
   ];
 
   return (

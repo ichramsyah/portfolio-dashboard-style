@@ -19,7 +19,7 @@ const colorClassMapping = {
 
 const GlassIcons = ({ items, className }) => {
   return (
-    <div className={`flex flex-wrap space-x-8 space-y-14 mx-auto pt-[3em] overflow-visible ${className || ''}`}>
+    <div className={`flex flex-wrap md:justify-start justify-center space-x-8 space-y-14 mx-auto pt-[3em] overflow-visible ${className || ''}`}>
       {items.map((item, index) => {
         const backgroundClasses = colorClassMapping[item.colorKey] || colorClassMapping.default;
 
@@ -45,7 +45,7 @@ const GlassIcons = ({ items, className }) => {
               </span>
             </span>
 
-            <span className="absolute top-full left-0 right-0 text-center whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)]">
+            <span className="absolute top-full left-0 right-0 text-center text-gray-8 dark:text-gray-2 whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)]">
               {item.label}
             </span>
           </button>

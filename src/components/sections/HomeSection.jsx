@@ -10,7 +10,7 @@ const HomeSection = ({ setActiveSection }) => {
         <Greeting />
         <Skills />
 
-        <GithubContribution />
+        <GithubContribution username="ichramsyah" month="2025-08" />
         <Services setActiveSection={setActiveSection} />
       </div>
     </div>
