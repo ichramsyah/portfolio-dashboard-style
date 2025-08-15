@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { Award, Layers, LayoutGrid, MessageSquareText } from 'lucide-react';
+import { Award, Brush, Layers, LayoutGrid, MessageSquareText } from 'lucide-react';
 import SpotlightCard from '../../common/SpotlightCard';
 import TechStackMarquee from './TechStackMarquee';
 import { User } from 'lucide-react';
@@ -77,7 +77,18 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* Baris 2 */}
-        <SpotlightCard className="h-76 rounded-lg lg:col-span-2">4</SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
+          <div className="w-1/2 py-5 px-6">
+            <button>
+              <Brush width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
+            </button>
+            <div className="pt-2">
+              <span className="text-gray-8 dark:text-gray-2">Services</span>
+              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of the services offered.</p>
+            </div>
+          </div>
+          <div className="w-1/2 h-[160px] max-sm:h-[305px]">d</div>
+        </SpotlightCard>
 
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
