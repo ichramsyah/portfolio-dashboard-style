@@ -147,3 +147,27 @@ body {
 .animate-fade-in-slide-right {
   animation: fadeInSlideRight 0.4s ease-out;
 } */
+
+@keyframes pop-with-pause {
+  0%,
+  85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  92% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.chat-bubble-1 {
+  animation: pop-with-pause 2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.chat-bubble-2 {
+  animation: pop-with-pause 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
