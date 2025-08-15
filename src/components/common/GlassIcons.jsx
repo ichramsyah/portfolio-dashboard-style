@@ -1,5 +1,3 @@
-// Definisikan pemetaan dari kunci ke kelas gradien Tailwind
-// Tulis nama kelas secara lengkap agar bisa dideteksi oleh compiler Tailwind (JIT)
 const colorClassMapping = {
   react: 'bg-gradient-to-br from-cyan-500 to-blue-600',
   nextjs: 'bg-gradient-to-br from-gray-800 to-gray-900',
@@ -14,6 +12,13 @@ const colorClassMapping = {
   mongodb: 'bg-gradient-to-br from-green-500 to-emerald-600',
   html: 'bg-gradient-to-br from-orange-500 to-red-600',
   css: 'bg-gradient-to-br from-blue-500 to-sky-600',
+  git: 'bg-gradient-to-br from-red-600 to-red-800',
+  github: 'bg-gradient-to-br from-gray-800 to-gray-900',
+  postman: 'bg-gradient-to-br from-purple-500 to-fuchsia-600',
+  figma: 'bg-gradient-to-br from-fuchsia-400 to-pink-500',
+  adobeillustrator: 'bg-gradient-to-br from-orange-500 to-red-600',
+  cpanel: 'bg-gradient-to-br from-teal-400 to-cyan-500',
+  python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   default: 'bg-gradient-to-br from-gray-500 to-gray-600',
 };
 
@@ -28,7 +33,7 @@ const GlassIcons = ({ items, className }) => {
             key={index}
             type="button"
             aria-label={item.label}
-            className={`relative bg-transparent outline-none w-[3.4em] h-[3.4em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ''}`}
+            className={`relative bg-transparent outline-none w-[3.7em] h-[3.7em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ''}`}
           >
             <span
               className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[15deg] group-hover:[transform:rotate(25deg)_translate3d(-0.5em,-0.5em,0.5em)] ${backgroundClasses}`}

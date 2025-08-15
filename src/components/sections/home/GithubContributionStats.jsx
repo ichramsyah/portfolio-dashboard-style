@@ -16,36 +16,44 @@ export default function GithubContributionStats({ username }) {
     fetch(`https://github-contributions-api.deno.dev/${username}.json`)
       .then((res) => res.json())
       .then((data) => {
-        const days = data.contributions.flatMap((week) => week.days);
-        const total = days.reduce((a, b) => a + b.count, 0);
-        const thisWeek = days.slice(-7).reduce((a, b) => a + b.count, 0);
-        const best = Math.max(...days.map((d) => d.count));
+        if (!data?.contributions) return;
+
+        // Flatten array 2D jadi array 1D
+        const days = data.contributions.flat();
+
+        const total = data.totalContributions;
+        const thisWeek = days.slice(-7).reduce((sum, d) => sum + d.contributionCount, 0);
+        const best = Math.max(...days.map((d) => d.contributionCount));
         const average = (total / days.length).toFixed(1);
+
         setStats({ total, thisWeek, best, average });
-      });
+      })
+      .catch((err) => console.error('Error fetching GitHub data:', err));
   }, [username]);
 
   return (
-    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7">
+    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7 pb-8">
       {/* Header */}
       <div className="pb-7">
-        <h3 className="flex items-center text-xl text-gray-9 dark:text-whitee pb-3">
+        <h3 className="flex items-center text-xl text-gray-9 dark:text-white pb-3">
           <FaGithub className="text-xl" />
-          <span className="ml-2">Github Contributions</span>
+          <span className="ml-2">GitHub Contributions</span>
         </h3>
-        <p className=" text-gray-5 dark:text-gray-4">My GitHub activity over the past year.</p>
+        <p className="text-gray-5 dark:text-gray-4">My GitHub activity over the past year.</p>
       </div>
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <StatCard label="Total" value={stats.total} highlight />
-        <StatCard label="This week" value={stats.thisWeek} highlight />
+        <StatCard label="This Week" value={stats.thisWeek} highlight />
         <StatCard label="Best" value={stats.best} highlight />
         <StatCard label="Average" value={`${stats.average} / day`} highlight />
       </div>
 
       {/* Calendar */}
-      <GitHubCalendar username={username} colorScheme={theme === 'dark' ? 'dark' : 'light'} blockSize={14} blockMargin={4} fontSize={14} />
+      <div className="overflow-x-auto">
+        <GitHubCalendar username={username} colorScheme={theme === 'dark' ? 'dark' : 'light'} blockSize={14} blockMargin={4} fontSize={14} />
+      </div>
     </div>
   );
 }
