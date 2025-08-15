@@ -1,7 +1,7 @@
-import GithubContribution from '../sections/home/GithubContribution';
 import Greeting from '../sections/home/Greeting';
 import Services from '../sections/home/Services';
 import Skills from './home/Skills';
+import GithubContributionStats from './home/GithubContributionStats';
 
 const HomeSection = ({ setActiveSection }) => {
   return (
@@ -10,7 +10,7 @@ const HomeSection = ({ setActiveSection }) => {
         <Greeting />
         <Skills />
 
-        <GithubContribution username="ichramsyah" month="2025-08" />
+        <GithubContributionStats username="ichramsyah" />
         <Services setActiveSection={setActiveSection} />
       </div>
     </div>

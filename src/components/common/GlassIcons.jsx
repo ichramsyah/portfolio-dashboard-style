@@ -1,5 +1,3 @@
-// Definisikan pemetaan dari kunci ke kelas gradien Tailwind
-// Tulis nama kelas secara lengkap agar bisa dideteksi oleh compiler Tailwind (JIT)
 const colorClassMapping = {
   react: 'bg-gradient-to-br from-cyan-500 to-blue-600',
   nextjs: 'bg-gradient-to-br from-gray-800 to-gray-900',
@@ -14,7 +12,6 @@ const colorClassMapping = {
   mongodb: 'bg-gradient-to-br from-green-500 to-emerald-600',
   html: 'bg-gradient-to-br from-orange-500 to-red-600',
   css: 'bg-gradient-to-br from-blue-500 to-sky-600',
-  // Warna untuk ikon-ikon tambahan
   git: 'bg-gradient-to-br from-red-600 to-red-800',
   github: 'bg-gradient-to-br from-gray-800 to-gray-900',
   postman: 'bg-gradient-to-br from-purple-500 to-fuchsia-600',
