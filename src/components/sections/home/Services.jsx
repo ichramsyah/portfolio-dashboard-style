@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { Award, Layers, LayoutGrid } from 'lucide-react';
+import { Award, Layers, LayoutGrid, MessageSquareText } from 'lucide-react';
 import SpotlightCard from '../../common/SpotlightCard';
 import TechStackMarquee from './TechStackMarquee';
 import { User } from 'lucide-react';
 import CircularGallery from '../../common/CircularGallery';
 import CardSwap, { Card } from '../../common/CardSwap';
+import { motion } from 'framer-motion';
 
 const Services = ({ setActiveSection }) => {
   const { t } = useContext(LanguageContext);
@@ -20,7 +21,7 @@ const Services = ({ setActiveSection }) => {
       </div>
       <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[8px] gap-3 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[10px] gap-3 mt-6">
         {/* Baris 1 */}
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
@@ -46,7 +47,7 @@ const Services = ({ setActiveSection }) => {
 
         <SpotlightCard className="h-76 rounded-lg lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
-            <button onClick={() => setActiveSection('about')}>
+            <button onClick={() => setActiveSection('projects')}>
               <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <div className="pt-2">
@@ -78,7 +79,30 @@ const Services = ({ setActiveSection }) => {
         {/* Baris 2 */}
         <SpotlightCard className="h-76 rounded-lg lg:col-span-2">4</SpotlightCard>
 
-        <SpotlightCard className="h-76 rounded-lg">5</SpotlightCard>
+        <SpotlightCard className="h-76 rounded-lg">
+          <div className="flex flex-col items-center justify-center p-5">
+            <button onClick={() => setActiveSection('chatroom')}>
+              <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+            </button>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">Chat Room</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">Join the conversation and connect with others.</p>
+          </div>
+          <div className="px-2 space-y-3">
+            {/* Pesan 1 */}
+            <div className="flex justify-start">
+              <div className="max-w-xs rounded-xl rounded-tl-none bg-gray-2 p-3 text-gray-8 dark:bg-gray-8 dark:text-gray-2 chat-bubble-1">
+                <p className="text-sm">Hi, is this your website?</p>
+              </div>
+            </div>
+
+            {/* Pesan 2 */}
+            <div className="flex justify-end">
+              <div className="max-w-xs rounded-xl rounded-tr-none bg-blue-5 p-3 text-white chat-bubble-2">
+                <p className="text-sm">Yes, I built it myself!</p>
+              </div>
+            </div>
+          </div>
+        </SpotlightCard>
 
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
