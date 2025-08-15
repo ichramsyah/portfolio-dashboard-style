@@ -140,7 +140,7 @@ const Services = ({ setActiveSection }) => {
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of my achievements.</p>
           </div>
           <div className="flex-grow flex items-center justify-center w-full p-4">
-            <Stack cardsData={images} sendToBackOnClick={true} />
+            <Stack cardsData={images} sendToBackOnClick={false} />
           </div>
         </SpotlightCard>
       </div>

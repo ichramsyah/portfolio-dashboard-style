@@ -1,7 +1,7 @@
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import GlassIcons from '../../common/GlassIcons';
-import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb } from 'react-icons/si';
+import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython } from 'react-icons/fa';
+import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
 
@@ -20,6 +20,14 @@ const Skills = () => {
     { icon: <SiMongodb size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mongodb', label: 'MongoDB' },
     { icon: <DiHtml5 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'html', label: 'HTML5' },
     { icon: <FaCss3Alt size={32} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'css', label: 'CSS3' },
+    // Ikon-ikon tambahan
+    { icon: <FaGitAlt size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'git', label: 'Git' },
+    { icon: <FaGithub size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'github', label: 'GitHub' },
+    { icon: <SiPostman size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'postman', label: 'Postman' },
+    { icon: <FaFigma size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'figma', label: 'Figma' },
+    { icon: <SiAdobeillustrator size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobeillustrator', label: 'Adobe Illustrator' },
+    { icon: <SiCpanel size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'cpanel', label: 'cPanel' },
+    { icon: <FaPython size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
   ];
 
   return (
