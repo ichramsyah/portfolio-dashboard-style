@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState, useEffect } from 'react';
+import { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers } from 'lucide-react';

@@ -6,7 +6,7 @@ import { useContext } from 'react';
 const ContactSection = () => {
   const { t } = useContext(LanguageContext);
   return (
-    <div className="py-12">
+    <div className="py-12 md:mt-0 mt-3">
       <SectionHeader title={t('contact.title')} description={t('contact.description')} />
       <SocialCards />
     </div>

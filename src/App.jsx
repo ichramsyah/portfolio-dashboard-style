@@ -44,8 +44,8 @@ const App = () => {
         <div className="min-h-screen bg-whitee dark:bg-background-dark transition-colors">
           <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
-          <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-8 rounded-br-2xl shadow-md">
-            <Menu size={24} className="text-gray-7 dark:text-gray-3" />
+          <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-9 w-full border-b border-gray-2 dark:border-gray-8">
+            <Menu size={24} className="text-gray-8 dark:text-gray-3" />
           </button>
 
           <div className="lg:ml-64 min-h-screen">
