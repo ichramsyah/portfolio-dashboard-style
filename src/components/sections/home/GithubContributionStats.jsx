@@ -93,7 +93,7 @@ function StatCard({ label, value, highlight }) {
     <SpotlightCard>
       <div className="rounded-lg p-4 text-center transition">
         <p className="text-gray-8 dark:text-gray-2 text-sm transition-color duration-500">{label}</p>
-        <p className={`text-2xl font-bold ${highlight ? 'text-green-6 dark:text-green-7' : ''}`}>{value}</p>
+        <p className={`text-2xl font-bold ${highlight ? 'text-green-6' : ''}`}>{value}</p>
       </div>
     </SpotlightCard>
   );
