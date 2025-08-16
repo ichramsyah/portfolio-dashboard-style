@@ -20,7 +20,6 @@ const Skills = () => {
     { icon: <SiMongodb size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mongodb', label: 'MongoDB' },
     { icon: <DiHtml5 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'html', label: 'HTML5' },
     { icon: <FaCss3Alt size={32} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'css', label: 'CSS3' },
-    // Ikon-ikon tambahan
     { icon: <FaGitAlt size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'git', label: 'Git' },
     { icon: <FaGithub size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'github', label: 'GitHub' },
     { icon: <SiPostman size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'postman', label: 'Postman' },

@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const AboutSection = () => {
   const { t } = useContext(LanguageContext);
   return (
-    <div className="py-12">
+    <div className="py-12 md:mt-0 mt-3">
       <motion.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="text-3xl font-medium text-gray-9 dark:text-whitee mb-5">
         {t('about.title')}
       </motion.h1>

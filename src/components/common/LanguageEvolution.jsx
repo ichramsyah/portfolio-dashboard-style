@@ -35,7 +35,7 @@ export default function LanguageEvolution({ username }) {
   }, [username]);
 
   // Palet hijau gelap (mirip calendar kamu)
-  const COLORS = ['#10b981', '#34d399', '#6ee7b7', '#047857', '#065f46'];
+  const COLORS = ['#34d399', '#6ee7b7', '#10b981', '#047857', '#065f46'];
 
   return (
     <div className="">
