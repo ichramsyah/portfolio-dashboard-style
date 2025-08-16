@@ -2,6 +2,7 @@ import Greeting from '../sections/home/Greeting';
 import Services from '../sections/home/Services';
 import Skills from './home/Skills';
 import GithubContributionStats from './home/GithubContributionStats';
+import GitHubCalendar from 'react-github-calendar';
 
 const HomeSection = ({ setActiveSection }) => {
   return (

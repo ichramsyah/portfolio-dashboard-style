@@ -51,8 +51,18 @@ export default function GithubContributionStats({ username }) {
       </div>
 
       {/* Calendar */}
-      <div className="overflow-x-auto">
-        <GitHubCalendar username={username} colorScheme={theme === 'dark' ? 'dark' : 'light'} blockSize={14} blockMargin={4} fontSize={14} />
+      <div className="text-gray-8 dark:text-gray-3">
+        <GitHubCalendar
+          username={username}
+          colorScheme={theme === 'dark' ? 'dark' : 'light'}
+          theme={{
+            light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+            dark: ['#111827', '#125d37ff', '#028b42ff', '#2db54dff', '#43ef60ff'],
+          }}
+          blockSize={14}
+          blockMargin={4}
+          fontSize={14}
+        />
       </div>
     </div>
   );
@@ -63,7 +73,7 @@ function StatCard({ label, value, highlight }) {
     <SpotlightCard>
       <div className="rounded-lg p-4 text-center transition">
         <p className="text-gray-8 dark:text-gray-3 text-sm">{label}</p>
-        <p className={`text-2xl font-bold ${highlight ? 'text-green-6 dark:text-green-5' : ''}`}>{value}</p>
+        <p className={`text-2xl font-bold ${highlight ? 'text-green-6 dark:text-green-7' : ''}`}>{value}</p>
       </div>
     </SpotlightCard>
   );
