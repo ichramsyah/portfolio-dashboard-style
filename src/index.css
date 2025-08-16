@@ -123,16 +123,6 @@ body {
   animation: marquee-left 60s linear infinite;
 }
 
-.react-activity-calendar__calendar {
-  color: var(--color-blackk);
-}
-
-@media (prefers-color-scheme: dark) {
-  .react-activity-calendar__calendar {
-    color: var(--color-whitee);
-  }
-}
-
 /* @keyframes fadeInSlideRight {
   0% {
     opacity: 0;
