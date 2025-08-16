@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import { FaGithub } from 'react-icons/fa';
 import { ThemeContext } from '../../../contexts/ThemeContext';
+import SpotlightCard from '../../common/SpotlightCard';
 
 export default function GithubContributionStats({ username }) {
   const { theme } = useContext(ThemeContext);
@@ -18,7 +19,6 @@ export default function GithubContributionStats({ username }) {
       .then((data) => {
         if (!data?.contributions) return;
 
-        // Flatten array 2D jadi array 1D
         const days = data.contributions.flat();
 
         const total = data.totalContributions;
@@ -60,9 +60,11 @@ export default function GithubContributionStats({ username }) {
 
 function StatCard({ label, value, highlight }) {
   return (
-    <div className="bg-gray-2 dark:bg-gray-8 rounded-lg p-4 text-center transition">
-      <p className="text-gray-5 text-sm">{label}</p>
-      <p className={`text-2xl font-bold ${highlight ? 'text-green-6' : ''}`}>{value}</p>
-    </div>
+    <SpotlightCard>
+      <div className="rounded-lg p-4 text-center transition">
+        <p className="text-gray-8 dark:text-gray-3 text-sm">{label}</p>
+        <p className={`text-2xl font-bold ${highlight ? 'text-green-6 dark:text-green-5' : ''}`}>{value}</p>
+      </div>
+    </SpotlightCard>
   );
 }
