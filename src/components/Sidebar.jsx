@@ -42,7 +42,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
         <div className="flex flex-col h-full">
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
-              <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }} viewport={{ once: false }} className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-center w-full">
                 {/* Gambar Profil */}
                 <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full" />
 
@@ -79,7 +79,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     onChange={(idx) => setLanguage(['en', 'id', 'jp'][idx])}
                   />
                 </div>
-              </motion.div>
+              </div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-[-10px] right-[-10px] lg:hidden p-2 text-gray-5 hover:text-gray-7 dark:text-gray-4 dark:hover:text-gray-2">
                 <X size={24} />
               </button>
@@ -96,7 +96,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 const isActive = activeSection === item.id;
 
                 return (
-                  <motion.li key={item.id} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 * index }} viewport={{ once: false }} className="group">
+                  <li key={item.id} className="group">
                     <button
                       ref={(el) => {
                         if (isActive) setActiveRef(el);
@@ -108,13 +108,13 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
                           ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-5 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%]'
-                          : 'text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[104%]'
+                          : 'text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[103%]'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
                       <span>{item.label}</span>
                     </button>
-                  </motion.li>
+                  </li>
                 );
               })}
             </ul>
