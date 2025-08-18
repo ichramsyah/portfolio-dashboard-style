@@ -4,8 +4,11 @@ import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGi
 import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
+import { useContext } from 'react';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 
 const Skills = () => {
+  const { t } = useContext(LanguageContext);
   const items = [
     { icon: <FaReact size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'react', label: 'React' },
     { icon: <SiNextdotjs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nextjs', label: 'Next.js' },
@@ -35,9 +38,9 @@ const Skills = () => {
       <div className="space-y-2">
         <h3 className="flex items-center text-xl  text-gray-9 dark:text-whitee ">
           <CodeBracketIcon className="text-sm w-6 " />
-          <span className="ml-2">Skills</span>
+          <span className="ml-2">{t('home.skills')}</span>
         </h3>
-        <p className=" text-gray-5 dark:text-gray-4">My professional skills.</p>
+        <p className=" text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
       </div>
       <div className="md:mb-10 mb-0">
         <GlassIcons items={items} className="custom-class" />

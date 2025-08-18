@@ -6,7 +6,7 @@ const colorClassMapping = {
   javascript: 'bg-gradient-to-br from-yellow-400 to-yellow-500',
   typescript: 'bg-gradient-to-br from-blue-500 to-blue-700',
   php: 'bg-gradient-to-br from-indigo-400 to-purple-500',
-  nodejs: 'bg-gradient-to-br from-green-600 to-green-700',
+  nodejs: 'bg-gradient-to-br from-green-500 to-green-700',
   tailwind: 'bg-gradient-to-br from-teal-400 to-cyan-600',
   python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   bootstrap: 'bg-gradient-to-br from-purple-600 to-indigo-700',
