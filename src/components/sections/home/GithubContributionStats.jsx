@@ -4,8 +4,10 @@ import { FaGithub } from 'react-icons/fa';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 import SpotlightCard from '../../common/SpotlightCard';
 import LanguageEvolution from '../../common/LanguageEvolution';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 
 export default function GithubContributionStats({ username }) {
+  const { t } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
   const [stats, setStats] = useState({
     total: 0,
@@ -35,7 +37,7 @@ export default function GithubContributionStats({ username }) {
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
-    const shownMonths = 6;
+    const shownMonths = 5;
 
     return contributions.filter((activity) => {
       const date = new Date(activity.date);
@@ -51,17 +53,17 @@ export default function GithubContributionStats({ username }) {
       <div className="pb-7">
         <h3 className="flex items-center text-xl text-gray-9 dark:text-white pb-3">
           <FaGithub className="text-xl" />
-          <span className="ml-2">GitHub Contributions</span>
+          <span className="ml-2">{t('home.githubcontribution')}</span>
         </h3>
-        <p className="text-gray-5 dark:text-gray-4">My GitHub activity over the past year.</p>
+        <p className="text-gray-5 dark:text-gray-4">{t('home.githubcontribution_paragraph')}</p>
       </div>
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <StatCard label="Total" value={stats.total} highlight />
-        <StatCard label="This Week" value={stats.thisWeek} highlight />
-        <StatCard label="Best" value={stats.best} highlight />
-        <StatCard label="Average" value={`${stats.average} / day`} highlight />
+        <StatCard label={t('home.githubcontribution_total')} value={stats.total} highlight />
+        <StatCard label={t('home.githubcontribution_week')} value={stats.thisWeek} highlight />
+        <StatCard label={t('home.githubcontribution_best')} value={stats.best} highlight />
+        <StatCard label={t('home.githubcontribution_average')} value={`${stats.average} / ${t('home.githubcontribution_day')}`} highlight />
       </div>
 
       {/* Calendar */}
@@ -80,7 +82,7 @@ export default function GithubContributionStats({ username }) {
             fontSize={14}
           />
         </div>
-        <div className="mt-4">
+        <div className="mt-3">
           <LanguageEvolution username="ichramsyah" />
         </div>
       </div>

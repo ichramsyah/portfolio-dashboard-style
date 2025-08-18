@@ -6,7 +6,9 @@ const colorClassMapping = {
   javascript: 'bg-gradient-to-br from-yellow-400 to-yellow-500',
   typescript: 'bg-gradient-to-br from-blue-500 to-blue-700',
   php: 'bg-gradient-to-br from-indigo-400 to-purple-500',
+  nodejs: 'bg-gradient-to-br from-green-500 to-green-700',
   tailwind: 'bg-gradient-to-br from-teal-400 to-cyan-600',
+  python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   bootstrap: 'bg-gradient-to-br from-purple-600 to-indigo-700',
   mysql: 'bg-gradient-to-br from-blue-500 to-orange-400',
   mongodb: 'bg-gradient-to-br from-green-500 to-emerald-600',
@@ -18,7 +20,6 @@ const colorClassMapping = {
   figma: 'bg-gradient-to-br from-fuchsia-400 to-pink-500',
   adobeillustrator: 'bg-gradient-to-br from-orange-500 to-red-600',
   cpanel: 'bg-gradient-to-br from-teal-400 to-cyan-500',
-  python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   default: 'bg-gradient-to-br from-gray-500 to-gray-600',
 };
 

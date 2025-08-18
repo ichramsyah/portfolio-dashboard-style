@@ -1,11 +1,14 @@
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import GlassIcons from '../../common/GlassIcons';
-import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython } from 'react-icons/fa';
+import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
+import { useContext } from 'react';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 
 const Skills = () => {
+  const { t } = useContext(LanguageContext);
   const items = [
     { icon: <FaReact size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'react', label: 'React' },
     { icon: <SiNextdotjs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nextjs', label: 'Next.js' },
@@ -13,7 +16,9 @@ const Skills = () => {
     { icon: <SiExpress size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'express', label: 'Express.js' },
     { icon: <FaJs size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'javascript', label: 'JavaScript' },
     { icon: <SiTypescript size={27} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'typescript', label: 'TypeScript' },
+    { icon: <FaNodeJs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nodejs', label: 'Node.js' },
     { icon: <FaPhp size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'php', label: 'PHP' },
+    { icon: <FaPython size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
     { icon: <SiTailwindcss size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'tailwind', label: 'Tailwind CSS' },
     { icon: <FaBootstrap size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'bootstrap', label: 'Bootstrap' },
     { icon: <GrMysql size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mysql', label: 'MySQL' },
@@ -26,7 +31,6 @@ const Skills = () => {
     { icon: <FaFigma size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'figma', label: 'Figma' },
     { icon: <SiAdobeillustrator size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobeillustrator', label: 'Adobe Illustrator' },
     { icon: <SiCpanel size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'cpanel', label: 'cPanel' },
-    { icon: <FaPython size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
   ];
 
   return (
@@ -34,11 +38,11 @@ const Skills = () => {
       <div className="space-y-2">
         <h3 className="flex items-center text-xl  text-gray-9 dark:text-whitee ">
           <CodeBracketIcon className="text-sm w-6 " />
-          <span className="ml-2">Skills</span>
+          <span className="ml-2">{t('home.skills')}</span>
         </h3>
-        <p className=" text-gray-5 dark:text-gray-4">My professional skills.</p>
+        <p className=" text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
       </div>
-      <div>
+      <div className="md:mb-10 mb-0">
         <GlassIcons items={items} className="custom-class" />
       </div>
     </div>

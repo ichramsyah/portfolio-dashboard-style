@@ -161,3 +161,20 @@ body {
   animation: pop-with-pause 2s ease-in-out infinite;
   animation-delay: 0.5s;
 }
+
+.scrollbar-x {
+  overflow-x: auto;
+
+  scrollbar-color: #8f8e8e transparent;
+}
+
+.scrollbar-x::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-x::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0; /* Warna handle semi-transparan */
+  border-radius: 8px;
+}
+.scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7a7a; /* Warna handle saat hover */
+}
