@@ -35,7 +35,7 @@ export default function GithubContributionStats({ username }) {
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
-    const shownMonths = 6;
+    const shownMonths = 5;
 
     return contributions.filter((activity) => {
       const date = new Date(activity.date);
@@ -80,7 +80,7 @@ export default function GithubContributionStats({ username }) {
             fontSize={14}
           />
         </div>
-        <div className="mt-4">
+        <div className="mt-3">
           <LanguageEvolution username="ichramsyah" />
         </div>
       </div>

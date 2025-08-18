@@ -15,7 +15,7 @@ export const translations = {
       greeting: "Hello, I'm Ichramsyah Abdurrachman",
       religion: 'from Jakarta, Indonesia',
       description:
-        'A passionate and dedicated software developer with a focus on end-to-end development. Good understanding of web technologies with modern frameworks. Accustomed to working collaboratively in a team and committed to building functional, responsive and visually appealing web applications.',
+        'Experienced and passionate Fullstack Developer with a focus on end-to-end development. Good understanding of web technologies with modern frameworks. Accustomed to working collaboratively in a team and committed to building functional, responsive and visually appealing web applications. On the frontend, I work with React.js, Next.js, TypeScript, and Tailwind CSS to craft responsive and accessible user interfaces. On the backend, I work with Node.js, Express.js, Laravel, MySQL and MongoDB to build robust APIs and manage data effectively.',
       service: 'Featured',
       services_paragraph: 'Explore everything I’ve crafted, contributed, and accomplished.',
     },
