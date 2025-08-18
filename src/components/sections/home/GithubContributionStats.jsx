@@ -60,7 +60,7 @@ export default function GithubContributionStats({ username }) {
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <StatCard label="Total" value={stats.total} highlight />
+        <StatCard label={t('home.githubcontribution_total')} value={stats.total} highlight />
         <StatCard label={t('home.githubcontribution_week')} value={stats.thisWeek} highlight />
         <StatCard label={t('home.githubcontribution_best')} value={stats.best} highlight />
         <StatCard label={t('home.githubcontribution_average')} value={`${stats.average} / ${t('home.githubcontribution_day')}`} highlight />

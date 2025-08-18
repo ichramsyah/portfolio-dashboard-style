@@ -37,8 +37,8 @@ const Services = ({ setActiveSection }) => {
         <SpotlightCard className="h-76 rounded-lg">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
-            <span className="pt-4 text-gray-8 dark:text-gray-2">Skills & Tools</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A collection of my technical skills and tools.</p>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.skills')}</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.skills_paragraph')}</p>
           </div>
           <TechStackMarquee />
         </SpotlightCard>
@@ -49,8 +49,8 @@ const Services = ({ setActiveSection }) => {
             <button onClick={() => setActiveSection('about')}>
               <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
-            <span className="pt-4 text-gray-8 dark:text-gray-2">About me</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief introduction about myself.</p>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_about')}</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_about_desc')}</p>
           </div>
           <div className="relative mt-[-30px]">
             <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
@@ -64,8 +64,8 @@ const Services = ({ setActiveSection }) => {
               <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <div className="pt-2">
-              <span className="text-gray-8 dark:text-gray-2">Project Showcase</span>
-              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A selection of real apps built to solve real problems.</p>
+              <span className="text-gray-8 dark:text-gray-2">{t('home.service_project')}</span>
+              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_project_desc')}</p>
             </div>
           </div>
           <div className="w-1/2 h-[160px] max-sm:h-[305px]">
@@ -96,8 +96,8 @@ const Services = ({ setActiveSection }) => {
               <Brush width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <div className="pt-2">
-              <span className="text-gray-8 dark:text-gray-2">Services</span>
-              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of the services offered.</p>
+              <span className="text-gray-8 dark:text-gray-2">{t('home.service_services')}</span>
+              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_services_desc')}</p>
             </div>
           </div>
           {/* Kontainer yang sudah diperbaiki */}
@@ -112,8 +112,8 @@ const Services = ({ setActiveSection }) => {
             <button onClick={() => setActiveSection('chatroom')}>
               <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
-            <span className="pt-4 text-gray-8 dark:text-gray-2">Chat Room</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">Join the conversation and connect with others.</p>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_chatroom')}</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_chatroom_desc')}</p>
           </div>
           <div className="px-2 space-y-3">
             <div className="flex justify-start">
@@ -136,8 +136,8 @@ const Services = ({ setActiveSection }) => {
             <button onClick={() => setActiveSection('achievements')}>
               <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
-            <span className="pt-4 text-gray-8 dark:text-gray-2">Achievements</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">A brief overview of my achievements.</p>
+            <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_achievements')}</span>
+            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_achievements_desc')}</p>
           </div>
           <div className="flex-grow flex items-center justify-center w-full p-4">
             <Stack cardsData={images} sendToBackOnClick={false} />
