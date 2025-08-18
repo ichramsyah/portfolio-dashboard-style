@@ -179,12 +179,12 @@ I am eager to contribute to the technology industry with innovative web solution
     nav: {
       home: 'Beranda',
       about: 'Tentang',
-      achievements: 'Prestasi',
+      achievements: 'Pencapaian',
       projects: 'Proyek',
-      contact: 'Kontak',
       chatroom: 'Ruang Obrolan',
-      copyright1: 'HAK CIPTA © 2025',
-      copyright2: 'Ichramsyah Abdurrachman. Seluruh hak dilindungi.',
+      contact: 'Kontak',
+      copyright1: 'Hak Cipta © 2025',
+      copyright2: 'Ichramsyah Abdurrachman. Semua hak dilindungi undang-undang.',
     },
     home: {
       greeting: 'Halo, saya Ichramsyah Abdurrachman',
@@ -357,10 +357,13 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
   jp: {
     nav: {
       home: 'ホーム',
-      about: '私について',
-      achievements: '業績',
+      about: '自己紹介',
+      achievements: '実績',
       projects: 'プロジェクト',
-      contact: '連絡先',
+      chatroom: 'チャットルーム',
+      contact: 'お問い合わせ',
+      copyright1: '著作権 © 2025',
+      copyright2: 'Ichramsyah Abdurrachman. 全ての権利を保有します。',
     },
     home: {
       greeting: 'こんにちは、イクラムシャ・アブドゥラックマンです',
