@@ -24,7 +24,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-[17px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line"
+          className="text-[16px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line"
         >
           {showFullBio ? fullBio : previewBio}
         </motion.p>

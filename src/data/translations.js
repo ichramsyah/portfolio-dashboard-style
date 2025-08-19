@@ -42,21 +42,13 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio: `I am Ichramsyah Abdurrachman, an active student at Paramadina University majoring in Computer Engineering, dedicated to becoming a Fullstack Developer. I specialize in building scalable and user-friendly web applications, leveraging technologies like React, Laravel, Node.js, Express.js, with a focus on advanced skills such as Design Patterns and performance optimization.
+      bio: `Hello! Thank you for visiting my personal website. I'm Ichramsyah Abdurrachman, an Informatics Engineering student at Paramadina University. I am a Fullstack Developer with a strong passion for building software products, focusing on advanced skills like Design Patterns and performance optimization. My tech stack includes modern frontend technologies such as Next.js, React.js, TypeScript, and Tailwind CSS, as well as backend development using Node.js, Laravel, and Express.js.
 
-My journey began with a passion for graphic design and web development. I have mastered Adobe Illustrator and Figma, enhancing my ability to create intuitive user interfaces.
+I enjoy creating user-friendly, high-performance solutions. Whether building intuitive interfaces or architecting the backend, I always strive to bring efficiency and clarity to every layer of the application. I'm a quick learner who thrives in dynamic environments and enjoys solving complex problems collaboratively.
 
-My internship at PT Hino Motor Sales Indonesia in IT Change Management, alongside my role as a Graphic Designer, provided deep insights into IT processes and the integration of design with technology.
+I believe that clear communication and team synergy are key to successful software development. My experiences have shaped my technical and analytical abilities, as well as my leadership qualities. I am always eager to work in a team, learn from others, and contribute to impactful projects.
 
-As a Fullstack Developer, I successfully built a social platform website for Indonesian film enthusiasts using Laravel, Blade, Tailwind CSS, and MySQL, which I deployed using cPanel.
-
-To further demonstrate my expertise in real-time communication, I also engineered a full-featured chat application using the MERN (MongoDB, Express.js, React, Node.js) stack, integrating Socket.IO to facilitate instant, bi-directional messaging.
-
-I apply Architecture Patterns like MVC and Repository Pattern to ensure clean and maintainable code, while optimizing performance with efficient MySQL queries.
-
-Additionally, I delve into machine learning with Python, such as developing keyword frequency predictions for technology articles on DOAJ.org.
-
-I am eager to contribute to the technology industry with innovative web solutions. Let’s connect to collaborate or explore opportunities together!`,
+Best regards, Ichram`,
       language: 'Language',
       education: 'Education',
       experience: 'Work Experience',
@@ -69,14 +61,6 @@ I am eager to contribute to the technology industry with innovative web solution
           year: '2022 - 2026',
           description: 'Focused on software development, algorithms, and information systems.',
           location: '• Jakarta, Indonesia',
-        },
-        {
-          logo: 'https://ppdb.man1kotabogor.id/logoman.png',
-          degree: 'Science',
-          school: 'MAN 1 Bogor',
-          year: '2019 - 2022',
-          description: 'Focused on scientific studies including math and physics.',
-          location: '• Bogor, Indonesia',
         },
       ],
       experienceItems: [
@@ -217,21 +201,13 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     about: {
       title: 'Tentang Saya',
-      bio: `Saya Ichramsyah Abdurrachman, seorang mahasiswa aktif di Universitas Paramadina jurusan Teknik Komputer, berdedikasi untuk menjadi seorang Fullstack Developer. Saya memiliki spesialisasi dalam membangun aplikasi web yang skalabel dan mudah digunakan (user-friendly), dengan memanfaatkan teknologi seperti React, Laravel, Node.js, Express.js, serta berfokus pada keahlian lanjutan seperti Design Patterns dan optimasi kinerja.
+      bio: `Halo! Terima kasih telah mengunjungi website pribadi saya. Saya Ichramsyah Abdurrachman, seorang mahasiswa Teknik Informatika di Universitas Paramadina. Saya adalah seorang Fullstack Developer dengan minat besar dalam membangun produk perangkat lunak dan berfokus pada keahlian lanjutan seperti Design Patterns dan optimasi kinerja. Stack teknologi saya meliputi teknologi frontend modern seperti Next.js, React.js, TypeScript, dan Tailwind CSS, serta pengembangan backend menggunakan Node.js, Laravel dan Express.js.
 
-Perjalanan saya dimulai dari passion terhadap desain grafis dan pengembangan web. Saya telah menguasai Adobe Illustrator dan Figma, yang meningkatkan kemampuan saya dalam menciptakan antarmuka pengguna yang intuitif.
+Saya menikmati menciptakan solusi yang ramah pengguna dan memiliki performa tinggi. Baik saat membangun antarmuka yang intuitif maupun merancang backend, saya selalu berusaha membawa efisiensi dan kejelasan pada setiap lapisan aplikasi. Saya pembelajar cepat yang tumbuh dalam lingkungan dinamis dan senang menyelesaikan masalah kompleks secara kolaboratif.
 
-Pengalaman magang saya di PT Hino Motor Sales Indonesia pada bidang IT Change Management, di samping peran sebagai Graphic Designer, memberikan wawasan mendalam tentang proses IT dan integrasi desain dengan teknologi.
+Saya percaya bahwa komunikasi yang baik dan sinergi tim adalah kunci kesuksesan dalam pengembangan perangkat lunak. Pengalaman saya telah membentuk kemampuan teknis dan analitis saya, serta kualitas kepemimpinan saya. Saya selalu bersemangat untuk bekerja dalam tim, belajar dari orang lain, dan berkontribusi pada proyek yang berdampak.
 
-Sebagai Fullstack Developer, saya berhasil membangun website platform sosial untuk penggemar film Indonesia menggunakan Laravel, Blade, Tailwind CSS, dan MySQL, yang saya deploy menggunakan cPanel.
-
-Untuk lebih menunjukkan keahlian saya dalam komunikasi real-time, saya juga merekayasa aplikasi chat dengan fitur lengkap menggunakan tumpukan MERN (MongoDB, Express.js, React, Node.js), mengintegrasikan Socket.IO untuk memfasilitasi pesan instan dua arah.
-
-Saya menerapkan Architecture Patterns seperti MVC dan Repository Pattern untuk memastikan kode yang bersih dan mudah dipelihara, sekaligus mengoptimalkan kinerja dengan kueri MySQL yang efisien.
-
-Selain itu, saya mendalami machine learning dengan Python, seperti mengembangkan prediksi frekuensi kata kunci untuk artikel teknologi di DOAJ.org.
-
-Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi web yang inovatif. Mari terhubung untuk berkolaborasi atau menjajaki peluang bersama!`,
+Salam hangat, Ichram`,
       language: 'Bahasa',
       education: 'Pendidikan',
       experience: 'Pengalaman Kerja',
@@ -244,14 +220,6 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
           year: '2022 - 2026',
           description: 'Fokus pada pengembangan perangkat lunak, algoritma, dan sistem informasi.',
           location: '• Jakarta, Indonesia',
-        },
-        {
-          logo: 'https://ppdb.man1kotabogor.id/logoman.png',
-          degree: 'Ilmu Pengetahuan Alam',
-          school: 'MAN 1 Bogor',
-          year: '2019 - 2022',
-          description: 'Fokus pada studi ilmiah termasuk matematika dan fisika.',
-          location: '• Bogor, Indonesia',
         },
       ],
       experienceItems: [
@@ -393,6 +361,169 @@ Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi w
       service_chatroom_desc: '会話に参加して、他の人とつながりましょう。',
       service_achievements: '実績',
       service_achievements_desc: '私の実績の概要。',
+    },
+    about: {
+      title: '自己紹介',
+      bio: 'こんにちは！私の個人ウェブサイトへお越しいただき、ありがとうございます。パラマディナ大学で情報工学を専攻している、イクラムシャ・アブドゥラックマンです。私はソフトウェア製品の開発に強い情熱を持つフルスタック開発者で、デザインパターンやパフォーマンス最適化といった高度なスキルに注力しています。私の技術スタックには、Next.js、React.js、TypeScript、Tailwind CSSなどの最新のフロントエンド技術、およびNode.js、Laravel、Express.jsを使用したバックエンド開発が含まれます。\n\nユーザーフレンドリーで高性能なソリューションを創り出すことに喜びを感じます。直感的なインターフェースの構築であれ、バックエンドの設計であれ、アプリケーションの各層に効率性と明確さをもたらすよう常に努めています。変化の速い環境で成長する学習意欲の高い人間であり、複雑な問題を協力して解決することを楽しんでいます。\n\n良好なコミュニケーションとチームの相乗効果が、ソフトウェア開発における成功の鍵であると信じています。これまでの経験を通じて、技術力、分析能力、そしてリーダーシップを培ってきました。チームで働き、他者から学び、影響力のあるプロジェクトに貢献することに常に意欲的です。\n\n敬具, イクラム',
+      language: '言語',
+      education: '学歴',
+      experience: '職歴',
+      interests: '趣味・関心事',
+      educationItems: [
+        {
+          logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
+          degree: '学士号 - 情報工学',
+          school: 'Paramadina University',
+          year: '2022年 - 2026年',
+          description: 'ソフトウェア開発、アルゴリズム、情報システムを中心に学習。',
+          location: '• インドネシア、ジャカルタ',
+        },
+      ],
+      experienceItems: [
+        {
+          logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
+          position: 'IT Change Management',
+          company: 'PT. Hino Motor Sales Indonesia',
+          location: 'インドネシア、ジャカルタ',
+          year: '2023年7月 - 2023年11月',
+          time: '• 4ヶ月間',
+          pos: '• インターンシップ',
+          workfrom: '• オンサイト',
+          description:
+            '技術チームと協力し、複雑なITコンセプトを分かりやすいビジュアルコンテンツに変換。\nIT変更管理イニシアチブをサポートするため、ビジュアルドキュメントやコミュニケーション資料（チラシ、アニメーション動画、プレゼンテーションなど）を作成。\nすべてのコミュニケーション資料が、会社のブランディング基準とITガバナンスに準拠していることを確認。\nCanva、Adobe Illustrator、PowerPointなどのツールを活用し、魅力的で有益なビジュアルを制作。',
+          current: false,
+        },
+      ],
+    },
+    achievements: {
+      title: '実績',
+      description: '私のプロフェッショナルなキャリアを通じて取得した証明書と実績のコレクションです。',
+      all: 'すべて',
+      certifications: '証明書',
+      other: 'その他',
+      items: [
+        {
+          type: 'certification',
+          image: 'images/certificate/hackaton.jpg',
+          title: 'ハッカソン大会参加感謝状',
+          organizer: 'パラマディナ大学',
+          date: '2025年6月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/legacyfrontend.png',
+          title: 'レガシーフロントエンド証明書',
+          organizer: 'FreeCodeCamp',
+          date: '2025年7月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/frontenddevelopment.png',
+          title: 'フロントエンド開発ライブラリ証明書',
+          organizer: 'FreeCodeCamp',
+          date: '2025年7月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/Sertifikat IBM.png',
+          title: 'IBM Graniteを使用したコード生成と最適化証明書',
+          organizer: 'IBM SkillsBuild',
+          date: '2025年7月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/javascriptintermediate.jpg',
+          title: 'Javascript（中級）証明書',
+          organizer: 'Sololearn',
+          date: '2025年7月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/javascriptalgorithm.png',
+          title: 'JavaScriptアルゴリズムとデータ構造証明書',
+          organizer: 'FreeCodeCamp',
+          date: '2025年7月',
+        },
+        {
+          type: 'other',
+          image: 'images/certificate/IBM Badge.JPG',
+          title: 'IBM Graniteを使用したコード生成と最適化バッジ',
+          organizer: 'IBM SkillsBuild',
+          date: '2025年7月',
+        },
+        {
+          type: 'certification',
+          image: 'images/certificate/responsivewebdesign.png',
+          title: 'レスポンシブウェブデザイン証明書',
+          organizer: 'FreeCodeCamp',
+          date: '2025年7月',
+        },
+        {
+          type: 'other',
+          image: 'images/certificate/jurnal.JPG',
+          title: '論文発表',
+          organizer: 'パダン工科大学テクノイフジャーナル',
+          date: '2024年10月',
+        },
+      ],
+    },
+    projects: {
+      title: 'プロジェクト',
+      description: '私が手がけた個人プロジェクトや学業プロジェクトの一部です。',
+      all: 'すべて',
+      Fullstack: 'フルスタック',
+      Frontend: 'フロントエンド',
+      Backend: 'バックエンド',
+      search: 'プロジェクトを検索...',
+      viewDetails: '詳細を見る',
+      items: [
+        {
+          id: 1,
+          title: 'VeloChat - リアルタイムチャットウェブアプリ',
+          description: 'VeloChatは、MERNスタックとSocket.IOを統合して構築されたリアルタイムチャットアプリケーションです。',
+          category: 'Fullstack',
+        },
+        {
+          id: 2,
+          title: 'Rinema - インドネシア映画ファンのためのソーシャルプラットフォーム',
+          description: 'LaravelとMySQLを使用して構築された、インドネシア映画ファンのためのコミュニティプラットフォームです。',
+          category: 'Fullstack',
+        },
+        {
+          id: 7,
+          title: 'BebasBlog - ソーシャルプラットフォーム向けRESTful API',
+          description: 'これはBebasblogプロジェクトのバックエンドサービスで、ブログやソーシャルメディアプラットフォームをサポートするために構築されたRESTful APIです。',
+          category: 'Backend',
+        },
+        {
+          id: 3,
+          title: 'Rinema（リビルド版）- インドネシア映画ファンのためのソーシャルプラットフォーム',
+          description: '公式APIを統合したRinemaウェブアプリケーションの再開発版です。',
+          category: 'Frontend',
+        },
+        {
+          id: 4,
+          title: 'ポートフォリオサイト - ダッシュボードデザイン',
+          description: 'ダッシュボードレイアウトでデザインされた個人のポートフォリオサイトです。',
+          category: 'Frontend',
+        },
+        {
+          id: 5,
+          title: 'ポートフォリオサイト - ランディングページデザイン',
+          description: 'ランディングページレイアウトでデザインされた個人のポートフォリオサイトです。',
+          category: 'Frontend',
+        },
+        {
+          id: 6,
+          title: 'シンプルなノートアプリ向けRESTful API',
+          description: 'Express.jsを使用して構築された、ノートを管理するためのシンプルなRESTful APIです。',
+          category: 'Backend',
+        },
+      ],
+    },
+    contact: {
+      title: 'お問い合わせ',
+      description: 'このページをスクロールして、お気軽にご連絡ください！',
     },
   },
 };
