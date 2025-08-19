@@ -307,7 +307,6 @@ class App {
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
       { image: `./images/iam.jpeg`, text: '' },
-      { image: `./images/iam2.jpg`, text: '' },
       { image: `./images/iam3.jpeg`, text: '' },
       { image: `./images/iam4.jpeg`, text: '' },
     ];
