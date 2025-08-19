@@ -217,21 +217,13 @@ I am eager to contribute to the technology industry with innovative web solution
     },
     about: {
       title: 'Tentang Saya',
-      bio: `Saya Ichramsyah Abdurrachman, seorang mahasiswa aktif di Universitas Paramadina jurusan Teknik Komputer, berdedikasi untuk menjadi seorang Fullstack Developer. Saya memiliki spesialisasi dalam membangun aplikasi web yang skalabel dan mudah digunakan (user-friendly), dengan memanfaatkan teknologi seperti React, Laravel, Node.js, Express.js, serta berfokus pada keahlian lanjutan seperti Design Patterns dan optimasi kinerja.
+      bio: `Halo! Terima kasih telah mengunjungi website pribadi saya. Saya Ichramsyah Abdurrachman, seorang mahasiswa Teknik Informatika di Universitas Paramadina. Saya adalah seorang Fullstack Developer dengan minat besar dalam membangun produk perangkat lunak dan berfokus pada keahlian lanjutan seperti Design Patterns dan optimasi kinerja. Stack teknologi saya meliputi teknologi frontend modern seperti Next.js, React.js, TypeScript, dan Tailwind CSS, serta pengembangan backend menggunakan Node.js, Laravel dan Express.js.
 
-Perjalanan saya dimulai dari passion terhadap desain grafis dan pengembangan web. Saya telah menguasai Adobe Illustrator dan Figma, yang meningkatkan kemampuan saya dalam menciptakan antarmuka pengguna yang intuitif.
+Saya menikmati menciptakan solusi yang ramah pengguna dan memiliki performa tinggi. Baik saat membangun antarmuka yang intuitif maupun merancang backend, saya selalu berusaha membawa efisiensi dan kejelasan pada setiap lapisan aplikasi. Saya pembelajar cepat yang tumbuh dalam lingkungan dinamis dan senang menyelesaikan masalah kompleks secara kolaboratif.
 
-Pengalaman magang saya di PT Hino Motor Sales Indonesia pada bidang IT Change Management, di samping peran sebagai Graphic Designer, memberikan wawasan mendalam tentang proses IT dan integrasi desain dengan teknologi.
+Saya percaya bahwa komunikasi yang baik dan sinergi tim adalah kunci kesuksesan dalam pengembangan perangkat lunak. Pengalaman saya telah membentuk kemampuan teknis dan analitis saya, serta kualitas kepemimpinan saya. Saya selalu bersemangat untuk bekerja dalam tim, belajar dari orang lain, dan berkontribusi pada proyek yang berdampak.
 
-Sebagai Fullstack Developer, saya berhasil membangun website platform sosial untuk penggemar film Indonesia menggunakan Laravel, Blade, Tailwind CSS, dan MySQL, yang saya deploy menggunakan cPanel.
-
-Untuk lebih menunjukkan keahlian saya dalam komunikasi real-time, saya juga merekayasa aplikasi chat dengan fitur lengkap menggunakan tumpukan MERN (MongoDB, Express.js, React, Node.js), mengintegrasikan Socket.IO untuk memfasilitasi pesan instan dua arah.
-
-Saya menerapkan Architecture Patterns seperti MVC dan Repository Pattern untuk memastikan kode yang bersih dan mudah dipelihara, sekaligus mengoptimalkan kinerja dengan kueri MySQL yang efisien.
-
-Selain itu, saya mendalami machine learning dengan Python, seperti mengembangkan prediksi frekuensi kata kunci untuk artikel teknologi di DOAJ.org.
-
-Saya sangat antusias untuk berkontribusi pada industri teknologi dengan solusi web yang inovatif. Mari terhubung untuk berkolaborasi atau menjajaki peluang bersama!`,
+Salam hangat, Ichram`,
       language: 'Bahasa',
       education: 'Pendidikan',
       experience: 'Pengalaman Kerja',
