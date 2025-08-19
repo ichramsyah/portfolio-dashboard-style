@@ -4,6 +4,7 @@ import { BriefcaseBusiness } from 'lucide-react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
+import SpotlightCard from '../../common/SpotlightCard';
 
 const containerVariants = {
   hidden: { opacity: 0, x: 30 },
@@ -53,57 +54,59 @@ const Experience = () => {
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
-              <div className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border border-gray-2 dark:border-gray-7">
-                <div className="flex items-start space-x-4">
-                  <img src={exp.logo} className="w-7 object-contain mt-[3px]" alt="" />
+              <SpotlightCard>
+                <div className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <img src={exp.logo} className="w-7 object-contain mt-[3px]" alt="" />
 
-                  <div className="flex-1 relative">
-                    <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
+                    <div className="flex-1 relative">
+                      <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
-                    <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
-                    <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
+                      <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
+                      <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
+                      <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
 
-                    <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
-                      <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
-                      <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
+                      <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
+                        <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
+                        <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
+                          <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
+                          <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
+                          <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
+                        </div>
                       </div>
+
+                      <Disclosure>
+                        {({ open }) => (
+                          <>
+                            <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-4 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-3 transition-all">
+                              {open ? 'Hide responsibilities' : 'Show responsibilities'}
+                              <ChevronDownIcon className={`w-4 h-4 mt-[2px] transition-transform duration-200 ${open ? 'rotate-0' : 'rotate-[-90deg]'}`} />
+                            </Disclosure.Button>
+
+                            <Transition
+                              as={Disclosure.Panel}
+                              enter="transition duration-300 ease-out"
+                              enterFrom="opacity-0 -translate-y-2"
+                              enterTo="opacity-100 translate-y-0"
+                              leave="transition duration-200 ease-in"
+                              leaveFrom="opacity-100 translate-y-0"
+                              leaveTo="opacity-0 -translate-y-2"
+                            >
+                              <ul className="list-disc ml-5 text-gray-6 dark:text-gray-3 mt-3">
+                                {exp.description.split('\n').map((line, i) => (
+                                  <li key={i} className="mb-2 leading-tight">
+                                    {line.replace(/^•\s*/, '')}
+                                  </li>
+                                ))}
+                              </ul>
+                            </Transition>
+                          </>
+                        )}
+                      </Disclosure>
                     </div>
-
-                    <Disclosure>
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-4 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-3 transition-all">
-                            {open ? 'Hide responsibilities' : 'Show responsibilities'}
-                            <ChevronDownIcon className={`w-4 h-4 mt-[2px] transition-transform duration-200 ${open ? 'rotate-0' : 'rotate-[-90deg]'}`} />
-                          </Disclosure.Button>
-
-                          <Transition
-                            as={Disclosure.Panel}
-                            enter="transition duration-300 ease-out"
-                            enterFrom="opacity-0 -translate-y-2"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition duration-200 ease-in"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 -translate-y-2"
-                          >
-                            <ul className="list-disc ml-5 text-gray-6 dark:text-gray-3 mt-3">
-                              {exp.description.split('\n').map((line, i) => (
-                                <li key={i} className="mb-2 leading-tight">
-                                  {line.replace(/^•\s*/, '')}
-                                </li>
-                              ))}
-                            </ul>
-                          </Transition>
-                        </>
-                      )}
-                    </Disclosure>
                   </div>
                 </div>
-              </div>
+              </SpotlightCard>
             </motion.div>
           </div>
         ))}
