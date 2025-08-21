@@ -9,6 +9,7 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import ContactSection from './components/sections/ContactSection';
 import { Menu } from 'lucide-react';
 import './App.css';
+import ChatRoomSection from './components/sections/ChatRoomSection';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -33,6 +34,8 @@ const App = () => {
         return <ProjectsSection />;
       case 'contact':
         return <ContactSection />;
+      case 'chatroom':
+        return <ChatRoomSection />;
       default:
         return <HomeSection setActiveSection={setActiveSection} />;
     }
