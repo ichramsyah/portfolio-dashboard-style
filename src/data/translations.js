@@ -156,6 +156,10 @@ Best regards, Ichram`,
       title: 'Contact',
       description: 'Scroll through this page and contact me!',
     },
+    chatroom: {
+      title: 'Chat Room',
+      description: 'Feel free to share your thoughts, suggestions, questions, or anything else!',
+    },
   },
 
   // Indonesia
@@ -320,6 +324,10 @@ Salam hangat, Ichram`,
     contact: {
       title: 'Kontak',
       description: 'Scroll halaman ini dan hubungi saya!',
+    },
+    chatroom: {
+      title: 'Ruang Obrolan',
+      description: 'Silakan bagikan pemikiran, saran, pertanyaan, atau apa pun yang Anda inginkan!',
     },
   },
   jp: {
@@ -524,6 +532,10 @@ Salam hangat, Ichram`,
     contact: {
       title: 'お問い合わせ',
       description: 'このページをスクロールして、お気軽にご連絡ください！',
+    },
+    chatroom: {
+      title: 'チャットルーム',
+      description: '気軽に考えや提案、質問などを共有してください！',
     },
   },
 };
