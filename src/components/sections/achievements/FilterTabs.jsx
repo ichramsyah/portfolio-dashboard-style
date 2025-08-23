@@ -2,6 +2,7 @@ import { useContext, useState, Fragment, useRef, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
 import { motion } from 'framer-motion';
+import AchievementCard from './AchievementCard';
 
 const FilterTabs = () => {
   const { t } = useContext(LanguageContext);
@@ -69,31 +70,7 @@ const FilterTabs = () => {
       {/* Achievement Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredAchievements.map((achievement) => (
-          <motion.div
-            initial={{ opacity: 0, filter: 'blur(7px)', scale: 0.8 }}
-            whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-            viewport={{ once: true }}
-            key={achievement.id}
-            className="flex flex-col h-full bg-whitee dark:bg-gray-8 rounded-lg border-[2px] border-gray-2 dark:border-gray-7"
-          >
-            <div className="m-1 flex flex-col h-full rounded-lg overflow-hidden">
-              <div className="relative group cursor-pointer aspect-[16/11] w-full overflow-hidden rounded-t-lg" onClick={() => setSelectedImage(achievement.image)}>
-                <img src={achievement.image} alt="" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="text-white  text-sm">See Image</span>
-                </div>
-              </div>
-
-              <div className="flex-1 flex flex-col justify-between bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-b-lg p-4">
-                <div>
-                  <h3 className="text-gray-9 dark:text-whitee mb-3">{achievement.title}</h3>
-                  <p className="text-gray-6 dark:text-gray-4 text-sm mb-5">{achievement.organizer}</p>
-                </div>
-                <p className="text-gray-6 dark:text-gray-4 text-sm">{achievement.date}</p>
-              </div>
-            </div>
-          </motion.div>
+          <AchievementCard key={achievement.id} achievement={achievement} onImageClick={setSelectedImage} />
         ))}
       </div>
 
