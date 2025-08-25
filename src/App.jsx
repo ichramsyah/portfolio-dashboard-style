@@ -12,6 +12,7 @@ import './App.css';
 import ChatRoomSection from './components/sections/ChatRoomSection';
 import Preloader from './components/Preloader';
 import { AnimatePresence } from 'framer-motion';
+import { AuthProvider } from './contexts/AuthContext';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -26,15 +27,12 @@ const App = () => {
   }, [activeSection]);
 
   useEffect(() => {
-    // <-- 4. Efek untuk menyembunyikan preloader setelah delay
-    // Simulasi waktu loading, misalnya 2 detik (2000ms)
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 10);
 
-    // Cleanup function untuk membersihkan timer
     return () => clearTimeout(timer);
-  }, []); // Array dependensi kosong agar hanya berjalan sekali saat mount
+  }, []);
 
   const renderSection = () => {
     switch (activeSection) {
@@ -58,23 +56,25 @@ const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <AnimatePresence>
-          {isLoading ? (
-            <Preloader key="preloader" />
-          ) : (
-            <div className="scrollbar-x min-h-screen bg-whitee dark:bg-background-dark transition-colors">
-              <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+        <AuthProvider>
+          <AnimatePresence>
+            {isLoading ? (
+              <Preloader key="preloader" />
+            ) : (
+              <div className="scrollbar-x min-h-screen bg-whitee dark:bg-background-dark transition-colors">
+                <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
-              <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-9 w-full border-b border-gray-2 dark:border-gray-8">
-                <Menu size={24} className="text-gray-8 dark:text-gray-3" />
-              </button>
+                <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-9 w-full border-b border-gray-2 dark:border-gray-8">
+                  <Menu size={24} className="text-gray-8 dark:text-gray-3" />
+                </button>
 
-              <div className="lg:ml-64 min-h-screen">
-                <main className="container mx-auto px-6 md:pt-0 pt-2 lg:px-12">{renderSection()}</main>
+                <div className="lg:ml-64 min-h-screen">
+                  <main className="container mx-auto px-6 md:pt-0 pt-2 lg:px-12">{renderSection()}</main>
+                </div>
               </div>
-            </div>
-          )}
-        </AnimatePresence>
+            )}
+          </AnimatePresence>
+        </AuthProvider>
       </LanguageProvider>
     </ThemeProvider>
   );

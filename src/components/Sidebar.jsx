@@ -9,6 +9,7 @@ import LanguageSwitch from './common/LanguageSwitch';
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { language, setLanguage, t } = useContext(LanguageContext);
+  const [isProfileImageLoaded, setIsProfileImageLoaded] = useState(false);
 
   const navItems = [
     { id: 'home', icon: Home, label: t('nav.home') },
@@ -43,8 +44,15 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
               <div className="flex flex-col items-center w-full">
-                {/* Gambar Profil */}
-                <img src="./images/iam.jpeg" alt="" className="w-17 border-2 transition-color duration-200 delay-200 border-gray-5 dark:border-gray-6 object-cover rounded-full" />
+                <div className="relative w-17 h-17">
+                  {!isProfileImageLoaded && <div className="absolute inset-0 bg-gray-3 dark:bg-gray-7 rounded-full animate-pulse"></div>}
+                  <img
+                    src="./images/iam.jpeg"
+                    alt="Profile"
+                    className={`w-full h-full object-cover rounded-full border-2 border-gray-5 dark:border-gray-6 transition-opacity duration-800 ${isProfileImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => setIsProfileImageLoaded(true)}
+                  />
+                </div>
 
                 {/* Nama */}
                 <div className="flex items-center gap-1 mt-2">
