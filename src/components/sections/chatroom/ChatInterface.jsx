@@ -6,6 +6,7 @@ import { useAuth } from '../../../contexts/AuthContext';
 import { AiOutlineSend } from 'react-icons/ai';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { MdShield } from 'react-icons/md';
+import { MdReplyAll } from 'react-icons/md';
 
 const ChatInterface = () => {
   const { currentUser } = useAuth();
@@ -37,11 +38,9 @@ const ChatInterface = () => {
     return unsubscribe;
   }, [currentUser]);
 
-  useEffect(() => {
-    if (dummy.current) {
-      dummy.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
+  const scrollToBottom = () => {
+    dummy.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const signInWithGoogle = () => {
     signInWithPopup(auth, new GoogleAuthProvider()).catch((err) => setError('Gagal login.'));
@@ -78,9 +77,14 @@ const ChatInterface = () => {
 
   const cancelReply = () => setReplyingTo(null);
 
+  const handleReplyClick = (message) => {
+    setReplyingTo(message);
+    scrollToBottom();
+  };
+
   return (
     <section>
-      <main className="h-96 overflow-y-auto overflow-x-hidden p-4 space-y-2">
+      <main className="h-94 overflow-y-auto overflow-x-hidden p-4 space-y-2">
         {messages.length > 0 ? (
           messages.map((msg) => {
             const isSender = currentUser && msg.uid === currentUser.uid;
@@ -90,24 +94,24 @@ const ChatInterface = () => {
               timeStyle: 'short',
             });
 
+            const ReplyButton = ({ className }) => (
+              <button onClick={() => handleReplyClick(msg)} className={`opacity-0 group-hover:opacity-100 p-1 rounded-full text-gray-7 dark:text-gray-2 transition-all duration-300 cursor-pointer ${className}`}>
+                <MdReplyAll size={18} />
+              </button>
+            );
+
             return (
-              <div key={msg.id} className={`group relative flex items-end gap-2 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
-                {currentUser && !isSender && (
-                  <button onClick={() => setReplyingTo(msg)} className="absolute top-0 opacity-0 group-hover:opacity-100 p-1 bg-gray-3 rounded-full">
-                    ↩️
-                  </button>
-                )}
+              <div key={msg.id} className={`flex items-end gap-2 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
                 <div className={`flex items-start gap-2 ${isAuthor ? 'flex-row-reverse' : 'flex-row'}`}>
                   <img src={msg.photoURL || 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png'} alt="avatar" className="w-10 h-10 rounded-full self-start" />
 
-                  {/* Baris atas chat */}
                   <div className="flex flex-col mb-3.5">
                     <div className={`flex items-center gap-2 mb-1.5 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
                       {isAuthor ? (
                         <>
                           <p className="text-xs text-gray-5 dark:text-gray-4">{messageTime}</p>
                           <span className="text-[11px] font-semibold px-2 py-0.5 bg-sky-500/20 text-sky-500 rounded-full flex items-center">
-                            <MdShield className="w-2.8 h-2.8 mr-1" /> Author
+                            <MdShield className="w-2.8 h-2.8 mr-[3px]" /> Author
                           </span>
                           <p className="text-[13px] font-semibold text-gray-5 dark:text-gray-4">{msg.displayName}</p>
                         </>
@@ -119,15 +123,23 @@ const ChatInterface = () => {
                       )}
                     </div>
 
-                    {/* Bubble chat */}
-                    <div className={`px-3 pb-3 pt-2 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}>
-                      {msg.replyTo && (
-                        <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
-                          <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
-                          <p className="text-sm italic opacity-80 truncate">{msg.replyTo.text}</p>
-                        </div>
-                      )}
-                      <p className="text-base break-words">{msg.text}</p>
+                    <div className={`group flex items-center gap-2 w-full ${isAuthor ? 'justify-end' : 'justify-start'}`}>
+                      {/* Untuk Author, tombol muncul di KIRI bubble */}
+                      {isAuthor && currentUser && !isSender && <ReplyButton className="transform -scale-x-100" />}
+
+                      {/* Bubble chat */}
+                      <div className={`px-3 pb-3 pt-2 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}>
+                        {msg.replyTo && (
+                          <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
+                            <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
+                            <p className="text-sm italic opacity-80 truncate">{msg.replyTo.text}</p>
+                          </div>
+                        )}
+                        <p className="text-base break-words">{msg.text}</p>
+                      </div>
+
+                      {/* Untuk BUKAN Author, tombol muncul di KANAN bubble */}
+                      {!isAuthor && currentUser && !isSender && <ReplyButton />}
                     </div>
                   </div>
                 </div>
@@ -152,7 +164,7 @@ const ChatInterface = () => {
                 <p className="text-gray-6 dark:text-gray-3">
                   Replying to <span className="font-bold">{replyingTo.displayName}</span>
                 </p>
-                <p className="text-gray-5 dark:text-gray-4 italic truncate break-words w-[10%] md:w-[25%]">{replyingTo.text}</p>
+                <p className="text-gray-5 dark:text-gray-4 italic truncate break-words w-60 md:w-[90%]">{replyingTo.text}</p>
               </div>
               <button onClick={cancelReply} className="absolute right-0 font-bold text-2xl text-gray-5 hover:text-gray-8 pr-2">
                 &times;
