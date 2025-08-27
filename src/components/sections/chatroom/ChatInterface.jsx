@@ -73,6 +73,7 @@ const ChatInterface = () => {
     await addDoc(collection(db, 'messages'), newMessageData);
     setFormValue('');
     setReplyingTo(null);
+    scrollToBottom();
   };
 
   const cancelReply = () => setReplyingTo(null);
@@ -105,8 +106,9 @@ const ChatInterface = () => {
                 <div className={`flex items-start gap-2 ${isAuthor ? 'flex-row-reverse' : 'flex-row'}`}>
                   <img src={msg.photoURL || 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png'} alt="avatar" className="w-10 h-10 rounded-full self-start" />
 
-                  <div className="flex flex-col mb-3.5">
-                    <div className={`flex items-center gap-2 mb-1.5 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
+                  {/* Baris atas */}
+                  <div className="flex flex-col md:mb-3.5 mb-5">
+                    <div className={`flex items-center gap-2 md:mb-1.5 mb-[5px] ${isAuthor ? 'justify-end' : 'justify-start'}`}>
                       {isAuthor ? (
                         <>
                           <p className="text-xs text-gray-5 dark:text-gray-4">{messageTime}</p>
@@ -124,11 +126,12 @@ const ChatInterface = () => {
                     </div>
 
                     <div className={`group flex items-center gap-2 w-full ${isAuthor ? 'justify-end' : 'justify-start'}`}>
-                      {/* Untuk Author, tombol muncul di KIRI bubble */}
                       {isAuthor && currentUser && !isSender && <ReplyButton className="transform -scale-x-100" />}
 
                       {/* Bubble chat */}
-                      <div className={`px-3 pb-3 pt-2 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}>
+                      <div
+                        className={`px-3 pb-3 pt-2 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl break-words' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}
+                      >
                         {msg.replyTo && (
                           <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
                             <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
@@ -138,7 +141,6 @@ const ChatInterface = () => {
                         <p className="text-base break-words">{msg.text}</p>
                       </div>
 
-                      {/* Untuk BUKAN Author, tombol muncul di KANAN bubble */}
                       {!isAuthor && currentUser && !isSender && <ReplyButton />}
                     </div>
                   </div>
