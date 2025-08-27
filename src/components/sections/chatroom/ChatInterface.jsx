@@ -8,6 +8,7 @@ import { FaSignOutAlt } from 'react-icons/fa';
 import { MdShield } from 'react-icons/md';
 import { MdReplyAll } from 'react-icons/md';
 import MessageSkeleton from './MessageSkeleton';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ChatInterface = () => {
   const { currentUser } = useAuth();
@@ -170,19 +171,31 @@ const ChatInterface = () => {
       {/* Bagian form dan footer  */}
       {currentUser && (
         <div className="py-5 border-t border-gray-3 dark:border-gray-6">
-          {replyingTo && (
-            <div className="relative w-full flex justify-between items-center p-2 mb-2 bg-gray-2 dark:bg-gray-9 rounded-lg overflow-x-hidden">
-              <div className="text-sm pl-2 py-1">
-                <p className="text-gray-6 dark:text-gray-3">
-                  Replying to <span className="font-bold">{replyingTo.displayName}</span>
-                </p>
-                <p className="text-gray-5 dark:text-gray-4 italic truncate break-words w-60 md:w-[90%]">{replyingTo.text}</p>
-              </div>
-              <button onClick={cancelReply} className="absolute right-0 font-bold text-2xl text-gray-5 hover:text-gray-8 pr-2">
-                &times;
-              </button>
-            </div>
-          )}
+          <AnimatePresence>
+            {replyingTo && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 180,
+                  damping: 25,
+                  mass: 1,
+                }}
+                className="relative w-full flex justify-between items-center p-1 mb-2 bg-gray-2 dark:bg-gray-9 rounded-lg overflow-x-hidden"
+              >
+                <div className="text-sm pl-2 py-1 min-w-0">
+                  <p className="text-gray-6 dark:text-gray-3">
+                    Replying to <span className="font-bold">{replyingTo.displayName}</span>
+                  </p>
+                  <p className="text-gray-5 dark:text-gray-4 italic truncate pr-3">{replyingTo.text}</p>
+                </div>
+                <button onClick={cancelReply} className="absolute right-[4px] top-0 font-bold text-2xl text-gray-5 hover:text-gray-8 dark:hover:text-gray-4 pr-2">
+                  &times;
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <form onSubmit={sendMessage} className="flex">
             <input
               value={formValue}
@@ -206,9 +219,9 @@ const ChatInterface = () => {
       <div className="">
         {currentUser ? (
           <div className="flex justify-between">
-            <div className="flex items-center text-sm">
-              <p className="text-gray-5">
-                Sign in as <span className="font-bold text-gray-5">{currentUser.displayName}</span> <span className="text-gray-5">({currentUser.email})</span>
+            <div className="flex items-center text-sm min-w-0">
+              <p className="text-gray-5 truncate">
+                Sign in as <span className="font-bold">{currentUser.displayName}</span> <span>({currentUser.email})</span>
               </p>
             </div>
             <button onClick={handleSignOut} className="bg-red-600 text-white py-1 px-3 rounded-md text-sm transition duration-300 hover:scale-104 flex items-center">
