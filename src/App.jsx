@@ -13,6 +13,7 @@ import ChatRoomSection from './components/sections/ChatRoomSection';
 import Preloader from './components/Preloader';
 import { AnimatePresence } from 'framer-motion';
 import { AuthProvider } from './contexts/AuthContext';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -57,6 +58,7 @@ const App = () => {
     <ThemeProvider>
       <LanguageProvider>
         <AuthProvider>
+          <Toaster position="top-right" reverseOrder={false} />
           <AnimatePresence>
             {isLoading ? (
               <Preloader key="preloader" />

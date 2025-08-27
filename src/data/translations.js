@@ -1,6 +1,11 @@
 export const translations = {
   // English
   en: {
+    notification: {
+      signIn: 'Welcome',
+      signOut: 'Successfully signed out!',
+      error: 'An error occurred. Please try again.',
+    },
     nav: {
       home: 'Home',
       about: 'About',
@@ -169,6 +174,11 @@ Best regards, Ichram`,
 
   // Indonesia
   id: {
+    notification: {
+      signIn: 'Selamat datang',
+      signOut: 'Berhasil keluar!',
+      error: 'Terjadi kesalahan. Silakan coba lagi.',
+    },
     nav: {
       home: 'Beranda',
       about: 'Tentang',
@@ -341,6 +351,11 @@ Salam hangat, Ichram`,
     },
   },
   jp: {
+    notification: {
+      signIn: 'ようこそ',
+      signOut: 'ログアウトに成功しました！',
+      error: 'エラーが発生しました。もう一度お試しください。',
+    },
     nav: {
       home: 'ホーム',
       about: '自己紹介',

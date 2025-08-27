@@ -10,6 +10,7 @@ import { MdReplyAll } from 'react-icons/md';
 import MessageSkeleton from './MessageSkeleton';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LanguageContext } from '../../../contexts/LanguageContext';
+import toast from 'react-hot-toast';
 
 const ChatInterface = () => {
   const { t } = useContext(LanguageContext);
@@ -52,11 +53,25 @@ const ChatInterface = () => {
   };
 
   const signInWithGoogle = () => {
-    signInWithPopup(auth, new GoogleAuthProvider()).catch((err) => setError('Gagal login.'));
+    signInWithPopup(auth, new GoogleAuthProvider())
+      .then((result) => {
+        toast.success(`${t('notification.signIn')} ${result.user.displayName}!`);
+      })
+      .catch((err) => {
+        toast.error(`${t('notification.error')}`);
+        setError('Gagal login.');
+      });
   };
 
   const handleSignOut = () => {
-    signOut(auth).catch((err) => setError('Gagal logout.'));
+    signOut(auth)
+      .then(() => {
+        toast.success(t('notification.signOut'));
+      })
+      .catch((err) => {
+        toast.error(t('notification.error'));
+        setError('Gagal logout.');
+      });
   };
 
   const sendMessage = async (e) => {
