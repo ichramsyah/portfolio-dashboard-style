@@ -84,12 +84,15 @@ const ChatInterface = () => {
           messages.map((msg) => {
             const isSender = currentUser && msg.uid === currentUser.uid;
             const isAuthor = msg.email === AUTHOR_EMAIL;
-            const messageTime = msg.createdAt?.toDate().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+            const messageTime = msg.createdAt?.toDate().toLocaleString('id-ID', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+            });
 
             return (
               <div key={msg.id} className={`group relative flex items-end gap-2 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
                 {currentUser && !isSender && (
-                  <button onClick={() => setReplyingTo(msg)} className="absolute top-0 opacity-0 group-hover:opacity-100 p-1 bg-gray-3 rounded-full left-20">
+                  <button onClick={() => setReplyingTo(msg)} className="absolute top-0 opacity-0 group-hover:opacity-100 p-1 bg-gray-3 rounded-full">
                     ↩️
                   </button>
                 )}
@@ -98,14 +101,21 @@ const ChatInterface = () => {
 
                   <div className="flex flex-col">
                     <div className={`flex items-center gap-2 mb-1 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
-                      <p className={`text-xs font-bold ${isAuthor ? 'text-blue-5' : 'text-gray-5 dark:text-gray-4'}`}>{msg.displayName}</p>
-                      {isAuthor && <span className="text-xs font-semibold px-2 py-0.5 bg-yellow-4 text-yellow-9 rounded-full">Author</span>}
+                      {isAuthor ? (
+                        <>
+                          <p className="text-xs text-gray-5 dark:text-gray-4">{messageTime}</p>
+                          <p className="text-xs font-bold text-gray-5 dark:text-gray-3">{msg.displayName}</p>
+                          <span className="text-xs font-semibold px-2 py-0.5 bg-yellow-4 text-yellow-9 rounded-full">Author</span>
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-xs font-bold text-gray-5 dark:text-gray-3">{msg.displayName}</p>
+                          <p className="text-xs text-gray-5 dark:text-gray-4">{messageTime}</p>
+                        </>
+                      )}
                     </div>
                     {/* Bubble chat */}
-                    <div
-                      // <-- max-w ditambahkan di sini
-                      className={`p-3 rounded-lg max-w-xs md:max-w-md ${isAuthor ? 'bg-blue-500 text-white self-end' : 'bg-gray-1 dark:bg-gray-8 text-gray-8 dark:text-gray-1 self-start'}`}
-                    >
+                    <div className={`p-3 max-w-xs md:max-w-md bg-gray-1 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}>
                       {msg.replyTo && (
                         <div className="mb-2 p-2 border-l-4 border-gray-5 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
                           <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
@@ -113,7 +123,6 @@ const ChatInterface = () => {
                         </div>
                       )}
                       <p className="text-base break-words">{msg.text}</p>
-                      <p className={`text-xs text-right mt-1 ${isAuthor ? 'text-blue-100' : 'text-gray-400'}`}>{messageTime}</p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +138,7 @@ const ChatInterface = () => {
         <div ref={dummy}></div>
       </main>
 
-      {/* Bagian form dan footer tidak berubah */}
+      {/* Bagian form dan footer  */}
       {currentUser && (
         <div className="py-5 border-t border-gray-3 dark:border-gray-6">
           {replyingTo && (
