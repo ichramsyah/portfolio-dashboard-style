@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
 import { db, auth } from '../../../firebase';
 import { collection, query, orderBy, limit, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
@@ -9,8 +9,10 @@ import { MdShield } from 'react-icons/md';
 import { MdReplyAll } from 'react-icons/md';
 import MessageSkeleton from './MessageSkeleton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 
 const ChatInterface = () => {
+  const { t } = useContext(LanguageContext);
   const { currentUser } = useAuth();
   const dummy = useRef();
   const [messages, setMessages] = useState([]);
@@ -200,14 +202,14 @@ const ChatInterface = () => {
             <input
               value={formValue}
               onChange={(e) => setFormValue(e.target.value)}
-              placeholder="Ketik pesan..."
+              placeholder={t('chatroom.input_form')}
               className="text-blackk dark:text-whitee bg-gray-1 dark:bg-gray-8 flex-grow p-3 rounded-l-lg focus:outline-none focus:ring-none transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-5"
             />
             <button
               type="submit"
               disabled={!formValue.trim()}
               className={`p-2 transition-all duration-300 px-4 rounded-r-lg ${
-                !formValue.trim() ? 'cursor-not-allowed bg-gray-1 dark:bg-gray-8' : 'bg-gray-6 dark:bg-gray-7 cursor-pointer hover:scale-105 hover:bg-gray-8 dark:hover:bg-gray-6'
+                !formValue.trim() ? 'cursor-not-allowed bg-gray-1 dark:bg-gray-8' : 'bg-gray-8 dark:bg-gray-7 cursor-pointer hover:scale-105 hover:bg-gray-8 dark:hover:bg-gray-6'
               }`}
             >
               <AiOutlineSend size={24} className={!formValue.trim() ? 'text-gray-4 transition-all duration-300' : 'dark:text-white text-white transition-all duration-300'} />
@@ -221,21 +223,21 @@ const ChatInterface = () => {
           <div className="flex justify-between">
             <div className="flex items-center text-sm min-w-0">
               <p className="text-gray-5 truncate">
-                Sign in as <span className="font-bold">{currentUser.displayName}</span> <span>({currentUser.email})</span>
+                {t('chatroom.sign_in_as')} <span className="font-bold">{currentUser.displayName}</span> <span>({currentUser.email})</span>
               </p>
             </div>
             <button onClick={handleSignOut} className="bg-red-600 text-white py-1 px-3 rounded-md text-sm transition duration-300 hover:scale-104 flex items-center">
               <FaSignOutAlt className="inline mb-0.5 mr-1" />
-              <span className="">Logout</span>
+              <span className="">{t('chatroom.exit')}</span>
             </button>
           </div>
         ) : (
           <div className="pt-5 pb-0 flex justify-center border-t border-gray-3 dark:border-gray-6">
             <div className="flex flex-col justify-center items-center">
-              <p className="text-center text-sm text-gray-6 dark:text-gray-4 mb-5">Please sign in to join the conversation. Don't worry, your data is safe with us.</p>
+              <p className="text-center text-sm text-gray-6 dark:text-gray-4 mb-5">{t('chatroom.login')}</p>
               <button onClick={signInWithGoogle} className="px-4 py-2.5 flex items-center border border-gray-300 rounded-lg hover:scale-105 transition-all duration-300 bg-whitee dark:bg-gray-9">
                 <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" className="w-7" alt="Google icon" />
-                <span className="px-1 text-gray-7 dark:text-gray-2">Sign in with Google</span>
+                <span className="px-1 text-gray-7 dark:text-gray-2">{t('chatroom.login_google')}</span>
               </button>
             </div>
           </div>

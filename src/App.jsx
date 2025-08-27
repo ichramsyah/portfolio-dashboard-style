@@ -61,7 +61,7 @@ const App = () => {
             {isLoading ? (
               <Preloader key="preloader" />
             ) : (
-              <div className="scrollbar-x min-h-screen bg-whitee dark:bg-background-dark transition-colors">
+              <div className="scrollbar-x min-h-screen bg-whitee dark:bg-background-dark transition-colors duration-300">
                 <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
                 <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-9 w-full border-b border-gray-2 dark:border-gray-8">
