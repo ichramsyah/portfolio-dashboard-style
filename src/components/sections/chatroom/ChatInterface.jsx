@@ -127,7 +127,7 @@ const ChatInterface = () => {
             });
 
             const ReplyButton = ({ className }) => (
-              <button onClick={() => handleReplyClick(msg)} className={`opacity-0 group-hover:opacity-100 p-1 rounded-full text-gray-7 dark:text-gray-2 transition-all duration-300 cursor-pointer ${className}`}>
+              <button onClick={() => handleReplyClick(msg)} className={`md:opacity-0 opacity-60 md:group-hover:opacity-100 p-1 rounded-full text-gray-7 dark:text-gray-2 transition-all duration-300 cursor-pointer ${className}`}>
                 <MdReplyAll size={18} />
               </button>
             );
@@ -166,7 +166,7 @@ const ChatInterface = () => {
                         {msg.replyTo && (
                           <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
                             <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
-                            <p className="text-sm italic opacity-80 truncate">{msg.replyTo.text}</p>
+                            <p className="text-sm italic opacity-80 break-words md:line-clamp-2 line-clamp-1">{msg.replyTo.text}</p>
                           </div>
                         )}
                         <p className="text-base break-words">{msg.text}</p>
