@@ -2,17 +2,7 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const ToggleSwitch = ({
-  option1,
-  option2,
-  isActive,
-  onToggle,
-  activeBg = 'bg-whitee',
-  inactiveBg = 'bg-gray-3', // (opsional)
-  activeColor = 'text-yellow-200',
-  inactiveColor = 'text-whitee',
-  distanceOverride,
-}) => {
+const ToggleSwitch = ({ option1, option2, isActive, onToggle, activeBg = 'bg-whitee', inactiveBg = 'bg-gray-3', activeColor = 'text-yellow-200', inactiveColor = 'text-whitee', distanceOverride }) => {
   const containerRef = useRef(null);
   const knobRef = useRef(null);
   const [distance, setDistance] = useState(0);
@@ -50,7 +40,7 @@ const ToggleSwitch = ({
   const travel = typeof distanceOverride === 'number' ? distanceOverride : distance;
 
   return (
-    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 dark:bg-gray-8 p-1 overflow-hidden">
+    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 border-2 border-gray-2 dark:border-gray-8 dark:bg-gray-8 p-1 overflow-hidden">
       {/* Slider/knob */}
       <motion.div
         ref={knobRef}
