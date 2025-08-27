@@ -7,6 +7,7 @@ import { AiOutlineSend } from 'react-icons/ai';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { MdShield } from 'react-icons/md';
 import { MdReplyAll } from 'react-icons/md';
+import MessageSkeleton from './MessageSkeleton';
 
 const ChatInterface = () => {
   const { currentUser } = useAuth();
@@ -15,24 +16,29 @@ const ChatInterface = () => {
   const [formValue, setFormValue] = useState('');
   const [error, setError] = useState('');
   const [replyingTo, setReplyingTo] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const AUTHOR_EMAIL = 'iamabdulrahman15@gmail.com';
 
   useEffect(() => {
+    setIsLoading(true);
     const q = query(collection(db, 'messages'), orderBy('createdAt', 'asc'), limit(100));
     const unsubscribe = onSnapshot(
       q,
       (querySnapshot) => {
         const messagesData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         setMessages(messagesData);
+        setIsLoading(false);
       },
       (err) => {
         console.error('Gagal mengambil pesan:', err);
         setError('Tidak dapat memuat pesan.');
+        setIsLoading(false);
       }
     );
     if (!currentUser) {
       setMessages([]);
+      setIsLoading(false);
     }
 
     return unsubscribe;
@@ -86,7 +92,14 @@ const ChatInterface = () => {
   return (
     <section>
       <main className="h-94 overflow-y-auto overflow-x-hidden p-4 space-y-2">
-        {messages.length > 0 ? (
+        {isLoading ? (
+          <>
+            <MessageSkeleton align="start" />
+            <MessageSkeleton align="end" />
+            <MessageSkeleton align="start" />
+            <MessageSkeleton align="start" />
+          </>
+        ) : messages.length > 0 ? (
           messages.map((msg) => {
             const isSender = currentUser && msg.uid === currentUser.uid;
             const isAuthor = msg.email === AUTHOR_EMAIL;
@@ -149,10 +162,7 @@ const ChatInterface = () => {
             );
           })
         ) : (
-          <div className="h-full flex flex-col justify-center items-center text-gray-500">
-            <p className="font-semibold">Selamat Datang!</p>
-            <p>Belum ada percakapan. Jadilah yang pertama!</p>
-          </div>
+          <div className=""></div>
         )}
         <div ref={dummy}></div>
       </main>
@@ -207,7 +217,7 @@ const ChatInterface = () => {
             </button>
           </div>
         ) : (
-          <div className="py-5 flex justify-center border-t border-gray-3 dark:border-gray-6">
+          <div className="pt-5 pb-0 flex justify-center border-t border-gray-3 dark:border-gray-6">
             <div className="flex flex-col justify-center items-center">
               <p className="text-center text-sm text-gray-6 dark:text-gray-4 mb-5">Please sign in to join the conversation. Don't worry, your data is safe with us.</p>
               <button onClick={signInWithGoogle} className="px-4 py-2.5 flex items-center border border-gray-300 rounded-lg hover:scale-105 transition-all duration-300 bg-whitee dark:bg-gray-9">
