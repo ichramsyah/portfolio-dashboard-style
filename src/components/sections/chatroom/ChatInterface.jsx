@@ -89,7 +89,7 @@ const ChatInterface = () => {
             return (
               <div key={msg.id} className={`group relative flex items-end gap-2 ${isAuthor ? 'justify-end' : 'justify-start'}`}>
                 {currentUser && !isSender && (
-                  <button onClick={() => setReplyingTo(msg)} className="absolute top-0 opacity-0 group-hover:opacity-100 p-1 bg-gray-300 rounded-full left-20">
+                  <button onClick={() => setReplyingTo(msg)} className="absolute top-0 opacity-0 group-hover:opacity-100 p-1 bg-gray-3 rounded-full left-20">
                     ↩️
                   </button>
                 )}
@@ -107,7 +107,7 @@ const ChatInterface = () => {
                       className={`p-3 rounded-lg max-w-xs md:max-w-md ${isAuthor ? 'bg-blue-500 text-white self-end' : 'bg-gray-1 dark:bg-gray-8 text-gray-8 dark:text-gray-1 self-start'}`}
                     >
                       {msg.replyTo && (
-                        <div className="mb-2 p-2 border-l-4 border-gray-5 bg-gray-3 bg-opacity-10 rounded">
+                        <div className="mb-2 p-2 border-l-4 border-gray-5 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
                           <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
                           <p className="text-sm italic opacity-80 truncate">{msg.replyTo.text}</p>
                         </div>
