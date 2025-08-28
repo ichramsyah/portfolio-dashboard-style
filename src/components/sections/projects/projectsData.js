@@ -20,6 +20,14 @@ export const projects = [
     postmanUrl: '',
   },
   {
+    id: 8,
+    image: './images/bebasblog-frontend.png',
+    tech: [techIcons.react, techIcons.typescript, techIcons.tailwindcss],
+    githubUrl: 'https://github.com/ichramsyah/bebasblog-frontend',
+    demoUrl: '',
+    postmanUrl: ``,
+  },
+  {
     id: 7,
     image: './images/bebasblog-backend.jpeg',
     tech: [techIcons.mongodb, techIcons.typescript, techIcons.express, techIcons.nodejs],
