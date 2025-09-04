@@ -70,6 +70,19 @@ Best regards, Ichram`,
       ],
       experienceItems: [
         {
+          logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
+          position: 'Web Security Engineer',
+          company: 'Directorate of TSI Paramadina University',
+          location: 'Jakarta, Indonesia',
+          year: 'Sep 2025 - Now',
+          time: '• Ongoing',
+          pos: '• Internship',
+          workfrom: '• Onsite',
+          description:
+            'Developing a File Integrity Monitoring (FIM) system based on Python and incron to detect file changes in real-time. \nImplementing hashing (SHA/MD5) as a mechanism for verifying file integrity, enabling differentiation between content changes and regular metadata modifications. \nConfiguring servers via SSH and securing Linux/cPanel environments from potential exploitation. \nContributing to server hardening through permission control, dependency auditing, and activity log monitoring to detect hacking attempts.',
+          current: false,
+        },
+        {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
           position: 'IT Change Management',
           company: 'Head Office PT. Hino Motor Sales Indonesia',
@@ -249,6 +262,19 @@ Salam hangat, Ichram`,
       ],
       experienceItems: [
         {
+          logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
+          position: 'Web Security Engineer',
+          company: 'Direktorat TSI Universitas Paramadina',
+          location: 'Jakarta, Indonesia',
+          year: 'Sep 2025 - Sekarang',
+          time: '• Berlangsung',
+          pos: '• Magang',
+          workfrom: '• Di tempat',
+          description:
+            'Mengembangkan sistem File Integrity Monitoring (FIM) berbasis Python dan incron untuk mendeteksi perubahan file secara real-time. \nMengimplementasikan hashing (SHA/MD5) sebagai mekanisme untuk memverifikasi integritas file, memungkinkan diferensiasi antara perubahan konten dan modifikasi metadata biasa. \nMengonfigurasi server melalui SSH dan mengamankan lingkungan Linux/cPanel dari potensi eksploitasi. \nBerpartisipasi dalam penguatan server melalui kontrol izin, audit ketergantungan, dan pemantauan log aktivitas untuk mendeteksi upaya peretasan.',
+          current: false,
+        },
+        {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
           position: 'IT Change Management',
           company: 'Head Office PT. Hino Motor Sales Indonesia',
@@ -425,6 +451,19 @@ Salam hangat, Ichram`,
         },
       ],
       experienceItems: [
+        {
+          logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
+          position: 'Web Security Engineer',
+          company: 'Directorate of TSI Paramadina University',
+          location: 'インドネシア、ジャカルタ',
+          year: '2025年9月 - 現在',
+          time: '• 継続中',
+          pos: '• インターンシップ',
+          workfrom: '• オンサイト',
+          description:
+            'Pythonとincronをベースにしたファイル整合性監視（FIM）システムを開発し、リアルタイムでのファイル変更を検出。\nSHA/MD5ハッシュを実装し、ファイルの整合性を検証するメカニズムとして使用。これにより、コンテンツの変更と通常のメタデータの変更を区別可能に。\nSSHを介してサーバーを構成し、Linux/cPanel環境を潜在的な悪用から保護。\n権限管理、依存関係の監査、アクティビティログの監視を通じてサーバーの強化に貢献し、ハッキング試行を検出。',
+          current: false,
+        },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
           position: 'IT Change Management',
