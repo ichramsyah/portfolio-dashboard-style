@@ -271,7 +271,7 @@ Salam hangat, Ichram`,
           pos: '• Magang',
           workfrom: '• Di tempat',
           description:
-            'Mengembangkan sistem File Integrity Monitoring (FIM) berbasis Python dan incron untuk mendeteksi perubahan file secara real-time. \nMengimplementasikan hashing (SHA/MD5) sebagai mekanisme untuk memverifikasi integritas file, memungkinkan diferensiasi antara perubahan konten dan modifikasi metadata biasa. \nMengonfigurasi server melalui SSH dan mengamankan lingkungan Linux/cPanel dari potensi eksploitasi. \nBerpartisipasi dalam penguatan server melalui kontrol izin, audit ketergantungan, dan pemantauan log aktivitas untuk mendeteksi upaya peretasan.',
+            'Merancang dan mengembangkan sistem File Integrity Monitoring (FIM) real-time dari awal menggunakan Python di lingkungan Linux untuk meningkatkan keamanan server. \nMengimplementasikan notifikasi email otomatis untuk peringatan keamanan kritis, termasuk deteksi file berbahaya dan perubahan yang tidak sah. \nMengintegrasikan algoritma hashing SHA-256 untuk validasi integritas file dan memanfaatkan cron job untuk pemantauan terjadwal \nMembangun fitur keamanan proaktif, termasuk blacklist/whitelist ekstensi file dan skrip untuk menolak unggahan file .php di direktori kritis. \nMenambahkan fitur deteksi alamat IP pelaku pada laporan insiden untuk mempercepat proses investigasi dan respons keamanan.',
           current: false,
         },
         {
