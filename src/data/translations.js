@@ -79,7 +79,7 @@ Best regards, Ichram`,
           pos: '• Internship',
           workfrom: '• Onsite',
           description:
-            'Developing a File Integrity Monitoring (FIM) system based on Python and incron to detect file changes in real-time. \nImplementing hashing (SHA/MD5) as a mechanism for verifying file integrity, enabling differentiation between content changes and regular metadata modifications. \nConfiguring servers via SSH and securing Linux/cPanel environments from potential exploitation. \nContributing to server hardening through permission control, dependency auditing, and activity log monitoring to detect hacking attempts.',
+            'Designed and developed a real-time File Integrity Monitoring (FIM) system from scratch using Python in a Linux environment to enhance server security. \nImplemented automated email notifications for critical security alerts, including malicious file detection and unauthorized changes. \nIntegrated the SHA-256 hashing algorithm for file integrity validation and utilized cron jobs for scheduled monitoring. \nCBuilt proactive security features, including file extension blacklisting/whitelisting and a script to reject .php file uploads in critical directories. \nAdded a source IP address detection feature to incident reports to accelerate the investigation and security response process.',
           current: false,
         },
         {
@@ -271,7 +271,7 @@ Salam hangat, Ichram`,
           pos: '• Magang',
           workfrom: '• Di tempat',
           description:
-            'Mengembangkan sistem File Integrity Monitoring (FIM) berbasis Python dan incron untuk mendeteksi perubahan file secara real-time. \nMengimplementasikan hashing (SHA/MD5) sebagai mekanisme untuk memverifikasi integritas file, memungkinkan diferensiasi antara perubahan konten dan modifikasi metadata biasa. \nMengonfigurasi server melalui SSH dan mengamankan lingkungan Linux/cPanel dari potensi eksploitasi. \nBerpartisipasi dalam penguatan server melalui kontrol izin, audit ketergantungan, dan pemantauan log aktivitas untuk mendeteksi upaya peretasan.',
+            'Merancang dan mengembangkan sistem File Integrity Monitoring (FIM) real-time dari awal menggunakan Python di lingkungan Linux untuk meningkatkan keamanan server. \nMengimplementasikan notifikasi email otomatis untuk peringatan keamanan kritis, termasuk deteksi file berbahaya dan perubahan yang tidak sah. \nMengintegrasikan algoritma hashing SHA-256 untuk validasi integritas file dan memanfaatkan cron job untuk pemantauan terjadwal \nMembangun fitur keamanan proaktif, termasuk blacklist/whitelist ekstensi file dan skrip untuk menolak unggahan file .php di direktori kritis. \nMenambahkan fitur deteksi alamat IP pelaku pada laporan insiden untuk mempercepat proses investigasi dan respons keamanan.',
           current: false,
         },
         {
@@ -461,7 +461,7 @@ Salam hangat, Ichram`,
           pos: '• インターンシップ',
           workfrom: '• オンサイト',
           description:
-            'Pythonとincronをベースにしたファイル整合性監視（FIM）システムを開発し、リアルタイムでのファイル変更を検出。\nSHA/MD5ハッシュを実装し、ファイルの整合性を検証するメカニズムとして使用。これにより、コンテンツの変更と通常のメタデータの変更を区別可能に。\nSSHを介してサーバーを構成し、Linux/cPanel環境を潜在的な悪用から保護。\n権限管理、依存関係の監査、アクティビティログの監視を通じてサーバーの強化に貢献し、ハッキング試行を検出。',
+            'Linux環境にて、サーバーセキュリティ強化を目的としたリアルタイム・ファイル整合性監視（FIM）システムをPythonでゼロから設計・開発。\n不正ファイルの検知や不正な変更を含む、重大なセキュリティアラートのための自動メール通知機能を実装。\nファイルの整合性検証のためにSHA-256ハッシュアルゴリズムを統合し、定期監視のためにcronジョブを活用。\n重要なディレクトリへの.phpファイルのアップロードを拒否するスクリプトや、ファイル拡張子のブラックリスト・ホワイトリストを含む、プロアクティブなセキュリティ機能を構築。\n調査とセキュリティ対応の迅速化を目的として、インシデントレポートに攻撃者のIPアドレスを検知する機能を追加',
           current: false,
         },
         {
