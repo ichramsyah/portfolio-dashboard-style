@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
 import { GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
-import SpotlightCard from '../../common/SpotlightCard';
 
 const Education = () => {
   const { t } = useContext(LanguageContext);
@@ -29,8 +28,16 @@ const Education = () => {
       <div className="space-y-6">
         {educationItems.map((edu, index) => (
           <div key={index} className="flex space-x-4">
+            <motion.div initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }} viewport={{ once: false }} className="flex-shrink-0 w-2 bg-blue-3 rounded-full origin-top" />
             <div className="flex-1">
-              <SpotlightCard className="rounded-lg p-6">
+              <motion.div
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                variants={containerVariants}
+                viewport={{ once: false }}
+                className="bg-linear-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9  rounded-lg p-6  border border-gray-2 dark:border-gray-7"
+              >
                 <div className="flex items-start space-x-4">
                   <img src={edu.logo} className="w-7 object-contain mt-[3px]" alt="" />
                   <div className="flex-1">
@@ -42,7 +49,7 @@ const Education = () => {
                     </div>
                   </div>
                 </div>
-              </SpotlightCard>
+              </motion.div>
             </div>
           </div>
         ))}

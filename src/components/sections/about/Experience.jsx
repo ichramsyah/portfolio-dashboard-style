@@ -44,7 +44,7 @@ const Experience = () => {
               {/* Line */}
               <motion.div
                 initial={{ height: 0 }}
-                whileInView={{ height: '90%' }}
+                whileInView={{ height: '100%' }}
                 transition={{ duration: 1, ease: 'easeOut', delay: index * 0.5 + 0.2 }}
                 viewport={{ once: true, amount: 0.1 }}
                 className="w-0.5 h-full bg-gray-3 dark:bg-gray-6"
@@ -55,13 +55,13 @@ const Experience = () => {
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
               <div className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border border-gray-2 dark:border-gray-7">
                 <div className="flex items-start space-x-4">
-                  <img src={exp.logo} className="w-7 object-contain mt-[3px]" alt="" />
+                  <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
                   <div className="flex-1 relative">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
+                    <p className="text-md text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
 
                     <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
