@@ -39,7 +39,11 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     <>
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
-      <div className={`fixed left-0 top-0 h-full w-68 bg-whitee px-7 py-7 dark:bg-background-dark z-50 transform transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <div
+        className={`fixed lg:sticky top-0 h-screen flex-shrink-0 w-68 bg-whitee px-7 py-7 dark:bg-background-dark z-50 transform transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        }`}
+      >
         <div className="flex flex-col h-full">
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
