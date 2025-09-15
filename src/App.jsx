@@ -72,7 +72,7 @@ const App = () => {
 
                 {/* === BAGIAN YANG DIPERBAIKI === */}
                 <div className="flex-1 min-h-screen">
-                  <main className="container mx-auto px-6 pt-16 md:pt-6 lg:px-12">{renderSection()}</main>
+                  <main className="container mx-auto px-6">{renderSection()}</main>
                 </div>
               </div>
             )}
