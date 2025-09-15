@@ -40,7 +40,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
       <div
-        className={`fixed lg:sticky top-0 h-screen flex-shrink-0 w-68 bg-whitee px-7 py-7 dark:bg-background-dark z-50 transform transition-all duration-300 ease-in-out ${
+        className={`fixed lg:sticky top-0 h-screen flex-shrink-0 w-70 bg-whitee px-7 py-3 dark:bg-background-dark z-50 transform transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
@@ -48,7 +48,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
               <div className="flex flex-col items-center w-full">
-                <div className="relative w-17 h-17">
+                <div className="relative w-20 h-20 mt-5">
                   {!isProfileImageLoaded && <div className="absolute inset-0 bg-gray-3 dark:bg-gray-7 rounded-full animate-pulse"></div>}
                   <img
                     src="./images/iam.jpeg"

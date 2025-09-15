@@ -6,7 +6,7 @@ import GitHubCalendar from 'react-github-calendar';
 
 const HomeSection = ({ setActiveSection }) => {
   return (
-    <div className="py-12 md:mt-0 mt-3">
+    <div className="py-14 lg:py-8 md:mt-0 mt-3">
       <div className="mx-auto">
         <Greeting />
         <Skills />
