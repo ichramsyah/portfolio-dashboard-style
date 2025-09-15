@@ -4,6 +4,7 @@ import { BriefcaseBusiness } from 'lucide-react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
+import SpotlightCard from '../../common/SpotlightCard';
 
 const containerVariants = {
   hidden: { opacity: 0, x: 30 },
@@ -53,7 +54,7 @@ const Experience = () => {
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
-              <div className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border border-gray-2 dark:border-gray-7">
+              <SpotlightCard className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border-[1px] border-gray-2 dark:border-gray-7">
                 <div className="flex items-start space-x-4">
                   <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
@@ -103,7 +104,7 @@ const Experience = () => {
                     </Disclosure>
                   </div>
                 </div>
-              </div>
+              </SpotlightCard>
             </motion.div>
           </div>
         ))}
