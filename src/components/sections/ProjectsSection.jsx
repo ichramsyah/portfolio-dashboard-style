@@ -39,7 +39,7 @@ const ProjectsSection = () => {
     });
 
   return (
-    <div className="py-12 md:mt-0 mt-3">
+    <div className="py-14 lg:py-8 md:mt-0 mt-3">
       <SectionHeader title={t('projects.title')} description={t('projects.description')} />
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between md:space-x-10 space-y-4 md:space-y-0 mb-8">
