@@ -53,12 +53,12 @@ const Experience = () => {
             </div>
 
             {/* Experience Card */}
-            <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
+            <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
               <SpotlightCard className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border-[1px] border-gray-2 dark:border-gray-7">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-5">
                   <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
-                  <div className="flex-1 relative">
+                  <div className="flex-1 relative pb-1">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
