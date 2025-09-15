@@ -71,7 +71,7 @@ Best regards, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -263,7 +263,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -453,7 +453,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
