@@ -47,7 +47,7 @@ const ProjectsSection = () => {
         <FilterButtons categoryFilter={categoryFilter} setCategoryFilter={setCategoryFilter} categories={categories} categoryIcons={categoryIcons} t={t} />
       </div>
 
-      <div className="grid min-[768px]:grid-cols-2 min-[1400px]:grid-cols-3 gap-6">
+      <div className="grid min-[768px]:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} categoryIcons={categoryIcons} t={t} />
         ))}

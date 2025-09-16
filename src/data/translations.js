@@ -14,7 +14,7 @@ export const translations = {
       chatroom: 'Chat Room',
       contact: 'Contact',
       copyright1: 'Copyright © 2025',
-      copyright2: 'Ichramsyah Abdurrachman. All rights reserved.',
+      copyright2: 'Ichramsyah. All rights reserved.',
     },
     home: {
       greeting: "Hello, I'm Ichramsyah Abdurrachman",
@@ -71,7 +71,7 @@ Best regards, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -206,7 +206,7 @@ Best regards, Ichram`,
       chatroom: 'Ruang Obrolan',
       contact: 'Kontak',
       copyright1: 'Hak Cipta © 2025',
-      copyright2: 'Ichramsyah Abdurrachman. Semua hak dilindungi undang-undang.',
+      copyright2: 'Ichramsyah. Semua hak dilindungi undang-undang.',
     },
     home: {
       greeting: 'Halo, saya Ichramsyah Abdurrachman',
@@ -263,7 +263,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -402,7 +402,7 @@ Salam hangat, Ichram`,
       chatroom: 'チャットルーム',
       contact: 'お問い合わせ',
       copyright1: '著作権 © 2025',
-      copyright2: 'Ichramsyah Abdurrachman. 全ての権利を保有します。',
+      copyright2: 'Ichramsyah. 全ての権利を保有します。',
     },
     home: {
       greeting: 'こんにちは、イクラムシャ・アブドゥラックマンです',
@@ -453,7 +453,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Web Security Engineer',
+          position: 'Security Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',

@@ -4,6 +4,7 @@ import { BriefcaseBusiness } from 'lucide-react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
+import SpotlightCard from '../../common/SpotlightCard';
 
 const containerVariants = {
   hidden: { opacity: 0, x: 30 },
@@ -44,7 +45,7 @@ const Experience = () => {
               {/* Line */}
               <motion.div
                 initial={{ height: 0 }}
-                whileInView={{ height: '90%' }}
+                whileInView={{ height: '100%' }}
                 transition={{ duration: 1, ease: 'easeOut', delay: index * 0.5 + 0.2 }}
                 viewport={{ once: true, amount: 0.1 }}
                 className="w-0.5 h-full bg-gray-3 dark:bg-gray-6"
@@ -52,20 +53,20 @@ const Experience = () => {
             </div>
 
             {/* Experience Card */}
-            <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-5">
-              <div className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border border-gray-2 dark:border-gray-7">
-                <div className="flex items-start space-x-4">
-                  <img src={exp.logo} className="w-7 object-contain mt-[3px]" alt="" />
+            <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
+              <SpotlightCard className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border-[1px] border-gray-2 dark:border-gray-7">
+                <div className="flex items-start space-x-5">
+                  <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
-                  <div className="flex-1 relative">
+                  <div className="flex-1 relative pb-1">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
+                    <p className="text-[15px] text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
                     <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
 
-                    <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-5">
-                      <p className="text-sm text-gray-6 dark:text-gray-4 ">{exp.year}</p>
+                    <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-4">
+                      <p className="text-[13px] text-gray-6 dark:text-gray-4 ">{exp.year}</p>
                       <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
@@ -103,7 +104,7 @@ const Experience = () => {
                     </Disclosure>
                   </div>
                 </div>
-              </div>
+              </SpotlightCard>
             </motion.div>
           </div>
         ))}
