@@ -51,7 +51,7 @@ export default function GithubContributionStats({ username }) {
     <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7 pb-8">
       {/* Header */}
       <div className="pb-7">
-        <h3 className="flex items-center text-xl text-gray-9 dark:text-white pb-3">
+        <h3 className="flex items-center text-xl text-gray-9 dark:text-gray-3 pb-3">
           <FaGithub className="text-xl" />
           <span className="ml-2">{t('home.githubcontribution')}</span>
         </h3>
@@ -75,7 +75,7 @@ export default function GithubContributionStats({ username }) {
             colorScheme={theme === 'dark' ? 'dark' : 'light'}
             theme={{
               light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-              dark: ['#111827', '#125d37ff', '#028b42ff', '#2db54dff', '#43ef60ff'],
+              dark: ['#151617ff', '#125d37ff', '#028b42ff', '#2db54dff', '#43ef60ff'],
             }}
             blockSize={14}
             blockMargin={4}
@@ -92,7 +92,7 @@ export default function GithubContributionStats({ username }) {
 
 function StatCard({ label, value, highlight }) {
   return (
-    <SpotlightCard>
+    <SpotlightCard className="bg-gray-1/40 dark:bg-gray-8/20">
       <div className="rounded-lg p-4 text-center transition">
         <p className="text-gray-8 dark:text-gray-2 text-sm transition-color duration-500">{label}</p>
         <p className={`text-2xl font-bold ${highlight ? 'text-green-6' : ''}`}>{value}</p>
