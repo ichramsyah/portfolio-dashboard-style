@@ -60,7 +60,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
 
                 {/* Nama */}
                 <div className="flex items-center gap-1 mt-2">
-                  <h1 className="text-lg text-gray-9 dark:text-whitee">Ichramsyah</h1>
+                  <h1 className="text-lg text-gray-9 dark:text-gray-2/90">Ichramsyah</h1>
                   <div className="relative group">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 24 24" className="text-blue-4" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                       <path fill="none" d="M0 0h24v24H0z"></path>
