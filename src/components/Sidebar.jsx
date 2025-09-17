@@ -105,7 +105,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
 
           <nav className="flex-1 py-3 relative" ref={containerRef}>
             {/* Sliding sideline */}
-            <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-blue-3" />
+            <motion.div animate={sidelineStyle} transition={{ type: 'spring', stiffness: 400, damping: 26 }} className="absolute right-[-10px] w-[5px] rounded-lg bg-blue-2 dark:bg-gray-2/20" />
 
             <ul className="space-y-1">
               {navItems.map((item, index) => {
@@ -124,8 +124,8 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       }}
                       className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-blue-5 dark:to-blue-3 text-blue-7 dark:text-gray-1 scale-[100%] transition-color duration-500'
-                          : 'text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-8 hover:scale-[103%] transition-color duration-500'
+                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-5/20 dark:to-gray-5/20 text-blue-7 dark:text-gray-1 scale-[100%] transition-color duration-300'
+                          : 'bg-transparent text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
