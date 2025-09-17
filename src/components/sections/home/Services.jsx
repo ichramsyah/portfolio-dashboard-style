@@ -47,7 +47,7 @@ const Services = ({ setActiveSection }) => {
         <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('about')}>
-              <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+              <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_about')}</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_about_desc')}</p>
@@ -61,7 +61,7 @@ const Services = ({ setActiveSection }) => {
         <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10 lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
             <button onClick={() => setActiveSection('projects')}>
-              <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+              <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <div className="pt-2">
               <span className="text-gray-8 dark:text-gray-2">{t('home.service_project')}</span>
@@ -110,20 +110,20 @@ const Services = ({ setActiveSection }) => {
         <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('chatroom')}>
-              <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+              <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_chatroom')}</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_chatroom_desc')}</p>
           </div>
           <div className="px-2 space-y-3">
             <div className="flex justify-start">
-              <div className="max-w-xs rounded-xl rounded-tl-none bg-gray-2 p-3 text-gray-8 dark:bg-gray-8 dark:text-gray-2 chat-bubble-1">
+              <div className="max-w-xs rounded-xl rounded-tl-none bg-gray-2 p-3 text-gray-8 dark:bg-gray-5/20 dark:text-gray-2 chat-bubble-1">
                 <p className="text-sm">Hi, is this your website?</p>
               </div>
             </div>
 
             <div className="flex justify-end">
-              <div className="max-w-xs rounded-xl rounded-tr-none bg-blue-5 p-3 text-white chat-bubble-2">
+              <div className="max-w-xs rounded-xl rounded-tr-none bg-blue-5 p-3 text-whitee chat-bubble-2">
                 <p className="text-sm">Yes, I built it myself!</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Services = ({ setActiveSection }) => {
         <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('achievements')}>
-              <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer hover:bg-neutral-1 hover:shadow-sm dark:hover:bg-gray-8 hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
+              <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_achievements')}</span>
             <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_achievements_desc')}</p>
