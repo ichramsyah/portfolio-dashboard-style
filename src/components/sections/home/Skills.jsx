@@ -36,11 +36,11 @@ const Skills = () => {
   return (
     <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7">
       <div className="space-y-2">
-        <h3 className="flex items-center text-xl  text-gray-9 dark:text-whitee ">
+        <h3 className="flex items-center text-xl  text-gray-9 dark:text-gray-3 ">
           <CodeBracketIcon className="text-sm w-6 " />
           <span className="ml-2">{t('home.skills')}</span>
         </h3>
-        <p className=" text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
+        <p className="text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
       </div>
       <div className="md:mb-10 mb-0">
         <GlassIcons items={items} className="custom-class" />

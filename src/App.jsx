@@ -66,11 +66,10 @@ const App = () => {
               <div className="max-w-7xl mx-auto min-h-screen bg-whitee dark:bg-background-dark transition-colors duration-300 lg:flex">
                 <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
-                <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-gray-9 w-full border-b border-gray-2 dark:border-gray-8">
+                <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-background-dark w-full border-b border-gray-2 dark:border-gray-8">
                   <Menu size={24} className="text-gray-8 dark:text-gray-3" />
                 </button>
 
-                {/* === BAGIAN YANG DIPERBAIKI === */}
                 <div className="flex-1 min-h-screen">
                   <main className="container mx-auto px-6">{renderSection()}</main>
                 </div>

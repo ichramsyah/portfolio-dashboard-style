@@ -22,7 +22,9 @@ body {
   --color-spotlight-card: #f8f8f8;
 
   /* Background */
-  --color-background-dark: #0d131f; /* Dark background */
+  --color-background-dark: #0f0e0e; /* Dark background */
+
+  /* 0F0E0E */
 
   /* Gray Scale */
   --color-gray-1: #f3f4f6; /* gray-100 */
