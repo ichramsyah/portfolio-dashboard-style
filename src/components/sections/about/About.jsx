@@ -12,7 +12,7 @@ const About = () => {
 
   const language = [
     { name: 'Indonesia', level: 100 },
-    { name: 'English', level: 64 },
+    { name: 'English', level: 75 },
     { name: '日本語', level: 13 },
   ];
 
