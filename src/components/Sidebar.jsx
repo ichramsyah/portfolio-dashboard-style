@@ -79,7 +79,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     onToggle={toggleTheme}
                     option1={{ icon: <Sun className="transition-transform duration-400 hover:scale-120" size={14} /> }}
                     option2={{ icon: <Moon className="transition-transform duration-400 hover:scale-120" size={14} /> }}
-                    activeBg="bg-whitee dark:bg-gray-7"
+                    activeBg="bg-whitee dark:bg-gray-3/20"
                     inactiveBg="bg-gray-3"
                     activeColor="text-blue-6 dark:text-yellow-3"
                     inactiveColor="text-gray-5 dark:text-gray-3"
@@ -124,7 +124,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       }}
                       className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-5/20 dark:to-gray-5/20 text-blue-7 dark:text-gray-1 scale-[100%] transition-color duration-300'
+                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-5/20 dark:to-gray-5/20 text-blue-7 dark:text-gray-3 scale-[100%] transition-color duration-300'
                           : 'bg-transparent text-gray-7 dark:hover:text-gray-1 dark:text-gray-4 hover:bg-gray-2 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
                       }`}
                     >
