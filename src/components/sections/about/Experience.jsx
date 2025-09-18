@@ -25,7 +25,7 @@ const Experience = () => {
 
   return (
     <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-7">
-      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-whitee mb-6">
+      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-gray-3 mb-6">
         <BriefcaseBusiness className="mr-2" /> {t('about.experience')}
       </motion.h3>
       <div className="">
@@ -39,7 +39,7 @@ const Experience = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.5 }}
                 viewport={{ once: true }}
-                className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-3 dark:bg-blue-3'}`}
+                className={`w-4 h-4 rounded-full ${exp.current ? 'bg-green-5' : 'bg-blue-3 dark:bg-gray-5/90'}`}
               ></motion.div>
 
               {/* Line */}
@@ -48,13 +48,13 @@ const Experience = () => {
                 whileInView={{ height: '100%' }}
                 transition={{ duration: 1, ease: 'easeOut', delay: index * 0.5 + 0.2 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="w-0.5 h-full bg-gray-3 dark:bg-gray-6"
+                className="w-0.5 h-full bg-gray-3 dark:bg-gray-5/40"
               ></motion.div>
             </div>
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
-              <SpotlightCard className="bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6 border-[1px] border-gray-2 dark:border-gray-7">
+              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg p-6">
                 <div className="flex items-start space-x-5">
                   <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
@@ -62,13 +62,13 @@ const Experience = () => {
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
                     <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-[15px] text-blue-4 dark:text-blue-3 mb-2">{exp.company}</p>
-                    <p className="text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
+                    <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-3">{exp.company}</p>
+                    <p className="text-[12px] text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
 
-                    <div className="flex md:flex-row flex-col md:items-center space-x-2 mb-4">
-                      <p className="text-[13px] text-gray-6 dark:text-gray-4 ">{exp.year}</p>
+                    <div className="flex md:flex-row flex-col md:items-center space-x-3 mb-4">
+                      <p className="text-[12px] text-gray-6 dark:text-gray-4 ">{exp.year}</p>
                       <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.time}</p>
+                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.time}</p>
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
                         <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
                       </div>
@@ -77,7 +77,7 @@ const Experience = () => {
                     <Disclosure>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-4 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-3 transition-all">
+                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-3 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-2 transition-all">
                             {open ? 'Hide responsibilities' : 'Show responsibilities'}
                             <ChevronDownIcon className={`w-4 h-4 mt-[2px] transition-transform duration-200 ${open ? 'rotate-0' : 'rotate-[-90deg]'}`} />
                           </Disclosure.Button>
@@ -91,7 +91,7 @@ const Experience = () => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 -translate-y-2"
                           >
-                            <ul className="list-disc ml-5 text-gray-6 dark:text-gray-3 mt-3">
+                            <ul className="list-disc ml-5 text-gray-6 dark:text-gray-3/90 mt-3">
                               {exp.description.split('\n').map((line, i) => (
                                 <li key={i} className="mb-2 leading-tight">
                                   {line.replace(/^•\s*/, '')}

@@ -45,7 +45,7 @@ const FilterTabs = () => {
           animate={{ scaleX: 1, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 400, damping: 30 }}
           layout
-          className="absolute bottom-0 h-full rounded-sm bg-blue-3 dark:bg-blue-4"
+          className="absolute bottom-0 h-full rounded-sm bg-blue-3 dark:bg-gray-5/30"
           style={{ left: underlineStyle.left, width: underlineStyle.width }}
         />
 
@@ -59,7 +59,7 @@ const FilterTabs = () => {
               key={filterType}
               ref={(el) => isActive && setActiveTabRef(el)}
               onClick={() => setFilter(mappedFilter)}
-              className={`relative px-3 py-1 font-medium transition-colors duration-300 ${isActive ? 'text-whitee dark:text-gray-2' : 'text-gray-4 dark:text-gray-3 hover:text-blue-4 dark:hover:text-blue-3'}`}
+              className={`relative px-3 py-1 font-medium transition-colors duration-300 ${isActive ? 'text-whitee dark:text-gray-2' : 'text-gray-4 dark:text-gray-4 hover:text-blue-4 dark:hover:text-gray-3'}`}
             >
               {t(`achievements.${filterType}`)}
             </button>
@@ -84,10 +84,10 @@ const FilterTabs = () => {
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
-                <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-lg bg-whitee dark:bg-gray-8 p-4 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-lg bg-whitee dark:bg-gray-5/20 p-4 text-left align-middle shadow-xl transition-all">
                   <div className="mt-[-5px] pb-2 flex justify-end">
-                    <button onClick={() => setSelectedImage(null)} className="text-gray-500 hover:text-red-500 text-sm">
-                      ✕ Close
+                    <button onClick={() => setSelectedImage(null)} className="text-gray-5 hover:text-red-500 text-sm font-bold">
+                      ✕
                     </button>
                   </div>
                   <img src={selectedImage} alt="Preview" className="rounded w-full max-h-[80vh] object-contain" />
