@@ -34,7 +34,7 @@ const Services = ({ setActiveSection }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[10px] gap-3 mt-6">
         {/* 1 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.skills')}</span>
@@ -44,7 +44,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* 2 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('about')}>
               <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
@@ -58,7 +58,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* 3 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10 lg:col-span-2 w-full h-full flex">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10 lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
             <button onClick={() => setActiveSection('projects')}>
               <Layers width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
@@ -90,7 +90,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* 4 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10 lg:col-span-2 w-full h-full flex">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10 lg:col-span-2 w-full h-full flex">
           <div className="w-1/2 py-5 px-6">
             <button>
               <Brush width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
@@ -107,7 +107,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* 5 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('chatroom')}>
               <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
@@ -131,7 +131,7 @@ const Services = ({ setActiveSection }) => {
         </SpotlightCard>
 
         {/* 6 */}
-        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-9/10">
+        <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10">
           <div className="flex flex-col items-center justify-center p-5">
             <button onClick={() => setActiveSection('achievements')}>
               <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
