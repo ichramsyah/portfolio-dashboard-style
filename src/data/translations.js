@@ -47,11 +47,13 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio: `Hello! Thank you for visiting my personal website. I'm Ichramsyah Abdurrachman, an Informatics Engineering student at Paramadina University. I am a Fullstack Developer with a strong passion for building software products, focusing on advanced skills like Design Patterns and performance optimization. My tech stack includes modern frontend technologies such as Next.js, React.js, TypeScript, and Tailwind CSS, as well as backend development using Node.js, Laravel, and Express.js.
+      bio: `Hello! Thank you for visiting my personal website. I am Ichramsyah Abdurrachman, an undergraduate Computer Science student at Paramadina University. As a Software Engineer, I have a deep enthusiasm for software engineering—from architectural design to performance optimization. I focus on applying fundamental principles like Design Patterns to create solutions that are not only functional but also scalable and maintainable.
 
-I enjoy creating user-friendly, high-performance solutions. Whether building intuitive interfaces or architecting the backend, I always strive to bring efficiency and clarity to every layer of the application. I'm a quick learner who thrives in dynamic environments and enjoys solving complex problems collaboratively.
+I apply these principles within a modern technology ecosystem, from building structured frontend architectures with Next.js, React.js, and TypeScript, to designing robust backend systems using Node.js and Laravel.
 
-I believe that clear communication and team synergy are key to successful software development. My experiences have shaped my technical and analytical abilities, as well as my leadership qualities. I am always eager to work in a team, learn from others, and contribute to impactful projects.
+My primary focus is on transforming complex problems into elegant and efficient software solutions. Whether designing system architecture or writing code, I always prioritize quality, security, and performance at every layer. As an adaptive learner, I thrive in dynamic environments and enjoy solving complex problems collaboratively.
+
+I believe the best software is born from a synergy of technical excellence and effective communication. My academic and project experiences have honed my analytical, technical, and leadership skills. I am always enthusiastic about collaborating within a team, learning from professionals, and contributing to building products that deliver a real and sustainable impact.
 
 Best regards, Ichram`,
       language: 'Language',
@@ -239,11 +241,13 @@ Best regards, Ichram`,
     },
     about: {
       title: 'Tentang Saya',
-      bio: `Halo! Terima kasih telah mengunjungi website pribadi saya. Saya Ichramsyah Abdurrachman, seorang mahasiswa Teknik Informatika di Universitas Paramadina. Saya adalah seorang Fullstack Developer dengan minat besar dalam membangun produk perangkat lunak dan berfokus pada keahlian lanjutan seperti Design Patterns dan optimasi kinerja. Stack teknologi saya meliputi teknologi frontend modern seperti Next.js, React.js, TypeScript, dan Tailwind CSS, serta pengembangan backend menggunakan Node.js, Laravel dan Express.js.
+      bio: `Halo! Terima kasih telah mengunjungi website pribadi saya. Saya Ichramsyah Abdurrachman, seorang mahasiswa Teknik Informatika di Universitas Paramadina. Sebagai seorang Software Engineer, saya memiliki antusiasme mendalam terhadap rekayasa perangkat lunak, mulai dari perancangan arsitektur hingga optimasi performa. Saya berfokus pada penerapan prinsip-prinsip fundamental seperti Design Patterns untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga scalable dan maintainable.
 
-Saya menikmati menciptakan solusi yang ramah pengguna dan memiliki performa tinggi. Baik saat membangun antarmuka yang intuitif maupun merancang backend, saya selalu berusaha membawa efisiensi dan kejelasan pada setiap lapisan aplikasi. Saya pembelajar cepat yang tumbuh dalam lingkungan dinamis dan senang menyelesaikan masalah kompleks secara kolaboratif.
+Saya mengaplikasikan prinsip-prinsip ini dalam ekosistem teknologi modern, mulai dari membangun arsitektur frontend yang terstruktur dengan Next.js, React.js, dan TypeScript, hingga merancang sistem backend yang kokoh menggunakan Node.js dan Laravel.
 
-Saya percaya bahwa komunikasi yang baik dan sinergi tim adalah kunci kesuksesan dalam pengembangan perangkat lunak. Pengalaman saya telah membentuk kemampuan teknis dan analitis saya, serta kualitas kepemimpinan saya. Saya selalu bersemangat untuk bekerja dalam tim, belajar dari orang lain, dan berkontribusi pada proyek yang berdampak.
+Fokus utama saya adalah mengubah masalah kompleks menjadi solusi perangkat lunak yang elegan dan efisien. Baik dalam merancang arsitektur sistem maupun menulis kode, saya selalu memprioritaskan kualitas, keamanan, dan performa di setiap lapisan. Sebagai pembelajar yang adaptif, saya berkembang dalam lingkungan dinamis dan menikmati proses pemecahan masalah secara kolaboratif.
+
+Saya percaya bahwa perangkat lunak terbaik lahir dari sinergi antara keunggulan teknis dan komunikasi yang efektif. Pengalaman akademis dan proyek telah mengasah kemampuan analitis, teknis, serta kepemimpinan saya. Saya selalu antusias untuk berkolaborasi dalam tim, belajar dari para profesional, dan berkontribusi untuk membangun produk yang memberikan dampak nyata dan berkelanjutan.
 
 Salam hangat, Ichram`,
       language: 'Bahasa',
@@ -435,7 +439,7 @@ Salam hangat, Ichram`,
     },
     about: {
       title: '自己紹介',
-      bio: 'こんにちは！私の個人ウェブサイトへお越しいただき、ありがとうございます。パラマディナ大学で情報工学を専攻している、イクラムシャ・アブドゥラックマンです。私はソフトウェア製品の開発に強い情熱を持つフルスタック開発者で、デザインパターンやパフォーマンス最適化といった高度なスキルに注力しています。私の技術スタックには、Next.js、React.js、TypeScript、Tailwind CSSなどの最新のフロントエンド技術、およびNode.js、Laravel、Express.jsを使用したバックエンド開発が含まれます。\n\nユーザーフレンドリーで高性能なソリューションを創り出すことに喜びを感じます。直感的なインターフェースの構築であれ、バックエンドの設計であれ、アプリケーションの各層に効率性と明確さをもたらすよう常に努めています。変化の速い環境で成長する学習意欲の高い人間であり、複雑な問題を協力して解決することを楽しんでいます。\n\n良好なコミュニケーションとチームの相乗効果が、ソフトウェア開発における成功の鍵であると信じています。これまでの経験を通じて、技術力、分析能力、そしてリーダーシップを培ってきました。チームで働き、他者から学び、影響力のあるプロジェクトに貢献することに常に意欲的です。\n\n敬具, イクラム',
+      bio: 'こんにちは！私の個人ウェブサイトをご覧いただき、誠にありがとうございます。パラマディナ大学で情報工学を専攻している、イクラムシャ・アブドゥラックマンと申します。ソフトウェアエンジニアとして、アーキテクチャ設計からパフォーマンス最適化まで、ソフトウェアエンジニアリングそのものに深い情熱を持っています。特に、デザインパターンのような基本原則を適用し、機能的であるだけでなく、スケーラブルで保守性の高いソリューションを構築することに注力しています。 \n\nこれらの原則を、Next.js、React.js、TypeScriptを用いた構造的なフロントエンドアーキテクチャの構築から、Node.jsやLaravelによる堅牢なバックエンドシステムの設計まで、モダンな技術エコシステムの中で実践しています。\n\n私の主な焦点は、複雑な問題を洗練された効率的なソフトウェアソリューションに転換することです。システムのアーキテクチャを設計する際も、コードを書く際も、常にすべての層において品質、セキュリティ、そしてパフォーマンスを最優先に考えています。順応性の高い学習者として、変化の速い環境で成長し、チームで協力して複雑な問題を解決することに喜びを感じます。\n\n最高のソフトウェアは、卓越した技術力と効果的なコミュニケーションの相乗効果から生まれると信じています。学業やプロジェクトでの経験を通じて、分析能力、技術力、そしてリーダーシップの資質を磨いてきました。チームで協力し、プロフェッショナルから学び、実質的かつ持続的なインパクトを与える製品開発に貢献することに、常に意欲的です。\n\n敬具, イクラム',
       language: '言語',
       education: '学歴',
       experience: '職歴',
