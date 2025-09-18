@@ -59,7 +59,7 @@ export default function GithubContributionStats({ username }) {
       </div>
 
       {/* Stat cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
         <StatCard label={t('home.githubcontribution_total')} value={stats.total} highlight />
         <StatCard label={t('home.githubcontribution_week')} value={stats.thisWeek} highlight />
         <StatCard label={t('home.githubcontribution_best')} value={stats.best} highlight />
@@ -75,7 +75,7 @@ export default function GithubContributionStats({ username }) {
             colorScheme={theme === 'dark' ? 'dark' : 'light'}
             theme={{
               light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-              dark: ['#151617ff', '#125d37ff', '#028b42ff', '#2db54dff', '#43ef60ff'],
+              dark: ['#161718ff', '#125d37ff', '#028b42ff', '#2db54dff', '#43ef60ff'],
             }}
             blockSize={14}
             blockMargin={4}
@@ -92,7 +92,7 @@ export default function GithubContributionStats({ username }) {
 
 function StatCard({ label, value, highlight }) {
   return (
-    <SpotlightCard className="bg-gray-1/40 dark:bg-gray-9/10">
+    <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10">
       <div className="rounded-lg p-4 text-center transition">
         <p className="text-gray-8 dark:text-gray-2 text-sm transition-color duration-500">{label}</p>
         <p className={`text-2xl font-bold ${highlight ? 'text-green-6' : ''}`}>{value}</p>
