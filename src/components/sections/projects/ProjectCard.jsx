@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { SiPostman } from 'react-icons/si';
+import SpotlightCard from '../../common/SpotlightCard';
 
 const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
   return (
@@ -9,42 +10,39 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
       whileInView={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
       viewport={{ once: false }}
-      className="relative rounded-lg p-[4px] border-[2px] border-gray-2 dark:border-gray-7 h-full"
+      className="relative rounded-lg p-[4px] h-full"
     >
-      <div className="absolute flex top-0 right-0">
-        {/* Menggunakan map untuk menampilkan setiap kategori jika project.category adalah array */}
+      {/* <div className="absolute flex top-0 right-0">
         {Array.isArray(project.category) ? (
           project.category.map((cat, index) => (
             <span
-              key={index} // Penting untuk memberikan key unik saat melakukan map
+              key={index}
               className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[28px] bg-blue-3 dark:bg-blue-4 text-white dark:text-gray-2"
               style={{
-                // Menyesuaikan posisi jika ada lebih dari satu kategori untuk menghindari tumpang tindih
-                right: index * 50, // Contoh penyesuaian, Anda mungkin perlu menyempurnakan ini
-                zIndex: project.category.length - index, // Untuk memastikan kategori pertama di atas
+                right: index * 50,
+                zIndex: project.category.length - index,
               }}
             >
               <div className="flex items-center gap-2">
-                {categoryIcons[cat]} {/* Gunakan 'cat' karena ini adalah kategori individual */}
+                {categoryIcons[cat]}
                 {cat}
               </div>
             </span>
           ))
         ) : (
-          // Jika project.category masih berupa string tunggal (untuk proyek lama atau tunggal)
-          <span className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[28px] bg-blue-3 dark:bg-blue-4 text-white dark:text-gray-2">
+          <span className="font-medium pl-5 pr-5 pb-[10px] py-[6px] text-sm rounded-tr-[7px] rounded-bl-[28px] bg-blue-3 dark:bg-gray-8 text-white dark:text-gray-2">
             <div className="flex items-center gap-2">
               {categoryIcons[project.category]}
               {project.category}
             </div>
           </span>
         )}
-      </div>
-      <div className="h-full rounded-lg overflow-hidden flex flex-col">
-        <div className="w-full aspect-[16/9] overflow-hidden">
-          <img src={project.image} className="w-full bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
+      </div> */}
+      <SpotlightCard className="h-full rounded-lg bg-gray-1/40 dark:bg-gray-6/10 overflow-hidden flex flex-col">
+        <div className="w-full aspect-[16/9] overflow-hidden p-1">
+          <img src={project.image} className="w-full rounded-t-lg bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
         </div>
-        <div className="bg-whitee h-full dark:bg-gray-8 rounded-lg overflow-hidden bg-gradient-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 flex flex-col justify-between flex-1 p-6">
+        <div className="h-full rounded-b-lg overflow-hidden flex flex-col justify-between flex-1 p-6">
           <div>
             <h3 className="text-gray-9 dark:text-whitee mb-3">{project.title}</h3>
             <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
@@ -84,7 +82,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
             </div>
           </div>
         </div>
-      </div>
+      </SpotlightCard>
     </motion.div>
   );
 };
