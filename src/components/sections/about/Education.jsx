@@ -23,23 +23,29 @@ const Education = () => {
   const educationItems = t('about.educationItems', { returnObjects: true });
   return (
     <div className="">
-      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-whitee mb-6">
+      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-gray-3 mb-6">
         <GraduationCap className="mr-2" /> {t('about.education')}
       </motion.h3>
       <div className="space-y-6">
         {educationItems.map((edu, index) => (
           <div key={index} className="flex space-x-4">
-            <motion.div initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }} viewport={{ once: true }} className="flex-shrink-0 w-2 bg-blue-3 rounded-full origin-top" />
+            <motion.div
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.3 }}
+              viewport={{ once: true }}
+              className="flex-shrink-0 w-2 bg-blue-3 dark:bg-gray-5/60 rounded-full origin-top"
+            />
             <div className="flex-1">
-              <SpotlightCard className="bg-linear-to-t from-gray-1 to-whitee hover:from-gray-2 hover:to-whitee dark:from-gray-8 dark:to-gray-9 dark:hover:from-gray-7 dark:hover:to-gray-9 rounded-lg p-6  border-[1px] border-gray-1 dark:border-gray-7">
+              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg px-6 py-6">
                 <div className="flex items-start space-x-4">
                   <img src={edu.logo} className="w-7 object-contain mt-[3px]" alt="" />
                   <div className="flex-1">
-                    <h4 className="text-xl  text-gray-9 dark:text-whitee mb-1">{edu.school}</h4>
-                    <p className="text-blue-4 dark:text-blue-3 mb-2">{edu.degree}</p>
-                    <div className="flex items-center space-x-2 mb-1">
-                      <p className="text-sm text-gray-5 dark:text-gray-4">{edu.year}</p>
-                      <p className="text-[12px] text-gray-5 dark:text-gray-4">{edu.location}</p>
+                    <h4 className="text-lg  text-gray-9 dark:text-gray-3 mb-1">{edu.school}</h4>
+                    <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-4">{edu.degree}</p>
+                    <div className="flex items-center space-x-2 my-1">
+                      <p className="text-[12px] text-gray-5 dark:text-gray-5">{edu.year}</p>
+                      <p className="text-[12px] text-gray-5 dark:text-gray-4/80">{edu.location}</p>
                     </div>
                   </div>
                 </div>

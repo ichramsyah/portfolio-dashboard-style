@@ -9,7 +9,7 @@ const AboutSection = () => {
   const { t } = useContext(LanguageContext);
   return (
     <div className="py-14 lg:py-8 md:mt-0 mt-3 mr-2">
-      <motion.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="text-3xl font-medium text-gray-9 dark:text-whitee mb-5">
+      <motion.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="text-3xl font-medium text-gray-9 dark:text-gray-1 mb-5">
         {t('about.title')}
       </motion.h1>
       <About />
