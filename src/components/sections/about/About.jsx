@@ -58,7 +58,7 @@ const About = () => {
               </div>
               <div className="w-full bg-gray-2 dark:bg-gray-5/20 rounded-full h-2 overflow-hidden">
                 <motion.div
-                  className="bg-blue-3 dark:bg-gray-4/80 h-2 rounded-full"
+                  className="bg-blue-3 dark:bg-gray-5/30 h-2 rounded-full"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${lang.level}%` }}
                   transition={{ duration: 1, ease: 'easeOut', delay: 0.5 * index }}

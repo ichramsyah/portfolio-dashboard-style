@@ -77,7 +77,7 @@ const Experience = () => {
                     <Disclosure>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-4 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-3 transition-all">
+                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-3 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-2 transition-all">
                             {open ? 'Hide responsibilities' : 'Show responsibilities'}
                             <ChevronDownIcon className={`w-4 h-4 mt-[2px] transition-transform duration-200 ${open ? 'rotate-0' : 'rotate-[-90deg]'}`} />
                           </Disclosure.Button>
@@ -91,7 +91,7 @@ const Experience = () => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 -translate-y-2"
                           >
-                            <ul className="list-disc ml-5 text-gray-6 dark:text-gray-4 mt-3">
+                            <ul className="list-disc ml-5 text-gray-6 dark:text-gray-3/90 mt-3">
                               {exp.description.split('\n').map((line, i) => (
                                 <li key={i} className="mb-2 leading-tight">
                                   {line.replace(/^•\s*/, '')}

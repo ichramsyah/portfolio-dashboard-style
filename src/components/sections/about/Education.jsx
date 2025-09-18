@@ -41,7 +41,7 @@ const Education = () => {
                 <div className="flex items-start space-x-4">
                   <img src={edu.logo} className="w-7 object-contain mt-[3px]" alt="" />
                   <div className="flex-1">
-                    <h4 className="text-lg  text-gray-9 dark:text-gray-3 mb-1">{edu.school}</h4>
+                    <h4 className="text-lg  text-gray-9 dark:text-gray-2 mb-1">{edu.school}</h4>
                     <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-4">{edu.degree}</p>
                     <div className="flex items-center space-x-2 my-1">
                       <p className="text-[12px] text-gray-5 dark:text-gray-5">{edu.year}</p>
