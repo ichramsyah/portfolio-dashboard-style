@@ -124,8 +124,8 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       }}
                       className={`w-full flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-3 scale-[100%] transition-color duration-300'
-                          : 'bg-transparent text-gray-7 dark:hover:text-gray-1 dark:text-gray-5 hover:bg-gray-2 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
+                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-2 scale-[100%] transition-color duration-300'
+                          : 'bg-transparent text-gray-7 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
