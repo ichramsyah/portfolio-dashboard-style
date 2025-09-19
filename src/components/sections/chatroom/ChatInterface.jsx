@@ -146,11 +146,11 @@ const ChatInterface = () => {
                           <span className="text-[11px] font-semibold px-2 py-0.5 bg-sky-500/20 text-sky-500 rounded-full flex items-center">
                             <MdShield className="w-2.8 h-2.8 mr-[3px]" /> Author
                           </span>
-                          <p className="text-[13px] font-semibold text-gray-5 dark:text-gray-4">{msg.displayName}</p>
+                          <p className="text-[13px] text-gray-9 dark:text-gray-2">{msg.displayName}</p>
                         </>
                       ) : (
                         <>
-                          <p className="text-xs font-semibold text-gray-5 dark:text-gray-4">{msg.displayName}</p>
+                          <p className="text-xs text-gray-9 dark:text-gray-2">{msg.displayName}</p>
                           <p className="text-xs text-gray-5 dark:text-gray-4">{messageTime}</p>
                         </>
                       )}
@@ -161,10 +161,12 @@ const ChatInterface = () => {
 
                       {/* Bubble chat */}
                       <div
-                        className={`px-3 pb-3 pt-2 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-8 text-gray-8 dark:text-gray-1 ${isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl break-words' : 'self-start rounded-bl-2xl rounded-r-2xl'}`}
+                        className={`px-4 pb-3.5 pt-2.5 max-w-xs md:max-w-md bg-gray-2 dark:bg-gray-4/10 text-gray-8 dark:text-gray-1 ${
+                          isAuthor ? 'self-end rounded-br-2xl rounded-l-2xl break-words' : 'self-start rounded-bl-2xl rounded-r-2xl'
+                        }`}
                       >
                         {msg.replyTo && (
-                          <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-9 dark:border-gray-5 rounded">
+                          <div className="mb-2 mt-1 p-2 border-l-4 border-gray-4 bg-gray-3 dark:bg-gray-5/10 dark:border-gray-5 rounded">
                             <p className="text-xs font-bold">{msg.replyTo.displayName}</p>
                             <p className="text-sm italic opacity-80 break-words md:line-clamp-2 line-clamp-1">{msg.replyTo.text}</p>
                           </div>
@@ -199,10 +201,10 @@ const ChatInterface = () => {
                   damping: 25,
                   mass: 1,
                 }}
-                className="relative w-full flex justify-between items-center p-1 mb-2 bg-gray-2 dark:bg-gray-9 rounded-lg overflow-x-hidden"
+                className="relative w-full flex justify-between items-center p-1 mb-2 bg-gray-2 dark:bg-gray-6/10 rounded-lg overflow-x-hidden"
               >
                 <div className="text-sm pl-2 py-1 min-w-0">
-                  <p className="text-gray-6 dark:text-gray-3">
+                  <p className="text-gray-6 dark:text-gray-3 mb-0.5">
                     Replying to <span className="font-bold">{replyingTo.displayName}</span>
                   </p>
                   <p className="text-gray-5 dark:text-gray-4 italic truncate pr-3">{replyingTo.text}</p>
@@ -218,13 +220,13 @@ const ChatInterface = () => {
               value={formValue}
               onChange={(e) => setFormValue(e.target.value)}
               placeholder={t('chatroom.input_form')}
-              className="text-blackk dark:text-whitee bg-gray-1 dark:bg-gray-8 flex-grow p-3 rounded-l-lg focus:outline-none focus:ring-none transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-5"
+              className="text-blackk dark:text-whitee bg-gray-1 dark:bg-gray-5/20 flex-grow p-3 pl-4 rounded-l-lg focus:outline-none focus:ring-none transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-5"
             />
             <button
               type="submit"
               disabled={!formValue.trim()}
               className={`p-2 transition-all duration-300 px-4 rounded-r-lg ${
-                !formValue.trim() ? 'cursor-not-allowed bg-gray-1 dark:bg-gray-8' : 'bg-gray-8 dark:bg-gray-7 cursor-pointer hover:scale-105 hover:bg-gray-8 dark:hover:bg-gray-6'
+                !formValue.trim() ? 'cursor-not-allowed bg-gray-1 dark:bg-gray-5/20' : 'bg-gray-8 dark:bg-gray-5/40 cursor-pointer hover:scale-105 hover:bg-gray-8 dark:hover:bg-gray-6'
               }`}
             >
               <AiOutlineSend size={24} className={!formValue.trim() ? 'text-gray-4 transition-all duration-300' : 'dark:text-white text-white transition-all duration-300'} />
@@ -237,11 +239,11 @@ const ChatInterface = () => {
         {currentUser ? (
           <div className="flex justify-between">
             <div className="flex items-center text-sm min-w-0">
-              <p className="text-gray-5 truncate">
+              <p className="text-gray-5 dark:text-gray-4 truncate">
                 {t('chatroom.sign_in_as')} <span className="font-bold">{currentUser.displayName}</span> <span>({currentUser.email})</span>
               </p>
             </div>
-            <button onClick={handleSignOut} className="bg-red-600 text-white py-1 px-3 rounded-md text-sm transition duration-300 hover:scale-104 flex items-center">
+            <button onClick={handleSignOut} className="bg-red-600 text-whitee py-1 px-3 rounded-md text-sm transition duration-300 hover:scale-104 flex items-center">
               <FaSignOutAlt className="inline mb-0.5 mr-1" />
               <span className="">{t('chatroom.exit')}</span>
             </button>
@@ -250,9 +252,12 @@ const ChatInterface = () => {
           <div className="pt-5 pb-0 flex justify-center border-t border-gray-3 dark:border-gray-6">
             <div className="flex flex-col justify-center items-center">
               <p className="text-center text-sm text-gray-6 dark:text-gray-4 mb-5">{t('chatroom.login')}</p>
-              <button onClick={signInWithGoogle} className="px-4 py-2.5 flex items-center border border-gray-300 rounded-lg hover:scale-105 transition-all duration-300 bg-whitee dark:bg-gray-9">
+              <button
+                onClick={signInWithGoogle}
+                className="px-4 py-2.5 flex items-center border border-gray-3 dark:border-gray-5/20 rounded-lg hover:scale-105 transition-all duration-300 bg-whitee dark:bg-gray-7/20 text-gray-8 dark:text-gray-2"
+              >
                 <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" className="w-7" alt="Google icon" />
-                <span className="px-1 text-gray-7 dark:text-gray-2">{t('chatroom.login_google')}</span>
+                <span className="px-1">{t('chatroom.login_google')}</span>
               </button>
             </div>
           </div>
