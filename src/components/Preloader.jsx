@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // --- Konfigurasi ---
-const TEXT_TO_REVEAL = 'WELCOME';
+const TEXT_TO_REVEAL = '0123456789';
 const ROTATION_DURATION = 5;
 const RADIUS = 120;
 
