@@ -1,14 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// 1. Definisikan "variants" untuk animasi parent dan child
-// Ini adalah kunci untuk membuat animasi yang terkoordinasi
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Memberi jeda antar animasi anak
+      staggerChildren: 0.1,
     },
   },
 };
@@ -19,7 +17,7 @@ const letterVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring', // Efek seperti pegas
+      type: 'spring',
       stiffness: 120,
     },
   },
@@ -44,29 +42,22 @@ const Preloader = () => {
   const letters = Array.from(loadingText);
 
   return (
-    // Div utama untuk fade out saat keluar
     <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-whitee dark:bg-background-dark gap-6">
       {/* 2. Ikon SVG dengan animasi path drawing */}
       <motion.svg width="80" height="80" viewBox="0 0 100 100" className="stroke-blue-4 dark:stroke-blue-3" style={{ strokeWidth: 5, fill: 'none' }}>
         <motion.path
           d="M 50, 5
-             A 45,45 0 1 1 49.9,5.001" // Path untuk lingkaran yang hampir sempurna
+             A 45,45 0 1 1 49.9,5.001"
           variants={iconVariants}
           initial="hidden"
           animate="visible"
         />
       </motion.svg>
 
-      {/* 3. Container untuk teks yang akan dianimasikan secara bergiliran */}
-      <motion.div
-        className="flex overflow-hidden" // Overflow hidden agar huruf muncul dari bawah
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="flex overflow-hidden" variants={containerVariants} initial="hidden" animate="visible">
         {letters.map((letter, index) => (
           <motion.span key={index} variants={letterVariants} className="text-xl font-medium text-gray-7 dark:text-gray-4">
-            {letter === ' ' ? '\u00A0' : letter} {/* Menangani spasi */}
+            {letter === ' ' ? '\u00A0' : letter}
           </motion.span>
         ))}
       </motion.div>
