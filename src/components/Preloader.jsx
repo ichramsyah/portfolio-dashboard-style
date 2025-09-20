@@ -1,75 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// 1. Definisikan "variants" untuk animasi parent dan child
-// Ini adalah kunci untuk membuat animasi yang terkoordinasi
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1, // Memberi jeda antar animasi anak
-    },
-  },
-};
-
-const letterVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring', // Efek seperti pegas
-      stiffness: 120,
-    },
-  },
-};
-
-const iconVariants = {
-  hidden: {
-    pathLength: 0,
-    fill: 'rgba(255, 255, 255, 0)',
-  },
-  visible: {
-    pathLength: 1,
-    fill: 'rgba(255, 255, 255, 0)',
-    transition: {
-      default: { duration: 2, ease: 'easeInOut', repeat: Infinity, repeatType: 'loop' },
-    },
-  },
-};
+// --- Konfigurasi ---
+const TEXT_TO_REVEAL = 'WELCOME';
+const ROTATION_DURATION = 5;
+const RADIUS = 120;
 
 const Preloader = () => {
-  const loadingText = 'Loading...';
-  const letters = Array.from(loadingText);
+  const letters = Array.from(TEXT_TO_REVEAL);
+  const numLetters = letters.length;
 
   return (
-    // Div utama untuk fade out saat keluar
-    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-whitee dark:bg-background-dark gap-6">
-      {/* 2. Ikon SVG dengan animasi path drawing */}
-      <motion.svg width="80" height="80" viewBox="0 0 100 100" className="stroke-blue-4 dark:stroke-blue-3" style={{ strokeWidth: 5, fill: 'none' }}>
-        <motion.path
-          d="M 50, 5
-             A 45,45 0 1 1 49.9,5.001" // Path untuk lingkaran yang hampir sempurna
-          variants={iconVariants}
-          initial="hidden"
-          animate="visible"
-        />
-      </motion.svg>
+    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 1.5, ease: 'easeOut' } }} className="fixed inset-0 z-[100] flex items-center justify-center bg-whitee dark:bg-background-dark">
+      <div className="relative w-[300px] h-[300px]">
+        <motion.div
+          className="absolute w-full h-full"
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: ROTATION_DURATION,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        >
+          <div
+            className="absolute w-[600px] h-[600px] left-1/2 -top-[300px]"
+            style={{
+              transform: 'translateX(-50%)',
+              background: 'conic-gradient(from 0deg, transparent 0%, transparent 80%, #b3f1ffff 98%, transparent 100%)',
+              maskImage: 'radial-gradient(circle at center, white 5%, transparent 60%)',
+            }}
+          />
+        </motion.div>
 
-      {/* 3. Container untuk teks yang akan dianimasikan secara bergiliran */}
-      <motion.div
-        className="flex overflow-hidden" // Overflow hidden agar huruf muncul dari bawah
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {letters.map((letter, index) => (
-          <motion.span key={index} variants={letterVariants} className="text-xl font-medium text-gray-7 dark:text-gray-4">
-            {letter === ' ' ? '\u00A0' : letter} {/* Menangani spasi */}
-          </motion.span>
-        ))}
-      </motion.div>
+        {letters.map((char, i) => {
+          const angle = (i / numLetters) * 360;
+          const x = RADIUS * Math.cos((angle - 90) * (Math.PI / 180));
+          const y = RADIUS * Math.sin((angle - 90) * (Math.PI / 180));
+
+          const activationDelay = (i / numLetters) * ROTATION_DURATION;
+
+          return (
+            <motion.span
+              key={i}
+              className="absolute left-1/2 top-1/2 text-2xl font-bold"
+              style={{
+                transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                color: '#444', // Warna awal saat "gelap"
+              }}
+              initial={{ color: '#444' }}
+              animate={{ color: ['#444', '#fff', '#444'] }}
+              transition={{
+                duration: 1.5,
+                delay: activationDelay,
+                repeat: Infinity,
+                repeatDelay: ROTATION_DURATION - 1.5,
+                ease: 'easeOut',
+                times: [0, 0.2, 1], // Cepat menyala, lambat meredup
+              }}
+            >
+              {char}
+            </motion.span>
+          );
+        })}
+
+        {/* Titik Pusat (Mercusuar) yang Berdenyut */}
+        <motion.div
+          className="absolute left-1/2 top-1/2 w-3 h-3 rounded-full transform -translate-x-1/2 -translate-y-1/2"
+          animate={{
+            backgroundColor: ['#383838ff', '#f0f9ff', '#2d2d2dff'],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      </div>
     </motion.div>
   );
 };
