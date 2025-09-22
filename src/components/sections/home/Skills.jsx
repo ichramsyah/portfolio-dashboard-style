@@ -1,7 +1,7 @@
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import GlassIcons from '../../common/GlassIcons';
 import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel } from 'react-icons/si';
+import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel, SiFirebase } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
 import { useContext } from 'react';
@@ -18,6 +18,7 @@ const Skills = () => {
     { icon: <SiTypescript size={27} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'typescript', label: 'TypeScript' },
     { icon: <FaNodeJs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nodejs', label: 'Node.js' },
     { icon: <FaPhp size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'php', label: 'PHP' },
+    { icon: <SiFirebase size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'firebase', label: 'Firebase' },
     { icon: <FaPython size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
     { icon: <SiTailwindcss size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'tailwind', label: 'Tailwind CSS' },
     { icon: <FaBootstrap size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'bootstrap', label: 'Bootstrap' },
