@@ -1,7 +1,7 @@
 const colorClassMapping = {
-  react: 'bg-gradient-to-br from-cyan-300 to-blue-400',
+  react: 'bg-gradient-to-br from-cyan-400 to-blue-400',
   nextjs: 'bg-gradient-to-br from-gray-800 to-gray-900',
-  laravel: 'bg-gradient-to-br from-red-400 to-red-600',
+  laravel: 'bg-gradient-to-br from-red-600 to-red-700',
   express: 'bg-gradient-to-br from-gray-600 to-gray-700',
   javascript: 'bg-gradient-to-br from-yellow-400 to-yellow-500',
   typescript: 'bg-gradient-to-br from-blue-600 to-blue-700',
@@ -15,7 +15,7 @@ const colorClassMapping = {
   mongodb: 'bg-gradient-to-br from-green-500 to-emerald-600',
   html: 'bg-gradient-to-br from-orange-500 to-red-600',
   css: 'bg-gradient-to-br from-blue-500 to-sky-600',
-  git: 'bg-gradient-to-br from-red-600 to-red-800',
+  git: 'bg-gradient-to-br from-red-400 to-red-600',
   github: 'bg-gradient-to-br from-gray-800 to-gray-900',
   postman: 'bg-gradient-to-br from-purple-500 to-fuchsia-600',
   figma: 'bg-gradient-to-br from-fuchsia-400 to-pink-500',
