@@ -40,7 +40,7 @@ const ToggleSwitch = ({ option1, option2, isActive, onToggle, activeBg = 'bg-whi
   const travel = typeof distanceOverride === 'number' ? distanceOverride : distance;
 
   return (
-    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 border-2 border-gray-2 dark:border-gray-5/10 dark:bg-gray-5/20 p-1 overflow-hidden">
+    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 border-3 border-gray-3/40 dark:border-gray-5/10 dark:bg-gray-5/20 p-1 overflow-hidden">
       {/* Slider/knob */}
       <motion.div
         ref={knobRef}
