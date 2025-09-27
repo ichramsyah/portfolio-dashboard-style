@@ -155,7 +155,7 @@ const SocialCards = () => {
       {cardData.map((card, index) => (
         <section
           key={card.id}
-          className={`card-item absolute grid grid-cols-[2.5fr_1fr] items-center overflow-hidden p-6 bg-gradient-to-b ${card.bg} shadow-md rounded-2xl border border-white/10 w-full h-[40vh] max-h-[450px]`}
+          className={`card-item absolute grid grid-cols-[2.5fr_1fr] items-center overflow-hidden p-6 bg-gradient-to-b ${card.bg} shadow-md rounded-2xl border border-white/10 md:w-[50%] w-full h-[40vh] max-h-[450px]`}
           style={{ zIndex: cardData.length - index }}
         >
           <div className={`absolute -left-[3.5rem] -top-[3.5rem] rotate-45 text-white/10 bg-icon`}>{card.bgIcon}</div>
