@@ -73,15 +73,15 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 </div>
 
                 {/* Toggle Tema */}
-                <div className="flex gap-2 py-2">
+                <div className="flex gap-2.5 py-2">
                   <ToggleSwitch
                     isActive={theme === 'light'}
                     onToggle={toggleTheme}
-                    option1={{ icon: <Sun className="transition-transform duration-400 hover:scale-120" size={14} /> }}
-                    option2={{ icon: <Moon className="transition-transform duration-400 hover:scale-120" size={14} /> }}
-                    activeBg="bg-whitee dark:bg-gray-3/20"
+                    option1={{ icon: <Sun className="transition-transform duration-400 hover:scale-120" size={15} /> }}
+                    option2={{ icon: <Moon className="transition-transform duration-400 hover:scale-120 ml-[3px]" size={15} /> }}
+                    activeBg="bg-whitee/90 dark:bg-gray-3/20"
                     inactiveBg="bg-gray-3"
-                    activeColor="text-blue-6 dark:text-yellow-3"
+                    activeColor="text-blue-5 dark:text-yellow-3"
                     inactiveColor="text-gray-5 dark:text-gray-3"
                   />
 
