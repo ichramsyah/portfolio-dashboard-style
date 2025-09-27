@@ -20,7 +20,7 @@ const colorClassMapping = {
   git: 'bg-gradient-to-br from-red-400 to-red-600',
   github: 'bg-gradient-to-br from-gray-800 to-gray-900',
   postman: 'bg-gradient-to-br from-orange-500 to-orange-300',
-  figma: 'bg-gradient-to-br from-fuchsia-400 to-pink-500',
+  figma: 'bg-gradient-to-br from-gray-900 to-gray-700',
   adobeillustrator: 'bg-gradient-to-br from-orange-700 to-red-500',
   cpanel: 'bg-gradient-to-br from-orange-500 to-orange-600',
   default: 'bg-gradient-to-br from-gray-500 to-gray-600',
