@@ -52,7 +52,7 @@ const ToggleSwitch = ({ option1, option2, isActive, onToggle, activeBg = 'bg-whi
         className={`absolute h-[70%] w-[41%] rounded-full ${activeBg} will-change-transform shadow-md border border-gray-3/10 dark:border-gray-5/10`}
         initial={false}
         animate={{ x: isActive ? 0 : travel }}
-        transition={{ type: 'spring', stiffness: 420, damping: 52 }}
+        transition={{ type: 'spring', stiffness: 420, damping: 58 }}
         style={{ visibility: ready ? 'visible' : 'hidden' }}
       />
 
