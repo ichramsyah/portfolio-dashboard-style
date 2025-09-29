@@ -40,14 +40,19 @@ const ToggleSwitch = ({ option1, option2, isActive, onToggle, activeBg = 'bg-whi
   const travel = typeof distanceOverride === 'number' ? distanceOverride : distance;
 
   return (
-    <div ref={containerRef} onClick={onToggle} className="relative flex w-18 h-7 cursor-pointer items-center rounded-lg bg-gray-2 border-3 border-gray-3/40 dark:border-gray-5/10 dark:bg-gray-5/20 p-1 overflow-hidden">
+    <div
+      ref={containerRef}
+      onClick={onToggle}
+      className="relative flex w-22 h-10 cursor-pointer items-center rounded-full px-[7px] overflow-hidden bg-gray-3/40 dark:bg-gray-5/20 inset-shadow-sm inset-shadow-gray-4/30 dark:inset-shadow-gray-5/10 select-none"
+      style={{ backgroundColor: isActive ? undefined : undefined }}
+    >
       {/* Slider/knob */}
       <motion.div
         ref={knobRef}
-        className={`absolute h-[75%] w-[45%] rounded-md ${activeBg} will-change-transform`}
+        className={`absolute h-[70%] w-[41%] rounded-full ${activeBg} will-change-transform shadow-md border border-gray-3/10 dark:border-gray-5/10`}
         initial={false}
         animate={{ x: isActive ? 0 : travel }}
-        transition={{ type: 'spring', stiffness: 420, damping: 48 }}
+        transition={{ type: 'spring', stiffness: 420, damping: 58 }}
         style={{ visibility: ready ? 'visible' : 'hidden' }}
       />
 

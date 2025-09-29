@@ -73,15 +73,15 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 </div>
 
                 {/* Toggle Tema */}
-                <div className="flex gap-2 py-2">
+                <div className="flex gap-2.5 py-2">
                   <ToggleSwitch
                     isActive={theme === 'light'}
                     onToggle={toggleTheme}
-                    option1={{ icon: <Sun className="transition-transform duration-400 hover:scale-120" size={14} /> }}
-                    option2={{ icon: <Moon className="transition-transform duration-400 hover:scale-120" size={14} /> }}
-                    activeBg="bg-whitee dark:bg-gray-3/20"
+                    option1={{ icon: <Sun className="transition-transform duration-400 hover:scale-120" size={15} /> }}
+                    option2={{ icon: <Moon className="transition-transform duration-400 hover:scale-120 ml-[3px]" size={15} /> }}
+                    activeBg="bg-whitee/90 dark:bg-gray-3/20"
                     inactiveBg="bg-gray-3"
-                    activeColor="text-blue-6 dark:text-yellow-3"
+                    activeColor="text-blue-5 dark:text-yellow-3"
                     inactiveColor="text-gray-5 dark:text-gray-3"
                   />
 
@@ -122,10 +122,10 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 ${
+                      className={`w-full cursor-pointer flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 ${
                         isActive
                           ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-2 scale-[100%] transition-color duration-300'
-                          : 'bg-transparent text-gray-7 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
+                          : 'bg-transparent text-gray-7/90 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2/60 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
                       }`}
                     >
                       <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />

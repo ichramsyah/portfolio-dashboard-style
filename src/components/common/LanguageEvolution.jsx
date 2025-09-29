@@ -47,7 +47,7 @@ export default function LanguageEvolution({ username }) {
             <YAxis allowDecimals={false} stroke="#9ca3af" />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#111827',
+                backgroundColor: '#0f0e0e',
                 border: '1px solid #374151',
                 borderRadius: '0.5rem',
                 color: '#d1d5db',
