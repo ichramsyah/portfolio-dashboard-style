@@ -73,7 +73,7 @@ Best regards, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'Security Engineer & Fullstack Developer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -267,7 +267,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'Security Engineer & Fullstack Developer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -457,7 +457,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'Security Engineer & Fullstack Developer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
