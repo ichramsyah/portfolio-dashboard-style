@@ -73,7 +73,7 @@ Best regards, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer & Fullstack Developer',
+          position: 'DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -267,7 +267,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer & Fullstack Developer',
+          position: 'DevSecOps Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -275,7 +275,7 @@ Salam hangat, Ichram`,
           pos: '• Magang',
           workfrom: '• Gabungan',
           description:
-            'Merancang dan mengembangkan sistem File Integrity Monitoring (FIM) real-time dari awal menggunakan Python di lingkungan Linux untuk meningkatkan keamanan server. \nMengimplementasikan notifikasi email otomatis untuk peringatan keamanan kritis, termasuk deteksi file berbahaya dan perubahan yang tidak sah. \nMengintegrasikan algoritma hashing SHA-256 untuk validasi integritas file dan memanfaatkan cron job untuk pemantauan terjadwal \nMembangun fitur keamanan proaktif, termasuk blacklist/whitelist ekstensi file dan skrip untuk menolak unggahan file .php di direktori kritis. \nMenambahkan fitur deteksi alamat IP pelaku pada laporan insiden untuk mempercepat proses investigasi dan respons keamanan.',
+            'Merancang dan mengimplementasikan sistem File Integrity Monitoring (FIM) berbasis Python menggunakan teknik hashing untuk mendeteksi perubahan file, dengan integrasi cron jobs pada cPanel guna menghasilkan laporan otomatis mingguan melalui email. \nMengembangkan sistem FIM real-time berbasis incron dan Python untuk memantau perubahan file/direktori tertentu dengan filter ekstensi dan waktu kerja (timestamp), serta mengirimkan notifikasi email dan mencatat log perubahan secara otomatis. \nMembangun backend menggunakan Django untuk mengelola data log hasil monitoring, melakukan konversi log menjadi format JSON, dan menyediakan API bagi frontend. \nMengembangkan frontend dashboard menggunakan Next.js untuk menampilkan data hasil monitoring dengan fitur autentikasi, soft delete, penghapusan log, serta indikator status aktif/tidaknya layanan incron di server. \nMengintegrasikan sistem backend dan frontend dengan menerapkan praktik fullstack development, termasuk pengaturan routing API, komunikasi antar-port, dan manajemen koneksi antara Django (backend) dan Next.js (frontend). \nMengelola server Linux dan deployment aplikasi secara mandiri, meliputi konfigurasi Gunicorn dan PM2, pengaturan proxy menggunakan .htaccess, serta menjalankan perintah administratif melalui akses SSH dengan hak sudo. \nMengimplementasikan konsep DevSecOps dengan menggabungkan keamanan sistem (FIM), otomatisasi (cron/incron), dan pengelolaan aplikasi (deployment pipeline) menjadi satu kesatuan sistem yang terintegrasi dan dapat dimonitor melalui dashboard.',
           current: false,
         },
         {
@@ -457,7 +457,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer & Fullstack Developer',
+          position: 'DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
