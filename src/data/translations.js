@@ -73,7 +73,7 @@ Best regards, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -81,7 +81,7 @@ Best regards, Ichram`,
           pos: '• Internship',
           workfrom: '• Hybrid',
           description:
-            'Designed and developed a real-time File Integrity Monitoring (FIM) system from scratch using Python in a Linux environment to enhance server security. \nImplemented automated email notifications for critical security alerts, including malicious file detection and unauthorized changes. \nIntegrated the SHA-256 hashing algorithm for file integrity validation and utilized cron jobs for scheduled monitoring. \nCBuilt proactive security features, including file extension blacklisting/whitelisting and a script to reject .php file uploads in critical directories. \nAdded a source IP address detection feature to incident reports to accelerate the investigation and security response process.',
+            'Design and implement a Python-based File Integrity Monitoring (FIM) system using hashing techniques to detect file changes, with cPanel cron job integration to automatically generate weekly reports via email. \nDevelop a real-time FIM system using incron and Python to monitor specific file/directory changes, featuring extension filters and timestamps, while automatically sending email notifications and logging all changes. \nBuild a backend using Django to manage monitoring log data, convert logs into JSON format, and provide an API for the frontend. \nDevelop a frontend dashboard using Next.js to display monitoring data, complete with features for authentication, soft delete, log deletion, and a status indicator for the incron service on the server. \nIntegrate the backend and frontend systems by applying fullstack development practices, including API routing configuration, inter-port communication, and connection management between Django (backend) and Next.js (frontend). \nIndependently manage a Linux server and application deployment, including the configuration of Gunicorn and PM2, setting up a proxy using .htaccess, and executing administrative commands via SSH with sudo privileges. \nImplement the DevSecOps concept by combining system security (FIM), automation (cron/incron), and application management (deployment pipeline) into a single, integrated system that can be monitored through the dashboard.',
           current: false,
         },
         {
@@ -267,7 +267,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'DevSecOps Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -275,7 +275,7 @@ Salam hangat, Ichram`,
           pos: '• Magang',
           workfrom: '• Gabungan',
           description:
-            'Merancang dan mengembangkan sistem File Integrity Monitoring (FIM) real-time dari awal menggunakan Python di lingkungan Linux untuk meningkatkan keamanan server. \nMengimplementasikan notifikasi email otomatis untuk peringatan keamanan kritis, termasuk deteksi file berbahaya dan perubahan yang tidak sah. \nMengintegrasikan algoritma hashing SHA-256 untuk validasi integritas file dan memanfaatkan cron job untuk pemantauan terjadwal \nMembangun fitur keamanan proaktif, termasuk blacklist/whitelist ekstensi file dan skrip untuk menolak unggahan file .php di direktori kritis. \nMenambahkan fitur deteksi alamat IP pelaku pada laporan insiden untuk mempercepat proses investigasi dan respons keamanan.',
+            'Merancang dan mengimplementasikan sistem File Integrity Monitoring (FIM) berbasis Python menggunakan teknik hashing untuk mendeteksi perubahan file, dengan integrasi cron jobs pada cPanel guna menghasilkan laporan otomatis mingguan melalui email. \nMengembangkan sistem FIM real-time berbasis incron dan Python untuk memantau perubahan file/direktori tertentu dengan filter ekstensi dan waktu kerja (timestamp), serta mengirimkan notifikasi email dan mencatat log perubahan secara otomatis. \nMembangun backend menggunakan Django untuk mengelola data log hasil monitoring, melakukan konversi log menjadi format JSON, dan menyediakan API bagi frontend. \nMengembangkan frontend dashboard menggunakan Next.js untuk menampilkan data hasil monitoring dengan fitur autentikasi, soft delete, penghapusan log, serta indikator status aktif/tidaknya layanan incron di server. \nMengintegrasikan sistem backend dan frontend dengan menerapkan praktik fullstack development, termasuk pengaturan routing API, komunikasi antar-port, dan manajemen koneksi antara Django (backend) dan Next.js (frontend). \nMengelola server Linux dan deployment aplikasi secara mandiri, meliputi konfigurasi Gunicorn dan PM2, pengaturan proxy menggunakan .htaccess, serta menjalankan perintah administratif melalui akses SSH dengan hak sudo. \nMengimplementasikan konsep DevSecOps dengan menggabungkan keamanan sistem (FIM), otomatisasi (cron/incron), dan pengelolaan aplikasi (deployment pipeline) menjadi satu kesatuan sistem yang terintegrasi dan dapat dimonitor melalui dashboard.',
           current: false,
         },
         {
@@ -457,7 +457,7 @@ Salam hangat, Ichram`,
       experienceItems: [
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Security Engineer',
+          position: 'DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
@@ -465,7 +465,7 @@ Salam hangat, Ichram`,
           pos: '• インターンシップ',
           workfrom: '• ハイブリッド',
           description:
-            'Linux環境にて、サーバーセキュリティ強化を目的としたリアルタイム・ファイル整合性監視（FIM）システムをPythonでゼロから設計・開発。\n不正ファイルの検知や不正な変更を含む、重大なセキュリティアラートのための自動メール通知機能を実装。\nファイルの整合性検証のためにSHA-256ハッシュアルゴリズムを統合し、定期監視のためにcronジョブを活用。\n重要なディレクトリへの.phpファイルのアップロードを拒否するスクリプトや、ファイル拡張子のブラックリスト・ホワイトリストを含む、プロアクティブなセキュリティ機能を構築。\n調査とセキュリティ対応の迅速化を目的として、インシデントレポートに攻撃者のIPアドレスを検知する機能を追加',
+            'ハッシュ技術を用いたPythonベースのファイル整合性監視（FIM）システムを設計・実装し、cPanelのcronジョブと連携して週次レポートをメールで自動生成する。 \nincronとPythonをベースにしたリアルタイムFIMシステムを開発し、特定のファイルやディレクトリの変更を監視する。拡張子フィルタやタイムスタンプ機能を備え、変更を検知した際にはメール通知とログ記録を自動的に行う。 \nDjangoを使用してバックエンドを構築し、監視ログデータの管理、ログのJSON形式への変換、およびフロントエンド用のAPIを提供する。 \nNext.jsを使用してフロントエンドダッシュボードを開発し、監視結果のデータを表示する。認証、ソフトデリート、ログ削除機能、およびサーバー上のincronサービスのアクティブ状態を示すインジケーターを実装する。 \nフルスタック開発の実践に基づき、バックエンドとフロントエンドシステムを統合する。APIルーティングの設定、ポート間の通信、Django（バックエンド）とNext.js（フロントエンド）間の接続管理などを行う。 \nLinuxサーバーの管理とアプリケーションのデプロイを自主的に管理する。GunicornとPM2の設定、.htaccessによるプロキシ設定、sudo権限でのSSHアクセスによる管理コマンドの実行などを含む。 \nシステムセキュリティ（FIM）、自動化（cron/incron）、アプリケーション管理（デプロイメントパイプライン）を統合し、ダッシュボードで監視可能な一つの統合システムとしてDevSecOpsの概念を実装する。',
           current: false,
         },
         {
