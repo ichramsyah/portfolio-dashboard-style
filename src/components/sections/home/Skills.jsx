@@ -6,6 +6,8 @@ import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
+import IconPm2 from '../../common/icon/IconPm2';
+import IconGunicorn from '../../common/icon/IconGunicorn';
 
 const Skills = () => {
   const { t } = useContext(LanguageContext);
@@ -20,8 +22,10 @@ const Skills = () => {
     { icon: <FaNodeJs size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'nodejs', label: 'Node.js' },
     { icon: <FaPhp size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'php', label: 'PHP' },
     { icon: <SiFirebase size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'firebase', label: 'Firebase' },
-    { icon: <FaPython size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
-    { icon: <FaLinux size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'linux', label: 'Linux' },
+    { icon: <FaPython size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
+    { icon: <FaLinux size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'linux', label: 'Linux' },
+    { icon: <IconPm2 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'pm2', label: 'PM2' },
+    { icon: <IconGunicorn size={100} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'gunicorn', label: 'Gunicorn' },
     { icon: <SiTailwindcss size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'tailwind', label: 'Tailwind CSS' },
     { icon: <FaBootstrap size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'bootstrap', label: 'Bootstrap' },
     { icon: <GrMysql size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'mysql', label: 'MySQL' },
