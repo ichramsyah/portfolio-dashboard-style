@@ -12,7 +12,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
       viewport={{ once: false }}
       className="relative rounded-lg p-[4px] h-full"
     >
-      {/* <div className="absolute flex top-0 right-0">
+      <div className="absolute flex top-0 right-0 z-10">
         {Array.isArray(project.category) ? (
           project.category.map((cat, index) => (
             <span
@@ -37,7 +37,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
             </div>
           </span>
         )}
-      </div> */}
+      </div>
       <SpotlightCard className="h-full rounded-lg bg-gray-1/40 dark:bg-gray-6/10 overflow-hidden flex flex-col">
         <div className="w-full aspect-[16/9] overflow-hidden p-1">
           <img src={project.image} className="w-full rounded-t-lg bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
