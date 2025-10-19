@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { SiPostman } from 'react-icons/si';
 import SpotlightCard from '../../common/SpotlightCard';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const ProjectCard = ({ project, techIcons, categoryIcons, t, onProjectClick }) => {
   return (
@@ -43,8 +44,9 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t, onProjectClick }) =
           <img src={project.image} className="w-full rounded-t-lg bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
 
           <div className="absolute inset-1 flex items-center justify-center bg-blackk/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg">
-            <div className="flex items-center gap-2 text-whitee font-medium">
-              <span>See Details</span>
+            <div className="flex items-center gap-2 text-whitee font-medium text-gray-7">
+              <span>View Details</span>
+              <FaArrowRight size={14} />
             </div>
           </div>
         </div>
