@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { SiPostman } from 'react-icons/si';
 import SpotlightCard from '../../common/SpotlightCard';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
+const ProjectCard = ({ project, techIcons, categoryIcons, t, onProjectClick }) => {
   return (
     <motion.div
       initial={{ opacity: 0, filter: 'blur(4px)', scale: 0.9 }}
@@ -12,7 +13,7 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
       viewport={{ once: false }}
       className="relative rounded-lg p-[4px] h-full"
     >
-      {/* <div className="absolute flex top-0 right-0">
+      <div className="absolute flex top-0 right-0 z-10">
         {Array.isArray(project.category) ? (
           project.category.map((cat, index) => (
             <span
@@ -37,10 +38,17 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t }) => {
             </div>
           </span>
         )}
-      </div> */}
+      </div>
       <SpotlightCard className="h-full rounded-lg bg-gray-1/40 dark:bg-gray-6/10 overflow-hidden flex flex-col">
-        <div className="w-full aspect-[16/9] overflow-hidden p-1">
+        <div className="w-full aspect-[16/9] overflow-hidden p-1 relative cursor-pointer group" onClick={() => onProjectClick(project)}>
           <img src={project.image} className="w-full rounded-t-lg bg-gray-3 dark:bg-gray-8 h-full object-cover" alt="" />
+
+          <div className="absolute inset-1 flex items-center justify-center bg-blackk/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg">
+            <div className="flex items-center gap-2 text-whitee font-medium text-gray-7">
+              <span>View Details</span>
+              <FaArrowRight size={14} />
+            </div>
+          </div>
         </div>
         <div className="h-full rounded-b-lg overflow-hidden flex flex-col justify-between flex-1 p-6">
           <div>

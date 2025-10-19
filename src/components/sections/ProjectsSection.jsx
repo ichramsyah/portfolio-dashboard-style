@@ -6,11 +6,21 @@ import ProjectCard from './projects/ProjectCard';
 import { projects } from './projects/projectsData';
 import SearchInput from './projects/SearchInput';
 import FilterButtons from './projects/FilterButtons';
+import ProjectDetailModal from './projects/ProjectDetailModal';
 
 const ProjectsSection = () => {
   const { t } = useContext(LanguageContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
 
   const categoryIcons = {
     all: <LayoutGrid size={16} />,
@@ -26,10 +36,8 @@ const ProjectsSection = () => {
     .map((project) => {
       const text = projectTexts.find((p) => p.id === project.id);
       return {
-        ...project,
-        title: text?.title || '',
-        description: text?.description || '',
-        category: text?.category || 'Fullstack',
+        ...project, // ✅ Cara terbaik: Gabungkan semua data secara otomatis
+        ...text,
       };
     })
     .filter((project) => {
@@ -49,7 +57,7 @@ const ProjectsSection = () => {
 
       <div className="grid min-[768px]:grid-cols-2 gap-6">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} categoryIcons={categoryIcons} t={t} />
+          <ProjectCard key={project.id} project={project} categoryIcons={categoryIcons} t={t} onProjectClick={handleProjectClick} />
         ))}
       </div>
 
@@ -58,6 +66,7 @@ const ProjectsSection = () => {
           <p className="text-gray-5 dark:text-gray-4 text-lg">No projects found matching your criteria.</p>
         </div>
       )}
+      {selectedProject && <ProjectDetailModal project={selectedProject} onClose={handleCloseModal} t={t} />}
     </div>
   );
 };
