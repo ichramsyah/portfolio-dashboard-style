@@ -133,48 +133,96 @@ Best regards, Ichram`,
           title: 'VeloChat - Realtime Chat Web App',
           description: 'VeloChat is a realtime chat application built using the MERN stack with Socket.IO integration.',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'VeloChat is a realtime chat application that allows users to communicate instantly through text messages. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and integrated with Socket.IO for real-time functionality, VeloChat provides a seamless chatting experience.',
+            },
+          ],
         },
         {
           id: 2,
           title: 'Rinema - Indonesian Movie Lovers Social Platform',
           description: 'A community-driven platform built with Laravel and MySQL for Indonesian film enthusiasts.',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 8,
           title: 'BebasBlog - The official frontend for BebasBlog',
           description: 'Delivering a rich user experience for content creation and consumption. ',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 7,
           title: 'BebasBlog - RESTful APIs Social Media Platform',
           description: 'This is the backend service for the BebasBlog project, a RESTful API built to support a blogging or social media platform.',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 3,
           title: 'Rebuild Rinema - Indonesian Movie Lovers Social Platform',
           description: 'Rebuilding the Rinema web app with its official API integration.',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 4,
           title: 'Portfolio Website - Dashboard Style',
           description: 'Personal website portfolio with dashboard layout design',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 5,
           title: 'Portfolio Website - Desain Landing Page',
           description: 'Personal website portfolio with landing page design',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 6,
           title: 'RESTful APIs Simple Notes App',
           description: 'A simple RESTful API using Express.js that functions to manage notes.',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
       ],
     },
@@ -333,48 +381,96 @@ Salam hangat, Ichram`,
           title: 'VeloChat - Aplikasi Web Chat Realtime',
           description: 'VeloChat adalah aplikasi chat realtime yang dibangun dengan stack MERN dan integrasi Socket.IO.',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 2,
           title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
           description: 'Sebuah platform komunitas untuk pecinta film Indonesia yang dibangun menggunakan Laravel dan MySQL.',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 8,
           title: 'BebasBlog - Frontend Resmi BebasBlog',
           description: 'Menyediakan pengalaman pengguna yang kaya untuk pembuatan dan konsumsi konten.',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 7,
           title: 'BebasBlog - RESTful APIs Platform Sosial',
           description: 'Ini adalah layanan backend untuk proyek Bebasblog, sebuah API RESTful yang dibangun untuk mendukung platform blogging atau media sosial.',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 3,
           title: 'Rebuild Rinema - Platform Sosial Pecinta Film Indonesia',
           description: 'Pengembangan ulang aplikasi web Rinema dengan integrasi API resminya.',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 4,
           title: 'Portofolio Website - Desain Dashboard',
           description: 'Website portofolio pribadi dengan design tata letak dashboard',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 5,
           title: 'Portofolio Website - Landing Page Design',
           description: 'Website portofolio pribadi dengan design tata letak Landing Page',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 6,
           title: 'RESTful APIs Aplikasi Catatan Sederhana',
           description: 'RESTful API sederhana menggunakan Express.js yang berfungsi untuk mengelola catatan (notes).',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
       ],
     },
@@ -570,48 +666,96 @@ Salam hangat, Ichram`,
           title: 'VeloChat - リアルタイムチャットウェブアプリ',
           description: 'VeloChatは、MERNスタックとSocket.IOを統合して構築されたリアルタイムチャットアプリケーションです。',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 2,
           title: 'Rinema - インドネシア映画ファンのためのソーシャルプラットフォーム',
           description: 'LaravelとMySQLを使用して構築された、インドネシア映画ファンのためのコミュニティプラットフォームです。',
           category: 'Fullstack',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 8,
           title: 'BebasBlog - BebasBlog 公式フロントエンド',
           description: 'コンテンツの作成と消費のための豊富なユーザー エクスペリエンスを提供します。',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 7,
           title: 'BebasBlog - ソーシャルプラットフォーム向けRESTful API',
           description: 'これはBebasblogプロジェクトのバックエンドサービスで、ブログやソーシャルメディアプラットフォームをサポートするために構築されたRESTful APIです。',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 3,
           title: 'Rinema（リビルド版）- インドネシア映画ファンのためのソーシャルプラットフォーム',
           description: '公式APIを統合したRinemaウェブアプリケーションの再開発版です。',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 4,
           title: 'ポートフォリオサイト - ダッシュボードデザイン',
           description: 'ダッシュボードレイアウトでデザインされた個人のポートフォリオサイトです。',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 5,
           title: 'ポートフォリオサイト - ランディングページデザイン',
           description: 'ランディングページレイアウトでデザインされた個人のポートフォリオサイトです。',
           category: 'Frontend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
         {
           id: 6,
           title: 'シンプルなノートアプリ向けRESTful API',
           description: 'Express.jsを使用して構築された、ノートを管理するためのシンプルなRESTful APIです。',
           category: 'Backend',
+          detail: [
+            {
+              paragraph:
+                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+            },
+          ],
         },
       ],
     },

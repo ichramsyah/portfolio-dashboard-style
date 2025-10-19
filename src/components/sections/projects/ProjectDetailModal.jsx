@@ -1,5 +1,3 @@
-// src/components/sections/projects/ProjectDetailModal.jsx (File Baru)
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -8,13 +6,13 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
 
   return (
     <AnimatePresence>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={onClose}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-blackk/60 bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={onClose}>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 50, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className="bg-whitee dark:bg-gray-9 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-whitee dark:bg-gray-9 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative">
@@ -28,7 +26,11 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
             <h2 className="text-3xl font-bold text-gray-9 dark:text-whitee mb-2">{project.title}</h2>
             <span className="inline-block bg-blue-1 text-blue-4 dark:bg-blue-4/20 dark:text-blue-4 px-3 py-1 text-sm font-medium rounded-full mb-6">{project.category}</span>
 
-            <p className="text-gray-6 dark:text-gray-4 mb-6">{project.description}</p>
+            <div className="prose dark:prose-invert max-w-none text-gray-6 dark:text-gray-4 mb-4">
+              {project.detail?.map((item, index) => (
+                <p key={index}>{item.paragraph}</p>
+              ))}
+            </div>
 
             <h3 className="text-lg font-semibold text-gray-8 dark:text-gray-2 mb-3">Technologies Used</h3>
             <div className="flex flex-wrap items-center gap-3 mb-8">

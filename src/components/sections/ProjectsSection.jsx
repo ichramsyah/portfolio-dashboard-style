@@ -36,10 +36,8 @@ const ProjectsSection = () => {
     .map((project) => {
       const text = projectTexts.find((p) => p.id === project.id);
       return {
-        ...project,
-        title: text?.title || '',
-        description: text?.description || '',
-        category: text?.category || 'Fullstack',
+        ...project, // ✅ Cara terbaik: Gabungkan semua data secara otomatis
+        ...text,
       };
     })
     .filter((project) => {
