@@ -136,7 +136,7 @@ Best regards, Ichram`,
           detail: [
             {
               paragraph:
-                'VeloChat is a realtime chat application that allows users to communicate instantly through text messages. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and integrated with Socket.IO for real-time functionality, VeloChat provides a seamless chatting experience.',
+                'VeloChat is an ambitious project to build a functional and feature-rich single-page application (SPA) chat app. This project encompasses the entire development cycle, from designing the backend RESTful APIs architecture and real-time connections with Socket.IO (Websocket), to building a reactive and modern frontend interface using React Javascript. The main focus of this project is on security (JWT & Google OAuth authentication), user experience features such as real-time notifications, typing indicators, read receipts, responsive design, and clean, well-structured code quality.',
             },
           ],
         },
@@ -384,7 +384,10 @@ Salam hangat, Ichram`,
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'VeloChat adalah sebuah proyek ambisius untuk membangun aplikasi percakapan single-page application (SPA) yang fungsional dan kaya fitur. Proyek ini mencakup seluruh siklus pengembangan, mulai dari desain arsitektur backend RESTful APIs dan koneksi real-time dengan Socket.IO (Websocket), hingga pembangunan antarmuka frontend yang reaktif dan modern menggunakan React Javascript. Fokus utama proyek ini adalah pada keamanan (autentikasi JWT & Google OAuth), pengalaman pengguna seperti notifikasi real-time, indikator typing, pesan terbaca, tampilan responsif, dan kualitas kode yang bersih dan terstruktur.',
+            },
+            {
+              techstack: 'Teknologi yang digunakan: MongoDB, Express.js, React.js, Node.js, Socket.IO, JWT, Google OAuth, HTML5, CSS3, JavaScript (ES6+), Axios, Redux Toolkit, Tailwind CSS, Vercel, Heroku',
             },
           ],
         },
@@ -669,7 +672,7 @@ Salam hangat, Ichram`,
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'VeloChatは、機能豊富なシングルページアプリケーション（SPA）チャットアプリケーションを構築するための野心的なプロジェクトです。このプロジェクトは、RESTful APIのバックエンドアーキテクチャ設計とSocket.IO（Websocket）によるリアルタイム接続から、React Javascriptを使用した反応的でモダンなフロントエンドインターフェースの構築まで、開発の全サイクルをカバーしています。このプロジェクトの主な焦点は、セキュリティ（JWTおよびGoogle OAuth認証）、リアルタイム通知、タイピングインジケーター、既読メッセージ、レスポンシブデザイン、クリーンで構造化されたコード品質など、ユーザーエクスペリエンスにあります。',
             },
           ],
         },
