@@ -12,7 +12,7 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 50, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className="bg-whitee dark:bg-gray-9 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-whitee dark:bg-background-dark rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="relative">
@@ -26,11 +26,12 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
             <h2 className="text-3xl font-bold text-gray-9 dark:text-whitee mb-2">{project.title}</h2>
             <span className="inline-block bg-blue-1 text-blue-4 dark:bg-blue-4/20 dark:text-blue-4 px-3 py-1 text-sm font-medium rounded-full mb-6">{project.category}</span>
 
-            <div className="prose dark:prose-invert max-w-none text-gray-6 dark:text-gray-4 mb-4">
-              {project.detail?.map((item, index) => (
-                <p key={index}>{item.paragraph}</p>
-              ))}
-            </div>
+            {project.detail?.map((item) => (
+              <div className="prose dark:prose-invert max-w-none text-gray-6 dark:text-gray-4 mb-4">
+                <p>{item.paragraph}</p>
+                <p>{item.techstack}</p>
+              </div>
+            ))}
 
             <h3 className="text-lg font-semibold text-gray-8 dark:text-gray-2 mb-3">Technologies Used</h3>
             <div className="flex flex-wrap items-center gap-3 mb-8">
