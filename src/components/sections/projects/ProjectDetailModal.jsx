@@ -27,18 +27,12 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
             <span className="inline-block bg-blue-1 text-blue-4 dark:bg-blue-4/20 dark:text-blue-4 px-3 py-1 text-sm font-medium rounded-full mb-6">{project.category}</span>
 
             {project.detail?.map((item) => (
-              <div className="prose dark:prose-invert max-w-none text-gray-6 dark:text-gray-4 mb-4">
-                <p>{item.paragraph}</p>
-                <p>{item.techstack}</p>
+              <div className="max-w-none">
+                <p className=" text-gray-6 dark:text-gray-4 mb-4">{item.paragraph}</p>
+                <h3 className="font-semibold text-lg text-gray-8 dark:text-gray-1 mb-3">{item.htechstack}</h3>
+                <p className="text-gray-6 dark:text-gray-4 mb-4">{item.techstack}</p>
               </div>
             ))}
-
-            <h3 className="text-lg font-semibold text-gray-8 dark:text-gray-2 mb-3">Technologies Used</h3>
-            <div className="flex flex-wrap items-center gap-3 mb-8">
-              {project.tech.map((tech, index) => (
-                <img key={index} src={tech.url} className="w-7 h-7 object-contain" title={tech.name} alt={tech.name} />
-              ))}
-            </div>
           </div>
         </motion.div>
       </motion.div>
