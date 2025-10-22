@@ -46,7 +46,7 @@ const ProjectDetailModal = ({ project, onClose, t }) => {
                 </ul>
                 {item.linkyt && (
                   <div className="mt-6">
-                    <h3 className="font-semibold text-lg text-gray-8 dark:text-gray-1 mb-3">Demo Video</h3>
+                    <h3 className="font-semibold text-lg text-gray-8 dark:text-gray-1 mb-3">{item.hlinkyt}</h3>
                     <div className="aspect-w-16 aspect-h-9">
                       <iframe
                         src={item.linkyt}

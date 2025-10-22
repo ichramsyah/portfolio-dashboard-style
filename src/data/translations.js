@@ -136,10 +136,14 @@ Best regards, Ichram`,
           detail: [
             {
               paragraph:
-                'VeloChat is an ambitious project to build a functional and feature-rich single-page application (SPA) chat app. This project encompasses the entire development cycle, from designing the backend RESTful APIs architecture and real-time connections with Socket.IO (Websocket), to building a reactive and modern frontend interface using React Javascript. The main focus of this project is on security (JWT & Google OAuth authentication), user experience features such as real-time notifications, typing indicators, read receipts, responsive design, and clean, well-structured code quality.',
+                'VeloChat is an ambitious project to build a functional and feature-rich single-page application (SPA) chat app. This project covers the entire development cycle, from designing a RESTful API backend architecture and real-time connections with Socket.IO (Websockets), to building a reactive and modern frontend interface using React. The main focus of this project is on security (JWT authentication & Google OAuth), user experience features like real-time notifications, typing indicators, read receipts, a responsive layout, and clean, well-structured code quality.',
               htechstack: 'Technologies Used',
               techstack:
                 'React, Vite, Tailwind CSS, Zustand, React Router DOM, Axios, Socket.IO Client, @react-oauth/google, react-hot-toast, react-loading-skeleton, date-fns, Node.js, Express.js, Socket.IO, JSON Web Token (JWT), Passport.js (for Google OAuth), Mongoose, Bcrypt.js, Multer, Cloudinary, Express Session, Dotenv, MongoDB Atlas (NoSQL), Google Cloud Platform (OAuth), Cloudinary (Media Storage)',
+              hfeat: 'Main Features',
+              feat: "Manual registration with email domain validation (@gmail.com)., Secure login system with hashed passwords., Third-party login & registration via Google OAuth 2.0., JWT-based authorization to protect the API., Protected pages accessible only after login., Search for other users by exact email., Friend Request System (Send, Accept, Decline)., Real-time friend request notifications., Dynamic contact list separate from conversations., Contact list search with a debounce feature., Instant one-to-one personal messaging with Socket.IO., Permanently saved message history., 'Typing...' indicator when another user is typing., Unread message notification badge with a count on the conversation list., Read Receipts with 'sent' and 'seen' checkmark icons., Timestamps and Date Dividers (Today, Yesterday, etc.) for chat history clarity., Ability to change profile name., Ability to change account password., Upload and change profile picture with cloud storage (Cloudinary)., Default profile picture for all new users.",
+              hlinkyt: 'Demo Video',
+              linkyt: 'https://www.youtube.com/embed/2FnM3nW0jvQ?si=ENxc0igjz3ENQXpb',
             },
           ],
         },
@@ -393,6 +397,7 @@ Salam hangat, Ichram`,
                 'React, Vite, Tailwind CSS, Zustand, React Router DOM, Axios, Socket.IO Client, @react-oauth/google, react-hot-toast, react-loading-skeleton, date-fns, Node.js, Express.js, Socket.IO, JSON Web Token (JWT), Passport.js (untuk Google OAuth), Mongoose, Bcrypt.js, Multer, Cloudinary, Express Session, Dotenv, MongoDB Atlas (NoSQL), Google Cloud Platform (OAuth), Cloudinary (Media Storage)',
               hfeat: 'Fitur Utama',
               feat: 'Registrasi manual dengan validasi domain email (@gmail.com)., Sistem login aman dengan password yang di-hash. ,Login & Registrasi pihak ketiga via Google OAuth 2.0., Otorisasi berbasis JWT (JSON Web Tokens) untuk melindungi API., Halaman terproteksi yang hanya bisa diakses setelah login., Pencarian pengguna lain berdasarkan email yang tepat., Sistem Permintaan Pertemanan (Mengirim, Menerima, Menolak)., Notifikasi permintaan pertemanan secara real-time., Daftar Kontak yang dinamis dan terpisah dari percakapan., Pencarian daftar kontak dengan fitur debounce.,Komunikasi pesan personal (one-to-one) secara instan dengan Socket.IO., Riwayat pesan yang tersimpan permanen., Indikator "Typing..." saat pengguna lain sedang mengetik., Notifikasi Pesan Belum Dibaca berupa badge angka di daftar percakapan., Tanda Pesan Terbaca (Read Receipts) dengan ikon centang terkirim dan dilihat., Stempel Waktu dan Pembatas Tanggal (Hari Ini, Kemarin, dll.) untuk kejelasan riwayat chat., Kemampuan untuk mengubah nama profil., Kemampuan untuk mengubah password akun., Mengunggah dan mengubah foto profil dengan penyimpanan di layanan cloud (Cloudinary)., Foto profil default untuk semua pengguna baru. ',
+              hlinkyt: 'Demo Video',
               linkyt: 'https://www.youtube.com/embed/2FnM3nW0jvQ?si=ENxc0igjz3ENQXpb',
             },
           ],
@@ -678,10 +683,14 @@ Salam hangat, Ichram`,
           detail: [
             {
               paragraph:
-                'VeloChatは、機能豊富なシングルページアプリケーション（SPA）チャットアプリケーションを構築するための野心的なプロジェクトです。このプロジェクトは、RESTful APIのバックエンドアーキテクチャ設計とSocket.IO（Websocket）によるリアルタイム接続から、React Javascriptを使用した反応的でモダンなフロントエンドインターフェースの構築まで、開発の全サイクルをカバーしています。このプロジェクトの主な焦点は、セキュリティ（JWTおよびGoogle OAuth認証）、リアルタイム通知、タイピングインジケーター、既読メッセージ、レスポンシブデザイン、クリーンで構造化されたコード品質など、ユーザーエクスペリエンスにあります。',
+                'VeloChatは、機能豊富で高機能なシングルページアプリケーション（SPA）チャットアプリを構築する意欲的なプロジェクトです。このプロジェクトは、RESTful APIのバックエンドアーキテクチャ設計やSocket.IO（Websocket）によるリアルタイム接続から、Reactを使用したリアクティブでモダンなフロントエンドインターフェースの開発まで、開発サイクル全体をカバーしています。主な焦点は、セキュリティ（JWT認証とGoogle OAuth）、リアルタイム通知、タイピングインジケーター、既読通知、レスポンシブデザインなどのユーザーエクスペリエンス、そしてクリーンで構造化されたコード品質です。',
               htechstack: '使用技術',
               techstack:
-                'React, Vite, Tailwind CSS, Zustand, React Router DOM, Axios, Socket.IO Client, @react-oauth/google, react-hot-toast, react-loading-skeleton, date-fns, Node.js, Express.js, Socket.IO, JSON Web Token (JWT), Passport.js, Mongoose, Bcrypt.js, Multer, Cloudinary, Express Session, Dotenv, MongoDB Atlas (NoSQL), Google Cloud Platform (OAuth), Cloudinary (Media Storage)',
+                'React, Vite, Tailwind CSS, Zustand, React Router DOM, Axios, Socket.IO Client, @react-oauth/google, react-hot-toast, react-loading-skeleton, date-fns, Node.js, Express.js, Socket.IO, JSON Web Token (JWT), Passport.js (Google OAuth用), Mongoose, Bcrypt.js, Multer, Cloudinary, Express Session, Dotenv, MongoDB Atlas (NoSQL), Google Cloud Platform (OAuth), Cloudinary (メディアストレージ)',
+              hfeat: '主な機能',
+              feat: 'メールのドメイン検証（@gmail.com）付き手動登録., ハッシュ化されたパスワードによる安全なログインシステム., Google OAuth 2.0を介したサードパーティのログインと登録., APIを保護するためのJWT（JSON Web Tokens）ベースの認可., ログイン後にのみアクセス可能な保護されたページ., 正確なメールアドレスによる他のユーザーの検索., 友達リクエストシステム（送信、承認、拒否）., リアルタイムの友達リクエスト通知., 会話とは別の動的な連絡先リスト., デバウンス機能付きの連絡先リスト検索., Socket.IOによるリアルタイムの1対1パーソナルメッセージング., 永久に保存されるメッセージ履歴., 他のユーザーが入力中の「入力中...」インジケーター., 会話リストの未読メッセージ通知バッジ., 「送信済み」および「既読」のチェックマークアイコンによる既読通知., チャット履歴を明確にするためのタイムスタンプと日付区切り（今日、昨日など）., プロフィール名の変更機能., アカウントのパスワード変更機能., クラウドサービス（Cloudinary）へのプロフィール写真のアップロードと変更., すべての新規ユーザー向けのデフォルトのプロフィール写真。',
+              hlinkyt: 'デモビデオ',
+              linkyt: 'https://www.youtube.com/embed/2FnM3nW0jvQ?si=ENxc0igjz3ENQXpb',
             },
           ],
         },
