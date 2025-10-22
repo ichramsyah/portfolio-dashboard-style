@@ -56,9 +56,17 @@ const ProjectCard = ({ project, techIcons, categoryIcons, t, onProjectClick }) =
             <p className="text-gray-6 dark:text-gray-4 text-sm mb-4">{project.description}</p>
           </div>
           <div className="w-full flex md:flex-row flex-col justify-between items-center mt-4">
-            <div className="max-[1200px]:w-1/3 max-[480px]:w-full max-[480px]:justify-center max-[480px]:mb-4 flex flex-wrap items-center gap-1">
+            <div className="max-[1200px]:w-1/3 max-[480px]:w-full max-[480px]:justify-center max-[480px]:mb-4 flex flex-wrap items-center gap-2">
               {project.tech.map((tech, index) => (
-                <img key={index} src={tech.url} className="w-6 object-cover" alt="" />
+                <div key={index} className="relative group">
+                  <img src={tech.url} className="w-6 object-cover" alt={tech.name} />
+                  <span
+                    className="absolute left-1/2 -translate-x-1/2 -top-8 scale-0 group-hover:scale-100 transition-transform duration-200 
+                   bg-gray-7 dark:bg-gray-3 dark:text-gray-9 text-whitee text-xs px-2 py-1 rounded-sm shadow-md"
+                  >
+                    {tech.name}
+                  </span>
+                </div>
               ))}
             </div>
 
