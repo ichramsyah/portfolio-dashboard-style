@@ -1,8 +1,8 @@
 import { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers, Eye } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
 
@@ -10,6 +10,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { language, setLanguage, t } = useContext(LanguageContext);
   const [isProfileImageLoaded, setIsProfileImageLoaded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navItems = [
     { id: 'home', icon: Home, label: t('nav.home') },
@@ -39,6 +40,26 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     <>
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsModalOpen(false)} className="fixed inset-0 bg-black/80 flex items-center justify-center z-[999] cursor-pointer">
+            <motion.img
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+              src="./images/iam.jpeg"
+              alt="Profile zoomed in"
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors" onClick={() => setIsModalOpen(false)}>
+              <X size={32} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div
         className={`fixed lg:sticky top-0 h-screen flex-shrink-0 w-70 bg-whitee px-7 py-3 dark:bg-background-dark z-50 transform transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
@@ -48,7 +69,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           <div className="pb-2 border-b border-gray-3 dark:border-gray-7 relative">
             <div className="flex items-center justify-between">
               <div className="flex flex-col items-center w-full">
-                <div className="relative w-20 h-20 mt-5">
+                <div className="relative w-20 h-20 mt-5 group cursor-pointer" onClick={() => setIsModalOpen(true)}>
                   {!isProfileImageLoaded && <div className="absolute inset-0 bg-gray-3 dark:bg-gray-7 rounded-full animate-pulse"></div>}
                   <img
                     src="./images/iam.jpeg"
@@ -56,6 +77,12 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     className={`w-full h-full object-cover rounded-full border-2 border-gray-5 dark:border-gray-6 transition-opacity duration-800 ${isProfileImageLoaded ? 'opacity-100' : 'opacity-0'}`}
                     onLoad={() => setIsProfileImageLoaded(true)}
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-gray-2 dark:text-gray-3 text-xs font-medium text-center">
+                      <Eye size={16} className="mb-1 mx-auto" />
+                      <span>{t('nav.view')}</span>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Nama */}
