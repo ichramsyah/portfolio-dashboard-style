@@ -15,6 +15,7 @@ export const translations = {
       contact: 'Contact',
       copyright1: 'Copyright © 2025',
       copyright2: 'Ichramsyah. All rights reserved.',
+      view: 'View',
     },
     home: {
       greeting: "Hello, I'm Ichramsyah Abdurrachman",
@@ -264,6 +265,7 @@ Best regards, Ichram`,
       contact: 'Kontak',
       copyright1: 'Hak Cipta © 2025',
       copyright2: 'Ichramsyah. Semua hak dilindungi undang-undang.',
+      view: 'Lihat',
     },
     home: {
       greeting: 'Halo, saya Ichramsyah Abdurrachman',
@@ -517,6 +519,7 @@ Salam hangat, Ichram`,
       contact: 'お問い合わせ',
       copyright1: '著作権 © 2025',
       copyright2: 'Ichramsyah. 全ての権利を保有します。',
+      view: '表示',
     },
     home: {
       greeting: 'こんにちは、イクラムシャ・アブドゥラックマンです',
