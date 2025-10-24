@@ -5,6 +5,7 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
 import SpotlightCard from '../../common/SpotlightCard';
+import { FaGem } from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0, x: 30 },
@@ -54,23 +55,23 @@ const Experience = () => {
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
-              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg p-6">
+              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg p-6 pb-5">
                 <div className="flex items-start space-x-5">
                   <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
 
-                  <div className="flex-1 relative pb-1">
+                  <div className="flex-1 relative pb-[2px]">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
-                    <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-3">{exp.company}</p>
-                    <p className="text-[12px] text-gray-6 dark:text-gray-4 mb-2 block sm:hidden">{exp.location}</p>
+                    <h4 className="text-lg  text-gray-9 dark:text-whitee">{exp.position}</h4>
+                    <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-2">{exp.company}</p>
+                    <p className="text-[12px] text-gray-6 dark:text-gray-4 block sm:hidden">{exp.location}</p>
 
-                    <div className="flex md:flex-row flex-col md:items-center space-x-3 mb-4">
+                    <div className="flex md:flex-row flex-col md:items-center space-x-3 mb-3">
                       <p className="text-[12px] text-gray-6 dark:text-gray-4 ">{exp.year}</p>
                       <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
                         <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.time}</p>
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.pos}</p>
-                        <p className="text-[12px] text-gray-5 dark:text-gray-4">{exp.workfrom}</p>
+                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.pos}</p>
+                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.workfrom}</p>
                       </div>
                     </div>
 
@@ -102,6 +103,11 @@ const Experience = () => {
                         </>
                       )}
                     </Disclosure>
+
+                    <div className="flex items-center mt-6 text-[12px] text-gray-5 dark:text-gray-4 italic md:gap-1 gap-3">
+                      <FaGem className="text-[30px] md:text-[14px]" />
+                      <p>{exp.skills.join(', ')}</p>
+                    </div>
                   </div>
                 </div>
               </SpotlightCard>
