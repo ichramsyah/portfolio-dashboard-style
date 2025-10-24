@@ -104,9 +104,9 @@ const Experience = () => {
                       )}
                     </Disclosure>
 
-                    <div className="flex items-center mt-6 text-[12px] text-gray-5 dark:text-gray-5 italic gap-1">
-                      <FaGem />
-                      <p>Docker, PM2</p>
+                    <div className="flex items-center mt-6 text-[12px] text-gray-5 dark:text-gray-4 italic md:gap-1 gap-3">
+                      <FaGem className="text-[30px] md:text-[14px]" />
+                      <p>{exp.skills.join(', ')}</p>
                     </div>
                   </div>
                 </div>

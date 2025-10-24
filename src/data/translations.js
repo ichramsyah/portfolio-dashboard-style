@@ -84,6 +84,7 @@ Best regards, Ichram`,
           description:
             'Design and implement a Python-based File Integrity Monitoring (FIM) system using hashing techniques to detect file changes, with cPanel cron job integration to automatically generate weekly reports via email. \nDevelop a real-time FIM system using incron and Python to monitor specific file/directory changes, featuring extension filters and timestamps, while automatically sending email notifications and logging all changes. \nBuild a backend using Django to manage monitoring log data, convert logs into JSON format, and provide an API for the frontend. \nDevelop a frontend dashboard using Next.js to display monitoring data, complete with features for authentication, soft delete, log deletion, and a status indicator for the incron service on the server. \nIntegrate the backend and frontend systems by applying fullstack development practices, including API routing configuration, inter-port communication, and connection management between Django (backend) and Next.js (frontend). \nIndependently manage a Linux server and application deployment, including the configuration of Gunicorn and PM2, setting up a proxy using .htaccess, and executing administrative commands via SSH with sudo privileges. \nImplement the DevSecOps concept by combining system security (FIM), automation (cron/incron), and application management (deployment pipeline) into a single, integrated system that can be monitored through the dashboard.',
           current: false,
+          skills: ['Docker', 'Python', 'Django', 'Next.js', 'Linux', 'cPanel', 'PM2', 'Git'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
@@ -97,6 +98,7 @@ Best regards, Ichram`,
           description:
             'Collaborated with technical teams to translate complex IT concepts into easily understandable visual content. \nCreated visual documentation and communication materials (such as flyers, animated videos, and presentations) to support IT Change Management initiatives. \nEnsured all communication materials adhered to company branding standards and IT governance. \nUtilized tools such as Canva, Adobe Illustrator, and PowerPoint to produce engaging and informative visuals.',
           current: false,
+          skills: ['Adobe Illustrator', 'Canva', 'Doratoon', 'Microsoft PowerPoint', 'Microsoft Word'],
         },
       ],
     },
@@ -334,6 +336,7 @@ Salam hangat, Ichram`,
           description:
             'Merancang dan mengimplementasikan sistem File Integrity Monitoring (FIM) berbasis Python menggunakan teknik hashing untuk mendeteksi perubahan file, dengan integrasi cron jobs pada cPanel guna menghasilkan laporan otomatis mingguan melalui email. \nMengembangkan sistem FIM real-time berbasis incron dan Python untuk memantau perubahan file/direktori tertentu dengan filter ekstensi dan waktu kerja (timestamp), serta mengirimkan notifikasi email dan mencatat log perubahan secara otomatis. \nMembangun backend menggunakan Django untuk mengelola data log hasil monitoring, melakukan konversi log menjadi format JSON, dan menyediakan API bagi frontend. \nMengembangkan frontend dashboard menggunakan Next.js untuk menampilkan data hasil monitoring dengan fitur autentikasi, soft delete, penghapusan log, serta indikator status aktif/tidaknya layanan incron di server. \nMengintegrasikan sistem backend dan frontend dengan menerapkan praktik fullstack development, termasuk pengaturan routing API, komunikasi antar-port, dan manajemen koneksi antara Django (backend) dan Next.js (frontend). \nMengelola server Linux dan deployment aplikasi secara mandiri, meliputi konfigurasi Gunicorn dan PM2, pengaturan proxy menggunakan .htaccess, serta menjalankan perintah administratif melalui akses SSH dengan hak sudo. \nMengimplementasikan konsep DevSecOps dengan menggabungkan keamanan sistem (FIM), otomatisasi (cron/incron), dan pengelolaan aplikasi (deployment pipeline) menjadi satu kesatuan sistem yang terintegrasi dan dapat dimonitor melalui dashboard.',
           current: false,
+          skills: ['Docker', 'Python', 'Django', 'Next.js', 'Linux', 'cPanel', 'PM2', 'Git'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
@@ -347,6 +350,7 @@ Salam hangat, Ichram`,
           description:
             'Bekerja sama dengan tim teknis untuk menerjemahkan konsep IT yang kompleks menjadi konten visual yang mudah dipahami.\nMembuat dokumentasi visual dan materi komunikasi (seperti flyer, video animasi, dan presentasi) untuk mendukung inisiatif IT Change Management. \nMemastikan semua materi komunikasi sesuai dengan standar branding perusahaan dan tata kelola IT. \nMenggunakan tools seperti Canva, Adobe Illustrator, dan PowerPoint untuk membuat visual yang menarik dan informatif.',
           current: false,
+          skills: ['Adobe Illustrator', 'Canva', 'Doratoon', 'Microsoft PowerPoint', 'Microsoft Word'],
         },
       ],
     },
@@ -580,6 +584,7 @@ Salam hangat, Ichram`,
           description:
             'ハッシュ技術を用いたPythonベースのファイル整合性監視（FIM）システムを設計・実装し、cPanelのcronジョブと連携して週次レポートをメールで自動生成する。 \nincronとPythonをベースにしたリアルタイムFIMシステムを開発し、特定のファイルやディレクトリの変更を監視する。拡張子フィルタやタイムスタンプ機能を備え、変更を検知した際にはメール通知とログ記録を自動的に行う。 \nDjangoを使用してバックエンドを構築し、監視ログデータの管理、ログのJSON形式への変換、およびフロントエンド用のAPIを提供する。 \nNext.jsを使用してフロントエンドダッシュボードを開発し、監視結果のデータを表示する。認証、ソフトデリート、ログ削除機能、およびサーバー上のincronサービスのアクティブ状態を示すインジケーターを実装する。 \nフルスタック開発の実践に基づき、バックエンドとフロントエンドシステムを統合する。APIルーティングの設定、ポート間の通信、Django（バックエンド）とNext.js（フロントエンド）間の接続管理などを行う。 \nLinuxサーバーの管理とアプリケーションのデプロイを自主的に管理する。GunicornとPM2の設定、.htaccessによるプロキシ設定、sudo権限でのSSHアクセスによる管理コマンドの実行などを含む。 \nシステムセキュリティ（FIM）、自動化（cron/incron）、アプリケーション管理（デプロイメントパイプライン）を統合し、ダッシュボードで監視可能な一つの統合システムとしてDevSecOpsの概念を実装する。',
           current: false,
+          skills: ['Docker', 'Python', 'Django', 'Next.js', 'Linux', 'cPanel', 'PM2', 'Git'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
@@ -593,6 +598,7 @@ Salam hangat, Ichram`,
           description:
             '技術チームと協力し、複雑なITコンセプトを分かりやすいビジュアルコンテンツに変換。\nIT変更管理イニシアチブをサポートするため、ビジュアルドキュメントやコミュニケーション資料（チラシ、アニメーション動画、プレゼンテーションなど）を作成。\nすべてのコミュニケーション資料が、会社のブランディング基準とITガバナンスに準拠していることを確認。\nCanva、Adobe Illustrator、PowerPointなどのツールを活用し、魅力的で有益なビジュアルを制作。',
           current: false,
+          skills: ['Adobe Illustrator', 'Canva', 'Doratoon', 'Micorosoft PowerPoint', 'Microsoft Word'],
         },
       ],
     },
