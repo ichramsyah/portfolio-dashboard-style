@@ -14,6 +14,7 @@ import Preloader from './components/Preloader';
 import { AnimatePresence } from 'framer-motion';
 import { AuthProvider } from './contexts/AuthContext';
 import { Toaster } from 'react-hot-toast';
+import AISection from './components/sections/AISection';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -49,6 +50,8 @@ const App = () => {
         return <ContactSection />;
       case 'chatroom':
         return <ChatRoomSection />;
+      case 'aichat':
+        return <AISection />;
       default:
         return <HomeSection setActiveSection={setActiveSection} />;
     }

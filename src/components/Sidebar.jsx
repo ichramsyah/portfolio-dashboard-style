@@ -1,7 +1,7 @@
 import { useContext, useRef, useState, useEffect } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { LanguageContext } from '../contexts/LanguageContext';
-import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers, Eye } from 'lucide-react';
+import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers, Eye, LucideBotMessageSquare } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
@@ -17,8 +17,9 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     { id: 'about', icon: User, label: t('nav.about') },
     { id: 'achievements', icon: Award, label: t('nav.achievements') },
     { id: 'projects', icon: Layers, label: t('nav.projects') },
-    { id: 'contact', icon: Mail, label: t('nav.contact') },
     { id: 'chatroom', icon: MessageSquareText, label: t('nav.chatroom') },
+    { id: 'contact', icon: Mail, label: t('nav.contact') },
+    { id: 'aichat', icon: LucideBotMessageSquare, label: t('nav.aichat') },
   ];
 
   const containerRef = useRef(null);
