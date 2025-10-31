@@ -12,6 +12,7 @@ const colorClassMapping = {
   python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   firebase: 'bg-gradient-to-br from-red-600 to-orange-400',
   linux: 'bg-gradient-to-br from-gray-300 to-yellow-600',
+  ubuntu: 'bg-gradient-to-br from-orange-500 to-orange-600',
   docker: 'bg-gradient-to-br from-blue-400 to-blue-500',
   pm2: 'bg-gradient-to-br from-purple-400 to-pink-600',
   gunicorn: 'bg-gradient-to-br from-green-500 to-green-700',

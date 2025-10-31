@@ -1,6 +1,6 @@
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import GlassIcons from '../../common/GlassIcons';
-import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs, FaLinux } from 'react-icons/fa';
+import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs, FaLinux, FaUbuntu } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel, SiFirebase, SiDjango, SiDocker } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
@@ -24,6 +24,7 @@ const Skills = () => {
     { icon: <FaPython size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
     { icon: <SiFirebase size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'firebase', label: 'Firebase' },
     { icon: <FaLinux size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'linux', label: 'Linux' },
+    { icon: <FaUbuntu size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'ubuntu', label: 'Ubuntu' },
     { icon: <SiDocker size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'docker', label: 'Docker' },
     { icon: <IconPm2 size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'pm2', label: 'PM2' },
     { icon: <IconGunicorn size={100} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'gunicorn', label: 'Gunicorn' },
