@@ -31,7 +31,7 @@ const Experience = () => {
       </motion.h3>
       <div className="">
         {experienceItems.map((exp, index) => (
-          <div key={index} className="flex space-x-4">
+          <div key={index} className="flex space-x-2">
             {/* Left: Timeline (dot + line) */}
             <div className="flex-shrink-0 flex flex-col items-center">
               {/* Dot */}
@@ -55,14 +55,14 @@ const Experience = () => {
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
-              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg p-6 pb-5">
+              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg pt-5.5 px-6 pb-5">
                 <div className="flex items-start space-x-5">
-                  <img src={exp.logo} className="w-9 object-contain mt-[3px]" alt="" />
+                  <img src={exp.logo} className="w-11 object-contain mt-[3px]" alt="" />
 
                   <div className="flex-1 relative pb-[2px]">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
-                    <h4 className="text-lg  text-gray-9 dark:text-whitee">{exp.position}</h4>
+                    <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
                     <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-2">{exp.company}</p>
                     <p className="text-[12px] text-gray-6 dark:text-gray-4 block sm:hidden">{exp.location}</p>
 
