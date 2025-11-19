@@ -100,9 +100,8 @@ const Services = ({ setActiveSection }) => {
               <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_services_desc')}</p>
             </div>
           </div>
-          {/* Kontainer yang sudah diperbaiki */}
-          <div className="w-1/2 h-[160px] max-sm:h-[305px] flex items-center justify-center md:mt-13 mt-0">
-            <TrueFocus sentence="Web UI/UX" manualMode={false} blurAmount={5} animationDuration={1} pauseBetweenAnimations={2} />
+          <div className="w-1/2 h-[160px] max-sm:h-[305px] flex items-center justify-center md:mt-15 mt-[-10px]">
+            <TrueFocus sentence="Dev Sec Ops" manualMode={false} blurAmount={5} animationDuration={1} pauseBetweenAnimations={2} />
           </div>
         </SpotlightCard>
 
