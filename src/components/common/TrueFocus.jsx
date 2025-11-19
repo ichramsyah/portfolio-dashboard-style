@@ -45,14 +45,14 @@ const TrueFocus = ({ sentence = 'True Focus', manualMode = false, blurAmount = 5
   };
 
   return (
-    <div className="relative flex gap-2 md:gap-4 justify-center items-center flex-wrap" ref={containerRef}>
+    <div className="relative flex flex-col gap-6 md:gap-7 justify-center items-center" ref={containerRef}>
       {words.map((word, index) => {
         const isActive = index === currentIndex;
         return (
           <span
             key={index}
             ref={(el) => (wordRefs.current[index] = el)}
-            className="relative text-4xl md:text-5xl font-black text-gray-8 dark:text-gray-2 "
+            className="relative text-5xl md:text-5xl font-black text-gray-8 dark:text-gray-2 "
             style={{
               filter: isActive ? `blur(0px)` : `blur(${blurAmount}px)`,
               transition: `filter ${animationDuration}s ease`,
