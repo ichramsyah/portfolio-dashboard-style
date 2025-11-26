@@ -5,6 +5,7 @@ import { BsStars } from 'react-icons/bs';
 import ReactMarkdown from 'react-markdown';
 import { motion, AnimatePresence } from 'framer-motion';
 import remarkGfm from 'remark-gfm';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 
 const Typewriter = ({ text, speed = 15 }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -75,6 +76,7 @@ const markdownComponents = {
 };
 
 const AiChatInterface = () => {
+  const { t } = useContext(LanguageContext);
   const { messages, sendMessage, isLoading } = useGoogleAI();
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
@@ -152,7 +154,7 @@ const AiChatInterface = () => {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Mulai ketik pertanyaanmu..."
+            placeholder={t('aiassistant.input')}
             className="text-gray-8 dark:text-gray-2 bg-gray-1 dark:bg-gray-5/20 flex-grow px-4 py-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/10 transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-6 text-sm border border-transparent focus:border-gray-5/30"
             disabled={isLoading}
           />
@@ -166,7 +168,7 @@ const AiChatInterface = () => {
             <AiOutlineSend size={18} />
           </button>
         </form>
-        <p className="text-center text-[11px] text-gray-4 dark:text-gray-6 mt-3 font-medium">Hailyo bisa saja salah. Mohon cek kembali informasi penting.</p>
+        <p className="text-center text-[12px] text-gray-4 dark:text-gray-6 mt-3 font-medium">{t('aiassistant.footer')}</p>
       </div>
     </section>
   );

@@ -264,6 +264,12 @@ Best regards, Ichram`,
       sign_in_as: 'Sign in as',
       exit: 'Exit',
     },
+    aiassistant: {
+      greeting: 'Hello!👋 I am Hailyo, your personal AI assistant.',
+      description: 'Personal AI assistant ready to answer questions about Ichram.',
+      footer: 'Hailyo may be wrong. Please double-check important information.',
+      input: 'Start chatting...',
+    },
   },
 
   // Indonesia
@@ -537,6 +543,12 @@ Salam hangat, Ichram`,
       input_form: 'Ketik pesan Anda di sini...',
       sign_in_as: 'Masuk sebagai',
       exit: 'Keluar',
+    },
+    aiassistant: {
+      greeting: 'Halo!👋 Aku Hailyo, asisten virtual Ichram.',
+      description: 'Asisten AI pribadi yang siap menjawab pertanyaan seputar Ichram.',
+      footer: 'Hailyo bisa saja salah. Mohon cek kembali informasi penting.',
+      input: 'Mulai mengobrol...',
     },
   },
   jp: {
@@ -847,6 +859,12 @@ Salam hangat, Ichram`,
       input_form: 'ここにメッセージを入力...',
       sign_in_as: 'としてサインイン',
       exit: 'ログアウト',
+    },
+    aiassistant: {
+      greeting: 'こんにちは！👋 私はIchramのバーチャルアシスタント、Hailyoです。',
+      description: 'Ichramに関する質問に答える準備ができているあなたのパーソナルAIアシスタントです。',
+      footer: 'Hailyoは間違っている可能性があります。重要な情報は再確認してください。',
+      input: 'チャットを始めましょう...',
     },
   },
 };

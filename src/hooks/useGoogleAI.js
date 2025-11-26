@@ -1,6 +1,7 @@
 // hooks/useGoogleAI.js
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { LanguageContext } from '../contexts/LanguageContext';
 
 const SYSTEM_INSTRUCTION = `
 [ROLE & PERSONA]
@@ -244,13 +245,26 @@ Udah ya, jangan bilang-bilang aku yang bocorin! 🤐"
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export const useGoogleAI = () => {
+  const { t } = useContext(LanguageContext);
   const [messages, setMessages] = useState([
     {
       role: 'model',
-      text: 'Halo! 👋 Aku Hailyo, asisten virtual Ichram.',
+      text: t('aiassistant.greeting'),
     },
   ]);
+
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].role === 'model') {
+      setMessages([
+        {
+          role: 'model',
+          text: t('aiassistant.greeting'),
+        },
+      ]);
+    }
+  }, [t]);
 
   const sendMessage = async (userMessage) => {
     if (!userMessage.trim()) return;
@@ -300,6 +314,7 @@ Jika user bertanya jam/tanggal, jawablah berdasarkan data ini.
       setMessages((prev) => [...prev, { role: 'model', text: text }]);
     } catch (error) {
       console.error('AI Error:', error);
+      // Kamu bisa juga bikin error message ini pake t() kalau mau
       setMessages((prev) => [...prev, { role: 'model', text: 'Waduh, ada gangguan sebentar. Coba lagi ya! 😅' }]);
     } finally {
       setIsLoading(false);
