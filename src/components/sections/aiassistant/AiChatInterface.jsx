@@ -100,7 +100,7 @@ const AiChatInterface = () => {
 
   return (
     <section className="overflow-hidden bg-whitee dark:bg-background-dark">
-      <main className="h-[450px] overflow-y-auto overflow-x-hidden p-4 md:pr-10 pr-0 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
+      <main className="h-[450px] overflow-y-auto overflow-x-hidden lg:p-4 p-1.5 md:pr-10 pr-1 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
         <AnimatePresence>
           {messages.map((msg, idx) => {
             const isAI = msg.role === 'model';
@@ -127,7 +127,7 @@ const AiChatInterface = () => {
 
                 {/* Bubble Chat */}
                 <div
-                  className={`relative max-w-[85%] md:max-w-[75%] px-5 py-3.5 pb-4 text-sm md:text-[16px] leading-relaxed shadow-sm ${
+                  className={`relative max-w-[85%] md:max-w-[75%] px-5 py-3.5 pb-4 text-sm md:text-[16px] leading-relaxed ${
                     isAI
                       ? 'bg-gray-2/50 dark:bg-gray-4/10 text-gray-8 dark:text-gray-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-transparent'
                       : 'bg-blue-2/40 dark:bg-gray-4/20 text-gray-8 dark:text-gray-1 rounded-2xl rounded-tr-none'
