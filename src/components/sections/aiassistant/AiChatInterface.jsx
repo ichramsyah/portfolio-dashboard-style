@@ -168,7 +168,7 @@ const AiChatInterface = () => {
             <AiOutlineSend size={18} />
           </button>
         </form>
-        <p className="text-center text-[12px] text-gray-4 dark:text-gray-6 mt-3 font-medium">{t('aiassistant.footer')}</p>
+        <p className="text-center text-[12px] text-gray-5 dark:text-gray-6 mt-3 font-medium">{t('aiassistant.footer')}</p>
       </div>
     </section>
   );
