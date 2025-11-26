@@ -92,7 +92,7 @@ const AiChatInterface = () => {
 
   return (
     <section className="overflow-hidden bg-whitee dark:bg-background-dark">
-      <main className="h-[500px] overflow-y-auto overflow-x-hidden p-4 md:pr-3 pr-0 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
+      <main className="h-[450px] overflow-y-auto overflow-x-hidden p-4 md:pr-3 pr-0 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
         <AnimatePresence>
           {messages.map((msg, idx) => {
             const isAI = msg.role === 'model';
@@ -113,7 +113,7 @@ const AiChatInterface = () => {
                   className={`relative max-w-[85%] md:max-w-[75%] px-5 py-3.5 pb-4 text-sm md:text-[16px] leading-relaxed shadow-sm ${
                     isAI
                       ? 'bg-gray-2/50 dark:bg-gray-4/10 text-gray-8 dark:text-gray-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-transparent'
-                      : 'bg-gray-3/60 dark:bg-gray-4/20 text-gray-8 dark:text-gray-1 rounded-2xl rounded-tr-none'
+                      : 'bg-gray-3/40 dark:bg-gray-4/20 text-gray-8 dark:text-gray-1 rounded-2xl rounded-tr-none'
                   }`}
                 >
                   {isAI ? (
@@ -153,14 +153,14 @@ const AiChatInterface = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Mulai ketik pertanyaanmu..."
-            className="text-gray-8 dark:text-gray-2 bg-gray-1 dark:bg-gray-8/50 flex-grow px-4 py-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/10 transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-6 text-sm border border-transparent focus:border-blue-500/30"
+            className="text-gray-8 dark:text-gray-2 bg-gray-1 dark:bg-gray-5/20 flex-grow px-4 py-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-blue-400/10 transition-all duration-300 placeholder:text-gray-4 dark:placeholder:text-gray-6 text-sm border border-transparent focus:border-gray-5/30"
             disabled={isLoading}
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
             className={`p-3.5 rounded-xl transition-all duration-300 flex-shrink-0 flex items-center justify-center ${
-              !input.trim() || isLoading ? 'cursor-not-allowed bg-gray-2 dark:bg-gray-8 text-gray-4' : 'bg-gray-9 dark:bg-gray-1 text-white dark:text-gray-9 hover:scale-105 hover:shadow-lg cursor-pointer'
+              !input.trim() || isLoading ? 'cursor-not-allowed bg-gray-2 dark:bg-gray-5/20 text-gray-4' : 'bg-gray-9 dark:bg-gray-5/50 text-white dark:text-gray-9 hover:scale-105 hover:shadow-lg cursor-pointer'
             }`}
           >
             <AiOutlineSend size={18} />
