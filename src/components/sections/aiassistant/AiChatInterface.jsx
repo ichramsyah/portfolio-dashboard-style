@@ -190,7 +190,7 @@ const AiChatInterface = () => {
         {/* Footer Aman */}
         <div className="flex items-center justify-center gap-1.5 mt-3 text-[11px] text-gray-4 dark:text-gray-5 opacity-80">
           <BsShieldLock size={12} className="text-green-500" />
-          <p className="font-medium text-center">{t('aiassistant.privacy') || 'Privasi terjaga. Chat hilang saat reload.'}</p>
+          <p className="font-medium text-center">{t('aiassistant.footer') || 'Privasi terjaga. Chat hilang saat reload.'}</p>
         </div>
       </div>
     </section>
