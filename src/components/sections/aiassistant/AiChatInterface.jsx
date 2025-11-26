@@ -94,7 +94,7 @@ const AiChatInterface = () => {
 
   return (
     <section className="overflow-hidden bg-whitee dark:bg-background-dark">
-      <main className="h-[450px] overflow-y-auto overflow-x-hidden p-4 md:pr-3 pr-0 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
+      <main className="h-[450px] overflow-y-auto overflow-x-hidden p-4 md:pr-10 pr-0 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
         <AnimatePresence>
           {messages.map((msg, idx) => {
             const isAI = msg.role === 'model';
@@ -112,10 +112,10 @@ const AiChatInterface = () => {
 
                 {/* Bubble Chat */}
                 <div
-                  className={`relative max-w-[85%] md:max-w-[75%] px-5 py-3.5 pb-4 text-sm md:text-[16px] leading-relaxed shadow-sm ${
+                  className={`relative max-w-[85%] md:max-w-[75%] px-5 py-3.5 pb-4 text-sm md:text-[16px] leading-relaxed ${
                     isAI
                       ? 'bg-gray-2/50 dark:bg-gray-4/10 text-gray-8 dark:text-gray-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-transparent'
-                      : 'bg-gray-3/40 dark:bg-gray-4/20 text-gray-8 dark:text-gray-1 rounded-2xl rounded-tr-none'
+                      : 'bg-blue-2/40 dark:bg-gray-4/20 text-gray-8 dark:text-gray-1 rounded-2xl rounded-tr-none'
                   }`}
                 >
                   {isAI ? (
@@ -162,7 +162,9 @@ const AiChatInterface = () => {
             type="submit"
             disabled={!input.trim() || isLoading}
             className={`p-3.5 rounded-xl transition-all duration-300 flex-shrink-0 flex items-center justify-center ${
-              !input.trim() || isLoading ? 'cursor-not-allowed bg-gray-2 dark:bg-gray-5/20 text-gray-4' : 'bg-gray-9 dark:bg-gray-5/50 text-white dark:text-gray-9 hover:scale-105 hover:shadow-lg cursor-pointer'
+              !input.trim() || isLoading
+                ? 'cursor-not-allowed bg-gradient-to-br from-gray-2 to-gray-2 dark:bg-gradient-to-br dark:from-gray-5/20 dark:to-gray-5/20 text-gray-4'
+                : 'bg-gradient-to-br from-blue-4 to-gray-2 dark:bg-gradient-to-br dark:from-blue-4 dark:to-gray-2 text-white dark:text-gray-9 hover:scale-105 hover:shadow-lg cursor-pointer'
             }`}
           >
             <AiOutlineSend size={18} />
