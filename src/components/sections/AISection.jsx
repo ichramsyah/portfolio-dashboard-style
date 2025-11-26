@@ -27,7 +27,7 @@ const AISection = () => {
   };
 
   return (
-    <div className="py-14 lg:py-8 md:mt-0 mt-3" id="ai-assistant">
+    <div className="pt-14 pb-2 lg:pt-8 pb-1 md:mt-0 mt-3" id="ai-assistant">
       <SectionHeader title={'Ask Hailyo'} description={'Asisten AI pribadi yang siap menjawab pertanyaan seputar skill dan pengalaman Ichram.'} />
 
       <div className="mt-8">
