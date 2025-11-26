@@ -28,7 +28,7 @@ const AISection = () => {
 
   return (
     <div className="py-14 lg:py-8 md:mt-0 mt-3" id="ai-assistant">
-      <SectionHeader title={'Ask HelloChram'} description={'Asisten AI pribadi yang siap menjawab pertanyaan seputar skill dan pengalaman Ichram.'} />
+      <SectionHeader title={'Ask Hailyo'} description={'Asisten AI pribadi yang siap menjawab pertanyaan seputar skill dan pengalaman Ichram.'} />
 
       <div className="mt-8">
         <section className="overflow-hidden bg-whitee dark:bg-background-dark">
@@ -48,7 +48,7 @@ const AISection = () => {
           </div> */}
 
           {/* Area Chat */}
-          <main className="h-96 overflow-y-auto overflow-x-hidden md:pr-3 pr-0 space-y-8 bg-whitee dark:bg-background-dark transition-colors duration-300">
+          <main className="h-100 overflow-y-auto overflow-x-hidden md:pr-3 pr-0 space-y-10 bg-whitee dark:bg-background-dark transition-colors duration-300">
             {messages.map((msg, idx) => {
               const isAI = msg.role === 'model';
               return (
@@ -133,7 +133,7 @@ const AISection = () => {
                 {/* <div className="w-8 h-8 rounded-full bg-whitee dark:bg-gray-7 border border-gray-2 dark:border-gray-6 flex items-center justify-center shadow-sm">
                   <FaRobot className="text-blue-500 text-sm" />
                 </div> */}
-                <div className="bg-whitee dark:bg-gray-6/30 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-gray-6/50 flex gap-1 items-center h-[46px]">
+                <div className="bg-gray-1 dark:bg-gray-6/30 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-gray-6/50 flex gap-1 items-center h-[46px]">
                   <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                   <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                   <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce"></span>

@@ -178,9 +178,25 @@ export const useGoogleAI = () => {
 
     try {
       const genAI = new GoogleGenerativeAI(API_KEY);
+
+      const now = new Date();
+      const timeString = now.toLocaleString('id-ID', {
+        dateStyle: 'full',
+        timeStyle: 'short',
+        timeZone: 'Asia/Jakarta',
+      });
+
+      const dynamicInstruction = `
+${SYSTEM_INSTRUCTION}
+
+[KONTEKS WAKTU SAAT INI]
+Sekarang adalah hari ${timeString}.
+Jika user bertanya jam/tanggal, jawablah berdasarkan data ini.
+      `;
+
       const model = genAI.getGenerativeModel({
         model: 'gemini-flash-latest',
-        systemInstruction: SYSTEM_INSTRUCTION,
+        systemInstruction: dynamicInstruction,
       });
 
       const historyForApi = messages
