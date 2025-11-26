@@ -5,6 +5,7 @@ import { Home, User, Award, Mail, Moon, Sun, X, MessageSquareText, Layers, Eye, 
 import { motion, AnimatePresence } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
+import { BsStars } from 'react-icons/bs';
 
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -19,7 +20,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
     { id: 'projects', icon: Layers, label: t('nav.projects') },
     { id: 'chatroom', icon: MessageSquareText, label: t('nav.chatroom') },
     { id: 'contact', icon: Mail, label: t('nav.contact') },
-    { id: 'aichat', icon: LucideBotMessageSquare, label: t('nav.aichat') },
+    { id: 'aichat', icon: BsStars, label: t('nav.aichat') },
   ];
 
   const containerRef = useRef(null);
@@ -140,6 +141,8 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                 const Icon = item.icon;
                 const isActive = activeSection === item.id;
 
+                const isAiChat = item.id === 'aichat';
+
                 return (
                   <li key={item.id} className="group">
                     <button
@@ -150,14 +153,21 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full cursor-pointer flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 ${
-                        isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-2 scale-[100%] transition-color duration-300'
-                          : 'bg-transparent text-gray-7/90 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2/60 dark:hover:bg-gray-5/20 hover:scale-[103%] transition-color duration-300'
+                      className={`w-full cursor-pointer flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 
+                      ${
+                        isAiChat
+                          ? `bg-gradient-to-r from-blue-4 to-gray-1 dark:from-blue-5 dark:to-gray-3
+                             text-whitee 
+                             ${isActive ? 'scale-[102%]' : 'hover:scale-[102%] opacity-90 hover:opacity-100'}`
+                          : isActive
+                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-2 scale-[100%]'
+                          : 'bg-transparent text-gray-7/90 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2/60 dark:hover:bg-gray-5/20 hover:scale-[103%]'
                       }`}
                     >
-                      <Icon size={20} className="transition-transform duration-300 group-hover:rotate-[-13deg]" />
-                      <span>{item.label}</span>
+                      <Icon size={20} className={`transition-transform duration-300 ${isAiChat ? 'animate-pulse' : 'group-hover:rotate-[-13deg]'}`} />
+                      <span className={isAiChat ? '' : ''}>{item.label}</span>
+
+                      {isAiChat && <span className="ml-auto text-[10px] bg-blue-5 dark:bg-gray-8 text-whitee dark:text-gray-2 px-1.5 py-0.5 pb-1 rounded-md">Safe</span>}
                     </button>
                   </li>
                 );
