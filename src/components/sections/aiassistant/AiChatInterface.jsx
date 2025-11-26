@@ -138,7 +138,7 @@ const AiChatInterface = () => {
         {/* Loading Indicator */}
         {isLoading && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-3">
-            <div className="bg-gray-1 dark:bg-gray-6/30 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-gray-6/50 flex gap-1 items-center h-[46px]">
+            <div className="bg-gray-1 dark:bg-gray-4/10 px-4 py-3 rounded-2xl rounded-tl-none border border-gray-2 dark:border-gray-4/10 flex gap-1 items-center h-[46px]">
               <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
               <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
               <span className="w-1.5 h-1.5 bg-gray-4 dark:bg-gray-4 rounded-full animate-bounce"></span>
