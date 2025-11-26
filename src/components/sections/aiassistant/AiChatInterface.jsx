@@ -42,9 +42,9 @@ const markdownComponents = {
   ul: ({ node, ...props }) => <ul className="list-disc pl-5 mb-3 space-y-1" {...props} />,
   ol: ({ node, ...props }) => <ol className="list-decimal pl-5 mb-3 space-y-1" {...props} />,
   li: ({ node, ...props }) => <li className="pl-1" {...props} />,
-  h1: ({ node, ...props }) => <h1 className="text-lg font-bold mb-2 mt-4" {...props} />,
-  h2: ({ node, ...props }) => <h2 className="text-base font-bold mb-2 mt-3" {...props} />,
-  h3: ({ node, ...props }) => <h3 className="text-sm font-bold mb-1 mt-2" {...props} />,
+  h1: ({ node, ...props }) => <h1 className="text-[17px] font-bold mb-2 mt-4" {...props} />,
+  h2: ({ node, ...props }) => <h2 className="text-[17px] font-bold mb-2 mt-3" {...props} />,
+  h3: ({ node, ...props }) => <h3 className="text-[17px] font-bold mb-4 mt-4" {...props} />,
   strong: ({ node, ...props }) => <strong className="font-bold text-gray-8 dark:text-gray-2" {...props} />,
   a: ({ node, ...props }) => <a className="text-blue-500 hover:underline break-all" target="_blank" rel="noreferrer" {...props} />,
   table: ({ node, ...props }) => (
