@@ -2,7 +2,8 @@ import Greeting from '../sections/home/Greeting';
 import Services from '../sections/home/Services';
 import Skills from './home/Skills';
 import GithubContributionStats from './home/GithubContributionStats';
-import GitHubCalendar from 'react-github-calendar';
+
+import BannerAI from './home/BannerAI';
 
 const HomeSection = ({ setActiveSection }) => {
   return (
@@ -10,8 +11,8 @@ const HomeSection = ({ setActiveSection }) => {
       <div className="mx-auto">
         <Greeting />
         <Skills />
-
         <GithubContributionStats username="ichramsyah" />
+        <BannerAI setActiveSection={setActiveSection} />
         <Services setActiveSection={setActiveSection} />
       </div>
     </div>
