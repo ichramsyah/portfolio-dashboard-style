@@ -16,7 +16,9 @@ const BannerAI = ({ setActiveSection }) => {
 
       <div className="relative overflow-hidden flex w-full md:p-7 p-6 rounded-lg bg-gradient-to-br from-blue-5 via-blue-4 to-gray-2 dark:bg-gradient-to-br dark:from-blue-6 dark:via-blue-4 dark:to-gray-3">
         <div className="md:w-1/2 w-full lg:pr-0 pr-8 z-10">
-          <h1 className="md:text-[23px] text-[19px] font-medium text-whitee">Mulai chat dengan Hailyo, AI asisten pribadi ichramsyah</h1>
+          <h1 className="md:text-[23px] text-[19px] font-medium text-whitee">
+            Mulai chat dengan <span className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-3 via-blue-2 to-gray-1"> Hailyo</span>, AI asisten pribadi ichramsyah
+          </h1>
           <button onClick={() => setActiveSection('aichat')} className="lg:mt-4 mt-7 text-sm bg-whitee/20 hover:bg-whitee/30 transition-all px-4 py-2 rounded-lg text-whitee font-medium cursor-pointer">
             Chat Hailyo
           </button>
