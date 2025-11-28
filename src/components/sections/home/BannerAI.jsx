@@ -20,7 +20,7 @@ const BannerAI = ({ setActiveSection }) => {
         }
         .animate-text-gradient {
           background-size: 200% auto;
-          animation: text-flow 3s linear infinite;
+          animation: text-flow 1s linear infinite;
         }
       `}</style>
 

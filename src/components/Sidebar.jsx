@@ -167,7 +167,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                       <Icon size={20} className={`transition-transform duration-300 ${isAiChat ? 'animate-pulse' : 'group-hover:rotate-[-13deg]'}`} />
                       <span className={isAiChat ? '' : ''}>{item.label}</span>
 
-                      {isAiChat && <span className="ml-auto text-[10px] bg-blue-5 dark:bg-blue-5/70 text-whitee dark:text-gray-2 px-1.5 py-0.5 pb-1 rounded-md">Ver 1.1</span>}
+                      {isAiChat && <span className="ml-auto text-[10px] bg-blue-5 dark:bg-blue-5/70 text-whitee dark:text-gray-2 px-1.5 py-0.5 pb-1 rounded-md">V 1.0</span>}
                     </button>
                   </li>
                 );
