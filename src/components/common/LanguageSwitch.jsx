@@ -13,7 +13,7 @@ const LanguageSwitch = ({ options = [], activeIndex = 0, onChange }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 20, opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="text-[17px] font-medium text-gray-4 dark:text-gray-5 transition-transform duration-400 hover:scale-120 w-full h-full flex items-center justify-center"
+          className="text-[20px] transition-transform duration-400 hover:scale-120 w-full h-full flex items-center justify-center"
         >
           {options[activeIndex].icon || options[activeIndex].label}
         </motion.span>
