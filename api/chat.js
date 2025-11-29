@@ -334,7 +334,7 @@ Jika user bertanya jam/tanggal, jawablah berdasarkan data ini.
     `;
 
     const model = genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-flash-latest',
       systemInstruction: dynamicInstruction,
     });
     const formattedHistory = history.map((msg) => ({
