@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ToggleSwitch from './common/ToggleSwitch';
 import LanguageSwitch from './common/LanguageSwitch';
 import { BsStars } from 'react-icons/bs';
+import ReactCountryFlag from 'react-country-flag';
 
 const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -117,9 +118,9 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                   {/* Toggle Bahasa */}
                   <LanguageSwitch
                     options={[
-                      { label: '🇺🇸', value: 'en' },
-                      { label: '🇮🇩', value: 'id' },
-                      { label: '🇯🇵', value: 'jp' },
+                      { label: <ReactCountryFlag countryCode="GB" svg />, value: 'en' },
+                      { label: <ReactCountryFlag countryCode="ID" svg />, value: 'id' },
+                      { label: <ReactCountryFlag countryCode="JP" svg />, value: 'jp' },
                     ]}
                     activeIndex={['en', 'id', 'jp'].indexOf(language)}
                     onChange={(idx) => setLanguage(['en', 'id', 'jp'][idx])}
