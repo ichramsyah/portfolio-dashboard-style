@@ -16,8 +16,14 @@ export const useGoogleAI = () => {
 
   useEffect(() => {
     if (messages.length === 1 && messages[0].role === 'model') {
+      setMessages([
+        {
+          role: 'model',
+          text: t('aiassistant.greeting'),
+        },
+      ]);
     }
-  }, [t]);
+  }, [t, messages.length]);
 
   const sendMessage = async (userMessage) => {
     if (!userMessage.trim()) return;
