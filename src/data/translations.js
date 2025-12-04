@@ -51,15 +51,15 @@ export const translations = {
     },
     about: {
       title: 'About Me',
-      bio: `Hello! Thank you for visiting my personal website. I am Ichramsyah Abdurrachman, an undergraduate Computer Science student at Paramadina University. As a Software Engineer, I have a deep enthusiasm for software engineering—from architectural design to performance optimization. I focus on applying fundamental principles like Design Patterns to create solutions that are not only functional but also scalable and maintainable.
+      bio: `Hello, I’m Ichram! I am a Full-Cycle DevSecOps Engineer focused on building secure, scalable, and operationally friendly end-to-end solutions. My background as a software engineer has given me a strong foundation in building applications from both the frontend and backend. Over time, I expanded my scope to include cloud infrastructure, automation, and system security. It was through this journey that I discovered a deep passion for the Full-Cycle DevSecOps approach, where every stage—from development to operations—is handled comprehensively within a single, integrated workflow.
 
-I apply these principles within a modern technology ecosystem, from building structured frontend architectures with Next.js, React.js, and TypeScript, to designing robust backend systems using Node.js and Laravel.
+I thoroughly enjoy the process of building systems from the ground up: writing application code, provisioning servers on AWS EC2, implementing security hardening and access controls, orchestrating container deployments with Docker, managing reverse proxies with Nginx, and ensuring stability through continuous monitoring and observability. I believe that a system shouldn't just function well; it must be secure, efficient, consistent, and maintainable in the long run.
 
-My primary focus is on transforming complex problems into elegant and efficient software solutions. Whether designing system architecture or writing code, I always prioritize quality, security, and performance at every layer. As an adaptive learner, I thrive in dynamic environments and enjoy solving complex problems collaboratively.
+One of the most defining moments in my professional journey was designing and implementing a Distributed File Integrity Monitoring (FIM) system to monitor five production servers simultaneously. I developed a custom Python-based FIM agent capable of detecting file changes, identifying the user responsible, capturing the command used, and analyzing the execution context. I implemented filtering logic to distinguish normal operations from high-risk activities, including the detection of malicious files and suspicious after-hours behavior. On the server side, I built a Django backend to process and store data from all agents, coupled with a Next.js real-time monitoring dashboard that displays integrity status and server activity with full authentication. I even extended the scope to the application layer by monitoring WordPress activities, such as failed login attempts and suspicious administrative actions, complete with perpetrator IP identification.
 
-I believe the best software is born from a synergy of technical excellence and effective communication. My academic and project experiences have honed my analytical, technical, and leadership skills. I am always enthusiastic about collaborating within a team, learning from professionals, and contributing to building products that deliver a real and sustainable impact.
+As an engineer, I hold the principle that system quality relies not just on technology, but on the mindset behind it. I strive to write clean code, design solid architectures, prioritize proactive security, and build automation at every step to create efficient and predictable workflows. I believe in the importance of full ownership over what I build, as well as open and constructive cross-disciplinary collaboration.
 
-Best regards, Ichram`,
+To me, technology is a space to solve real-world problems and create solutions that last. If you’re interested in discussing DevSecOps, cloud infrastructure, security engineering, or end-to-end system development, I’d love to connect and share insights.`,
       language: 'Language',
       education: 'Education',
       experience: 'Work Experience',
@@ -326,15 +326,15 @@ Best regards, Ichram`,
     },
     about: {
       title: 'Tentang Saya',
-      bio: `Halo! Terima kasih telah mengunjungi website pribadi saya. Saya Ichramsyah Abdurrachman, seorang mahasiswa Teknik Informatika di Universitas Paramadina. Sebagai seorang Software Engineer, saya memiliki antusiasme mendalam terhadap rekayasa perangkat lunak, mulai dari perancangan arsitektur hingga optimasi performa. Saya berfokus pada penerapan prinsip-prinsip fundamental seperti Design Patterns untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga scalable dan maintainable.
+      bio: `Halo, saya Ichram! Saya seorang Full-Cycle DevSecOps Engineer yang berfokus pada pembangunan solusi end-to-end yang aman, scalable, dan mudah dioperasikan. Latar belakang saya sebagai software engineer membuat saya terbiasa membangun aplikasi dari sisi frontend maupun backend, namun seiring waktu saya berkembang ke ranah yang lebih luas—mencakup cloud infrastructure, automation, dan keamanan sistem. Dari pengalaman itulah saya menemukan ketertarikan mendalam pada pendekatan Full-Cycle DevSecOps, di mana setiap tahap dari pengembangan hingga operasional dapat ditangani secara menyeluruh dalam satu alur kerja yang terintegrasi.
 
-Saya mengaplikasikan prinsip-prinsip ini dalam ekosistem teknologi modern, mulai dari membangun arsitektur frontend yang terstruktur dengan Next.js, React.js, dan TypeScript, hingga merancang sistem backend yang kokoh menggunakan Node.js dan Laravel.
+Saya menikmati proses membangun sistem dari dasar, mulai dari menulis kode aplikasi, menyiapkan server di AWS EC2, melakukan hardening dan pengamanan akses, mengatur container deployment dengan Docker, mengelola reverse proxy dengan Nginx, hingga memastikan semua layanan berjalan stabil melalui monitoring dan observasi berkelanjutan. Saya percaya bahwa sebuah sistem tidak hanya harus berfungsi dengan baik, tetapi juga harus aman, efisien, konsisten, dan mudah dipelihara dalam jangka panjang.
 
-Fokus utama saya adalah mengubah masalah kompleks menjadi solusi perangkat lunak yang elegan dan efisien. Baik dalam merancang arsitektur sistem maupun menulis kode, saya selalu memprioritaskan kualitas, keamanan, dan performa di setiap lapisan. Sebagai pembelajar yang adaptif, saya berkembang dalam lingkungan dinamis dan menikmati proses pemecahan masalah secara kolaboratif.
+Salah satu pengalaman paling berkesan dalam perjalanan profesional saya adalah ketika saya merancang dan mengimplementasikan sebuah distributed File Integrity Monitoring (FIM) system yang berfungsi memantau lima server produksi secara bersamaan. Saya mengembangkan custom FIM agent berbasis Python yang mampu mendeteksi perubahan file, mengidentifikasi siapa yang melakukan perubahan, command apa yang digunakan, dan konteks eksekusinya. Sistem tersebut saya lengkapi dengan filtering untuk memisahkan perubahan normal dari aktivitas berisiko, termasuk pendeteksian file berbahaya serta aktivitas mencurigakan di luar jam kerja. Di sisi server utama, saya membangun backend berbasis Django untuk mengolah dan menyimpan data dari seluruh agent, kemudian menyediakan dashboard monitoring real-time menggunakan Next.js yang menampilkan status integritas dan aktivitas server dengan otentikasi penuh. Saya juga memperluas cakupan pengawasan hingga ke lapisan aplikasi dengan memonitor aktivitas WordPress seperti percobaan login gagal dan tindakan administratif yang mencurigakan berikut identitas IP pelakunya.
 
-Saya percaya bahwa perangkat lunak terbaik lahir dari sinergi antara keunggulan teknis dan komunikasi yang efektif. Pengalaman akademis dan proyek telah mengasah kemampuan analitis, teknis, serta kepemimpinan saya. Saya selalu antusias untuk berkolaborasi dalam tim, belajar dari para profesional, dan berkontribusi untuk membangun produk yang memberikan dampak nyata dan berkelanjutan.
+Sebagai engineer, saya memegang prinsip bahwa kualitas sistem tidak hanya bergantung pada teknologi, tetapi juga pada cara berpikir di baliknya. Saya selalu berusaha menulis kode yang bersih, merancang arsitektur yang solid, mengedepankan keamanan secara proaktif, dan membangun automasi di setiap langkah untuk menciptakan proses kerja yang efisien dan dapat diprediksi. Saya percaya pada pentingnya ownership penuh terhadap apa yang saya bangun, serta kolaborasi lintas disiplin yang terbuka dan konstruktif.
 
-Salam hangat, Ichram`,
+Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan menciptakan sesuatu yang bertahan lama. Jika kamu tertarik berdiskusi tentang DevSecOps, cloud infrastructure, security engineering, atau pengembangan sistem end-to-end, saya selalu senang untuk terhubung dan berbagi wawasan.`,
       language: 'Bahasa',
       education: 'Pendidikan',
       experience: 'Pengalaman Kerja',
@@ -606,7 +606,15 @@ Salam hangat, Ichram`,
     },
     about: {
       title: '自己紹介',
-      bio: 'こんにちは！私の個人ウェブサイトをご覧いただき、誠にありがとうございます。パラマディナ大学で情報工学を専攻している、イクラムシャ・アブドゥラックマンと申します。ソフトウェアエンジニアとして、アーキテクチャ設計からパフォーマンス最適化まで、ソフトウェアエンジニアリングそのものに深い情熱を持っています。特に、デザインパターンのような基本原則を適用し、機能的であるだけでなく、スケーラブルで保守性の高いソリューションを構築することに注力しています。 \n\nこれらの原則を、Next.js、React.js、TypeScriptを用いた構造的なフロントエンドアーキテクチャの構築から、Node.jsやLaravelによる堅牢なバックエンドシステムの設計まで、モダンな技術エコシステムの中で実践しています。\n\n私の主な焦点は、複雑な問題を洗練された効率的なソフトウェアソリューションに転換することです。システムのアーキテクチャを設計する際も、コードを書く際も、常にすべての層において品質、セキュリティ、そしてパフォーマンスを最優先に考えています。順応性の高い学習者として、変化の速い環境で成長し、チームで協力して複雑な問題を解決することに喜びを感じます。\n\n最高のソフトウェアは、卓越した技術力と効果的なコミュニケーションの相乗効果から生まれると信じています。学業やプロジェクトでの経験を通じて、分析能力、技術力、そしてリーダーシップの資質を磨いてきました。チームで協力し、プロフェッショナルから学び、実質的かつ持続的なインパクトを与える製品開発に貢献することに、常に意欲的です。\n\n敬具, イクラム',
+      bio: `こんにちは、イクラムと申します！ 私は、安全でスケーラブル、かつ運用しやすいエンドツーエンド（E2E）ソリューションの構築に注力するフルサイクルDevSecOpsエンジニアです。元々ソフトウェアエンジニアとしてフロントエンドとバックエンドの両方を開発していた背景がありますが、次第にクラウドインフラ、自動化、システムセキュリティへと領域を広げてきました。その経験を通じて、開発から運用までの全工程を統合されたワークフローとして包括的に扱う『フルサイクルDevSecOps』というアプローチに深い関心を持つようになりました。
+
+アプリケーションコードの執筆から始まり、AWS EC2でのサーバー構築、セキュリティの堅牢化（Hardening）、Dockerによるコンテナデプロイ、Nginxでのリバースプロキシ管理、そして継続的な監視によるサービスの安定化に至るまで、システムをゼロから構築するプロセスを楽しんでいます。システムは単に機能するだけでなく、安全で効率的であり、一貫性があり、長期的に保守しやすいものであるべきだと信じています。
+
+これまでのキャリアで最も印象に残っているプロジェクトの一つは、5台の本番サーバーを同時に監視する分散型ファイル整合性監視（FIM）システムの設計と実装です。私はPythonベースのカスタムFIMエージェントを開発し、ファイルの変更検知だけでなく、変更者の特定、使用されたコマンド、実行コンテキストの追跡を可能にしました。また、通常業務とリスクの高い活動を区別するフィルタリング機能を実装し、悪意のあるファイルや営業時間外の不審な動きを検出できるようにしました。 サーバーサイドでは、全エージェントからのデータを処理・保存するためにDjangoバックエンドを構築し、Next.jsを使用してリアルタイムの監視ダッシュボードを提供しました。さらに、WordPressへのログイン失敗や不審な管理操作、実行者のIP特定など、アプリケーション層の監視まで適用範囲を広げました。
+
+エンジニアとして、システムの品質は技術そのものだけでなく、その背後にある思考法に依存すると考えています。クリーンなコード、堅実なアーキテクチャ、プロアクティブなセキュリティ対策、そして各ステップでの自動化を常に心がけ、効率的で予測可能なワークフローを作り出すことを目指しています。また、自分が構築するものに対する完全なオーナーシップ（責任感）と、オープンで建設的な部門間のコラボレーションを大切にしています。
+
+私にとってテクノロジーとは、現実の問題を解決し、長く価値が続くものを創造するための空間です。DevSecOps、クラウドインフラ、セキュリティエンジニアリング、あるいはエンドツーエンドのシステム開発についてディスカッションできることを楽しみにしています。ぜひ繋がって、知見を共有しましょう。`,
       language: '言語',
       education: '学歴',
       experience: '職歴',
