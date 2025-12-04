@@ -55,7 +55,7 @@ export const translations = {
 
 I thoroughly enjoy the process of building systems from the ground up: writing application code, provisioning servers on AWS EC2, implementing security hardening and access controls, orchestrating container deployments with Docker, managing reverse proxies with Nginx, and ensuring stability through continuous monitoring and observability. I believe that a system shouldn't just function well; it must be secure, efficient, consistent, and maintainable in the long run.
 
-One of the most defining moments in my professional journey was designing and implementing a Distributed File Integrity Monitoring (FIM) system to monitor five production servers simultaneously. I developed a custom Python-based FIM agent capable of detecting file changes, identifying the user responsible, capturing the command used, and analyzing the execution context. I implemented filtering logic to distinguish normal operations from high-risk activities, including the detection of malicious files and suspicious after-hours behavior. On the server side, I built a Django backend to process and store data from all agents, coupled with a Next.js real-time monitoring dashboard that displays integrity status and server activity with full authentication. I even extended the scope to the application layer by monitoring WordPress activities, such as failed login attempts and suspicious administrative actions, complete with perpetrator IP identification.
+One of the most defining moments in my professional journey was designing and implementing a Distributed File Integrity Monitoring (FIM) system to monitor five production servers simultaneously. I developed a custom Python-based FIM agent capable of detecting file changes, identifying the user responsible, capturing the command used, and analyzing the execution context. I implemented filtering logic to distinguish normal operations from high-risk activities, including the detection of malicious files and suspicious after-hours behavior. On the server side, I built a Django backend to process and store data from all agents, coupled with a Next.js real-time monitoring dashboard that displays integrity status and server activity with full authentication. I even extended the scope to the application layer by monitoring WordPress activities, such as failed login attempts and suspicious administrative actions, complete with perpetrator IP identification. Furthermore, I have experience executing various system migrations, such as transitioning applications from PM2 to Docker to enhance deployment consistency. I also migrated security log pipelines to SQLite, resulting in a lighter, more stable, and easier-to-manage process for log storage and analysis.
 
 As an engineer, I hold the principle that system quality relies not just on technology, but on the mindset behind it. I strive to write clean code, design solid architectures, prioritize proactive security, and build automation at every step to create efficient and predictable workflows. I believe in the importance of full ownership over what I build, as well as open and constructive cross-disciplinary collaboration.
 
@@ -91,7 +91,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'DevSecOps Engineer',
+          position: 'Full Cycle DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -330,7 +330,7 @@ To me, technology is a space to solve real-world problems and create solutions t
 
 Saya menikmati proses membangun sistem dari dasar, mulai dari menulis kode aplikasi, menyiapkan server di AWS EC2, melakukan hardening dan pengamanan akses, mengatur container deployment dengan Docker, mengelola reverse proxy dengan Nginx, hingga memastikan semua layanan berjalan stabil melalui monitoring dan observasi berkelanjutan. Saya percaya bahwa sebuah sistem tidak hanya harus berfungsi dengan baik, tetapi juga harus aman, efisien, konsisten, dan mudah dipelihara dalam jangka panjang.
 
-Salah satu pengalaman paling berkesan dalam perjalanan profesional saya adalah ketika saya merancang dan mengimplementasikan sebuah distributed File Integrity Monitoring (FIM) system yang berfungsi memantau lima server produksi secara bersamaan. Saya mengembangkan custom FIM agent berbasis Python yang mampu mendeteksi perubahan file, mengidentifikasi siapa yang melakukan perubahan, command apa yang digunakan, dan konteks eksekusinya. Sistem tersebut saya lengkapi dengan filtering untuk memisahkan perubahan normal dari aktivitas berisiko, termasuk pendeteksian file berbahaya serta aktivitas mencurigakan di luar jam kerja. Di sisi server utama, saya membangun backend berbasis Django untuk mengolah dan menyimpan data dari seluruh agent, kemudian menyediakan dashboard monitoring real-time menggunakan Next.js yang menampilkan status integritas dan aktivitas server dengan otentikasi penuh. Saya juga memperluas cakupan pengawasan hingga ke lapisan aplikasi dengan memonitor aktivitas WordPress seperti percobaan login gagal dan tindakan administratif yang mencurigakan berikut identitas IP pelakunya.
+Salah satu pengalaman paling berkesan dalam perjalanan profesional saya adalah ketika saya merancang dan mengimplementasikan sebuah distributed File Integrity Monitoring (FIM) system yang berfungsi memantau lima server produksi secara bersamaan. Saya mengembangkan custom FIM agent berbasis Python yang mampu mendeteksi perubahan file, mengidentifikasi siapa yang melakukan perubahan, command apa yang digunakan, dan konteks eksekusinya. Sistem tersebut saya lengkapi dengan filtering untuk memisahkan perubahan normal dari aktivitas berisiko, termasuk pendeteksian file berbahaya serta aktivitas mencurigakan di luar jam kerja. Di sisi server utama, saya membangun backend berbasis Django untuk mengolah dan menyimpan data dari seluruh agent, kemudian menyediakan dashboard monitoring real-time menggunakan Next.js yang menampilkan status integritas dan aktivitas server dengan otentikasi penuh. Saya juga memperluas cakupan pengawasan hingga ke lapisan aplikasi dengan memonitor aktivitas WordPress seperti percobaan login gagal dan tindakan administratif yang mencurigakan beserta identitas IP pelakunya. Selain itu, saya juga berpengalaman melakukan berbagai migrasi sistem seperti transisi aplikasi dari PM2 ke Docker untuk meningkatkan konsistensi deployment, serta memigrasikan pipeline log keamanan ke SQLite agar proses penyimpanan dan analisis log menjadi lebih ringan, stabil, dan mudah dikelola.
 
 Sebagai engineer, saya memegang prinsip bahwa kualitas sistem tidak hanya bergantung pada teknologi, tetapi juga pada cara berpikir di baliknya. Saya selalu berusaha menulis kode yang bersih, merancang arsitektur yang solid, mengedepankan keamanan secara proaktif, dan membangun automasi di setiap langkah untuk menciptakan proses kerja yang efisien dan dapat diprediksi. Saya percaya pada pentingnya ownership penuh terhadap apa yang saya bangun, serta kolaborasi lintas disiplin yang terbuka dan konstruktif.
 
@@ -366,7 +366,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'DevSecOps Engineer',
+          position: 'Full Cycle DevSecOps Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -612,7 +612,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
 
 これまでのキャリアで最も印象に残っているプロジェクトの一つは、5台の本番サーバーを同時に監視する分散型ファイル整合性監視（FIM）システムの設計と実装です。私はPythonベースのカスタムFIMエージェントを開発し、ファイルの変更検知だけでなく、変更者の特定、使用されたコマンド、実行コンテキストの追跡を可能にしました。また、通常業務とリスクの高い活動を区別するフィルタリング機能を実装し、悪意のあるファイルや営業時間外の不審な動きを検出できるようにしました。 サーバーサイドでは、全エージェントからのデータを処理・保存するためにDjangoバックエンドを構築し、Next.jsを使用してリアルタイムの監視ダッシュボードを提供しました。さらに、WordPressへのログイン失敗や不審な管理操作、実行者のIP特定など、アプリケーション層の監視まで適用範囲を広げました。
 
-エンジニアとして、システムの品質は技術そのものだけでなく、その背後にある思考法に依存すると考えています。クリーンなコード、堅実なアーキテクチャ、プロアクティブなセキュリティ対策、そして各ステップでの自動化を常に心がけ、効率的で予測可能なワークフローを作り出すことを目指しています。また、自分が構築するものに対する完全なオーナーシップ（責任感）と、オープンで建設的な部門間のコラボレーションを大切にしています。
+エンジニアとして、システムの品質は技術そのものだけでなく、その背後にある思考法に依存すると考えています。クリーンなコード、堅実なアーキテクチャ、プロアクティブなセキュリティ対策、そして各ステップでの自動化を常に心がけ、効率的で予測可能なワークフローを作り出すことを目指しています。また、自分が構築するものに対する完全なオーナーシップ（責任感）と、オープンで建設的な部門間のコラボレーションを大切にしています。さらに、システム移行の経験も豊富です。デプロイの一貫性を向上させるためにアプリケーションをPM2からDockerへ移行したり、ログの保存・分析プロセスをより軽量かつ安定して管理しやすくするために、セキュリティログのパイプラインをSQLiteへ移行した実績があります。
 
 私にとってテクノロジーとは、現実の問題を解決し、長く価値が続くものを創造するための空間です。DevSecOps、クラウドインフラ、セキュリティエンジニアリング、あるいはエンドツーエンドのシステム開発についてディスカッションできることを楽しみにしています。ぜひ繋がって、知見を共有しましょう。`,
       language: '言語',
@@ -646,7 +646,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'DevSecOps Engineer',
+          position: 'Full Cycle DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
