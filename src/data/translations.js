@@ -77,7 +77,7 @@ To me, technology is a space to solve real-world problems and create solutions t
       experienceItems: [
         {
           logo: './images/favicon.png',
-          position: 'Private Fullstack Mentor',
+          position: 'Private Frontend Mentor',
           company: 'Freelance',
           location: 'Jakarta, Indonesia',
           year: 'Nov 2025 - Now',
@@ -91,7 +91,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Full Cycle DevSecOps Engineer',
+          position: 'Full-Cycle DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Now',
@@ -101,7 +101,7 @@ To me, technology is a space to solve real-world problems and create solutions t
           description:
             'Designed and built a distributed File Integrity Monitoring (FIM) system monitoring five production servers in real-time, utilizing custom Python agents integrated with incron, auditd, and sudoers access controls.\nBuilt Python agents capable of granular file change detection, capturing user identity, command execution details, execution location, and system activity context.\nDeveloped an automated classification engine to distinguish normal operations from risks, including malicious file detection (.php, .exe, .js) and smart noise reduction filters for irrelevant events.\nImplemented detection logic for suspicious after-hours activity, automatically flagging potential insider threats and behavioral anomalies.\nEstablished a monthly data rotation pipeline that exports security logs to CSV and auto-purges obsolete data via scheduled Python scripts (cron), ensuring optimal monitoring performance.\nBuilt a distributed Django-based backend deployed across five servers to process and store monitoring data, implementing secure and structured APIs for dashboard consumption.\nImplemented secure Cross-Domain Authentication using strict Secure Cookies and CORS policies, enabling a seamless Single Sign-On (SSO) experience between the dashboard and backend servers.\nDesigned a centralized Next.js dashboard featuring TypeScript-based Multi-Server API Orchestration for dynamic routing and data normalization, alongside interactive visualizations for real-time attack trends.\nIntegrated a WordPress monitoring module to detect failed logins, suspicious administrative actions, and system file changes, complete with perpetrator IP identification.\nMigrated runtime from PM2 to Docker to enhance deployment consistency and isolation. Migrated log pipelines to SQLite for lighter, more stable, and scalable storage across multi-server environments.\nManaged end-to-end AWS EC2 infrastructure, including server provisioning, security group configuration, user management, firewall setup, and OS hardening.\nDesigned a secure Docker-based deployment infrastructure (DNS, Nginx Reverse Proxy, SSL/TLS), utilizing separate Build-Args and Environment Variables to protect credentials and ensure configuration consistency.\nBuilt GitHub Actions pipelines covering build, test, containerization, and automated deployment to production.\nExecuted the entire project using a Full-Cycle DevSecOps approach, bridging development, security, infrastructure, deployment, and continuous monitoring.',
           current: false,
-          skills: ['Docker', 'Linux', 'Ubuntu', 'AWS', 'Nginx', 'Apache', 'cPanel', 'PM2', 'Git', 'Python', 'Django', 'Next.js'],
+          skills: ['AWS', 'Linux', 'Docker', 'Ubuntu', 'Nginx', 'Apache', 'PM2', 'Git', 'Python', 'Django', 'Next.js', 'TypeScript'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
@@ -352,7 +352,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
       experienceItems: [
         {
           logo: './images/favicon.png',
-          position: 'Private Fullstack Mentor',
+          position: 'Private Frontend Mentor',
           company: 'Freelance',
           location: 'Jakarta, Indonesia',
           year: 'Nov 2025 - Sekarang',
@@ -366,7 +366,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Full Cycle DevSecOps Engineer',
+          position: 'Full-Cycle DevSecOps Engineer',
           company: 'Direktorat TSI Universitas Paramadina',
           location: 'Jakarta, Indonesia',
           year: 'Sep 2025 - Sekarang',
@@ -377,7 +377,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
             'Merancang dan membangun distributed File Integrity Monitoring (FIM) system yang memantau lima server produksi secara real-time dengan agen Python kustom yang terintegrasi dengan incron, auditd, dan kontrol akses berbasis sudoers. \nMembangun agen Python yang mampu mendeteksi perubahan file secara detail, termasuk informasi siapa yang mengubah, command apa yang dijalankan, lokasi eksekusi, serta konteks aktivitas pengguna di sistem. \nMengembangkan sistem klasifikasi otomatis untuk membedakan perubahan normal dan aktivitas berisiko, termasuk deteksi file berbahaya (.php, .exe, .js, dan lain-lain) serta filter smart noise reduction untuk event yang tidak relevan. \nMengimplementasikan deteksi aktivitas mencurigakan di luar jam kerja, termasuk flagging otomatis untuk potensi insider threat dan anomali perilaku pengguna. \nMengimplementasikan monthly data rotation pipeline yang mengekspor log keamanan ke CSV dan secara otomatis menghapus data usang melalui Python script terjadwal (cron), memastikan performa dan stabilitas sistem monitoring tetap optimal. \nMembangun backend berbasis Django yang di-deploy ke lima server berbeda untuk menerima, mengolah, dan menyimpan data monitoring secara terdistribusi. menerapkan API untuk konsumsi dashboard secara aman dan terstruktur. \nMengimplementasikan mekanisme autentikasi lintas-domain (Cross-Domain Authentication) yang aman menggunakan konfigurasi Secure Cookies dan CORS Policy yang ketat, memungkinkan Single Sign-On (SSO) experience antara dashboard monitoring dan backend server. \nMerancang dashboard Next.js terpusat dengan arsitektur Multi-Server API Orchestration berbasis TypeScript untuk routing dinamis dan normalisasi data, serta mengimplementasikan visualisasi data interaktif untuk memantau tren serangan dan integritas sistem secara real-time. \nMenambahkan modul pemantauan aktivitas WordPress, meliputi deteksi login gagal, tindakan administratif mencurigakan, perubahan file sistem WP, serta identifikasi alamat IP pengguna yang terlibat dalam event berisiko. \nMelakukan migrasi runtime dari PM2 ke Docker, meningkatkan konsistensi deployment, isolasi environment, dan portabilitas aplikasi lintas server. Memigrasikan pipeline log dari format lama menuju SQLite untuk penyimpanan yang lebih stabil, ringan, dan mudah dievaluasi pada skala multi-server. \n Menangani seluruh proses infrastruktur AWS EC2, termasuk provisioning server, konfigurasi security group, pembuatan user terpisah, firewall, OS hardening, dan pengamanan akses. \nMerancang infrastruktur deployment yang aman (DNS, Nginx Reverse Proxy, SSL/TLS) dan teroptimasi pada Docker, dengan menerapkan strategi pemisahan Build-Args dan Environment Variables untuk menjaga keamanan kredensial serta konsistensi konfigurasi antar-server. \nMembangun pipeline CI/CD GitHub Actions mencakup build, test, containerization, hingga deployment otomatis ke server produksi. \nMenyelesaikan keseluruhan proyek secara end-to-end menggunakan pendekatan Full-Cycle DevSecOps, mencakup development, security, infrastructure, deployment, dan monitoring berkelanjutan.',
           current: false,
 
-          skills: ['Docker', 'Linux', 'Ubuntu', 'AWS', 'Nginx', 'Apache', 'cPanel', 'PM2', 'Git', 'Python', 'Django', 'Next.js'],
+          skills: ['AWS', 'Linux', 'Docker', 'Ubuntu', 'Nginx', 'Apache', 'PM2', 'Git', 'Python', 'Django', 'Next.js', 'TypeScript'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',
@@ -632,7 +632,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
       experienceItems: [
         {
           logo: './images/favicon.png',
-          position: 'Private Fullstack Mentor',
+          position: 'Private Frontend Mentor',
           company: 'フリーランス',
           location: 'ジャカルタ、インドネシア',
           year: '2025年11月 - 現在',
@@ -646,7 +646,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           logo: 'https://assets.nsd.co.id/images/kampus/logo/Logo-Paramadina-Universitas-Paramadina-Original-PNG.png',
-          position: 'Full Cycle DevSecOps Engineer',
+          position: 'Full-Cycle DevSecOps Engineer',
           company: 'Directorate of TSI Paramadina University',
           location: 'インドネシア、ジャカルタ',
           year: '2025年9月 - 現在',
@@ -656,7 +656,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
           description:
             'incron、auditd、sudoersと統合されたカスタムPythonエージェントを使用し、5台の本番サーバーをリアルタイムで監視する分散型ファイル整合性監視（FIM）システムを設計・構築。\n変更者の特定、実行コマンド、実行場所、システムアクティビティのコンテキストを含む、詳細なファイル変更検知が可能なPythonエージェントを開発。\n悪意のあるファイル（.php, .exe, .js等）の検知やスマートノイズリダクションフィルターを含め、通常の変更とリスクある活動を自動で区別するシステムを開発。\n営業時間外の不審なアクティビティ検知を実装し、インサイダー脅威やユーザー行動の異常（アノマリー）を自動的にフラグ付けする機能を導入。\nセキュリティログをCSVにエクスポートし、スケジュールされたPythonスクリプト（cron）で古いデータを自動削除する月次データローテーションパイプラインを実装し、パフォーマンスを維持。\n5台のサーバーに分散デプロイされたDjangoベースのバックエンドを構築し、モニタリングデータの処理・保存およびダッシュボード用のセキュアなAPIを実装。\nStrictなSecure CookiesとCORSポリシー設定を用いた安全なクロスドメイン認証メカニズムを実装し、ダッシュボードとバックエンド間でのシングルサインオン（SSO）体験を実現。\nTypeScriptベースのマルチサーバーAPIオーケストレーションを採用したNext.jsダッシュボードを設計。動的ルーティング、データ正規化、およびリアルタイムの攻撃傾向の可視化を実現。\nログイン失敗、不審な管理操作、システムファイル変更、および実行者のIP特定を含む、WordPressアクティビティ監視機能を追加。\nPM2からDockerへのランタイム移行を行い、デプロイの一貫性と分離性を向上。また、ログパイプラインをSQLiteへ移行し、マルチサーバー規模での保存処理を軽量化・安定化。\nサーバープロビジョニング、セキュリティグループ設定、ユーザー管理、ファイアウォール、OSの堅牢化（Hardening）を含む、AWS EC2インフラの全プロセスを担当。\nビルド引数（Build-Args）と環境変数（Env Vars）の分離戦略を採用し、クレデンシャル保護と構成の一貫性を保ちつつ、Docker上で最適化されたインフラ（DNS, Nginx Reverse Proxy, SSL/TLS）を設計。\nビルド、テスト、コンテナ化、本番環境への自動デプロイをカバーするGitHub Actionsパイプラインを構築。\n開発、セキュリティ、インフラ、デプロイ、継続的監視を包括するフルサイクルDevSecOpsアプローチを用いて、プロジェクト全体をエンドツーエンドで完遂。',
           current: false,
-          skills: ['Docker', 'Linux', 'Ubuntu', 'AWS', 'Nginx', 'Apache', 'cPanel', 'PM2', 'Git', 'Python', 'Django', 'Next.js'],
+          skills: ['AWS', 'Linux', 'Docker', 'Ubuntu', 'Nginx', 'Apache', 'PM2', 'Git', 'Python', 'Django', 'Next.js', 'TypeScript'],
         },
         {
           logo: 'https://upload.wikimedia.org/wikipedia/id/5/5d/Logo_Hino.png',

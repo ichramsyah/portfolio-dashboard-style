@@ -154,21 +154,24 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         setActiveSection(item.id);
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full cursor-pointer flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 
-                      ${
+                      className={`w-full cursor-pointer flex items-center space-x-3 px-3.5 pt-[7px] pb-[10px] rounded-lg rounded-r-sm transition-all duration-300 relative overflow-hidden isolate group ${
                         isAiChat
-                          ? `bg-gradient-to-r from-blue-4 to-gray-1 dark:from-blue-5 dark:to-gray-3
-                             text-whitee 
-                             ${isActive ? 'scale-[102%]' : 'hover:scale-[102%] opacity-90 hover:opacity-100'}`
+                          ? `bg-gradient-to-r from-blue-4 to-gray-1 dark:from-blue-5 dark:to-gray-3 text-whitee ${isActive ? 'scale-[102%]' : 'hover:scale-[102%] opacity-90 hover:opacity-100'}`
                           : isActive
-                          ? 'bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-gray-6/30 dark:to-gray-6/30 text-blue-7 dark:text-gray-2 scale-[100%]'
+                          ? 'text-blue-7 dark:text-gray-2 scale-[100%]'
                           : 'bg-transparent text-gray-7/90 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2/60 dark:hover:bg-gray-5/20 hover:scale-[103%]'
                       }`}
                     >
-                      <Icon size={20} className={`transition-transform duration-300 ${isAiChat ? 'animate-pulse' : 'group-hover:rotate-[-13deg]'}`} />
-                      <span className={isAiChat ? '' : ''}>{item.label}</span>
-
-                      {isAiChat && <span className="ml-auto text-[10px] bg-blue-5 dark:bg-blue-5/70 text-whitee dark:text-gray-2 px-1.5 py-0.5 pb-1 rounded-md">V 1.0</span>}
+                      {!isAiChat && isActive && (
+                        <>
+                          <div className="absolute inset-[-20%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#374151_0%,#93c5fd_50%,#6b7280_100%)] -z-20 " />
+                          <div className="absolute w-[222px] inset-[1.5px] rounded-[5px] rounded-l-[5px] bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-background-dark dark:to-background-dark -z-10" />
+                        </>
+                      )}
+                      <div className="relative z-10 flex items-center space-x-3 w-full">
+                        <Icon size={20} className={`transition-transform duration-300 ${isAiChat ? 'animate-pulse' : 'group-hover:rotate-[-13deg]'}`} /> <span className={isAiChat ? '' : ''}>{item.label}</span>
+                        {isAiChat && <span className="ml-auto text-[10px] bg-blue-5 dark:bg-blue-5/70 text-whitee dark:text-gray-2 px-1.5 py-0.5 pb-1 rounded-md">V 1.0</span>}
+                      </div>
                     </button>
                   </li>
                 );

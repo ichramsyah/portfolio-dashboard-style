@@ -101,7 +101,7 @@ const Services = ({ setActiveSection }) => {
             </div>
           </div>
           <div className="w-1/2 h-[160px] max-sm:h-[305px] flex items-center justify-center md:mt-15 mt-[-10px]">
-            <TrueFocus sentence="Dev Sec Ops" manualMode={false} blurAmount={5} animationDuration={1} pauseBetweenAnimations={2} />
+            <TrueFocus sentence="Dev Sec Ops" manualMode={false} blurAmount={5} animationDuration={1} pauseBetweenAnimations={1} />
           </div>
         </SpotlightCard>
 

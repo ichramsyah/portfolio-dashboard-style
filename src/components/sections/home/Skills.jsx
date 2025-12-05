@@ -1,7 +1,7 @@
 import { CodeBracketIcon } from '@heroicons/react/16/solid';
 import GlassIcons from '../../common/GlassIcons';
-import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs, FaLinux, FaUbuntu } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel, SiFirebase, SiDjango, SiDocker, SiApache } from 'react-icons/si';
+import { FaReact, FaLaravel, FaPhp, FaBootstrap, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaFigma, FaPython, FaNodeJs, FaLinux, FaUbuntu, FaAws } from 'react-icons/fa';
+import { SiNextdotjs, SiExpress, SiTypescript, SiTailwindcss, SiMongodb, SiPostman, SiAdobeillustrator, SiCpanel, SiFirebase, SiDjango, SiDocker, SiApache, SiAdobephotoshop } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 import { DiHtml5 } from 'react-icons/di';
 import { useContext } from 'react';
@@ -23,6 +23,7 @@ const Skills = () => {
     { icon: <FaPhp size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'php', label: 'PHP' },
     { icon: <FaPython size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'python', label: 'Python' },
     { icon: <SiFirebase size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'firebase', label: 'Firebase' },
+    { icon: <FaAws size={150} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'aws', label: 'AWS' },
     { icon: <FaLinux size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'linux', label: 'Linux' },
     { icon: <FaUbuntu size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'ubuntu', label: 'Ubuntu' },
     { icon: <SiApache size={30} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'apache', label: 'Apache' },
@@ -40,6 +41,7 @@ const Skills = () => {
     { icon: <SiPostman size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'postman', label: 'Postman' },
     { icon: <FaFigma size={32} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'figma', label: 'Figma' },
     { icon: <SiAdobeillustrator size={28} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobeillustrator', label: 'Adobe Illustrator' },
+    { icon: <SiAdobephotoshop size={28} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobephotoshop', label: 'Adobe Photoshop' },
     { icon: <SiCpanel size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'cpanel', label: 'cPanel' },
   ];
 
@@ -52,7 +54,7 @@ const Skills = () => {
         </h3>
         <p className="text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
       </div>
-      <div className="md:mb-1 mb-0">
+      <div className="md:mb-12 mb-0">
         <GlassIcons items={items} className="custom-class" />
       </div>
     </div>
