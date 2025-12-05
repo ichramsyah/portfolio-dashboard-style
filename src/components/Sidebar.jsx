@@ -164,7 +164,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                     >
                       {!isAiChat && isActive && (
                         <>
-                          <div className="absolute inset-[-20%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#374151_0%,#60a5fa_50%,#6b7280_100%)] -z-20 " />
+                          <div className="absolute inset-[-20%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#374151_0%,#93c5fd_50%,#6b7280_100%)] -z-20 " />
                           <div className="absolute w-[222px] inset-[1.5px] rounded-[5px] rounded-l-[5px] bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-background-dark dark:to-background-dark -z-10" />
                         </>
                       )}
