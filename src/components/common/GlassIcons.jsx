@@ -11,6 +11,7 @@ const colorClassMapping = {
   tailwind: 'bg-gradient-to-br from-teal-400 to-cyan-600',
   python: 'bg-gradient-to-br from-blue-500 to-yellow-400',
   firebase: 'bg-gradient-to-br from-red-600 to-orange-400',
+  aws: 'bg-gradient-to-br from-gray-900 via-orange-700 to-yellow-500',
   linux: 'bg-gradient-to-br from-gray-300 to-yellow-600',
   ubuntu: 'bg-gradient-to-br from-orange-500 to-orange-600',
   apache: 'bg-gradient-to-br from-purple-800 to-orange-800',
