@@ -19,10 +19,10 @@ const About = () => {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 gap-12 mb-8 pb-8 border-b border-gray-3 dark:border-gray-7">
+    <div className="grid lg:grid-cols-1 gap-10 mb-8 pb-12 border-b border-gray-3 dark:border-gray-5/30">
       <div>
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="text-[16px] text-gray-6 dark:text-gray-4 mb-3">
-          <p className="whitespace-pre-line">{firstPart}</p>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="text-[16px] text-gray-6 dark:text-gray-3/90 mb-4">
+          <p className="whitespace-pre-line leading-[28px]">{firstPart}</p>
 
           <AnimatePresence>
             {showFullBio && (
@@ -33,7 +33,7 @@ const About = () => {
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 className="overflow-hidden"
               >
-                <p className="whitespace-pre-line">{remainingPart}</p>
+                <p className="whitespace-pre-line leading-[28px]">{remainingPart}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -44,7 +44,7 @@ const About = () => {
             onClick={() => setShowFullBio((prev) => !prev)}
             className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-gray-3 bg-blue-1 dark:bg-gray-5/20 hover:bg-blue-2 dark:hover:bg-gray-5/40 px-4 py-[6px] rounded-full transition-all cursor-pointer"
           >
-            <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Show more'}</span>
+            <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Read more'}</span>
             <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />
           </button>
         </motion.div>
@@ -56,9 +56,9 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }}
           viewport={{ once: true }}
-          className="flex items-center text-xl text-gray-9 dark:text-whitee mb-6"
+          className="flex items-center text-xl text-gray-9 dark:text-gray-2 mb-6"
         >
-          <Globe className="mr-2" /> {t('about.language')}
+          <Globe size={19} className="mr-2" /> {t('about.language')}
         </motion.h3>
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.8 }} viewport={{ once: true }} className="space-y-4">
           {language.map((lang, index) => (

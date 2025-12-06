@@ -55,7 +55,7 @@ export default function GithubContributionStats({ username }) {
           <FaGithub className="text-[20px]" />
           <span className="ml-2">{t('home.githubcontribution')}</span>
         </h3>
-        <p className="text-gray-5 dark:text-gray-4/80">{t('home.githubcontribution_paragraph')}</p>
+        <p className="text-gray-5 dark:text-gray-4/90">{t('home.githubcontribution_paragraph')}</p>
       </div>
 
       {/* Stat cards */}

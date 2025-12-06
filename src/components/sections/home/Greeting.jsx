@@ -7,7 +7,7 @@ const Greeting = () => {
   return (
     <div className="border-b border-gray-3 dark:border-gray-5/30 pb-8">
       <StrokeText text={t('home.greeting')} className="text-3xl text-gray-8 dark:text-neutral-200 transition-color duration-300" />
-      <div className="flex items-center pt-2 text-[17px] text-gray-7 dark:text-gray-4/80">
+      <div className="flex items-center pt-2 text-[17px] text-gray-7 dark:text-gray-4/90">
         <h3 className="">{t('home.religion')}</h3>
         <p className="pl-2">🇮🇩</p>
       </div>

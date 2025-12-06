@@ -51,7 +51,7 @@ const Skills = () => {
           <CodeBracketIcon className="text-sm w-5 " />
           <span className="ml-2">{t('home.skills')}</span>
         </h3>
-        <p className="text-gray-5 dark:text-gray-4/80">{t('home.skills_paragraph')}</p>
+        <p className="text-gray-5 dark:text-gray-4/90">{t('home.skills_paragraph')}</p>
       </div>
       <div className="md:mb-0 mb-10">
         <GlassIcons items={items} className="custom-class" />
