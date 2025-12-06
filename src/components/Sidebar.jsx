@@ -40,7 +40,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
   }, [activeSection, activeRef]);
 
   return (
-    <>
+    <div className="px-2">
       {isMobileMenuOpen && <div className="fixed inset-0 bg-blackk/20 bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMobileMenuOpen(false)} />}
 
       <AnimatePresence>
@@ -158,14 +158,14 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
                         isAiChat
                           ? `bg-gradient-to-r from-blue-4 to-gray-1 dark:from-blue-5 dark:to-gray-3 text-whitee ${isActive ? 'scale-[102%]' : 'hover:scale-[102%] opacity-90 hover:opacity-100'}`
                           : isActive
-                          ? 'text-blue-7 dark:text-gray-2 scale-[100%]'
-                          : 'bg-transparent text-gray-7/90 dark:text-gray-2/60 dark:hover:text-gray-1 hover:bg-gray-2/60 dark:hover:bg-gray-5/20 hover:scale-[103%]'
+                          ? 'text-gray-8 dark:text-gray-2 scale-[100%]'
+                          : 'bg-transparent text-gray-7/70 dark:text-gray-2/40 hover:text-gray-7 dark:hover:text-gray-1 hover:bg-gray-2/40 dark:hover:bg-gray-7/20 hover:scale-[103%]'
                       }`}
                     >
                       {!isAiChat && isActive && (
                         <>
                           <div className="absolute inset-[-20%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#374151_0%,#93c5fd_50%,#6b7280_100%)] -z-20 " />
-                          <div className="absolute w-[222px] inset-[1.5px] rounded-[5px] rounded-l-[5px] bg-gradient-to-r from-blue-1 to-blue-2 dark:bg-gradient-to-r dark:from-background-dark dark:to-background-dark -z-10" />
+                          <div className="absolute w-[221px] inset-[1.5px] rounded-[5px] rounded-l-[5px] bg-whitee dark:bg-gradient-to-r dark:from-background-dark dark:to-background-dark -z-10" />
                         </>
                       )}
                       <div className="relative z-10 flex items-center space-x-3 w-full">
@@ -190,7 +190,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileMenuOpen, setIsMobil
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
