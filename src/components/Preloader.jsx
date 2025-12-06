@@ -1,83 +1,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// --- Konfigurasi ---
-const TEXT_TO_REVEAL = '0123456789';
-const ROTATION_DURATION = 5;
-const RADIUS = 120;
-
-const Preloader = () => {
-  const letters = Array.from(TEXT_TO_REVEAL);
-  const numLetters = letters.length;
+const ParticleVortexPreloader = () => {
+  const numParticles = 100;
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A8', '#FFD700'];
 
   return (
-    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 1.5, ease: 'easeOut' } }} className="fixed inset-0 z-[100] flex items-center justify-center bg-whitee dark:bg-background-dark">
+    <motion.div initial={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 0.8 } }} className="fixed inset-0 z-[100] flex items-center justify-center bg-whitee dark:bg-background-dark">
       <div className="relative w-[300px] h-[300px]">
-        <motion.div
-          className="absolute w-full h-full"
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: ROTATION_DURATION,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        >
-          <div
-            className="absolute w-[600px] h-[600px] left-1/2 -top-[300px]"
-            style={{
-              transform: 'translateX(-50%)',
-              background: 'conic-gradient(from 0deg, transparent 0%, transparent 80%, #b3f1ffff 98%, transparent 100%)',
-              maskImage: 'radial-gradient(circle at center, white 5%, transparent 60%)',
-            }}
-          />
-        </motion.div>
+        <motion.div className="absolute left-1/2 top-1/2 w-2 h-2 rounded-full bg-blue-500 blur-sm transform -translate-x-1/2 -translate-y-1/2" animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 2, repeat: Infinity }} />
 
-        {letters.map((char, i) => {
-          const angle = (i / numLetters) * 360;
-          const x = RADIUS * Math.cos((angle - 90) * (Math.PI / 180));
-          const y = RADIUS * Math.sin((angle - 90) * (Math.PI / 180));
-
-          const activationDelay = (i / numLetters) * ROTATION_DURATION;
+        {[...Array(numParticles)].map((_, i) => {
+          const delay = Math.random() * 2;
+          const duration = Math.random() * 1 + 1.5;
+          const radius = Math.random() * 100 + 40;
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          const size = Math.random() * 4 + 1;
 
           return (
-            <motion.span
+            <motion.div
               key={i}
-              className="absolute left-1/2 top-1/2 text-2xl font-bold"
+              className="absolute left-1/2 top-1/2 rounded-full"
               style={{
-                transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
-                color: '#444', // Warna awal saat "gelap"
+                width: size,
+                height: size,
+                backgroundColor: color,
+                boxShadow: `0 0 ${size * 2}px ${color}`,
               }}
-              initial={{ color: '#444' }}
-              animate={{ color: ['#444', '#fff', '#444'] }}
+              initial={{
+                x: 0,
+                y: 0,
+                opacity: 0,
+                scale: 0,
+              }}
+              animate={{
+                x: [0, radius * Math.cos(i), radius * Math.cos(i + Math.PI)],
+                y: [0, radius * Math.sin(i), radius * Math.sin(i + Math.PI)],
+                opacity: [0, 1, 1, 0],
+                scale: [0, 1, 0.5, 0],
+                rotate: 360,
+              }}
               transition={{
-                duration: 1.5,
-                delay: activationDelay,
+                duration: duration,
                 repeat: Infinity,
-                repeatDelay: ROTATION_DURATION - 1.5,
-                ease: 'easeOut',
-                times: [0, 0.2, 1], // Cepat menyala, lambat meredup
+                delay: delay,
+                ease: 'easeInOut',
               }}
-            >
-              {char}
-            </motion.span>
+            />
           );
         })}
-
-        {/* Titik Pusat (Mercusuar) yang Berdenyut */}
-        <motion.div
-          className="absolute left-1/2 top-1/2 w-3 h-3 rounded-full transform -translate-x-1/2 -translate-y-1/2"
-          animate={{
-            backgroundColor: ['#383838ff', '#f0f9ff', '#2d2d2dff'],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
       </div>
+      <motion.p className="absolute bottom-20 text-sm tracking-widest text-gray-500 dark:text-gray-400 uppercase" animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, repeat: Infinity }}>
+        Gathering Inspiration
+      </motion.p>
     </motion.div>
   );
 };
 
-export default Preloader;
+export default ParticleVortexPreloader;
