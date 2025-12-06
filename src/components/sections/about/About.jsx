@@ -2,13 +2,15 @@ import { Globe } from 'lucide-react';
 import { useState, useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
 import { ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const About = () => {
   const { t } = useContext(LanguageContext);
   const [showFullBio, setShowFullBio] = useState(false);
   const fullBio = t('about.bio');
-  const previewBio = fullBio.split('\n\n')[0];
+  const bioParts = fullBio.split('\n\n');
+  const firstPart = bioParts[0];
+  const remainingPart = bioParts.slice(1).join('\n\n');
 
   const language = [
     { name: 'Indonesia', level: 100 },
@@ -19,15 +21,24 @@ const About = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-12 mb-8 pb-8 border-b border-gray-3 dark:border-gray-7">
       <div>
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-[16px] text-gray-6 dark:text-gray-4 mb-3 whitespace-pre-line"
-        >
-          {showFullBio ? fullBio : previewBio}
-        </motion.p>
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="text-[16px] text-gray-6 dark:text-gray-4 mb-3">
+          <p className="whitespace-pre-line">{firstPart}</p>
+
+          <AnimatePresence>
+            {showFullBio && (
+              <motion.div
+                initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                animate={{ height: 'auto', opacity: 1, marginTop: 12 }}
+                exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
+                className="overflow-hidden"
+              >
+                <p className="whitespace-pre-line">{remainingPart}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }} viewport={{ once: true }}>
           <button
             onClick={() => setShowFullBio((prev) => !prev)}
