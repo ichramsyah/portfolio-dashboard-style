@@ -48,14 +48,14 @@ export default function GithubContributionStats({ username }) {
   };
 
   return (
-    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7 pb-8">
+    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-5/30 pb-8">
       {/* Header */}
       <div className="pb-7">
-        <h3 className="flex items-center text-xl text-gray-9 dark:text-gray-3 pb-3">
-          <FaGithub className="text-xl" />
+        <h3 className="flex items-center text-xl text-gray-9 dark:text-gray-2 pb-3">
+          <FaGithub className="text-[20px]" />
           <span className="ml-2">{t('home.githubcontribution')}</span>
         </h3>
-        <p className="text-gray-5 dark:text-gray-4">{t('home.githubcontribution_paragraph')}</p>
+        <p className="text-gray-5 dark:text-gray-4/90">{t('home.githubcontribution_paragraph')}</p>
       </div>
 
       {/* Stat cards */}
@@ -82,7 +82,7 @@ export default function GithubContributionStats({ username }) {
             fontSize={14}
           />
         </div>
-        <div className="mt-3">
+        <div className="mt-2">
           <LanguageEvolution username="ichramsyah" />
         </div>
       </div>

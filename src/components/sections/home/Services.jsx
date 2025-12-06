@@ -23,22 +23,22 @@ const Services = ({ setActiveSection }) => {
   ];
 
   return (
-    <div className="mt-8">
-      <div className="flex items-center text-xl text-gray-9 dark:text-gray-3 mb-4">
+    <div className="mt-7">
+      <div className="flex items-center text-xl text-gray-9 dark:text-gray-3 mb-3">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 10.435c0-.256.051-.512.153-.758.233-.56.854-1.046 2.095-2.018l6.206-4.856c1.241-.972 1.862-1.458 2.577-1.64.63-.16 1.308-.16 1.938 0 .715.183 1.336.668 2.577 1.64l6.206 4.856c1.241.972 1.862 1.458 2.095 2.018.102.246.153.502.153.758v3.13c0 .256-.051.512-.153.758-.233.56-.854 1.046-2.095 2.017l-6.206 4.857c-1.241.972-1.862 1.457-2.577 1.64-.63.16-1.308.16-1.938 0-.715-.183-1.336-.668-2.577-1.64L2.248 16.34C1.007 15.37.386 14.883.153 14.323A1.971 1.971 0 0 1 0 13.565v-3.13Zm9.34-3.238.887.694c.62.485.93.728 1.289.82.315.08.653.08.968 0 .358-.092.668-.335 1.29-.82l.886-.694c.62-.486.93-.729 1.047-1.009a.975.975 0 0 0 0-.758c-.116-.28-.427-.523-1.047-1.008l-.887-.694c-.62-.486-.93-.729-1.289-.82a1.984 1.984 0 0 0-.968 0c-.358.091-.668.334-1.29.82l-.886.694c-.62.485-.93.728-1.047 1.008a.975.975 0 0 0 0 .758c.116.28.427.523 1.047 1.009Zm5.91 4.625.887.694c.62.486.931.729 1.29.82.314.08.653.08.968 0 .358-.091.668-.334 1.288-.82l.887-.694c.62-.485.931-.728 1.047-1.008a.976.976 0 0 0 0-.758c-.116-.28-.426-.523-1.047-1.009l-.887-.694c-.62-.485-.93-.728-1.288-.82a1.984 1.984 0 0 0-.969 0c-.358.092-.668.335-1.289.82l-.886.694c-.621.486-.931.729-1.047 1.009a.975.975 0 0 0 0 .758c.116.28.426.523 1.047 1.008Zm-11.82 0 6.797 5.32c.62.486.93.728 1.289.82.315.08.653.08.968 0 .358-.092.668-.334 1.29-.82l.886-.694c.62-.486.93-.729 1.047-1.009a.974.974 0 0 0 0-.758c-.116-.28-.427-.523-1.047-1.008l-6.797-5.32c-.62-.485-.931-.728-1.29-.82a1.984 1.984 0 0 0-.968 0c-.358.092-.668.335-1.288.82l-.887.694c-.62.486-.931.729-1.047 1.009a.975.975 0 0 0 0 .758c.116.28.426.523 1.047 1.008Z"></path>
         </svg>
         <p className="pl-2">{t('home.service')}</p>
       </div>
-      <p className="text-lg text-gray-6 dark:text-gray-4">{t('home.services_paragraph')}</p>
+      <p className="text-[17px] text-gray-6 dark:text-gray-4/90">{t('home.services_paragraph')}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[10px] gap-3 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-[10px] gap-3 mt-7">
         {/* 1 */}
         <SpotlightCard className="h-76 rounded-lg bg-gray-1/40 dark:bg-gray-6/10">
           <div className="flex flex-col items-center justify-center p-5">
             <LayoutGrid width={40} height={40} className="text-gray-7 dark:text-gray-2 p-2 rounded-md" />
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.skills')}</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.skills_paragraph')}</p>
+            <p className="text-center text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.skills_paragraph')}</p>
           </div>
           <TechStackMarquee />
         </SpotlightCard>
@@ -50,7 +50,7 @@ const Services = ({ setActiveSection }) => {
               <User width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_about')}</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_about_desc')}</p>
+            <p className="text-center text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.service_about_desc')}</p>
           </div>
           <div className="relative mt-[-30px]">
             <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
@@ -65,7 +65,7 @@ const Services = ({ setActiveSection }) => {
             </button>
             <div className="pt-2">
               <span className="text-gray-8 dark:text-gray-2">{t('home.service_project')}</span>
-              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_project_desc')}</p>
+              <p className="text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.service_project_desc')}</p>
             </div>
           </div>
           <div className="w-1/2 h-[160px] max-sm:h-[305px]">
@@ -97,7 +97,7 @@ const Services = ({ setActiveSection }) => {
             </button>
             <div className="pt-2">
               <span className="text-gray-8 dark:text-gray-2">{t('home.service_services')}</span>
-              <p className="text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_services_desc')}</p>
+              <p className="text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.service_services_desc')}</p>
             </div>
           </div>
           <div className="w-1/2 h-[160px] max-sm:h-[305px] flex items-center justify-center md:mt-15 mt-[-10px]">
@@ -112,7 +112,7 @@ const Services = ({ setActiveSection }) => {
               <MessageSquareText width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_chatroom')}</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_chatroom_desc')}</p>
+            <p className="text-center text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.service_chatroom_desc')}</p>
           </div>
           <div className="px-2 space-y-3">
             <div className="flex justify-start">
@@ -136,7 +136,7 @@ const Services = ({ setActiveSection }) => {
               <Award width={40} height={40} className="text-gray-7 transition-all cursor-pointer  hover:scale-105 dark:text-gray-2 p-2 rounded-md" />
             </button>
             <span className="pt-4 text-gray-8 dark:text-gray-2">{t('home.service_achievements')}</span>
-            <p className="text-center text-gray-6 dark:text-gray-4 text-[12px] py-2">{t('home.service_achievements_desc')}</p>
+            <p className="text-center text-gray-6 dark:text-gray-4/90 text-[12px] py-2">{t('home.service_achievements_desc')}</p>
           </div>
           <div className="flex-grow flex items-center justify-center w-full p-4">
             <Stack cardsData={images} sendToBackOnClick={false} />

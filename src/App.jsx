@@ -66,14 +66,14 @@ const App = () => {
             {isLoading ? (
               <Preloader key="preloader" />
             ) : (
-              <div className="max-w-7xl mx-auto min-h-screen bg-whitee dark:bg-background-dark transition-colors duration-300 lg:flex">
+              <div className="max-w-7xl mx-auto min-h-screen bg-whitee dark:bg-background-dark transition-colors duration-300 lg:flex md:px-4 px-0">
                 <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
 
                 <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-0 left-0 z-30 lg:hidden p-3 bg-whitee dark:bg-background-dark w-full border-b border-gray-2 dark:border-gray-8">
                   <Menu size={24} className="text-gray-8 dark:text-gray-3" />
                 </button>
 
-                <div className="flex-1 min-h-screen">
+                <div className="flex-1 min-h-screen tracking-[0.3px]">
                   <main className="container mx-auto px-6">{renderSection()}</main>
                 </div>
               </div>

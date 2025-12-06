@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { BriefcaseBusiness } from 'lucide-react';
+import { BriefcaseBusiness, Rocket } from 'lucide-react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
@@ -25,14 +25,14 @@ const Experience = () => {
   const experienceItems = t('about.experienceItems', { returnObjects: true });
 
   return (
-    <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-7">
-      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl  text-gray-9 dark:text-gray-3 mb-6">
-        <BriefcaseBusiness className="mr-2" /> {t('about.experience')}
+    <div className="mb-7 pb-7 border-b border-gray-3 dark:border-gray-5/30">
+      <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="flex items-center text-xl text-gray-9 dark:text-gray-2 mb-2">
+        <Rocket size={20} className="mr-2" /> {t('about.experience')}
       </motion.h3>
+      <p className="text-gray-6 dark:text-gray-4/90 mb-6">{t('about.experienceDesc')}</p>
       <div className="">
         {experienceItems.map((exp, index) => (
           <div key={index} className="flex space-x-2">
-            {/* Left: Timeline (dot + line) */}
             <div className="flex-shrink-0 flex flex-col items-center">
               {/* Dot */}
               <motion.div
@@ -55,30 +55,30 @@ const Experience = () => {
 
             {/* Experience Card */}
             <motion.div custom={index} initial="hidden" whileInView="visible" variants={containerVariants} viewport={{ once: true }} className="flex-1 mb-4">
-              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg pt-5.5 px-6 pb-5">
-                <div className="flex items-start space-x-5">
+              <SpotlightCard className="bg-gray-1/40 dark:bg-gray-6/10 rounded-lg pt-[22px] px-7 pb-5">
+                <div className="flex items-start space-x-4">
                   <img src={exp.logo} className="w-11 object-contain mt-[3px]" alt="" />
 
-                  <div className="flex-1 relative pb-[2px]">
+                  <div className="flex-1 relative pb-[4px]">
                     <span className="absolute top-0 right-0 text-sm text-gray-4 hidden sm:block">{exp.location}</span>
 
-                    <h4 className="text-lg  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
-                    <p className="text-[14px] text-blue-4 dark:text-gray-3/80 mb-2">{exp.company}</p>
+                    <h4 className="text-[17px]  text-gray-9 dark:text-whitee mb-1">{exp.position}</h4>
+                    <p className="text-[14px] text-blue-4 dark:text-gray-4/90 mb-2">{exp.company}</p>
                     <p className="text-[12px] text-gray-6 dark:text-gray-4 block sm:hidden">{exp.location}</p>
 
                     <div className="flex md:flex-row flex-col md:items-center space-x-3 mb-3">
-                      <p className="text-[12px] text-gray-6 dark:text-gray-4 ">{exp.year}</p>
+                      <p className="text-[12px] text-gray-6 dark:text-gray-4/90 ">{exp.year}</p>
                       <div className="flex md:flex-row md:pt-0 pt-4 flex-col gap-2">
-                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.time}</p>
-                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.pos}</p>
-                        <p className="text-[12px] text-gray-5/80 dark:text-gray-5">{exp.workfrom}</p>
+                        <p className="text-[12px] text-gray-5/90 dark:text-gray-4/90">{exp.time}</p>
+                        <p className="text-[12px] text-gray-6 dark:text-gray-4/90">{exp.pos}</p>
+                        <p className="text-[12px] text-gray-6 dark:text-gray-4/90">{exp.workfrom}</p>
                       </div>
                     </div>
 
                     <Disclosure>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-3 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-2 transition-all">
+                          <Disclosure.Button className="text-sm font-medium text-gray-5 dark:text-gray-3/90 flex items-center gap-1 hover:text-gray-7 dark:hover:text-gray-2 transition-all cursor-pointer">
                             {open ? 'Hide responsibilities' : 'Show responsibilities'}
                             <ChevronDownIcon className={`w-4 h-4 mt-[2px] transition-transform duration-200 ${open ? 'rotate-0' : 'rotate-[-90deg]'}`} />
                           </Disclosure.Button>
