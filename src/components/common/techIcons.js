@@ -10,8 +10,10 @@ export const techIcons = {
   html: { url: 'https://cdn.simpleicons.org/html5', name: 'HTML' },
   tailwindcss: { url: 'https://cdn.simpleicons.org/tailwindcss', name: 'Tailwind CSS' },
   bootstrap: { url: 'https://cdn.simpleicons.org/bootstrap', name: 'Bootstrap' },
-  mysql: { url: 'https://cdn.simpleicons.org/mysql', name: 'MySQL' },
+  mysql: { url: 'https://pngimg.com/d/mysql_PNG23.png', name: 'MySQL' },
   tailwindcss: { url: 'https://cdn.simpleicons.org/tailwindcss', name: 'Tailwind CSS' },
   express: { url: 'https://cdn.simpleicons.org/express', name: 'Express' },
   typescript: { url: 'https://cdn.simpleicons.org/typescript', name: 'TypeScript' },
+  firebase: { url: 'https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/firebase-studio-logo-icon.png', name: 'Firebase' },
+  googleaistudio: { url: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Google_ai_studio_logo.png', name: 'Google AI Studio' },
 };

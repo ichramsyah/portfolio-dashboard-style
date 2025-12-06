@@ -186,7 +186,7 @@ To me, technology is a space to solve real-world problems and create solutions t
           ],
         },
         {
-          id: 7,
+          id: 3,
           title: 'BebasBlog - Secure & Type-Safe Social Media',
           description: 'A comprehensive Fullstack social media platform (Instagram-like), built with strict Type Safety standards using the MERN Stack and end-to-end TypeScript.',
           category: 'Fullstack',
@@ -207,7 +207,7 @@ To me, technology is a space to solve real-world problems and create solutions t
           id: 4,
           title: 'Portfolio Website - Dashboard Design',
           description: 'A modern SPA-based personal branding platform, featuring a custom personal AI assistant and a realtime global chat feature.',
-          category: 'Frontend',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
@@ -438,7 +438,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
           ],
         },
         {
-          id: 7,
+          id: 3,
           title: 'BebasBlog - Secure & Type-Safe Social Media',
           description: 'Platform media sosial Fullstack yang komprehensif, dibangun dengan standar Type Safety ketat menggunakan MERN Stack dan TypeScript end-to-end.',
           category: 'Fullstack',
@@ -459,7 +459,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
           id: 4,
           title: 'Portofolio Website - Desain Dashboard',
           description: 'Platform personal branding interaktif berbasis SPA yang modern, dilengkapi asisten AI pribadi dan fitur obrolan realtime global.',
-          category: 'Frontend',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
@@ -734,7 +734,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
           ],
         },
         {
-          id: 7,
+          id: 3,
           title: 'BebasBlog - セキュアで型安全なソーシャルメディア',
           description: 'MERNスタックとエンドツーエンドのTypeScriptを使用し、厳格な型安全性基準で構築された、包括的なフルスタックソーシャルメディアプラットフォーム（Instagram風）。',
           category: 'Fullstack',
@@ -755,7 +755,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
           id: 4,
           title: 'ポートフォリオサイト - ダッシュボードデザイン',
           description: 'カスタムAIアシスタントとリアルタイムグローバルチャット機能を備えた、モダンなSPAベースのパーソナルブランディングプラットフォーム。',
-          category: 'Frontend',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:

@@ -20,7 +20,7 @@ export const projects = [
     postmanUrl: '',
   },
   {
-    id: 7,
+    id: 3,
     image: './images/bebasblog-frontend.png',
     tech: [techIcons.typescript, techIcons.react, techIcons.express, techIcons.mongodb, techIcons.nodejs, techIcons.tailwindcss],
     githubUrl: 'https://github.com/ichramsyah/bebasblog-backend',
@@ -30,7 +30,7 @@ export const projects = [
   {
     id: 4,
     image: './images/portfolio-dashboard.png',
-    tech: [techIcons.javascript, techIcons.react, techIcons.tailwindcss],
+    tech: [techIcons.javascript, techIcons.react, techIcons.googleaistudio, techIcons.firebase, techIcons.tailwindcss],
     githubUrl: 'https://github.com/ichramsyah/portfolio-dashboard-style',
     demoUrl: 'http://ichram-portfolio-v2.vercel.app/',
     postmanUrl: '',
