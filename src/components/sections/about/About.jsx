@@ -42,7 +42,7 @@ const About = () => {
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.6 }} viewport={{ once: true }}>
           <button
             onClick={() => setShowFullBio((prev) => !prev)}
-            className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-gray-3 bg-blue-1 dark:bg-gray-5/20 hover:bg-blue-2 dark:hover:bg-gray-5/40 px-4 py-[6px] rounded-full transition-all"
+            className="inline-flex items-center gap-1 text-sm text-blue-5 dark:text-gray-3 bg-blue-1 dark:bg-gray-5/20 hover:bg-blue-2 dark:hover:bg-gray-5/40 px-4 py-[6px] rounded-full transition-all cursor-pointer"
           >
             <span className="mt-[-1px]">{showFullBio ? 'Show less' : 'Show more'}</span>
             <ChevronDown size={16} className={`transition-transform duration-300 transform ${showFullBio ? 'rotate-180' : 'rotate-0'}`} />

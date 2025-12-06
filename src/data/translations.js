@@ -151,7 +151,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         {
           id: 1,
           title: 'VeloChat - Realtime Chat Web App',
-          description: 'VeloChat is a realtime chat application built using the MERN stack with Socket.IO integration.',
+          description: 'A functional and secure modern messaging application (similar to WhatsApp Web), powered by Socket.IO for instant, low-latency communication.',
           category: 'Fullstack',
           detail: [
             {
@@ -170,84 +170,54 @@ To me, technology is a space to solve real-world problems and create solutions t
         {
           id: 2,
           title: 'Rinema - Indonesian Movie Lovers Social Platform',
-          description: 'A community-driven platform built with Laravel and MySQL for Indonesian film enthusiasts.',
+          description: 'A comprehensive digital platform for the Indonesian film community, integrating a film database, rating system, and active discussion forums into a single unified ecosystem.',
           category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 8,
-          title: 'BebasBlog - The official frontend for BebasBlog',
-          description: 'Delivering a rich user experience for content creation and consumption. ',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 7,
-          title: 'BebasBlog - RESTful APIs Social Media Platform',
-          description: 'This is the backend service for the BebasBlog project, a RESTful API built to support a blogging or social media platform.',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'Rinema is designed as a digital solution for the Indonesian film community, bridging the gap between a complete film database and dynamic social interaction. The project focuses on a seamless User Experience (UX), allowing users to discover movies through advanced search and dynamic filters, while participating in deep discussions via interactive forums. On the technical side, Rinema is built upon a robust backend architecture using Laravel 12, implementing industry-standard security with Role-Based Access Control (RBAC) and Google OAuth integration.',
+              htechstack: 'Technology Stack',
+              techstack: 'Laravel 12 (PHP), Blade Template, Tailwind CSS, MySQL (Relational DB), RESTful API, Laravel Sanctum.',
+              hfeat: 'Key Features',
+              feat: 'Advanced film discovery with Query Params and dynamic filters (Popular/Newest/Genre)., Comprehensive and informative film detail database., Interactive Rating & Review system (Star rating + Comments)., Community discussion forum featuring Threads and Nested Replies., Secure authentication via Register/Login (Sanctum/JWT) with Password Hashing., Instant third-party login using Google OAuth., Role-Based Access Control (RBAC) distinguishing User Editor and Admin access., User profile dashboard with rating history and account management., Complete film content management (CRUD) specifically for Editors., Responsive and modern Mobile-First interface design.',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
         {
           id: 3,
-          title: 'Rebuild Rinema - Indonesian Movie Lovers Social Platform',
-          description: 'Rebuilding the Rinema web app with its official API integration.',
-          category: 'Frontend',
+          title: 'BebasBlog - Secure & Type-Safe Social Media',
+          description: 'A comprehensive Fullstack social media platform (Instagram-like), built with strict Type Safety standards using the MERN Stack and end-to-end TypeScript.',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'BebasBlog stands as a testament to modern and disciplined Fullstack Engineering. More than just a social media app, this project focuses on scalable and secure code architecture. Built using the TypeScript ecosystem end-to-end (Frontend & Backend) to minimize bugs and ensure data consistency. The Frontend offers an interactive and responsive UX, while the Backend implements a robust MVC architecture with layered security, including Hybrid Authentication and strict data validation. This serves as a real-world simulation of enterprise-grade application development.',
+              htechstack: 'Technology Stack',
+              techstack: 'TypeScript (End-to-End), React.js, Node.js, Express (MVC), MongoDB (Mongoose), Tailwind CSS, Passport.js (OAuth), Cloudinary.',
+              hfeat: 'Key Features',
+              feat: 'Full TypeScript implementation across the entire stack for absolute Type Safety., Structured, clean, and maintainable MVC Backend architecture., Hybrid Authentication System: Manual Login (Bcrypt/JWT) & Google OAuth., Cloud Media Management (Cloudinary) for profile and post uploads., Real-time Social Interaction: Post CRUD, Like System, and Comments., Modern & Responsive Interface Design (Mobile-First) with Tailwind CSS., Strict API security with input validation and route protection (Middleware).',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
         {
           id: 4,
-          title: 'Portfolio Website - Dashboard Style',
-          description: 'Personal website portfolio with dashboard layout design',
-          category: 'Frontend',
+          title: 'Portfolio Website',
+          description: 'A modern SPA-based personal branding platform, featuring a custom personal AI assistant and a realtime global chat feature.',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 5,
-          title: 'Portfolio Website - Desain Landing Page',
-          description: 'Personal website portfolio with landing page design',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: 'RESTful APIs Simple Notes App',
-          description: 'A simple RESTful API using Express.js that functions to manage notes.',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'This portfolio website is built as a high-performance Single Page Application (SPA). Its standout feature is the integration of "Ichram AI," a custom AI model trained via Google AI Studio to intelligently answer visitor questions about my skills and experience. It also features a Global Chatroom enabling realtime visitor interaction. Technically, the site showcases efficient state management, including a custom-built internationalization (i18n) system engineered from scratch using the React Context API.',
+              htechstack: 'Technology Stack',
+              techstack: 'React.js, Tailwind CSS, Firebase (Realtime DB), Google Gemini API (AI Tuning), Context API (Custom i18n).',
+              hfeat: 'Key Features',
+              feat: '"Ichram AI" Integration (Custom LLM) trained via Google AI Studio., Realtime Global Chatroom using Firebase Realtime Database., Custom Multi-language System (i18n) built with React Context., Persistent Dynamic Dark and Light Mode support., Responsive UI/UX design with smooth interactive animations., SPA (Single Page Application) architecture for seamless navigation.',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
@@ -433,7 +403,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 1,
           title: 'VeloChat - Aplikasi Web Chat Realtime',
-          description: 'VeloChat adalah aplikasi chat realtime yang dibangun dengan stack MERN dan integrasi Socket.IO.',
+          description: 'Aplikasi percakapan modern (mirip WhatsApp Web) yang fungsional dan aman, ditenagai oleh Socket.IO untuk komunikasi instan dan latensi rendah.',
           category: 'Fullstack',
           detail: [
             {
@@ -452,84 +422,54 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 2,
           title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
-          description: 'Sebuah platform komunitas untuk pecinta film Indonesia yang dibangun menggunakan Laravel dan MySQL.',
+          description: 'Platform digital komunitas pecinta film Indonesia yang komprehensif, menggabungkan basis data film, sistem rating, dan forum diskusi aktif dalam satu ekosistem terintegrasi.',
           category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 8,
-          title: 'BebasBlog - Frontend Resmi BebasBlog',
-          description: 'Menyediakan pengalaman pengguna yang kaya untuk pembuatan dan konsumsi konten.',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 7,
-          title: 'BebasBlog - RESTful APIs Platform Sosial',
-          description: 'Ini adalah layanan backend untuk proyek Bebasblog, sebuah API RESTful yang dibangun untuk mendukung platform blogging atau media sosial.',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'Rinema dirancang sebagai solusi digital untuk komunitas perfilman di Indonesia, menjembatani kebutuhan akan basis data film yang lengkap dengan interaksi sosial yang dinamis. Proyek ini berfokus pada pengalaman pengguna (UX) yang mulus, memungkinkan pengguna untuk menemukan film melalui pencarian canggih dan filter dinamis, serta berpartisipasi dalam diskusi mendalam melalui forum interaktif. Di sisi teknis, Rinema dibangun dengan arsitektur backend yang kokoh menggunakan Laravel 12, menerapkan keamanan standar industri dengan Role-Based Access Control (RBAC) dan integrasi Google OAuth.',
+              htechstack: 'Teknologi yang digunakan',
+              techstack: 'Laravel 12 (PHP), Blade Template, Tailwind CSS, MySQL (Relational DB), RESTful API, Laravel Sanctum.',
+              hfeat: 'Fitur Utama',
+              feat: 'Pencarian film canggih dengan Query Params dan filter dinamis (Terpopuler/Terbaru/Genre)., Basis data detail film yang lengkap dan informatif., Sistem Rating & Review interaktif (Star rating + Komentar)., Forum diskusi komunitas dengan fitur Thread dan Nested Replies., Autentikasi aman via Register/Login (Sanctum/JWT) dengan Password Hashing., Login instan pihak ketiga menggunakan Google OAuth., Role-Based Access Control (RBAC) membedakan akses User Editor dan Admin., Dashboard profil user dengan histori rating dan manajemen akun., Manajemen konten film (CRUD) lengkap khusus untuk Editor., Desain antarmuka Mobile-First yang responsif dan modern.',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
         {
           id: 3,
-          title: 'Rebuild Rinema - Platform Sosial Pecinta Film Indonesia',
-          description: 'Pengembangan ulang aplikasi web Rinema dengan integrasi API resminya.',
-          category: 'Frontend',
+          title: 'BebasBlog - Secure & Type-Safe Social Media',
+          description: 'Platform media sosial Fullstack yang komprehensif, dibangun dengan standar Type Safety ketat menggunakan MERN Stack dan TypeScript end-to-end.',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'BebasBlog adalah pembuktian kemampuan Fullstack Engineering yang modern. Proyek ini berfokus pada arsitektur kode yang scalable dan aman. Dibangun menggunakan ekosistem TypeScript secara menyeluruh (Frontend & Backend) untuk meminimalisir bug. Backend menerapkan arsitektur MVC yang kokoh dengan sistem keamanan berlapis, manajemen media cloud, dan logika bisnis sosial yang kompleks.',
+              htechstack: 'Teknologi yang digunakan',
+              techstack: 'TypeScript (End-to-End), React.js, Node.js, Express (MVC), MongoDB (Mongoose), Tailwind CSS, Passport.js (OAuth), Cloudinary.',
+              hfeat: 'Fitur Utama',
+              feat: 'Sistem Registrasi & Login Manual aman dengan hashing password (Bcrypt) dan validasi input., Login Instan pihak ketiga menggunakan Google OAuth 2.0 (Passport.js)., Keamanan Endpoint API menggunakan verifikasi JSON Web Token (JWT)., Manajemen Profil Pengguna lengkap (Update Foto Bio Email Password)., Sistem CRUD Postingan interaktif dengan dukungan upload gambar., Integrasi Cloudinary via Middleware Multer untuk validasi dan penyimpanan media cloud., Fitur Interaksi Sosial Real-time: Sistem Like dan Komentar pada postingan., Implementasi End-to-End TypeScript untuk integritas kode frontend dan backend.',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
         {
           id: 4,
-          title: 'Portofolio Website - Desain Dashboard',
-          description: 'Website portofolio pribadi dengan design tata letak dashboard',
-          category: 'Frontend',
+          title: 'Portofolio Website',
+          description: 'Platform personal branding interaktif berbasis SPA yang modern, dilengkapi asisten AI pribadi dan fitur obrolan realtime global.',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 5,
-          title: 'Portofolio Website - Landing Page Design',
-          description: 'Website portofolio pribadi dengan design tata letak Landing Page',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: 'RESTful APIs Aplikasi Catatan Sederhana',
-          description: 'RESTful API sederhana menggunakan Express.js yang berfungsi untuk mengelola catatan (notes).',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'Website portofolio ini dibangun sebagai Single Page Application (SPA) yang cepat dan responsif tanpa reload. Fitur unggulannya adalah integrasi "Ichram AI", sebuah model kecerdasan buatan yang dilatih khusus menggunakan Google AI Studio untuk menjawab pertanyaan pengunjung mengenai pengalaman dan keahlian saya secara interaktif. Selain itu, terdapat fitur Global Chatroom yang memungkinkan pengunjung berkomunikasi secara realtime. Dari sisi teknis, website ini menerapkan sistem manajemen state yang efisien, termasuk implementasi fitur multi-bahasa (i18n) yang dibangun dari nol menggunakan React Context API.',
+              htechstack: 'Teknologi yang digunakan',
+              techstack: 'React.js, Tailwind CSS, Firebase (Realtime DB), Google Gemini API (AI Tuning), Context API (Custom i18n).',
+              hfeat: 'Fitur Utama',
+              feat: 'Integrasi "Ichram AI" (Custom LLM) yang dilatih via Google AI Studio., Global Chatroom Realtime menggunakan Firebase Realtime Database., Sistem Multi-bahasa (i18n) Custom yang dibangun dengan React Context., Dukungan Tema Gelap (Dark Mode) dan Terang yang persisten., Desain UI/UX Responsif dan interaktif dengan animasi halus., Arsitektur SPA (Single Page Application) untuk navigasi instan.',
+              hlinkyt: 'Demo Video',
+              linkyt: '',
             },
           ],
         },
@@ -759,7 +699,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 1,
           title: 'VeloChat - リアルタイムチャットウェブアプリ',
-          description: 'VeloChatは、MERNスタックとSocket.IOを統合して構築されたリアルタイムチャットアプリケーションです。',
+          description: 'Socket.IOを搭載し、インスタントで低遅延な通信を実現した、機能的かつ安全なモダンメッセージングアプリケーション（WhatsApp Web風）。',
           category: 'Fullstack',
           detail: [
             {
@@ -778,84 +718,54 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 2,
           title: 'Rinema - インドネシア映画ファンのためのソーシャルプラットフォーム',
-          description: 'LaravelとMySQLを使用して構築された、インドネシア映画ファンのためのコミュニティプラットフォームです。',
+          description: '映画データベース、評価システム、活発なディスカッションフォーラムを統合した、インドネシアの映画コミュニティ向け包括的デジタルプラットフォーム。',
           category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 8,
-          title: 'BebasBlog - BebasBlog 公式フロントエンド',
-          description: 'コンテンツの作成と消費のための豊富なユーザー エクスペリエンスを提供します。',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 7,
-          title: 'BebasBlog - ソーシャルプラットフォーム向けRESTful API',
-          description: 'これはBebasblogプロジェクトのバックエンドサービスで、ブログやソーシャルメディアプラットフォームをサポートするために構築されたRESTful APIです。',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'Rinemaは、インドネシアの映画コミュニティのためのデジタルソリューションとして設計されており、充実した映画データベースと動的な社会的交流の架け橋となります。このプロジェクトはシームレスなユーザー体験（UX）に重点を置いており、ユーザーは高度な検索や動的フィルターを通じて映画を発見し、インタラクティブなフォーラムで深い議論に参加できます。技術面では、Laravel 12を使用した堅牢なバックエンドアーキテクチャ上に構築されており、ロールベースアクセス制御（RBAC）やGoogle OAuth統合による業界標準のセキュリティを実装しています。',
+              htechstack: '使用技術',
+              techstack: 'Laravel 12 (PHP), Blade Template, Tailwind CSS, MySQL (Relational DB), RESTful API, Laravel Sanctum.',
+              hfeat: '主な機能',
+              feat: 'クエリパラメータと動的フィルター（人気/最新/ジャンル）を備えた高度な映画検索機能。, 包括的で詳細な映画データベース。, インタラクティブな評価＆レビューシステム（星評価＋コメント）。, スレッドとネストされた返信機能を備えたコミュニティディスカッションフォーラム。, パスワードハッシュ化を伴う安全な認証システム（Sanctum/JWT）。, Google OAuthを使用したインスタントサードパーティログイン。, ユーザー・編集者・管理者のアクセス権を区別するロールベースアクセス制御（RBAC）。, 評価履歴とアカウント管理を含むユーザープロファイルダッシュボード。, 編集者専用の完全な映画コンテンツ管理（CRUD）。, レスポンシブでモダンなモバイルファーストのインターフェースデザイン。',
+              hlinkyt: 'デモ動画',
+              linkyt: '',
             },
           ],
         },
         {
           id: 3,
-          title: 'Rinema（リビルド版）- インドネシア映画ファンのためのソーシャルプラットフォーム',
-          description: '公式APIを統合したRinemaウェブアプリケーションの再開発版です。',
-          category: 'Frontend',
+          title: 'BebasBlog - セキュアで型安全なソーシャルメディア',
+          description: 'MERNスタックとエンドツーエンドのTypeScriptを使用し、厳格な型安全性基準で構築された、包括的なフルスタックソーシャルメディアプラットフォーム（Instagram風）。',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'BebasBlogは、現代的で規律あるフルスタックエンジニアリング能力の証明です。単なるソーシャルメディアアプリではなく、スケーラブルで安全なコードアーキテクチャに焦点を当てています。バグを最小限に抑え、データの一貫性を保証するために、TypeScriptエコシステムをエンドツーエンド（フロントエンドとバックエンド）で使用して構築されました。フロントエンドはインタラクティブでレスポンシブなUXを提供し、バックエンドはハイブリッド認証や厳格なデータバリデーションを含む多層セキュリティを備えた堅牢なMVCアーキテクチャを実装しています。これは、エンタープライズグレードのアプリケーション開発の実践的なシミュレーションです。',
+              htechstack: '使用技術',
+              techstack: 'TypeScript (End-to-End), React.js, Node.js, Express (MVC), MongoDB (Mongoose), Tailwind CSS, Passport.js (OAuth), Cloudinary.',
+              hfeat: '主な機能',
+              feat: '絶対的な型安全性のためのスタック全体における完全なTypeScript実装。, 構造化され、クリーンで保守が容易なMVCバックエンドアーキテクチャ。, ハイブリッド認証システム：マニュアルログイン（Bcrypt/JWT）およびGoogle OAuth。, プロフィールと投稿のアップロードのためのクラウドメディア管理（Cloudinary）。, リアルタイムの社会的交流：投稿CRUD、いいねシステム、コメント機能。, Tailwind CSSを使用したモダンでレスポンシブなインターフェースデザイン（モバイルファースト）。, 入力バリデーションとルート保護（ミドルウェア）による厳格なAPIセキュリティ。',
+              hlinkyt: 'デモ動画',
+              linkyt: '',
             },
           ],
         },
         {
           id: 4,
-          title: 'ポートフォリオサイト - ダッシュボードデザイン',
-          description: 'ダッシュボードレイアウトでデザインされた個人のポートフォリオサイトです。',
-          category: 'Frontend',
+          title: 'ポートフォリオサイト',
+          description: 'カスタムAIアシスタントとリアルタイムグローバルチャット機能を備えた、モダンなSPAベースのパーソナルブランディングプラットフォーム。',
+          category: 'Fullstack',
           detail: [
             {
               paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 5,
-          title: 'ポートフォリオサイト - ランディングページデザイン',
-          description: 'ランディングページレイアウトでデザインされた個人のポートフォリオサイトです。',
-          category: 'Frontend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: 'シンプルなノートアプリ向けRESTful API',
-          description: 'Express.jsを使用して構築された、ノートを管理するためのシンプルなRESTful APIです。',
-          category: 'Backend',
-          detail: [
-            {
-              paragraph:
-                'Rinema is a social platform for Indonesian movie lovers, built with Laravel and MySQL. It provides a space for users to discuss and share their favorite films, as well as discover new ones through community recommendations.',
+                'このポートフォリオサイトは、高速で応答性の高いシングルページアプリケーション（SPA）として構築されています。最大の特徴は、Google AI Studioを通じて特別にトレーニングされたカスタムAIモデル「Ichram AI」の統合であり、私のスキルや経験に関する訪問者の質問にインテリジェントに回答します。また、訪問者がリアルタイムで交流できるグローバルチャットルームも備えています。技術面では、React Context APIを使用してゼロから構築されたカスタム多言語システム（i18n）など、効率的な状態管理を実装しています。',
+              htechstack: '使用技術',
+              techstack: 'React.js, Tailwind CSS, Firebase (Realtime DB), Google Gemini API (AI Tuning), Context API (Custom i18n).',
+              hfeat: '主な機能',
+              feat: 'Google AI Studioでトレーニングされた「Ichram AI」（カスタムLLM）の統合。, Firebase Realtime Databaseを使用したリアルタイムグローバルチャットルーム。, React Contextで構築されたカスタム多言語システム（i18n）。, 持続的なダークモードとライトモードのサポート。, スムーズなアニメーションを備えたレスポンシブなUI/UXデザイン。, シームレスなナビゲーションのためのSPAアーキテクチャ。',
+              hlinkyt: 'デモ動画',
+              linkyt: '',
             },
           ],
         },
