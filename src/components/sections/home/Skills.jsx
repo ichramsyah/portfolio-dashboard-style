@@ -42,19 +42,18 @@ const Skills = () => {
     { icon: <FaFigma size={32} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'figma', label: 'Figma' },
     { icon: <SiAdobeillustrator size={28} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobeillustrator', label: 'Adobe Illustrator' },
     { icon: <SiAdobephotoshop size={28} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'adobephotoshop', label: 'Adobe Photoshop' },
-    { icon: <SiCpanel size={40} className="text-gray-9 dark:text-gray-1 transition-color duration-500" />, colorKey: 'cpanel', label: 'cPanel' },
   ];
 
   return (
-    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-7">
+    <div className="w-full mx-auto mt-8 border-b border-gray-3 dark:border-gray-5/30 tracking-wide">
       <div className="space-y-2">
-        <h3 className="flex items-center text-xl  text-gray-9 dark:text-gray-3 ">
-          <CodeBracketIcon className="text-sm w-6 " />
+        <h3 className="flex items-center text-xl text-gray-9 dark:text-gray-2 ">
+          <CodeBracketIcon className="text-sm w-5 " />
           <span className="ml-2">{t('home.skills')}</span>
         </h3>
-        <p className="text-gray-5 dark:text-gray-4">{t('home.skills_paragraph')}</p>
+        <p className="text-gray-5 dark:text-gray-4/80">{t('home.skills_paragraph')}</p>
       </div>
-      <div className="md:mb-12 mb-0">
+      <div className="md:mb-0 mb-10">
         <GlassIcons items={items} className="custom-class" />
       </div>
     </div>

@@ -35,7 +35,7 @@ const colorClassMapping = {
 
 const GlassIcons = ({ items, className }) => {
   return (
-    <div className={`flex flex-wrap md:justify-start justify-center space-x-8 space-y-14 mx-auto pt-[3em] overflow-visible ${className || ''}`}>
+    <div className={`flex flex-wrap md:justify-start justify-center space-x-[29px] space-y-13 mx-auto pt-[40px] overflow-visible ${className || ''}`}>
       {items.map((item, index) => {
         const backgroundClasses = colorClassMapping[item.colorKey] || colorClassMapping.default;
 
@@ -44,14 +44,14 @@ const GlassIcons = ({ items, className }) => {
             key={index}
             type="button"
             aria-label={item.label}
-            className={`relative bg-transparent outline-none w-[3.8em] h-[3.8em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ''}`}
+            className={`relative bg-transparent outline-none w-[60px] h-[60px] [perspective:30em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ''}`}
           >
             <span
-              className={`absolute top-0 left-0 w-full h-full rounded-[1.25em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[18deg] group-hover:[transform:rotate(16deg)_translate3d(-0.4em,-0.3em,0.2em)] ${backgroundClasses}`}
+              className={`absolute top-0 left-0 w-full h-full rounded-[1.5em] block transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[100%_100%] rotate-[18deg] group-hover:[transform:rotate(16deg)_translate3d(-0.4em,-0.3em,0.2em)] ${backgroundClasses}`}
             ></span>
 
             <span
-              className="absolute top-0 left-0 w-full h-full rounded-[1.25em] bg-[hsla(0,0%,100%,0.15)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)] transform group-hover:[transform:translateZ(2em)]"
+              className="absolute top-0 left-0 w-full h-full rounded-[1.5em] bg-[hsla(0,0%,100%,0.15)] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] origin-[80%_50%] flex backdrop-blur-[0.75em] [-webkit-backdrop-filter:blur(0.75em)] transform group-hover:[transform:translateZ(2em)]"
               style={{
                 boxShadow: '0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset',
               }}
@@ -61,7 +61,7 @@ const GlassIcons = ({ items, className }) => {
               </span>
             </span>
 
-            <span className="absolute top-full left-0 right-0 text-center text-[15px] text-gray-7 dark:text-gray-2 whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)]">
+            <span className="absolute top-full left-0 right-0 text-center text-[15px] text-gray-7 dark:text-gray-2 whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(10%)]">
               {item.label}
             </span>
           </button>
