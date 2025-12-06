@@ -26,7 +26,7 @@ const AISection = () => {
           animation: text-flow 3s linear infinite;
         }
       `}</style>
-      <div className="pb-8 mb-5 border-b border-gray-3 dark:border-gray-7">
+      {/* <div className="pb-8 mb-5 border-b border-gray-3 dark:border-gray-7">
         <motion.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }} viewport={{ once: true }} className="text-3xl font-medium text-gray-9 dark:text-gray-1 mb-3">
           Ask
           <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-6 via-blue-3 to-gray-4 animate-text-gradient"> Hailyo</span>
@@ -35,7 +35,7 @@ const AISection = () => {
         <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }} viewport={{ once: true }} className="text-[17px] text-gray-6 dark:text-gray-4">
           {t('aiassistant.description')}
         </motion.p>
-      </div>
+      </div> */}
 
       <AiChatInterface />
     </div>
