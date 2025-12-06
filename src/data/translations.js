@@ -151,7 +151,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         {
           id: 1,
           title: 'VeloChat - Realtime Chat Web App',
-          description: 'VeloChat is a realtime chat application built using the MERN stack with Socket.IO integration.',
+          description: 'A functional and secure modern messaging application (similar to WhatsApp Web), powered by Socket.IO for instant, low-latency communication.',
           category: 'Fullstack',
           detail: [
             {
@@ -170,7 +170,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         {
           id: 2,
           title: 'Rinema - Indonesian Movie Lovers Social Platform',
-          description: 'A community-driven platform built with Laravel and MySQL for Indonesian film enthusiasts.',
+          description: 'A comprehensive digital platform for the Indonesian film community, integrating a film database, rating system, and active discussion forums into a single unified ecosystem.',
           category: 'Fullstack',
           detail: [
             {
@@ -205,7 +205,7 @@ To me, technology is a space to solve real-world problems and create solutions t
         },
         {
           id: 4,
-          title: 'Portfolio Website - Dashboard Design',
+          title: 'Portfolio Website',
           description: 'A modern SPA-based personal branding platform, featuring a custom personal AI assistant and a realtime global chat feature.',
           category: 'Fullstack',
           detail: [
@@ -403,7 +403,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 1,
           title: 'VeloChat - Aplikasi Web Chat Realtime',
-          description: 'VeloChat adalah aplikasi chat realtime yang dibangun dengan stack MERN dan integrasi Socket.IO.',
+          description: 'Aplikasi percakapan modern (mirip WhatsApp Web) yang fungsional dan aman, ditenagai oleh Socket.IO untuk komunikasi instan dan latensi rendah.',
           category: 'Fullstack',
           detail: [
             {
@@ -422,7 +422,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 2,
           title: 'Rinema - Platform Sosial Pecinta Film Indonesia',
-          description: 'Sebuah platform komunitas untuk pecinta film Indonesia yang dibangun menggunakan Laravel dan MySQL.',
+          description: 'Platform digital komunitas pecinta film Indonesia yang komprehensif, menggabungkan basis data film, sistem rating, dan forum diskusi aktif dalam satu ekosistem terintegrasi.',
           category: 'Fullstack',
           detail: [
             {
@@ -457,7 +457,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           id: 4,
-          title: 'Portofolio Website - Desain Dashboard',
+          title: 'Portofolio Website',
           description: 'Platform personal branding interaktif berbasis SPA yang modern, dilengkapi asisten AI pribadi dan fitur obrolan realtime global.',
           category: 'Fullstack',
           detail: [
@@ -699,7 +699,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 1,
           title: 'VeloChat - リアルタイムチャットウェブアプリ',
-          description: 'VeloChatは、MERNスタックとSocket.IOを統合して構築されたリアルタイムチャットアプリケーションです。',
+          description: 'Socket.IOを搭載し、インスタントで低遅延な通信を実現した、機能的かつ安全なモダンメッセージングアプリケーション（WhatsApp Web風）。',
           category: 'Fullstack',
           detail: [
             {
@@ -718,7 +718,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         {
           id: 2,
           title: 'Rinema - インドネシア映画ファンのためのソーシャルプラットフォーム',
-          description: 'LaravelとMySQLを使用して構築された、インドネシア映画ファンのためのコミュニティプラットフォームです。',
+          description: '映画データベース、評価システム、活発なディスカッションフォーラムを統合した、インドネシアの映画コミュニティ向け包括的デジタルプラットフォーム。',
           category: 'Fullstack',
           detail: [
             {
@@ -753,7 +753,7 @@ Bagi saya, teknologi adalah ruang untuk menyelesaikan masalah nyata dan mencipta
         },
         {
           id: 4,
-          title: 'ポートフォリオサイト - ダッシュボードデザイン',
+          title: 'ポートフォリオサイト',
           description: 'カスタムAIアシスタントとリアルタイムグローバルチャット機能を備えた、モダンなSPAベースのパーソナルブランディングプラットフォーム。',
           category: 'Fullstack',
           detail: [
