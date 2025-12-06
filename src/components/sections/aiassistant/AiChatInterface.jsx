@@ -100,7 +100,7 @@ const AiChatInterface = () => {
 
   return (
     <section className="overflow-hidden bg-whitee dark:bg-background-dark">
-      <main className="h-[450px] overflow-y-auto overflow-x-hidden lg:p-4 p-1.5 md:pr-10 pr-1 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
+      <main className="h-[450px] md:h-[480px] overflow-y-auto overflow-x-hidden lg:p-4 p-1.5 md:pr-10 pr-1 space-y-6 bg-whitee dark:bg-background-dark scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 transition-all duration-300">
         <AnimatePresence>
           {messages.map((msg, idx) => {
             const isAI = msg.role === 'model';
